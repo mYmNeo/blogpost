@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-07-01T18:09:34 CST">
+<meta name="revised" content="2019-07-01T18:42:05 CST">
 <title>jq tutorial :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -1030,7 +1030,7 @@ Output	{&quot;KEY_a&quot;: 1, &quot;KEY_b&quot;: 2}
 
 <pre><code>jq '.name=&quot;1&quot;|.resource=&quot;2&quot;'
 Input {&quot;name&quot;:&quot;a&quot;,&quot;resource&quot;:&quot;b&quot;}
-Ouput {&quot;name&quot;:&quot;1&quot;,&quot;resource&quot;:&quot;b&quot;}
+Ouput {&quot;name&quot;:&quot;1&quot;,&quot;resource&quot;:&quot;2&quot;}
 </code></pre></li>
 
 <li><p>show select fields</p>
@@ -1038,6 +1038,20 @@ Ouput {&quot;name&quot;:&quot;1&quot;,&quot;resource&quot;:&quot;b&quot;}
 <pre><code>jq '.name,.resource'
 Input {&quot;name&quot;:&quot;a&quot;,&quot;resource&quot;:&quot;b&quot;,&quot;type&quot;:&quot;c&quot;}
 Output &quot;a&quot; &quot;b&quot;
+</code></pre></li>
+
+<li><p>delete field value</p>
+
+<pre><code>jq 'del(.name)'
+Input {&quot;name&quot;:&quot;a&quot;,&quot;resource&quot;:&quot;b&quot;,&quot;type&quot;:&quot;c&quot;}
+Output {&quot;resource&quot;:&quot;b&quot;,&quot;type&quot;:&quot;c&quot;}
+</code></pre></li>
+
+<li><p>change key field</p>
+
+<pre><code>jq '{&quot;newkey&quot;:.name,&quot;newkey2&quot;:.type}'
+Input {&quot;name&quot;:&quot;a&quot;,&quot;resource&quot;:&quot;b&quot;,&quot;type&quot;:&quot;c&quot;}
+Output {&quot;newkey&quot;:&quot;a&quot;,&quot;newkey2&quot;:&quot;c&quot;}
 </code></pre></li>
 </ul>
 
