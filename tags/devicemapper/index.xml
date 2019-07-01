@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>devicemapper on Sparking Mind</title>
+    <link>http://mymneo.github.io/tags/devicemapper/</link>
+    <description>Recent content in devicemapper on Sparking Mind</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 23 Jun 2016 17:41:46 +0000</lastBuildDate>
+    
+	<atom:link href="http://mymneo.github.io/tags/devicemapper/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>behaviors of ext4 file system when devicemapper pool is full</title>
+      <link>http://mymneo.github.io/posts/behaviors-ext4-file-system-when-devicemapper-pool-is-full/</link>
+      <pubDate>Thu, 23 Jun 2016 17:41:46 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/behaviors-ext4-file-system-when-devicemapper-pool-is-full/</guid>
+      <description>Backgroud &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Our production system currently use docker to run all kinds of services. One day our clients reported that their service could not write down any log in the container and all the other containers which were started and worked well a few days ago also couldn&amp;rsquo;t. And the containers couldn&amp;rsquo;t be recovered. We logged in the malfunction machine, found that the thin pool used by devicemapper was full. At the same time there was some messages that dmesg reported telling the file system of containers became read-only.</description>
+    </item>
+    
+    <item>
+      <title>lvm thin pool cheatsheet</title>
+      <link>http://mymneo.github.io/posts/lvm-thin-pool-cheatsheet/</link>
+      <pubDate>Mon, 13 Jun 2016 15:17:34 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/lvm-thin-pool-cheatsheet/</guid>
+      <description>We use devicemapper as Docker storage driver, sometime any of the meta or data pool is full. We have to extend the pool
+  Single step thin pool LV creation  lvcreate --type thin-pool --poolmetadata &amp;lt;meta size&amp;gt; -L &amp;lt;pool size&amp;gt; &amp;lt;pool name&amp;gt;  Manually manage free data space of thin pool LV  lvextend -L &amp;lt;size&amp;gt; &amp;lt;pool name&amp;gt;  Manually manage free metadata space of a thin pool LV  lvs -oname,size,data_percent,metadata_percent # show the available metadat space in a thin pool LV lvextend --poolmetadatasize &amp;lt;size&amp;gt; &amp;lt;pool name&amp;gt; Metadata space exhaustion  Metadata space exhaustion can lead to inconsistent thin pool metadata and inconsistent file systems, so the response requires offline checking and repair.</description>
+    </item>
+    
+  </channel>
+</rss>

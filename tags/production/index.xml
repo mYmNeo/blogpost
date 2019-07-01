@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>production on Sparking Mind</title>
+    <link>http://mymneo.github.io/tags/production/</link>
+    <description>Recent content in production on Sparking Mind</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 22 Nov 2018 10:19:40 +0000</lastBuildDate>
+    
+	<atom:link href="http://mymneo.github.io/tags/production/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>vim cheatsheet</title>
+      <link>http://mymneo.github.io/posts/vim-cheatsheet/</link>
+      <pubDate>Thu, 22 Nov 2018 10:19:40 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/vim-cheatsheet/</guid>
+      <description> VIM cheatsheet  delete lines which matches regex expression
+:g/&amp;lt;expr&amp;gt;/d   </description>
+    </item>
+    
+    <item>
+      <title>vim plugins</title>
+      <link>http://mymneo.github.io/posts/vim-plugins/</link>
+      <pubDate>Wed, 27 Apr 2016 15:19:40 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/vim-plugins/</guid>
+      <description>工欲善其事,必先利其器.对于天天在类Unix写后台的代码的人来说,便捷的插件会使你写代码的速度加快很多.下面介绍一下我经常使用的插件(直接粘贴的英文,英文不好):
+   插件名称 简介     Vundle 统一管理所有vim插件的工具,让你管理插件very easy   google/vim-maktaba Maktaba is a vimscript plugin library. It is designed for plugin authors   google/vim-codefmt codefmt is a utility for syntax-aware code formatting. It contains several built-in formatters, and allows new formatters to be registered by other plugins.   google/vim-glaive Glaive is a utility for configuring maktaba plugins.   tpope/vim-fugitive I&amp;rsquo;m not going to lie to you; fugitive.</description>
+    </item>
+    
+  </channel>
+</rss>

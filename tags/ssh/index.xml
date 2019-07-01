@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ssh on Sparking Mind</title>
+    <link>http://mymneo.github.io/tags/ssh/</link>
+    <description>Recent content in ssh on Sparking Mind</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 29 Jun 2018 10:31:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://mymneo.github.io/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ssh tunnel configuration</title>
+      <link>http://mymneo.github.io/posts/ssh-tunnel/</link>
+      <pubDate>Fri, 29 Jun 2018 10:31:00 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/ssh-tunnel/</guid>
+      <description>SSH Tunnel Configuration You basically have three possibilities:
+ Tunnel from localhost to host1:
+ssh -L 9999:host2:1234 -N host1   As noted above, the connection from host1 to host2 will not be secured.
+ Tunnel from localhost to host1 and from host1 to host2:
+ssh -L 9999:localhost:9999 host1 ssh -L 9999:localhost:1234 -N host2   This will open a tunnel from localhost to host1 and another tunnel from host1 to host2.</description>
+    </item>
+    
+  </channel>
+</rss>

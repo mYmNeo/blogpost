@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Sparking Mind</title>
+    <link>http://mymneo.github.io/tags/</link>
+    <description>Recent content in Tags on Sparking Mind</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 22 Nov 2018 10:19:40 +0000</lastBuildDate>
+    
+	<atom:link href="http://mymneo.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>production</title>
+      <link>http://mymneo.github.io/tags/production/</link>
+      <pubDate>Thu, 22 Nov 2018 10:19:40 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/tags/production/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vim</title>
+      <link>http://mymneo.github.io/tags/vim/</link>
+      <pubDate>Thu, 22 Nov 2018 10:19:40 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/tags/vim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>audit</title>
+      <link>http://mymneo.github.io/tags/audit/</link>
+      <pubDate>Tue, 03 Jul 2018 18:00:00 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/tags/audit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>http://mymneo.github.io/tags/linux/</link>
+      <pubDate>Tue, 03 Jul 2018 18:00:00 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ssh</title>
+      <link>http://mymneo.github.io/tags/ssh/</link>
+      <pubDate>Fri, 29 Jun 2018 10:31:00 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/tags/ssh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>algorithm</title>
+      <link>http://mymneo.github.io/tags/algorithm/</link>
+      <pubDate>Wed, 19 Apr 2017 21:46:15 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/tags/algorithm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>leetcode</title>
+      <link>http://mymneo.github.io/tags/leetcode/</link>
+      <pubDate>Wed, 19 Apr 2017 21:46:15 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/tags/leetcode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mysql</title>
+      <link>http://mymneo.github.io/tags/mysql/</link>
+      <pubDate>Tue, 18 Apr 2017 10:39:59 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/tags/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>netsh</title>
+      <link>http://mymneo.github.io/tags/netsh/</link>
+      <pubDate>Fri, 10 Mar 2017 21:25:25 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/tags/netsh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>windows</title>
+      <link>http://mymneo.github.io/tags/windows/</link>
+      <pubDate>Fri, 10 Mar 2017 21:25:25 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/tags/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>log</title>
+      <link>http://mymneo.github.io/tags/log/</link>
+      <pubDate>Fri, 17 Feb 2017 14:25:46 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/tags/log/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>english</title>
+      <link>http://mymneo.github.io/tags/english/</link>
+      <pubDate>Tue, 18 Oct 2016 09:56:04 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/tags/english/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tcpdump</title>
+      <link>http://mymneo.github.io/tags/tcpdump/</link>
+      <pubDate>Fri, 15 Jul 2016 10:30:34 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/tags/tcpdump/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>http://mymneo.github.io/tags/git/</link>
+      <pubDate>Fri, 15 Jul 2016 10:05:33 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>svn</title>
+      <link>http://mymneo.github.io/tags/svn/</link>
+      <pubDate>Fri, 15 Jul 2016 10:05:33 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/tags/svn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jq</title>
+      <link>http://mymneo.github.io/tags/jq/</link>
+      <pubDate>Fri, 24 Jun 2016 16:48:39 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/tags/jq/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>devicemapper</title>
+      <link>http://mymneo.github.io/tags/devicemapper/</link>
+      <pubDate>Thu, 23 Jun 2016 17:41:46 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/tags/devicemapper/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>http://mymneo.github.io/tags/docker/</link>
+      <pubDate>Thu, 23 Jun 2016 17:41:46 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kvm</title>
+      <link>http://mymneo.github.io/tags/kvm/</link>
+      <pubDate>Wed, 22 Jun 2016 16:32:51 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/tags/kvm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cheatsheet</title>
+      <link>http://mymneo.github.io/tags/cheatsheet/</link>
+      <pubDate>Tue, 14 Jun 2016 09:43:51 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/tags/cheatsheet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>find</title>
+      <link>http://mymneo.github.io/tags/find/</link>
+      <pubDate>Tue, 14 Jun 2016 09:43:51 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/tags/find/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>filesystem</title>
+      <link>http://mymneo.github.io/tags/filesystem/</link>
+      <pubDate>Mon, 13 Jun 2016 14:39:06 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/tags/filesystem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shell</title>
+      <link>http://mymneo.github.io/tags/shell/</link>
+      <pubDate>Fri, 03 Jun 2016 09:50:09 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/tags/shell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mac</title>
+      <link>http://mymneo.github.io/tags/mac/</link>
+      <pubDate>Fri, 29 Apr 2016 09:32:42 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/tags/mac/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>golang</title>
+      <link>http://mymneo.github.io/tags/golang/</link>
+      <pubDate>Thu, 28 Apr 2016 18:06:41 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>programme</title>
+      <link>http://mymneo.github.io/tags/programme/</link>
+      <pubDate>Thu, 28 Apr 2016 18:06:41 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/tags/programme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>makefile</title>
+      <link>http://mymneo.github.io/tags/makefile/</link>
+      <pubDate>Thu, 28 Apr 2016 17:39:32 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/tags/makefile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rpmbuild</title>
+      <link>http://mymneo.github.io/tags/rpmbuild/</link>
+      <pubDate>Thu, 28 Apr 2016 11:04:44 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/tags/rpmbuild/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rpm</title>
+      <link>http://mymneo.github.io/tags/rpm/</link>
+      <pubDate>Thu, 28 Apr 2016 10:58:34 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/tags/rpm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sed</title>
+      <link>http://mymneo.github.io/tags/sed/</link>
+      <pubDate>Wed, 27 Apr 2016 22:42:37 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/tags/sed/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>iptables</title>
+      <link>http://mymneo.github.io/tags/iptables/</link>
+      <pubDate>Wed, 27 Apr 2016 22:32:29 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/tags/iptables/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hadoop</title>
+      <link>http://mymneo.github.io/tags/hadoop/</link>
+      <pubDate>Wed, 27 Apr 2016 21:20:09 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/tags/hadoop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>log4j</title>
+      <link>http://mymneo.github.io/tags/log4j/</link>
+      <pubDate>Wed, 27 Apr 2016 21:20:09 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/tags/log4j/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

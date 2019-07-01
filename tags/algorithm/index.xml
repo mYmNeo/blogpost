@@ -1,0 +1,1002 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>algorithm on Sparking Mind</title>
+    <link>http://mymneo.github.io/tags/algorithm/</link>
+    <description>Recent content in algorithm on Sparking Mind</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 19 Apr 2017 21:46:15 +0000</lastBuildDate>
+    
+	<atom:link href="http://mymneo.github.io/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Reverse Words in a String III</title>
+      <link>http://mymneo.github.io/posts/algorithm/reverse-words-in-a-string-iii/</link>
+      <pubDate>Wed, 19 Apr 2017 21:46:15 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/reverse-words-in-a-string-iii/</guid>
+      <description>Given a string, you need to reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.
+Example 1: Input: &amp;ldquo;Let&amp;rsquo;s take LeetCode contest&amp;rdquo; Output: &amp;ldquo;s&amp;rsquo;teL ekat edoCteeL tsetnoc&amp;rdquo; Note: In the string, each word is separated by single space and there will not be any extra space in the string.
+ Analysis: 找到一个单词的分界,然后翻转,repeat
+Time and space complexity: time: $\Theta (n)$</description>
+    </item>
+    
+    <item>
+      <title>Next Greater Element I</title>
+      <link>http://mymneo.github.io/posts/algorithm/next-greater-element-i/</link>
+      <pubDate>Wed, 19 Apr 2017 21:28:24 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/next-greater-element-i/</guid>
+      <description>First array, there is no next greater number for it in the second array, so output -1. Example 2: Input: nums1 = [2,4], nums2 = [1,2,3,4]. Output: [3,-1] Explanation: For number 2 in the first array, the next greater number for it in the second array is 3. For number 4 in the first array, there is no next greater number for it in the second array, so output -1.</description>
+    </item>
+    
+    <item>
+      <title>Max Consecutive Ones</title>
+      <link>http://mymneo.github.io/posts/algorithm/max-consecutive-ones/</link>
+      <pubDate>Wed, 19 Apr 2017 21:25:46 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/max-consecutive-ones/</guid>
+      <description>Given a binary array, find the maximum number of consecutive 1s in this array.
+Example 1: Input: [1,1,0,1,1,1] Output: 3 Explanation: The first two digits or the last three digits are consecutive 1s. The maximum number of consecutive 1s is 3. Note:
+The input array will only contain 0 and 1. The length of input array is a positive integer and will not exceed 10,000
+ Analysis: 简单的数组问题</description>
+    </item>
+    
+    <item>
+      <title>Fizz Buzz</title>
+      <link>http://mymneo.github.io/posts/algorithm/fizz-buzz/</link>
+      <pubDate>Wed, 19 Apr 2017 21:23:13 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/fizz-buzz/</guid>
+      <description>Write a program that outputs the string representation of numbers from 1 to n.
+But for multiples of three it should output “Fizz” instead of the number and for the multiples of five output “Buzz”. For numbers which are multiples of both three and five output “FizzBuzz”.
+Example:
+n = 15,
+Return: [ &amp;ldquo;1&amp;rdquo;, &amp;ldquo;2&amp;rdquo;, &amp;ldquo;Fizz&amp;rdquo;, &amp;ldquo;4&amp;rdquo;, &amp;ldquo;Buzz&amp;rdquo;, &amp;ldquo;Fizz&amp;rdquo;, &amp;ldquo;7&amp;rdquo;, &amp;ldquo;8&amp;rdquo;, &amp;ldquo;Fizz&amp;rdquo;, &amp;ldquo;Buzz&amp;rdquo;, &amp;ldquo;11&amp;rdquo;, &amp;ldquo;Fizz&amp;rdquo;, &amp;ldquo;13&amp;rdquo;, &amp;ldquo;14&amp;rdquo;, &amp;ldquo;FizzBuzz&amp;rdquo; ]</description>
+    </item>
+    
+    <item>
+      <title>Island Perimeter</title>
+      <link>http://mymneo.github.io/posts/algorithm/island-perimeter/</link>
+      <pubDate>Wed, 19 Apr 2017 21:16:37 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/island-perimeter/</guid>
+      <description>You are given a map in form of a two-dimensional integer grid where 1 represents land and 0 represents water. Grid cells are connected horizontally/vertically (not diagonally). The grid is completely surrounded by water, and there is exactly one island (i.e., one or more connected land cells). The island doesn&amp;rsquo;t have &amp;ldquo;lakes&amp;rdquo; (water inside that isn&amp;rsquo;t connected to the water around the island). One cell is a square with side length 1.</description>
+    </item>
+    
+    <item>
+      <title>Find All Numbers Disappeared in an Array</title>
+      <link>http://mymneo.github.io/posts/algorithm/find-all-numbers-disappeared-in-an-array/</link>
+      <pubDate>Wed, 19 Apr 2017 21:03:13 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/find-all-numbers-disappeared-in-an-array/</guid>
+      <description>Given an array of integers where 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others &amp;gt;appear once.
+Find all the elements of [1, n] inclusive that do not appear in this array.
+Could you do it without extra space and in O(n) runtime? You may assume the returned list does not count as extra space.
+Example:
+Input: [4,3,2,7,8,2,3,1]
+Output: [5,6]
+ Analysis: 一种方式像Union Find一样,每个元素是不是属于当前这个slot,如果不是就和该元素应该属于的位置交换,直到满足条件.</description>
+    </item>
+    
+    <item>
+      <title>Keyboard Row</title>
+      <link>http://mymneo.github.io/posts/algorithm/keyboard-row/</link>
+      <pubDate>Tue, 28 Mar 2017 07:49:38 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/keyboard-row/</guid>
+      <description>Given a List of words, return the words that can be typed using letters of alphabet on only one row&amp;rsquo;s of American keyboard like the image below.
+ Example 1:
+Input: [&amp;quot;Hello&amp;quot;, &amp;quot;Alaska&amp;quot;, &amp;quot;Dad&amp;quot;, &amp;quot;Peace&amp;quot;] Output: [&amp;quot;Alaska&amp;quot;, &amp;quot;Dad&amp;quot;]  Note:
+ You may use one character in the keyboard more than once. You may assume the input string will only contain letters of alphabet.  Analysis: 对每一行的字母编码,qwertyuiop编码001,asdfghjkl编码010,zxcvbnm编码100,遍历每个字串的每个字母,如果都是同一行的字母,那么所有的编码做与操作都是同一个编码,不然就会是0
+Time and space complexity: time: $\Theta (n*m) $</description>
+    </item>
+    
+    <item>
+      <title>Number Complement</title>
+      <link>http://mymneo.github.io/posts/algorithm/number-complement/</link>
+      <pubDate>Tue, 28 Mar 2017 07:49:28 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/number-complement/</guid>
+      <description>Given a positive integer, output its complement number. The complement strategy is to flip the bits of its binary representation.
+Note:
+The given integer is guaranteed to fit within the range of a 32-bit signed integer. You could assume no leading zero bit in the integer’s binary representation.
+ Exammple: Input: 5 Output: 2 Explanation: The binary representation of 5 is 101 (no leading zero bits), and its complement is 010.</description>
+    </item>
+    
+    <item>
+      <title>Hamming Distance</title>
+      <link>http://mymneo.github.io/posts/algorithm/hamming-distance/</link>
+      <pubDate>Tue, 28 Mar 2017 07:49:14 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/hamming-distance/</guid>
+      <description>  The Hamming distance between two integers is the number of positions at which the corresponding bits are different.
+Given two integers x and y, calculate the Hamming distance.
+ Note: $ 0 &amp;lt;= x, y &amp;lt; 2^{31} $
+Analysis: divide and conquer, 先1位计算,再2位计算,一直到16位
+Time and space complexity: time: $\Theta (1) $
+space: $\Theta (1) $
+Code: classSolution { public: int hammingDistance(int x, int y) { return pop(x ^ y); } int pop(int x) { x = ((x &amp;gt;&amp;gt; 1) &amp;amp; 0x55555555) + (x &amp;amp; 0x55555555); x = ((x &amp;gt;&amp;gt; 2) &amp;amp; 0x33333333) + (x &amp;amp; 0x33333333); x = ((x &amp;gt;&amp;gt; 4) &amp;amp; 0x0f0f0f0f) + (x &amp;amp; 0x0f0f0f0f); x = ((x &amp;gt;&amp;gt; 8) &amp;amp; 0x00ff00ff) + (x &amp;amp; 0x00ff00ff); x = ((x &amp;gt;&amp;gt; 16) &amp;amp; 0x0000ffff) + (x &amp;amp; 0x0000ffff); return x; } }; </description>
+    </item>
+    
+    <item>
+      <title>Reverse Bits</title>
+      <link>http://mymneo.github.io/posts/algorithm/reverse-bits/</link>
+      <pubDate>Mon, 09 May 2016 17:29:32 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/reverse-bits/</guid>
+      <description>  Reverse bits of a given 32 bits unsigned integer.
+For example, given input 43261596 (represented in binary as 00000010100101000001111010011100), return 964176192 (represented in binary as 00111001011110000010100101000000).
+Follow up:
+If this function is called many times, how would you optimize it?
+ Analysis: 与counting bit类似,divide and conquer,先2位2位swap,然后4位4位swap
+Time and space complexity: time: $\Theta (1)$
+space: $\Theta (1)$
+Code: classSolution { public: uint32_t reverseBits(uint32_t n) { n = (n &amp;gt;&amp;gt; 16) | (n &amp;lt;&amp;lt; 16); n = ((n &amp;amp; 0xff00ff00) &amp;gt;&amp;gt; 8) | ((n &amp;amp; 0x00ff00ff) &amp;lt;&amp;lt; 8); n = ((n &amp;amp; 0xf0f0f0f0) &amp;gt;&amp;gt; 4) | ((n &amp;amp; 0x0f0f0f0f) &amp;lt;&amp;lt; 4); n = ((n &amp;amp; 0xcccccccc) &amp;gt;&amp;gt; 2) | ((n &amp;amp; 0x33333333) &amp;lt;&amp;lt; 2); n = ((n &amp;amp; 0xaaaaaaaa) &amp;gt;&amp;gt; 1) | ((n &amp;amp; 0x55555555) &amp;lt;&amp;lt; 1); return n; } }; </description>
+    </item>
+    
+    <item>
+      <title>Read N Characters Given Read4</title>
+      <link>http://mymneo.github.io/posts/algorithm/read-n-characters-given-read4/</link>
+      <pubDate>Mon, 09 May 2016 17:24:29 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/read-n-characters-given-read4/</guid>
+      <description>The API: int read4(char *buf) reads 4 characters at a time from a file.
+The return value is the actual number of characters read. For example, it returns 3 if there is only 3 characters left in the file.
+By using the read4 API, implement the function int read(char *buf, int n) that reads n characters from the file.
+Note: The read function will only be called once for each test case.</description>
+    </item>
+    
+    <item>
+      <title>Valid Parentheses</title>
+      <link>http://mymneo.github.io/posts/algorithm/valid-parentheses/</link>
+      <pubDate>Mon, 09 May 2016 17:22:01 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/valid-parentheses/</guid>
+      <description>Given a string containing just the characters &#39;(&#39;, &#39;)&#39;, &#39;{&#39;, &#39;}&#39;, &#39;[&#39; and &#39;]&#39;, determine if the input string is valid.
+The brackets must close in the correct order, &amp;quot;()&amp;quot; and &amp;quot;()[]{}&amp;quot; are all valid but &amp;quot;(]&amp;quot; and &amp;quot;([)]&amp;quot; are not.
+ Analysis: 经典的用stack解决的问题
+Time and space complexity: time: $\Theta (n)$
+space: $\Theta (n)$
+Code: classSolution { public: bool isValid(string s) { unordered_map&amp;lt;char, char&amp;gt; table { {&amp;#39;(&amp;#39;, &amp;#39;)&amp;#39;}, {&amp;#39;[&amp;#39;, &amp;#39;]&amp;#39;}, {&amp;#39;{&amp;#39;, &amp;#39;}&amp;#39;}, }; stack&amp;lt;char&amp;gt; frame; for (char&amp;amp; c : s) { switch(c) { case &amp;#39;(&amp;#39;: case &amp;#39;[&amp;#39;: case &amp;#39;{&amp;#39;: { frame.</description>
+    </item>
+    
+    <item>
+      <title>Remove Nth Node From End of List</title>
+      <link>http://mymneo.github.io/posts/algorithm/remove-nth-node-from-end-of-list/</link>
+      <pubDate>Mon, 09 May 2016 16:56:47 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/remove-nth-node-from-end-of-list/</guid>
+      <description>Given a linked list, remove the nth node from the end of list and return its head.
+For example,
+Given linked list: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5, and n = 2.
+After removing the second node from the end, the linked list becomes 1-&amp;gt;2-&amp;gt;3-&amp;gt;5.
+Note:
+Given n will always be valid. Try to do this in one pass.
+ Analysis: 双指针,类似n大小滑动窗口
+Time and space complexity: time: $\Theta (n)$
+Code: classSolution { public: ListNode *removeNthFromEnd(ListNode *head, int n) { ListNode **t1 = &amp;amp;head, *t2 = head; for (int i = 1; i &amp;lt; n; ++i) { t2 = t2-&amp;gt;next; } while (t2-&amp;gt;next !</description>
+    </item>
+    
+    <item>
+      <title>Isomorphic Strings</title>
+      <link>http://mymneo.github.io/posts/algorithm/isomorphic-strings/</link>
+      <pubDate>Mon, 09 May 2016 16:52:48 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/isomorphic-strings/</guid>
+      <description>Given two strings s and t, determine if they are isomorphic.
+Two strings are isomorphic if the characters in s can be replaced to get t.
+All occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character but a character may map to itself.
+For example,
+Given &amp;quot;egg&amp;quot;, &amp;quot;add&amp;quot;, return true.
+Given &amp;quot;foo&amp;quot;, &amp;quot;bar&amp;quot;, return false.</description>
+    </item>
+    
+    <item>
+      <title>Bulls and Cows</title>
+      <link>http://mymneo.github.io/posts/algorithm/bulls-and-cows/</link>
+      <pubDate>Mon, 09 May 2016 16:39:07 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/bulls-and-cows/</guid>
+      <description>You are playing the following Bulls and Cows game with your friend: You write down a number and ask your friend to guess what the number is. Each time your friend makes a guess, you provide a hint that indicates how many digits in said guess match your secret number exactly in both digit and position (called &amp;ldquo;bulls&amp;rdquo;) and how many digits match the secret number but locate in the wrong position (called &amp;ldquo;cows&amp;rdquo;).</description>
+    </item>
+    
+    <item>
+      <title>Rectangle Area</title>
+      <link>http://mymneo.github.io/posts/algorithm/rectangle-area/</link>
+      <pubDate>Mon, 09 May 2016 16:33:16 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/rectangle-area/</guid>
+      <description>  Find the total area covered by two rectilinear rectangles in a 2D plane.
+Each rectangle is defined by its bottom left corner and top right corner as shown in the figure.
+Assume that the total area is never beyond the maximum possible value of int.
+ Analysis: 分cross和non-cross2种情况
+Time and space complexity: Code: classSolution { public: int computeArea(int A, int B, int C, int D, int E, int F, int G, int H) { int w1 = abs(A - C); int h1 = abs(B - D); int w2 = abs(E - G); int h2 = abs(H - F); int w3 = abs(min(A, E) - max(C, G)); int h3 = abs(min(B, F) - max(D, H)); // cross  if (w1 + w2 &amp;gt;= w3 &amp;amp;&amp;amp; h1 + h2 &amp;gt;= h3) { return (w1 * h1 + w2 * h2) - (w1 + w2 - w3) * (h1 + h2 - h3); } return w1 * h1 + w2 * h2; } }; </description>
+    </item>
+    
+    <item>
+      <title>Contains Duplicate II</title>
+      <link>http://mymneo.github.io/posts/algorithm/contains-duplicate-ii/</link>
+      <pubDate>Mon, 09 May 2016 16:18:46 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/contains-duplicate-ii/</guid>
+      <description>  Given an array of integers and an integer k, find out whether there are two distinct indices i and j in the array such that nums[i] = nums[j] and the difference between i and j is at most k.
+ Analysis: 长度为k的滑动窗口,用map来记录数字出现的次数
+Time and space complexity: time: $\Theta (n)$
+space: $\Theta (n)$
+Code: classSolution { public: bool containsNearbyDuplicate(vector&amp;lt;int&amp;gt;&amp;amp; nums, int k) { int size = nums.size(); unordered_map&amp;lt;int, int&amp;gt; record; for (int i = 0; i &amp;lt; size; ++i) { if (i &amp;gt; k) { --record[nums[i - k - 1]]; } ++record[nums[i]]; if (record[nums[i]] &amp;gt; 1) { return true; } } return false; } }; </description>
+    </item>
+    
+    <item>
+      <title>Merge Sorted Array</title>
+      <link>http://mymneo.github.io/posts/algorithm/merge-sorted-array/</link>
+      <pubDate>Mon, 09 May 2016 16:15:09 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/merge-sorted-array/</guid>
+      <description>  Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
+Note: You may assume that nums1 has enough space (size that is greater or equal to m + n) to hold additional elements from nums2. The number of elements initialized in nums1 and nums2 are m and n respectively.
+ Analysis: 题目的意思是不要用额外空间,为了避免overwrite原始数据,从m+n的位置开始写,逆序遍历2个array,选择最大的那个填到对应的位置
+Time and space complexity: time: $\Theta (m+n)$
+Code: classSolution { public: void merge(vector&amp;lt;int&amp;gt;&amp;amp; nums1, int m, vector&amp;lt;int&amp;gt;&amp;amp; nums2, int n) { int size = m + n; int i, j; for (i = m - 1, j = n - 1; i &amp;gt;= 0 &amp;amp;&amp;amp; j &amp;gt;= 0; ) { if (nums1[i] &amp;gt; nums2[j]) { nums1[--size] = nums1[i]; --i; } else { nums1[--size] = nums2[j]; --j; } } while (i &amp;gt;= 0) { nums1[--size] = nums1[i--]; } while (j &amp;gt;= 0) { nums1[--size] = nums2[j--]; } } }; </description>
+    </item>
+    
+    <item>
+      <title>Intersection of Two Linked Lists</title>
+      <link>http://mymneo.github.io/posts/algorithm/intersection-of-two-linked-lists/</link>
+      <pubDate>Mon, 09 May 2016 15:49:26 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/intersection-of-two-linked-lists/</guid>
+      <description>Write a program to find the node at which the intersection of two singly linked lists begins.
+For example, the following two linked lists:
+A: a1 → a2 ↘ c1 → c2 → c3 ↗ B: b1 → b2 → b3  begin to intersect at node c1.
+Notes:
+ If the two linked lists have no intersection at all, return null. The linked lists must retain their original structure after the function returns.</description>
+    </item>
+    
+    <item>
+      <title>Implement Stack using Queues</title>
+      <link>http://mymneo.github.io/posts/algorithm/implement-stack-using-queues/</link>
+      <pubDate>Mon, 09 May 2016 15:41:43 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/implement-stack-using-queues/</guid>
+      <description>Implement the following operations of a stack using queues.
+ push(x) &amp;ndash; Push element x onto stack. pop() &amp;ndash; Removes the element on top of the stack. top() &amp;ndash; Get the top element. empty() &amp;ndash; Return whether the stack is empty.  Notes:
+ You must use only standard operations of a queue &amp;ndash; which means only push to back, peek/pop from front, size, and is empty operations are valid.</description>
+    </item>
+    
+    <item>
+      <title>Valid Sudoku</title>
+      <link>http://mymneo.github.io/posts/algorithm/valid-sudoku/</link>
+      <pubDate>Mon, 09 May 2016 15:33:37 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/valid-sudoku/</guid>
+      <description>Determine if a Sudoku is valid, according to: Sudoku Puzzles - The Rules.
+The Sudoku board could be partially filled, where empty cells are filled with the character &amp;lsquo;.&amp;rsquo;.
+A partially filled sudoku which is valid.
+Note:
+A valid Sudoku board (partially filled) is not necessarily solvable. Only the filled cells need to be validated.
+ Analysis: Sudoku的要求,每个格子只能有1-9且只能出现一次
+Time and space complexity: Code: classSolution { public: bool isValidSudoku(vector&amp;lt;vector&amp;lt;char&amp;gt;&amp;gt;&amp;amp; board) { unordered_map&amp;lt;char, int&amp;gt; record; //row  for (int i = 0; i &amp;lt; 9; ++i) { record.</description>
+    </item>
+    
+    <item>
+      <title>Minimum Depth of Binary Tree</title>
+      <link>http://mymneo.github.io/posts/algorithm/minimum-depth-of-binary-tree/</link>
+      <pubDate>Mon, 09 May 2016 15:30:57 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/minimum-depth-of-binary-tree/</guid>
+      <description>  Given a binary tree, find its minimum depth.
+The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
+ Analysis: DFS或者BFS遍历
+Time and space complexity: time: $\Theta (n)$
+Code: classSolution { public: int minDepth(TreeNode *root) { if(!root) return 0; if(!root-&amp;gt;left) return 1 + minDepth(root-&amp;gt;right); if(!root-&amp;gt;right) return 1 + minDepth(root-&amp;gt;left); return 1 + min(minDepth(root-&amp;gt;left), minDepth(root-&amp;gt;right)); } }; </description>
+    </item>
+    
+    <item>
+      <title>Paint Fence</title>
+      <link>http://mymneo.github.io/posts/algorithm/paint-fence/</link>
+      <pubDate>Mon, 09 May 2016 15:15:11 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/paint-fence/</guid>
+      <description>There is a fence with n posts, each post can be painted with one of the k colors.
+You have to paint all the posts such that no more than two adjacent fence posts have the same color.
+Return the total number of ways you can paint the fence.
+Note:
+n and k are non-negative integers.
+ Analysis: 分2种情况考虑: + 最后2个fences的color一样,这样就有(k-1)*f(n-2) + 最后2个fences的color不一样,这样就有(k-1)*f(n-1)
+Time and space complexity: time: $\Theta (n)$</description>
+    </item>
+    
+    <item>
+      <title>Path Sum</title>
+      <link>http://mymneo.github.io/posts/algorithm/path-sum/</link>
+      <pubDate>Mon, 09 May 2016 14:54:12 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/path-sum/</guid>
+      <description>Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.
+For example:
+Given the below binary tree and sum = 22,
+ 5 / \ 4 8 / / \ 11 13 4 / \ \ 7 2 1  return true, as there exist a root-to-leaf path 5-&amp;gt;4-&amp;gt;11-&amp;gt;2 which sum is 22.</description>
+    </item>
+    
+    <item>
+      <title>Group Shifted Strings</title>
+      <link>http://mymneo.github.io/posts/algorithm/group-shifted-strings/</link>
+      <pubDate>Mon, 09 May 2016 14:42:22 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/group-shifted-strings/</guid>
+      <description>Given a string, we can &amp;ldquo;shift&amp;rdquo; each of its letter to its successive letter, for example: &amp;quot;abc&amp;quot; -&amp;gt; &amp;quot;bcd&amp;quot;. We can keep &amp;ldquo;shifting&amp;rdquo; which forms the sequence:
+&amp;quot;abc&amp;quot; -&amp;gt; &amp;quot;bcd&amp;quot; -&amp;gt; ... -&amp;gt; &amp;quot;xyz&amp;quot;  Given a list of strings which contains only lowercase alphabets, group all strings that belong to the same shifting sequence.
+For example, given: [&amp;quot;abc&amp;quot;, &amp;quot;bcd&amp;quot;, &amp;quot;acef&amp;quot;, &amp;quot;xyz&amp;quot;, &amp;quot;az&amp;quot;, &amp;quot;ba&amp;quot;, &amp;quot;a&amp;quot;, &amp;quot;z&amp;quot;], Return:
+[ [&amp;quot;abc&amp;quot;,&amp;quot;bcd&amp;quot;,&amp;quot;xyz&amp;quot;], [&amp;quot;az&amp;quot;,&amp;quot;ba&amp;quot;], [&amp;quot;acef&amp;quot;], [&amp;quot;a&amp;quot;,&amp;quot;z&amp;quot;] ]  Note: For the return value, each inner list&amp;rsquo;s elements must follow the lexicographic order.</description>
+    </item>
+    
+    <item>
+      <title>Palindrome Number</title>
+      <link>http://mymneo.github.io/posts/algorithm/palindrome-number/</link>
+      <pubDate>Mon, 09 May 2016 14:32:58 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/palindrome-number/</guid>
+      <description>  Determine whether an integer is a palindrome. Do this without extra space.
+ Analysis: 利用回文数的特点:逆序还是原来的数解决,注意溢出问题,为了防止溢出,只需要算一半的数字即可
+Time and space complexity: space: $\Theta (1)$
+Code: classSolution { public: bool isPalindrome(int x) { if (x&amp;lt;0 || (x!=0 &amp;amp;&amp;amp; x%10==0)) return false; int rev = 0; while (x&amp;gt;rev){ rev = rev*10 + x%10; x = x/10; } return (x==rev || x==rev/10); }; </description>
+    </item>
+    
+    <item>
+      <title>Pascal&#39;s Triangle II</title>
+      <link>http://mymneo.github.io/posts/algorithm/pascal-s-triangle-ii/</link>
+      <pubDate>Sun, 08 May 2016 11:29:35 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/pascal-s-triangle-ii/</guid>
+      <description>  Given an index k, return the kth row of the Pascal&amp;rsquo;s triangle.
+For example, given k = 3, Return [1,3,3,1].
+Note:
+Could you optimize your algorithm to use only O(k) extra space?
+ Analysis: 思路和pascal&amp;rsquo;s triangle一样
+Time and space complexity: time: $\Theta (k^2)$
+space: $\Theta (k)$
+Code: classSolution { public: vector&amp;lt;int&amp;gt; getRow(int rowIndex) { vector&amp;lt;int&amp;gt; A(rowIndex+1, 0); A[0] = 1; for(int i=1; i&amp;lt;rowIndex+1; i++) for(int j=i; j&amp;gt;=1; j--) A[j] += A[j-1]; return A; } }; </description>
+    </item>
+    
+    <item>
+      <title>Binary Tree Level Order Traversal</title>
+      <link>http://mymneo.github.io/posts/algorithm/binary-tree-level-order-traversal/</link>
+      <pubDate>Sun, 08 May 2016 11:24:07 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/binary-tree-level-order-traversal/</guid>
+      <description>Given a binary tree, return the level order traversal of its nodes&amp;rsquo; values. (ie, from left to right, level by level).
+For example:
+Given binary tree {3,9,20,#,#,15,7},
+ 3 / \ 9 20 / \ 15 7  return its level order traversal as:
+[ [3], [9,20], [15,7] ]   Analysis: level遍历
+Time and space complexity: time: $\Theta (n)$
+Code: classSolution { public: vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; levelOrderBottom(TreeNode* root) { DFS(root, 0); return res; } private: void DFS(TreeNode* root, int level) { if (root == NULL) return; if (level == res.</description>
+    </item>
+    
+    <item>
+      <title>Factorial Trailing Zeroes</title>
+      <link>http://mymneo.github.io/posts/algorithm/factorial-trailing-zeroes/</link>
+      <pubDate>Sat, 07 May 2016 10:28:21 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/factorial-trailing-zeroes/</guid>
+      <description>  Given an integer n, return the number of trailing zeroes in n!.
+Note: Your solution should be in logarithmic time complexity.
+ Analysis: 因为2比较多,0的个数由5的个数决定,需要注意的是5的power的数字,会包含5的个数更多,不停的除以5,并把商加起来为0的个数
+Time and space complexity: time: $\Theta(log_5(n))$
+Code: classSolution { public: int trailingZeroes(int n) { int result = 0; while (n) { n /= 5; result += n; } return result; } }; </description>
+    </item>
+    
+    <item>
+      <title>Pascal&#39;s Triangle</title>
+      <link>http://mymneo.github.io/posts/algorithm/pascal-s-triangle/</link>
+      <pubDate>Sat, 07 May 2016 10:21:22 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/pascal-s-triangle/</guid>
+      <description>  Given numRows, generate the first numRows of Pascal&amp;rsquo;s triangle.
+For example, given numRows = 5,
+Return
+[ [1], [1,1], [1,2,1], [1,3,3,1], [1,4,6,4,1] ]   Analysis: 类似dp, 对于每一个新行,现push 1,然后根据上一行从第二个元素开始,把上一行的当前位置的元素和它前面的元素加一起,为这个新行该位置的值
+Time and space complexity: Code: classSolution { public: vector&amp;lt;vector&amp;lt;int&amp;gt; &amp;gt; generate(int numRows) { vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; r(numRows); for (int i = 0; i &amp;lt; numRows; i++) { r[i].resize(i + 1); r[i][0] = r[i][i] = 1; for (int j = 1; j &amp;lt; i; j++) r[i][j] = r[i - 1][j - 1] + r[i - 1][j]; } return r; } }; </description>
+    </item>
+    
+    <item>
+      <title>Remove Duplicates from Sorted Array</title>
+      <link>http://mymneo.github.io/posts/algorithm/remove-duplicates-from-sorted-array/</link>
+      <pubDate>Sat, 07 May 2016 10:18:30 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/remove-duplicates-from-sorted-array/</guid>
+      <description>Given a sorted array, remove the duplicates in place such that each element appear only once and return the new length.
+Do not allocate extra space for another array, you must do this in place with constant memory.
+For example,
+Given input array nums = [1,1,2],
+Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively. It doesn&amp;rsquo;t matter what you leave beyond the new length.</description>
+    </item>
+    
+    <item>
+      <title>Power of Four</title>
+      <link>http://mymneo.github.io/posts/algorithm/power-of-four/</link>
+      <pubDate>Sat, 07 May 2016 10:09:52 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/power-of-four/</guid>
+      <description>Given an integer (signed 32 bits), write a function to check whether it is a power of 4.
+Example:
+Given num = 16, return true. Given num = 5, return false.
+Follow up:
+Could you solve it without loops/recursion?
+ Analysis: power of 4一定是power of 2,所以先用power of 2 的验证方法来验证,然后处理特例的情况,例如
+2 -&amp;gt; 10 # 10 &amp;amp; 01 = 0 8 -&amp;gt; 1000 # 1000 &amp;amp; 0101 = 0 32 -&amp;gt; 100000 # 100000 &amp;amp; 010101 = 0  是power of 2的数字再与0x55555555作and,如果不为0,就是power of 4</description>
+    </item>
+    
+    <item>
+      <title>Plus One</title>
+      <link>http://mymneo.github.io/posts/algorithm/plus-one/</link>
+      <pubDate>Sat, 07 May 2016 10:01:54 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/plus-one/</guid>
+      <description>Given a non-negative number represented as an array of digits, plus one to the number.
+The digits are stored such that the most significant digit is at the head of the list.
+ Analysis: 逆向遍历,如果当前数字是9,那么变为0,如果不是9就把该数字+1,如果全是9的话,需要把第一位变成1,然后多加一个0
+Time and space complexity: time: $\Theta (n)$
+Code: classSolution { public: vector&amp;lt;int&amp;gt; plusOne(vector&amp;lt;int&amp;gt;&amp;amp; digits) { int n = digits.size(); for (int i = n - 1; i &amp;gt;= 0; --i) { if (digits[i] == 9) { digits[i] = 0; } else { digits[i]++; return; } } digits[0] =1; digits.</description>
+    </item>
+    
+    <item>
+      <title>Remove Element</title>
+      <link>http://mymneo.github.io/posts/algorithm/remove-element/</link>
+      <pubDate>Sat, 07 May 2016 09:59:49 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/remove-element/</guid>
+      <description>Given an array and a value, remove all instances of that value in place and return the new length.
+Do not allocate extra space for another array, you must do this in place with constant memory.
+The order of elements can be changed. It doesn&amp;rsquo;t matter what you leave beyond the new length.
+Example:
+Given input array nums = [3,2,2,3], val = 3
+Your function should return length = 2, with the first two elements of nums being 2.</description>
+    </item>
+    
+    <item>
+      <title>Binary Tree Level Order Traversal II</title>
+      <link>http://mymneo.github.io/posts/algorithm/binary-tree-level-order-traversal-ii/</link>
+      <pubDate>Sat, 07 May 2016 09:51:29 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/binary-tree-level-order-traversal-ii/</guid>
+      <description>Given a binary tree, return the bottom-up level order traversal of its nodes&amp;rsquo; values. (ie, from left to &amp;gt;right, level by level from leaf to root).
+For example:
+Given binary tree {3,9,20,#,#,15,7},
+ 3 / \ 9 20 / \ 15 7  return its bottom-up level order traversal as:
+[ [15,7], [9,20], [3] ]   Analysis: level遍历,最后reverse
+Time and space complexity: time: $\Theta (n)$
+Code: classSolution { public: vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; levelOrderBottom(TreeNode* root) { DFS(root, 0); return vector&amp;lt;vector&amp;lt;int&amp;gt; &amp;gt; (res.</description>
+    </item>
+    
+    <item>
+      <title>Implement Queue using Stacks</title>
+      <link>http://mymneo.github.io/posts/algorithm/implement-queue-using-stacks/</link>
+      <pubDate>Sat, 07 May 2016 09:39:54 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/implement-queue-using-stacks/</guid>
+      <description>Implement the following operations of a queue using stacks.
+ push(x) &amp;ndash; Push element x to the back of queue. pop() &amp;ndash; Removes the element from in front of queue. peek() &amp;ndash; Get the front element. empty() &amp;ndash; Return whether the queue is empty.  Notes: + You must use only standard operations of a stack &amp;ndash; which means only push to top, peek/pop from top, size, and is empty operations are valid.</description>
+    </item>
+    
+    <item>
+      <title>Symmetric Tree</title>
+      <link>http://mymneo.github.io/posts/algorithm/symmetric-tree/</link>
+      <pubDate>Fri, 06 May 2016 17:01:29 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/symmetric-tree/</guid>
+      <description>Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).
+For example, this binary tree is symmetric:
+ 1 / \ 2 2 / \ / \ 3 4 4 3  But the following is not:
+ 1 / \ 2 2 \ \ 3 3  Note: Bonus points if you could solve it both recursively and iteratively.
+ Analysis: 根据example,可以看出对称的位置是left-&amp;gt;left和right-&amp;gt;right,left-&amp;gt;right和right-&amp;gt;left,递归调用,检测每个子树是否为对称.</description>
+    </item>
+    
+    <item>
+      <title>Balanced Binary Tree</title>
+      <link>http://mymneo.github.io/posts/algorithm/balanced-binary-tree/</link>
+      <pubDate>Fri, 06 May 2016 16:49:15 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/balanced-binary-tree/</guid>
+      <description>Given a binary tree, determine if it is height-balanced.
+For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two &amp;gt;subtrees of every node never differ by more than 1.
+ Analysis: DFS遍历树,给每个节点一个depth值,检查左右子树的的depth值是否相差为1
+Time and space complexity: time: $\Theta (n)$
+Code: classSolution { public: bool isBalanced(TreeNode* root) { bool result = true; Depth(root, result); return result; } private: int Depth(TreeNode* node, bool&amp;amp; result) { if (!</description>
+    </item>
+    
+    <item>
+      <title>House Robber</title>
+      <link>http://mymneo.github.io/posts/algorithm/house-robber/</link>
+      <pubDate>Fri, 06 May 2016 16:38:48 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/house-robber/</guid>
+      <description>You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security system connected and it will automatically contact the police if two adjacent houses were broken into on the same night.
+Given a list of non-negative integers representing the amount of money of each house, determine the maximum amount of money you can rob tonight without alerting the police.</description>
+    </item>
+    
+    <item>
+      <title>Closest Binary Search Tree Value</title>
+      <link>http://mymneo.github.io/posts/algorithm/closest-binary-search-tree-value/</link>
+      <pubDate>Fri, 06 May 2016 16:26:45 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/closest-binary-search-tree-value/</guid>
+      <description>Given a non-empty binary search tree and a target value, find the value in the BST that is closest to the target.
+Note: Given target value is a floating point. You are guaranteed to have only one unique value in the BST that is closest to the target.
+ Analysis: 先判断target的值是在哪个分支,然后再用该分支的值与当前的root的值相比,看哪个值更接近target
+Time and space complexity: time: $\Theta (log (n))$
+Code: classSolution { public: int closestValue(TreeNode* root, double target) { int cur = root-&amp;gt;val; TreeNode* branch = target &amp;lt; cur ?</description>
+    </item>
+    
+    <item>
+      <title>Reverse Vowels of a String</title>
+      <link>http://mymneo.github.io/posts/algorithm/reverse-vowels-of-a-string/</link>
+      <pubDate>Thu, 05 May 2016 17:12:17 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/reverse-vowels-of-a-string/</guid>
+      <description>Write a function that takes a string as input and reverse only the vowels of a string.
+Example 1:
+Given s = &amp;ldquo;hello&amp;rdquo;, return &amp;ldquo;holle&amp;rdquo;.
+Example 2:
+Given s = &amp;ldquo;leetcode&amp;rdquo;, return &amp;ldquo;leotcede&amp;rdquo;.
+ Analysis: 跟reverse string一样,只不过需要找到vowel字母后再swap
+Time and space complexity: time: $\Theta (n)$
+space: $\Theta (1)$
+Code: classSolution { public: string reverseVowels(string s) { int i = 0, j = (int)s.length() - 1; while (i &amp;lt; j) { while (i &amp;lt; (int)s.</description>
+    </item>
+    
+    <item>
+      <title>Swap Nodes in Pairs</title>
+      <link>http://mymneo.github.io/posts/algorithm/swap-nodes-in-pairs/</link>
+      <pubDate>Thu, 05 May 2016 17:07:39 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/swap-nodes-in-pairs/</guid>
+      <description>  Given a linked list, swap every two adjacent nodes and return its head.
+For example, Given 1-&amp;gt;2-&amp;gt;3-&amp;gt;4, you should return the list as 2-&amp;gt;1-&amp;gt;4-&amp;gt;3.
+Your algorithm should use only constant space. You may not modify the values in the list, only nodes itself can be changed.
+ Analysis: 利用二级指针,先swap node,然后更改指针指向的内存位置,跳到下一个位置继续
+Time and space complexity: time: $\Theta (n)$
+space: $\Theta (1)$
+Code: classSolution { public: ListNode* swapPairs(ListNode* head) { ListNode** pp = &amp;amp;head, *a, *b; while ((a = *pp) &amp;amp;&amp;amp; (b = a-&amp;gt;next)) { a-&amp;gt;next = b-&amp;gt;next; b-&amp;gt;next = a; *pp = b; pp = &amp;amp;(a-&amp;gt;next); } return head; } }; </description>
+    </item>
+    
+    <item>
+      <title>Merge Two Sorted Lists</title>
+      <link>http://mymneo.github.io/posts/algorithm/merge-two-sorted-lists/</link>
+      <pubDate>Thu, 05 May 2016 17:06:13 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/merge-two-sorted-lists/</guid>
+      <description>Merge Two Sorted Lists
+ Analysis: 就是简单的merge
+Time and space complexity: time: $\Theta (n)$
+space: $\Theta (1)$
+Code: classSolution { public: ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) { ListNode head(0); ListNode* pos = &amp;amp;head; while (l1 &amp;amp;&amp;amp; l2) { if (l1-&amp;gt;val &amp;lt; l2-&amp;gt;val) { pos-&amp;gt;next = l1; l1 = l1-&amp;gt;next; } else { pos-&amp;gt;next = l2; l2 = l2-&amp;gt;next; } pos = pos-&amp;gt;next; } pos-&amp;gt;next = l1 ? l1 : l2; return head.</description>
+    </item>
+    
+    <item>
+      <title>Best Time to Buy and Sell Stock</title>
+      <link>http://mymneo.github.io/posts/algorithm/best-time-to-buy-and-sell-stock/</link>
+      <pubDate>Thu, 05 May 2016 16:43:27 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/best-time-to-buy-and-sell-stock/</guid>
+      <description>Say you have an array for which the ith element is the price of a given stock on day i.
+If you were only permitted to complete at most one transaction (ie, buy one and sell one share of the stock), design an algorithm to find the maximum profit.
+ Analysis: 遍历数组,记录到当前节点的最大值和最小值,当最小值变化后,同时更新最大值和最小值,因为前面的最大值和最小值在后面是用不到的
+Time and space complexity: time: $\Theta (n)$
+space: $\Theta (1)$
+Code: classSolution { public: int maxProfit(vector&amp;lt;int&amp;gt;&amp;amp; prices) { if (prices.</description>
+    </item>
+    
+    <item>
+      <title>Strobogrammatic Number</title>
+      <link>http://mymneo.github.io/posts/algorithm/strobogrammatic-number/</link>
+      <pubDate>Thu, 05 May 2016 16:36:13 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/strobogrammatic-number/</guid>
+      <description>A strobogrammatic number is a number that looks the same when rotated 180 degrees (looked at upside down).
+Write a function to determine if a number is strobogrammatic. The number is represented as a string.
+For example, the numbers &amp;ldquo;69&amp;rdquo;, &amp;ldquo;88&amp;rdquo;, and &amp;ldquo;818&amp;rdquo; are all strobogrammatic.
+ Analysis: 和判断palindrome string一个思路,双指针
+Time and space complexity: time: $\Theta (n)$
+space: $\Theta (1)$
+Code: classSolution { public: bool isStrobogrammatic(string num) { set&amp;lt;pair&amp;lt;char, char&amp;gt;&amp;gt; lookup; lookup.</description>
+    </item>
+    
+    <item>
+      <title>Ugly Number</title>
+      <link>http://mymneo.github.io/posts/algorithm/ugly-number/</link>
+      <pubDate>Thu, 05 May 2016 16:28:59 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/ugly-number/</guid>
+      <description>Write a program to check whether a given number is an ugly number.
+Ugly numbers are positive numbers whose prime factors only include 2, 3, 5. For example, 6, 8 are ugly while 14 is not ugly since it includes another prime factor 7.
+Note that 1 is typically treated as an ugly number.
+ Analysis: 对given number分别对2,3,5做module运算,如果有其中任何情况不为0,那么不是ugly number
+Time and space complexity: time: $\Theta (a+b+c), number = 2^a3^b5^c$</description>
+    </item>
+    
+    <item>
+      <title>Happy Number</title>
+      <link>http://mymneo.github.io/posts/algorithm/happy-number/</link>
+      <pubDate>Thu, 05 May 2016 15:59:11 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/happy-number/</guid>
+      <description>Write an algorithm to determine if a number is &amp;ldquo;happy&amp;rdquo;.
+A happy number is a number defined by the following process: Starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1. Those numbers for which this process ends in 1 are happy numbers.</description>
+    </item>
+    
+    <item>
+      <title>Power of Two</title>
+      <link>http://mymneo.github.io/posts/algorithm/power-of-two/</link>
+      <pubDate>Thu, 05 May 2016 15:18:01 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/power-of-two/</guid>
+      <description>  Given an integer, write a function to determine if it is a power of two.
+ Analysis: 快速的判断一个数是不是power of two, n &amp;amp; (n - 1) == 0
+example:
+8 -&amp;gt; 1000 7 -&amp;gt; 0111 8 &amp;amp; 7 = 0  8是power of two
+或者数1的个数,只有1个1的数就是power of two
+Time and space complexity: time: $\Theta (1) $
+space:
+Code: classSolution { public: bool isPowerOfTwo(int n) { return n &amp;gt; 0 &amp;amp;&amp;amp; (n &amp;amp; (n - 1)) == 0; } }; </description>
+    </item>
+    
+    <item>
+      <title>Power of Three</title>
+      <link>http://mymneo.github.io/posts/algorithm/power-of-three/</link>
+      <pubDate>Thu, 05 May 2016 11:28:06 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/power-of-three/</guid>
+      <description>  Given an integer, write a function to determine if it is a power of three.
+Follow up:
+Could you do it without using any loop / recursion?
+ Analysis: 不停的除以3直到数字变为1,并检查每次的结果module 3后是否为0
+follow up: 用INT_MAX范围内最大的power of three来module被检查的数字,如果为0,则这个数字是power of three
+Time and space complexity: time: $\Theta (n)$, n为$\log_3 x{% endmath %}
+space: $\Theta (1)$
+Code: classSolution { public: bool isPowerOfThree(int n) { while (n &amp;gt; 0) { if (n % 3 == 0) { n /= 3; continue; } break; } return n == 1; } }; </description>
+    </item>
+    
+    <item>
+      <title>Climbing Stairs</title>
+      <link>http://mymneo.github.io/posts/algorithm/climbing-stairs/</link>
+      <pubDate>Thu, 05 May 2016 11:15:11 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/climbing-stairs/</guid>
+      <description>  You are climbing a stair case. It takes n steps to reach to the top.
+Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+ Analysis: DP的入门题
+formula: dp[i] = dp[i - 1] + dp[i - 2];
+Time and space complexity: time: $\Theta (n)$
+space: $\Theta (1)$
+Code: classSolution { public: int climbStairs(int n) { int a = 1, b = 1; while (n--) { a = (b += a) - a; } return a; } }; </description>
+    </item>
+    
+    <item>
+      <title>Remove Duplicates from Sorted List</title>
+      <link>http://mymneo.github.io/posts/algorithm/remove-duplicates-from-sorted-list/</link>
+      <pubDate>Tue, 03 May 2016 10:28:37 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/remove-duplicates-from-sorted-list/</guid>
+      <description>  Given a sorted linked list, delete all duplicates such that each element appear only once.
+For example, Given 1-&amp;gt;1-&amp;gt;2, return 1-&amp;gt;2. Given 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;3, return 1-&amp;gt;2-&amp;gt;3.
+ Analysis: 和数组遍历去重复一样
+Time and space complexity: time: $\Theta (n) $
+space: $\Theta (1) $
+Code: classSolution { public: ListNode* deleteDuplicates(ListNode* head) { ListNode* uniq = head; ListNode* cur; while (uniq) { cur = uniq; while (cur &amp;amp;&amp;amp; uniq-&amp;gt;val == cur-&amp;gt;val) { cur = cur-&amp;gt;next; } uniq-&amp;gt;next = cur; uniq = uniq-&amp;gt;next; } return head; } }; </description>
+    </item>
+    
+    <item>
+      <title>Linked List Cycle</title>
+      <link>http://mymneo.github.io/posts/algorithm/linked-list-cycle/</link>
+      <pubDate>Tue, 03 May 2016 10:22:02 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/linked-list-cycle/</guid>
+      <description>  Given a linked list, determine if it has a cycle in it.
+Follow up: Can you solve it without using extra space?
+ Analysis: native方式存储所有的node节点,如果查到相同的node节点表示有cycle.
+Follow up, 快慢指针追逐,一个指针每次走2步,一个指针每次走1步,如果快指针追上慢指针,说明有cycle,否则没有.快慢指针还有一个常用的功能就是找链表中点.
+Time and space complexity: time: $\Theta (n)$
+space: $\Theta (1)$
+Code: classSolution { public: bool hasCycle(ListNode *head) { ListNode* slow = head, *fast = head; while (fast &amp;amp;&amp;amp; fast-&amp;gt;next) { slow = slow-&amp;gt;next; fast = fast-&amp;gt;next-&amp;gt;next; if (slow == fast) { return true; } } return false; } }; </description>
+    </item>
+    
+    <item>
+      <title>Number of 1 Bits</title>
+      <link>http://mymneo.github.io/posts/algorithm/number-of-1-bits/</link>
+      <pubDate>Tue, 03 May 2016 09:59:40 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/number-of-1-bits/</guid>
+      <description>  Write a function that takes an unsigned integer and returns the number of ’1&amp;rsquo; bits it has (also known as the Hamming weight).
+For example, the 32-bit integer ’11&amp;rsquo; has binary representation 00000000000000000000000000001011, so the function should return 3.
+ Analysis: 最native的方式就是不停的logical right shift,然后统计1的个数,循环次数最多为32次.更高级一点的办法是divide and conquer,先2个bit数1的个数然后再4个bit数1的个数,再8个bit数,直到数到32bit
+Time and space complexity: time: $\Theta (1)$
+space: $\Theta (1)$
+Code: classSolution { public: int hammingWeight(uint32_t n) { n = (n &amp;amp; 0x55555555) + ((n &amp;gt;&amp;gt; 1) &amp;amp; 0x55555555); n = (n &amp;amp; 0x33333333) + ((n &amp;gt;&amp;gt; 2) &amp;amp; 0x33333333); n = (n &amp;amp; 0x0f0f0f0f) + ((n &amp;gt;&amp;gt; 4) &amp;amp; 0x0f0f0f0f); n = (n &amp;amp; 0x00ff00ff) + ((n &amp;gt;&amp;gt; 8) &amp;amp; 0x00ff00ff); n = (n &amp;amp; 0x0000ffff) + ((n &amp;gt;&amp;gt; 16) &amp;amp; 0x0000ffff); return n; } }; </description>
+    </item>
+    
+    <item>
+      <title>Lowest Common Ancestor of a Binary Search Tree</title>
+      <link>http://mymneo.github.io/posts/algorithm/lowest-common-ancestor-of-a-binary-search-tree/</link>
+      <pubDate>Mon, 02 May 2016 09:47:23 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/lowest-common-ancestor-of-a-binary-search-tree/</guid>
+      <description>Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST.
+According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes v and w as the lowest node in T that has both v and w as descendants (where we allow a node to be a descendant of itself).”
+ _______6______ / \ ___2__ ___8__ / \ / \ 0 _4 7 9 / \ 3 5  For example, the lowest common ancestor (LCA) of nodes 2 and 8 is 6.</description>
+    </item>
+    
+    <item>
+      <title>Roman to Integer</title>
+      <link>http://mymneo.github.io/posts/algorithm/roman-to-integer/</link>
+      <pubDate>Mon, 02 May 2016 09:24:16 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/roman-to-integer/</guid>
+      <description>Given a roman numeral, convert it to an integer.
+Input is guaranteed to be within the range from 1 to 3999.
+ Analysis: 从左往右依次读取,如果当前的字符代表的值大于后面的值,就把这个值+到最后的结果,不然就-,就像找递增数列一样
+Time and space complexity: time: $\Theta (n)$
+space: $\Theta (1)$
+Code: classSolution { public: int romanToInt(string s) { std::map&amp;lt;char, int&amp;gt; lookup { {&amp;#39;I&amp;#39;, 1}, {&amp;#39;V&amp;#39;, 5}, {&amp;#39;X&amp;#39;, 10}, {&amp;#39;L&amp;#39;, 50}, {&amp;#39;C&amp;#39;, 100}, {&amp;#39;D&amp;#39;, 500}, {&amp;#39;M&amp;#39;, 1000}, }; int num = 0; int next = 0; for (int i = 0; i &amp;lt; (int) s.</description>
+    </item>
+    
+    <item>
+      <title>Reverse Linked List</title>
+      <link>http://mymneo.github.io/posts/algorithm/reverse-linked-list/</link>
+      <pubDate>Mon, 02 May 2016 09:21:28 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/reverse-linked-list/</guid>
+      <description>  Reverse a singly linked list.
+ Analysis: 这个没有难度,不停的往头指针加入节点就可以
+Time and space complexity: time: $\Theta (n)$
+space: $\Theta (1)$
+Code: classSolution { public: ListNode* reverseList(ListNode* head) { ListNode pivot(0); ListNode* pos = head; ListNode* next = nullptr; while (pos) { next = pos-&amp;gt;next; pos-&amp;gt;next = pivot.next; pivot.next = pos; pos = next; } return pivot.next; } }; </description>
+    </item>
+    
+    <item>
+      <title>Maximum Size Subarray Sum Equals k</title>
+      <link>http://mymneo.github.io/posts/algorithm/maximum-size-subarray-sum-equals-k/</link>
+      <pubDate>Mon, 02 May 2016 09:01:39 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/maximum-size-subarray-sum-equals-k/</guid>
+      <description>Given an array nums and a target value k, find the maximum length of a subarray that sums to k. If there isn&amp;rsquo;t one, return 0 instead.
+Example 1: Given nums = [1, -1, 5, -2, 3], k = 3, return 4. (because the subarray [1, -1, 5, -2] sums to 3 and is the longest)
+Example 2: Given nums = [-2, -1, 2, 1], k = 1, return 2.</description>
+    </item>
+    
+    <item>
+      <title>Majority Element</title>
+      <link>http://mymneo.github.io/posts/algorithm/majority-element/</link>
+      <pubDate>Sat, 30 Apr 2016 09:55:43 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/majority-element/</guid>
+      <description>Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.
+You may assume that the array is non-empty and the majority element always exist in the array.
+Analysis: 最简单的方式是统计没有数字出现的次数,然后遍历一遍统计值,找出大于⌊ n/2 ⌋的那个数字. 还有一种更快速地方法Moore Voting,思路如下,用一个统计值表示当前的major出现的次数,然后遍历数组重复如下步骤: 1. 如果统计值为0,更改major的值为当前值和统计值为1 1. 如果统计值不为0,那么如果当前值和major的值不一致,统计值就-1,否则就+1 最后,major的值就为答案
+ Time and space complexity: time: $\Theta (n)$
+space: $\Theta (1)$
+Code: classSolution { public: int majorityElement(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int major = nums[0]; int count = 1; for (int i = 1; i &amp;lt; (int) nums.</description>
+    </item>
+    
+    <item>
+      <title>Contains Duplicate</title>
+      <link>http://mymneo.github.io/posts/algorithm/contains-duplicate/</link>
+      <pubDate>Sat, 30 Apr 2016 09:52:37 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/contains-duplicate/</guid>
+      <description>Given an array of integers, find if the array contains any duplicates. Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.
+ Analysis: 用unordered_set记录出现的数字,如果find到就返回true
+Time and space complexity: time: $\Theta (n) $
+space: $\Theta (n) $
+Code: classSolution { public: bool containsDuplicate(vector&amp;lt;int&amp;gt;&amp;amp; nums) { std::unordered_set&amp;lt;int&amp;gt; record; for (int&amp;amp; n : nums) { if (record.</description>
+    </item>
+    
+    <item>
+      <title>Meeting Rooms</title>
+      <link>http://mymneo.github.io/posts/algorithm/meeting-rooms/</link>
+      <pubDate>Sat, 30 Apr 2016 09:44:35 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/meeting-rooms/</guid>
+      <description>Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si &amp;lt; ei), determine if a person could attend all meetings.
+For example, Given [[0, 30],[5, 10],[15, 20]], return false.
+ Analysis: 简单地排序问题,将所有的interval按照开始时间排序, 然后遍历如果当前的interval的结束时间大于下一个interval的开始时间就返回false
+Time and space complexity: 排序时间为主要耗时 time: $\Theta(n\log n) $
+Code: classSolution { public: bool canAttendMeetings(vector&amp;lt;Interval&amp;gt;&amp;amp; intervals) { sort(intervals.begin(), intervals.end(), [](const Interval&amp;amp; a, const Interval&amp;amp; b){ return a.start &amp;lt; b.start; }); int size = intervals.</description>
+    </item>
+    
+    <item>
+      <title>Excel Sheet Column Number</title>
+      <link>http://mymneo.github.io/posts/algorithm/excel-sheet-column-number/</link>
+      <pubDate>Sat, 30 Apr 2016 09:39:47 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/excel-sheet-column-number/</guid>
+      <description>  Related to question Excel Sheet Column Title
+Given a column title as appear in an Excel sheet, return its corresponding column number.
+For example:
+ A -&amp;gt; 1 B -&amp;gt; 2 C -&amp;gt; 3 ... Z -&amp;gt; 26 AA -&amp;gt; 27 AB -&amp;gt; 28   Analysis: 类似于atoi,只不过不是10进制而是26进制
+Time and space complexity: time: $\Theta (n)$
+Code: classSolution { public: int titleToNumber(string s) { int num = 0; for (char&amp;amp; c : s) { int n = c - &amp;#39;A&amp;#39; + 1; num = num * 26 + n; } return num; } }; </description>
+    </item>
+    
+    <item>
+      <title>Valid Anagram</title>
+      <link>http://mymneo.github.io/posts/algorithm/valid-anagram/</link>
+      <pubDate>Sat, 30 Apr 2016 09:31:31 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/valid-anagram/</guid>
+      <description>Given two strings s and t, write a function to determine if t is an anagram of s.
+For example, s = &amp;quot;anagram&amp;quot;, t = &amp;quot;nagaram&amp;quot;, return true. s = &amp;quot;rat&amp;quot;, t = &amp;quot;car&amp;quot;, return false.
+Note: You may assume the string contains only lowercase alphabets.
+Follow up: What if the inputs contain unicode characters? How would you adapt your solution to such case?
+ Analysis: 用统计字符来解决,follow up也可以用此方法解决 1.</description>
+    </item>
+    
+    <item>
+      <title>Same Tree</title>
+      <link>http://mymneo.github.io/posts/algorithm/same-tree/</link>
+      <pubDate>Sat, 30 Apr 2016 09:23:39 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/same-tree/</guid>
+      <description>  Given two binary trees, write a function to check if they are equal or not.
+Two binary trees are considered equal if they are structurally identical and the nodes have the same value.
+ Analysis: 对2棵树做DFS遍历,2个树为same tree的条件 1. 当前2个节点都为空 1. 当前2个节点都不为空,val相同
+Time and space complexity: time: $\Theta (n)$
+Code: classSolution { public: bool isSameTree(TreeNode* p, TreeNode* q) { if (!p &amp;amp;&amp;amp; !q) { return true; } if (p &amp;amp;&amp;amp; q &amp;amp;&amp;amp; p-&amp;gt;val == q-&amp;gt;val) { return isSameTree(p-&amp;gt;left, q-&amp;gt;left) &amp;amp;&amp;amp; isSameTree(p-&amp;gt;right, q-&amp;gt;right); } return false; } }; </description>
+    </item>
+    
+    <item>
+      <title>Delete Node in a Linked List</title>
+      <link>http://mymneo.github.io/posts/algorithm/delete-node-in-a-linked-list/</link>
+      <pubDate>Sat, 30 Apr 2016 09:15:21 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/delete-node-in-a-linked-list/</guid>
+      <description>  Write a function to delete a node (except the tail) in a singly linked list, given only access to that node.
+Supposed the linked list is 1 -&amp;gt; 2 -&amp;gt; 3 -&amp;gt; 4 and you are given the third node with value 3, the linked list should become 1 -&amp;gt; 2 -&amp;gt; 4 after calling your function.
+ Analysis: 将被删除元素的copy到这个元素中
+Time and space complexity: time: $\Theta (1)$
+Code: classSolution { public: void deleteNode(ListNode* node) { *node = *node-&amp;gt;next; } }; </description>
+    </item>
+    
+    <item>
+      <title>Move Zeroes</title>
+      <link>http://mymneo.github.io/posts/algorithm/move-zeroes/</link>
+      <pubDate>Sat, 30 Apr 2016 09:03:35 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/move-zeroes/</guid>
+      <description>Given an array nums, write a function to move all 0&amp;rsquo;s to the end of it while maintaining the relative order of the non-zero elements.
+For example, given nums = [0, 1, 0, 3, 12], after calling your function, nums should be [1, 3, 12, 0, 0].
+Note: 1. You must do this in-place without making a copy of the array. 1. Minimize the total number of operations.</description>
+    </item>
+    
+    <item>
+      <title>Find the Celebrity</title>
+      <link>http://mymneo.github.io/posts/algorithm/find-the-celebrity/</link>
+      <pubDate>Fri, 29 Apr 2016 17:00:08 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/find-the-celebrity/</guid>
+      <description>Suppose you are at a party with n people (labeled from 0 to n - 1) and among them, there may exist one celebrity. The definition of a celebrity is that all the other n - 1 people know him/her but he/she does not know any of them.
+Now you want to find out who the celebrity is or verify that there is not one. The only thing you are allowed to do is to ask questions like: &amp;ldquo;Hi, A.</description>
+    </item>
+    
+    <item>
+      <title>Invert Binary Tree</title>
+      <link>http://mymneo.github.io/posts/algorithm/invert-binary-tree/</link>
+      <pubDate>Fri, 29 Apr 2016 16:45:16 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/invert-binary-tree/</guid>
+      <description>  Invert a binary tree.
+ 4 / \ 2 7 / \ / \ 1 3 6 9  to
+  4 / \ 7 2 / \ / \ 9 6 3 1  Analysis: 后序遍历树,最后交换一下左子树和右子树
+Time and space complexity time: $\Theta (n)$
+Code: classSolution { public: TreeNode* invertTree(TreeNode* root) { invert(root); return root; } private: void invert(TreeNode* node) { if (!node) { return; } invert(node-&amp;gt;left); invert(node-&amp;gt;right); std::swap(node-&amp;gt;left, node-&amp;gt;right); } }; </description>
+    </item>
+    
+    <item>
+      <title>Shortest Word Distance</title>
+      <link>http://mymneo.github.io/posts/algorithm/shortest-word-distance/</link>
+      <pubDate>Fri, 29 Apr 2016 16:33:36 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/shortest-word-distance/</guid>
+      <description>Given a list of words and two words word1 and word2, return the shortest distance between these two words in the list.
+For example, Assume that words = [&amp;quot;practice&amp;quot;, &amp;quot;makes&amp;quot;, &amp;quot;perfect&amp;quot;, &amp;quot;coding&amp;quot;, &amp;quot;makes&amp;quot;].
+Given word1 = “coding”, word2 = “practice”, return 3. Given word1 = &amp;quot;makes&amp;quot;, word2 = &amp;quot;coding&amp;quot;, return 1.
+Note: You may assume that word1 does not equal to word2, and word1 and word2 are both in the list.</description>
+    </item>
+    
+    <item>
+      <title>Maximum Depth of Binary Tree</title>
+      <link>http://mymneo.github.io/posts/algorithm/maximum-depth-of-binary-tree/</link>
+      <pubDate>Fri, 29 Apr 2016 16:25:47 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/maximum-depth-of-binary-tree/</guid>
+      <description>Given a binary tree, find its maximum depth.
+The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
+ Analysis: DFS遍历一遍树,保存最大的depth
+Time and space complexity time: $\Theta (n)$
+Code: classSolution { public: int maxDepth(TreeNode* root) { int depth = 0; recordDepth(root, 0, depth); return depth; } private: void recordDepth(TreeNode* node, int curDepth, int&amp;amp; maxDepth) { if (!</description>
+    </item>
+    
+    <item>
+      <title>Add Digits</title>
+      <link>http://mymneo.github.io/posts/algorithm/add-digits/</link>
+      <pubDate>Fri, 29 Apr 2016 16:03:02 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/add-digits/</guid>
+      <description>Given a non-negative integer num, repeatedly add all its digits until the result has only one digit.
+For example:
+Given num = 38, the process is like: 3 + 8 = 11, 1 + 1 = 2. Since 2 has only one digit, return it.
+Follow up: Could you do it without any loop/recursion in $\Theta (1) $ runtime?
+ Analysis: 最简单的方法就是按照例子给出的一样对每个数字做加法,然后不停迭代直到最后的num &amp;lt; 10
+Follow up:
+通过观察可以发现如下规律:
+0 % 9 = 0 # 0 1 % 9 = 1 # 1 .</description>
+    </item>
+    
+    <item>
+      <title>Flip Game</title>
+      <link>http://mymneo.github.io/posts/algorithm/flip-game/</link>
+      <pubDate>Fri, 29 Apr 2016 15:54:57 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/flip-game/</guid>
+      <description>You are playing the following Flip Game with your friend: Given a string that contains only these two characters: + and -, you and your friend take turns to flip two consecutive &amp;quot;++&amp;quot; into &amp;quot;--&amp;quot;. The game ends when a person can no longer make a move and therefore the other person will be the winner.
+Write a function to compute all possible states of the string after one valid move.</description>
+    </item>
+    
+    <item>
+      <title>Palindrome Permutation</title>
+      <link>http://mymneo.github.io/posts/algorithm/palindrome-permutation/</link>
+      <pubDate>Fri, 29 Apr 2016 15:42:38 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/palindrome-permutation/</guid>
+      <description>Given a string, determine if a permutation of the string could form a palindrome.
+For example,
+&amp;quot;code&amp;quot; -&amp;gt; false, &amp;quot;aab&amp;quot; -&amp;gt; true, &amp;quot;carerac&amp;quot; -&amp;gt; true.
+ Analysis: 这个问题可以看做是简单的统计字符问题,如果字符串每个字符都是偶数个,或者只有一个字符的数量是奇数个,那么这个字符串就会是palindrome permutation
+Time and space complexity time: $\Theta (n)$
+space: $\Theta (n)$
+Code: classSolution { public: bool canPermutePalindrome(string s) { unordered_map&amp;lt;char, int&amp;gt; count; for (char&amp;amp; c : s) { ++count[c]; } int odd = 0; for (auto it = count.begin(); it !</description>
+    </item>
+    
+    <item>
+      <title>Nim Game</title>
+      <link>http://mymneo.github.io/posts/algorithm/nim-game/</link>
+      <pubDate>Fri, 29 Apr 2016 15:20:05 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/nim-game/</guid>
+      <description>You are playing the following Nim Game with your friend: There is a heap of stones on the table, each time one of you take turns to remove 1 to 3 stones. The one who removes the last stone will be the winner. You will take the first turn to remove the stones.
+Both of you are very clever and have optimal strategies for the game. Write a function to determine whether you can win the game given the number of stones in the heap.</description>
+    </item>
+    
+    <item>
+      <title>Nested List Weight Sum</title>
+      <link>http://mymneo.github.io/posts/algorithm/nested-list-weight-sum/</link>
+      <pubDate>Fri, 29 Apr 2016 14:55:15 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/nested-list-weight-sum/</guid>
+      <description>Given a nested list of integers, return the sum of all integers in the list weighted by their depth.
+Each element is either an integer, or a list &amp;ndash; whose elements may also be integers or other lists.
+Example 1:
+Given the list [[1,1],2,[1,1]], return 10. (four 1&amp;rsquo;s at depth 2, one 2 at depth 1)
+Example 2:
+Given the list [1,[4,[6]]], return 27. (one 1 at depth 1, one 4 at depth 2, and one 6 at depth 3; 1 + 4*2 + 6*3 = 27)</description>
+    </item>
+    
+    <item>
+      <title>Reverse String</title>
+      <link>http://mymneo.github.io/posts/algorithm/reverse-string/</link>
+      <pubDate>Fri, 29 Apr 2016 14:47:02 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/algorithm/reverse-string/</guid>
+      <description>  Write a function that takes a string as input and returns the string reversed.
+Example:
+Given s = &amp;ldquo;hello&amp;rdquo;, return &amp;ldquo;olleh&amp;rdquo;.
+ Analysis: 用头尾2个指针进行遍历,遍历的同时进行交换
+Time ans space complexity time: $\Theta (n) $
+Code: classSolution { public: string reverseString(string s) { int i = 0, j = (int)s.length() - 1; while (i &amp;lt; j) { swap(s[i++], s[j--]); } return s; } }; </description>
+    </item>
+    
+  </channel>
+</rss>

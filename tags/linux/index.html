@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sparking Mind</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="revised" content="2019-07-01T18:09:34 CST">
+<title>linux :: Sparking Mind</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/hybrid.css" rel="stylesheet">
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<link href="/css/auto-complete.css" rel="stylesheet">
+<link href="/theme-original/style.css" rel="stylesheet">
+
+  <link href="/theme-original/variant-green.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<style type="text/css">
+  :root #header + #content > #left > #rlblock_left {
+    display:none !important;
+  }
+</style>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+</script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+    
+  </head>
+  <body data-url="/tags/linux/">
+    
+      <div id="headermain"></div>
+<nav id="sidebar" class="showVisitedLinks">
+
+
+
+<div class="highlightable">
+  <div id="header-wrapper">
+    <div id="header">
+      
+	
+  
+    <a class="baselink" href="http://mymneo.github.io/">Sparking Mind</a>
+  
+
+
+    </div>
+        <div class="searchbox">
+		    <label for="search-by"><i class="fa fa-search"></i></label>
+		    <input data-search-input id="search-by" type="text" placeholder="Search...">
+		    <span data-search-clear=""><i class="fa fa-close"></i></span>
+		</div>
+		<script type="text/javascript" src="/js/lunr.min.js"></script>
+		<script type="text/javascript" src="/js/auto-complete.js"></script>
+		<script type="text/javascript">
+        
+            var baseurl = "http:\/\/mymneo.github.io\/";
+        
+		</script>
+		<script type="text/javascript" src="/js/search.js"></script>
+  </div>
+
+      <ul class="topics">
+            <li data-nav-id="/" class="dd-item">
+            <a href="/"><i class="fa fa-fw fa-home"></i></a>
+            </li>
+    <li data-nav-id="/posts/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/posts/">Posts</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/posts/vim-cheatsheet/" class="dd-item">
+        <div>
+          <a href="/posts/vim-cheatsheet/">
+            vim cheatsheet
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/audit/" class="dd-item">
+        <div>
+          <a href="/posts/audit/">
+            audit command cheatsheet
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/ssh-tunnel/" class="dd-item">
+        <div>
+          <a href="/posts/ssh-tunnel/">
+            ssh tunnel configuration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/socat-tips/" class="dd-item">
+        <div>
+          <a href="/posts/socat-tips/">
+            socat tips
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/linux-administrator-command/" class="dd-item">
+        <div>
+          <a href="/posts/linux-administrator-command/">
+            Linux Administrator command
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/mysql-cheatsheet/" class="dd-item">
+        <div>
+          <a href="/posts/mysql-cheatsheet/">
+            MySQL cheatsheet
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/port-forwarding-in-windows/" class="dd-item">
+        <div>
+          <a href="/posts/port-forwarding-in-windows/">
+            port forwarding in windows
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/rsyslog-configuration/" class="dd-item">
+        <div>
+          <a href="/posts/rsyslog-configuration/">
+            rsyslog configuration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/symbol-legend/" class="dd-item">
+        <div>
+          <a href="/posts/symbol-legend/">
+            symbol legend
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/tcpdump/" class="dd-item">
+        <div>
+          <a href="/posts/tcpdump/">
+            tcpdump tutorial
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/svn2git/" class="dd-item">
+        <div>
+          <a href="/posts/svn2git/">
+            SVN and Git migration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/jq-tutorial/" class="dd-item">
+        <div>
+          <a href="/posts/jq-tutorial/">
+            jq tutorial
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/behaviors-ext4-file-system-when-devicemapper-pool-is-full/" class="dd-item">
+        <div>
+          <a href="/posts/behaviors-ext4-file-system-when-devicemapper-pool-is-full/">
+            behaviors of ext4 file system when devicemapper pool is full
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kvm/" class="dd-item">
+        <div>
+          <a href="/posts/kvm/">
+            kvm virtual machine with vnc support
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/find-cheatsheet/" class="dd-item">
+        <div>
+          <a href="/posts/find-cheatsheet/">
+            find cheatsheet
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/lvm-thin-pool-cheatsheet/" class="dd-item">
+        <div>
+          <a href="/posts/lvm-thin-pool-cheatsheet/">
+            lvm thin pool cheatsheet
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/resize-disk/" class="dd-item">
+        <div>
+          <a href="/posts/resize-disk/">
+            resize disk
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/shell-cheatsheet/" class="dd-item">
+        <div>
+          <a href="/posts/shell-cheatsheet/">
+            Shell Cheatsheet
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/mac-cheatsheet/" class="dd-item">
+        <div>
+          <a href="/posts/mac-cheatsheet/">
+            mac cheatsheet
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/golang-functions/" class="dd-item">
+        <div>
+          <a href="/posts/golang-functions/">
+            golang memo
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/git-command/" class="dd-item">
+        <div>
+          <a href="/posts/git-command/">
+            git command
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/makefile-memo/" class="dd-item">
+        <div>
+          <a href="/posts/makefile-memo/">
+            makefile memo
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/rpmbuild-tutorial/" class="dd-item">
+        <div>
+          <a href="/posts/rpmbuild-tutorial/">
+            rpmbuild easy tutorial
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/rpm-and-yum-cheatsheet/" class="dd-item">
+        <div>
+          <a href="/posts/rpm-and-yum-cheatsheet/">
+            rpm and yum cheatsheet
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/sed-command/" class="dd-item">
+        <div>
+          <a href="/posts/sed-command/">
+            Frequent commands about linux sed
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/docker-registry/" class="dd-item">
+        <div>
+          <a href="/posts/docker-registry/">
+            docker registry
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/iptables/" class="dd-item">
+        <div>
+          <a href="/posts/iptables/">
+            iptables command(docker related)
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/log4j-configuration/" class="dd-item">
+        <div>
+          <a href="/posts/log4j-configuration/">
+            log4j configuration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/vim-plugins/" class="dd-item">
+        <div>
+          <a href="/posts/vim-plugins/">
+            vim plugins
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
+        <div>
+          <a href="/posts/gdb-cheatsheet/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kernel-development/" class="dd-item">
+        <div>
+          <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+
+
+
+        <section id="shortcuts">
+                <li class="" role=""><h3>More</h3><a href="https://github.com/mYmNeo/" target="_blank" rel="noopener"><i class='fa fa-github'></i> <label>Github repo</label></a></li>
+        </section>
+            <a id="clear-history" class="" href="#" data-clear-history-toggle=""><i class="fa  fa-history"></i> Clear History</a>
+
+    <hr />
+    <li></li>
+    
+    </ul>
+
+ <section id="footer">
+    </section>
+  </div>
+</nav>
+
+
+
+<section id="body">
+<div id="overlay"></div>
+<div class="padding highlightable">
+
+  <div id="top-bar">
+    <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+        <span id="sidebar-toggle-span">
+          <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+            <i class="fa fa-bars"></i>
+          </a>
+        </span>
+        <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+        <span class="links">
+        
+
+ linux
+
+   
+        </span>
+    </div>
+    
+    
+    <div class="progress">
+        <div class="wrapper">
+    
+        </div>
+    </div>
+    
+
+  </div>
+
+
+<div id="body-inner">
+  
+    <h1>linux</h1>
+  
+
+
+
+    
+    
+    
+
+
+
+<div class="extra-pagination inner">
+<nav class="pagination" role="navigation">
+	
+	<span class="page-number">Page 1 of 2</span>
+	
+	    <a class="older-posts" href="/tags/linux/page/2/">Next Pages &rarr;</a>
+	
+</nav>
+
+</div>
+
+
+   <article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/posts/audit/">audit command cheatsheet</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>Audit Cheatsheet  audit syscall  auditctl -a exit,always -S &lt;syscall&gt;  audit file  auditctl -w /etc/shadow -p wa   extra option     Tag Description     -b backlog Set max number of outstanding audit buffers allowed (Kernel Default=64) If all buffers are full, the failure flag is consulted by the kernel for action.   -e [0..2] Set enabled flag. When 0 is passed, this can be used to temporarily disable auditing. <a class="read-more" href="/posts/audit/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+
+        
+          
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/linux/">linux</a>
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/audit/">audit</a>
+            
+        
+
+    </footer>
+</article>
+
+   <article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/posts/ssh-tunnel/">ssh tunnel configuration</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>SSH Tunnel Configuration You basically have three possibilities:
+ Tunnel from localhost to host1:
+ssh -L 9999:host2:1234 -N host1   As noted above, the connection from host1 to host2 will not be secured.
+ Tunnel from localhost to host1 and from host1 to host2:
+ssh -L 9999:localhost:9999 host1 ssh -L 9999:localhost:1234 -N host2   This will open a tunnel from localhost to host1 and another tunnel from host1 to host2. <a class="read-more" href="/posts/ssh-tunnel/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+
+        
+          
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/linux/">linux</a>
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/ssh/">ssh</a>
+            
+        
+
+    </footer>
+</article>
+
+   <article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/posts/socat-tips/">socat tips</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p> Tips for socat  listen tcp port and transport data to unix socket  socat TCP-LISTEN:&lt;port&gt;,fork UNIX:&lt;socket file&gt;  listen tcp prot and transport data to abstract unix socket  socat TCP-LISTEN:&lt;port&gt;,fork ABSTRACT:&lt;abstract socket file&gt; <a class="read-more" href="/posts/socat-tips/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+
+        
+          
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/linux/">linux</a>
+            
+        
+
+    </footer>
+</article>
+
+   <article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/posts/linux-administrator-command/">Linux Administrator command</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p> Commands for administrator  Disable expiration of a user &gt;Minimum Password Age to 0 &gt;Maximum Password Age to 99999 &gt;Password Inactive to -1 &gt;Account Expiration Date to -1  chage -I -1 -m 0 -M 99999 -E -1 &lt;username&gt; <a class="read-more" href="/posts/linux-administrator-command/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+
+        
+          
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/linux/">linux</a>
+            
+        
+
+    </footer>
+</article>
+
+   <article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/posts/mysql-cheatsheet/">MySQL cheatsheet</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p> select   normal select  SELECT column1, column2, ... FROM table_name;   Derived Tables  SELECT column1, column2, ... FROM (subquery) [AS] tbl_name ...  encoding  set CHARACTER SET (encoding) <a class="read-more" href="/posts/mysql-cheatsheet/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+
+        
+          
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/linux/">linux</a>
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/mysql/">mysql</a>
+            
+        
+
+    </footer>
+</article>
+
+   <article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/posts/rsyslog-configuration/">rsyslog configuration</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>configuration file location
+/etc/rsyslog.conf /etc/rsyslog.d/  rotate configuration location
+/etc/logrotate.d/rsyslog  rotate options
+  The following is a list of some of the directives you can specify in your logrotate configuration file:
+ weekly — Specifies the rotation of log files to be done weekly. Similar directives include:
+ daily monthly yearly  compress — Enables compression of rotated log files. Similar directives include:
+ nocompress compresscmd — Specifies the command to be used for compressing. <a class="read-more" href="/posts/rsyslog-configuration/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+
+        
+          
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/linux/">linux</a>
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/log/">log</a>
+            
+        
+
+    </footer>
+</article>
+
+   <article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/posts/tcpdump/">tcpdump tutorial</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>Tcpdump usage example  See the list of interfaces on which tcpdump can listen:
+tcpdump -D  Listen on interface eth0:
+tcpdump -i eth0  Listen on any available interface (cannot be done in promiscuous mode. Requires Linux kernel 2.2 or greater):
+tcpdump -i any  Be verbose while capturing packets:
+tcpdump -v  Be more verbose while capturing packets:
+tcpdump -vv  Be very verbose while capturing packets: <a class="read-more" href="/posts/tcpdump/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+
+        
+          
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/linux/">linux</a>
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/tcpdump/">tcpdump</a>
+            
+        
+
+    </footer>
+</article>
+
+   <article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/posts/svn2git/">SVN and Git migration</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p> Import svn project into your git project git config --add svn-remote.&lt;branch name&gt;.url &lt;svn repository url&gt; git config --add svn-remote.&lt;branch name&gt;.fetch :refs/remotes/&lt;branch name&gt; git svn fetch &lt;branch name&gt; [-r&lt;rev&gt;] Export and import SVN repository svnrdump dump [-r&lt;rev&gt;] &lt;svn repostory url&gt; &gt; &lt;dump file&gt; svnadmin load --force-uuid &lt;directory&gt; &lt; &lt;dump file&gt; <a class="read-more" href="/posts/svn2git/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+
+        
+          
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/linux/">linux</a>
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/svn/">svn</a>
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/git/">git</a>
+            
+        
+
+    </footer>
+</article>
+
+   <article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/posts/behaviors-ext4-file-system-when-devicemapper-pool-is-full/">behaviors of ext4 file system when devicemapper pool is full</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>Backgroud &nbsp;&nbsp;&nbsp;&nbsp;Our production system currently use docker to run all kinds of services. One day our clients reported that their service could not write down any log in the container and all the other containers which were started and worked well a few days ago also couldn&rsquo;t. And the containers couldn&rsquo;t be recovered. We logged in the malfunction machine, found that the thin pool used by devicemapper was full. At the same time there was some messages that dmesg reported telling the file system of containers became read-only. <a class="read-more" href="/posts/behaviors-ext4-file-system-when-devicemapper-pool-is-full/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+
+        
+          
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/linux/">linux</a>
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/devicemapper/">devicemapper</a>
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/docker/">docker</a>
+            
+        
+
+    </footer>
+</article>
+
+   <article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/posts/kvm/">kvm virtual machine with vnc support</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>Install a KVM virtual machin with VNC support  Create a disk for VM
+qemu-img create -f qcow2 &lt;img path&gt; &lt;size&gt;  Use virt-install install a VM bash virt-install \ --virt-type kvm \ --name &lt;name&gt; \ --cdrom=&lt;cdrom iso&gt; \ --disk path=&lt;disk path&gt; \ --network network=default \ --graphics vnc,listen=0.0.0.0 \ --noautoconsole \ --os-type=&lt;os type&gt; \ --os-variant=&lt;os&gt;   Show VNC port
+virsh vncdisplay &lt;domain name&gt; VM Operations  Sometimes you need add For example: <a class="read-more" href="/posts/kvm/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+
+        
+          
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/kvm/">kvm</a>
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/linux/">linux</a>
+            
+        
+
+    </footer>
+</article>
+
+
+<div style="margin-bottom:2rem"></div>
+
+<nav class="pagination" role="navigation">
+	
+	<span class="page-number">Page 1 of 2</span>
+	
+	    <a class="older-posts" href="/tags/linux/page/2/">Next Pages &rarr;</a>
+	
+</nav>
+
+
+
+
+    
+    
+          <footer class=" footline" >
+	
+</footer>
+  </div>
+</div>
+
+<div id="navigation">
+</div>
+
+</section>
+<div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+  <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+</div>    
+
+<script src="/js/clipboard.min.js"></script>
+<script src="/js/featherlight.min.js"></script>
+<script src="/js/html5shiv-printshiv.min.js"></script>
+
+<script src="/js/modernizr.custom.71422.js"></script>
+<script src="/js/docdock.js"></script>
+<script src="/theme-original/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

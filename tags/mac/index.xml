@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mac on Sparking Mind</title>
+    <link>http://mymneo.github.io/tags/mac/</link>
+    <description>Recent content in mac on Sparking Mind</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 29 Apr 2016 09:32:42 +0000</lastBuildDate>
+    
+	<atom:link href="http://mymneo.github.io/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>mac cheatsheet</title>
+      <link>http://mymneo.github.io/posts/mac-cheatsheet/</link>
+      <pubDate>Fri, 29 Apr 2016 09:32:42 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/mac-cheatsheet/</guid>
+      <description> Reset Launchpad Layout in OS X El Capitan &amp;amp; Yosemite bash defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock   </description>
+    </item>
+    
+  </channel>
+</rss>

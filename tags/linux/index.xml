@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on Sparking Mind</title>
+    <link>http://mymneo.github.io/tags/linux/</link>
+    <description>Recent content in linux on Sparking Mind</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 03 Jul 2018 18:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://mymneo.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>audit command cheatsheet</title>
+      <link>http://mymneo.github.io/posts/audit/</link>
+      <pubDate>Tue, 03 Jul 2018 18:00:00 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/audit/</guid>
+      <description>Audit Cheatsheet  audit syscall  auditctl -a exit,always -S &amp;lt;syscall&amp;gt;  audit file  auditctl -w /etc/shadow -p wa   extra option     Tag Description     -b backlog Set max number of outstanding audit buffers allowed (Kernel Default=64) If all buffers are full, the failure flag is consulted by the kernel for action.   -e [0..2] Set enabled flag. When 0 is passed, this can be used to temporarily disable auditing.</description>
+    </item>
+    
+    <item>
+      <title>ssh tunnel configuration</title>
+      <link>http://mymneo.github.io/posts/ssh-tunnel/</link>
+      <pubDate>Fri, 29 Jun 2018 10:31:00 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/ssh-tunnel/</guid>
+      <description>SSH Tunnel Configuration You basically have three possibilities:
+ Tunnel from localhost to host1:
+ssh -L 9999:host2:1234 -N host1   As noted above, the connection from host1 to host2 will not be secured.
+ Tunnel from localhost to host1 and from host1 to host2:
+ssh -L 9999:localhost:9999 host1 ssh -L 9999:localhost:1234 -N host2   This will open a tunnel from localhost to host1 and another tunnel from host1 to host2.</description>
+    </item>
+    
+    <item>
+      <title>socat tips</title>
+      <link>http://mymneo.github.io/posts/socat-tips/</link>
+      <pubDate>Thu, 24 Aug 2017 15:44:50 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/socat-tips/</guid>
+      <description> Tips for socat  listen tcp port and transport data to unix socket  socat TCP-LISTEN:&amp;lt;port&amp;gt;,fork UNIX:&amp;lt;socket file&amp;gt;  listen tcp prot and transport data to abstract unix socket  socat TCP-LISTEN:&amp;lt;port&amp;gt;,fork ABSTRACT:&amp;lt;abstract socket file&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux Administrator command</title>
+      <link>http://mymneo.github.io/posts/linux-administrator-command/</link>
+      <pubDate>Tue, 16 May 2017 09:53:26 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/linux-administrator-command/</guid>
+      <description> Commands for administrator  Disable expiration of a user &amp;gt;Minimum Password Age to 0 &amp;gt;Maximum Password Age to 99999 &amp;gt;Password Inactive to -1 &amp;gt;Account Expiration Date to -1  chage -I -1 -m 0 -M 99999 -E -1 &amp;lt;username&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>MySQL cheatsheet</title>
+      <link>http://mymneo.github.io/posts/mysql-cheatsheet/</link>
+      <pubDate>Tue, 18 Apr 2017 10:39:59 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/mysql-cheatsheet/</guid>
+      <description> select   normal select  SELECT column1, column2, ... FROM table_name;   Derived Tables  SELECT column1, column2, ... FROM (subquery) [AS] tbl_name ...  encoding  set CHARACTER SET (encoding)</description>
+    </item>
+    
+    <item>
+      <title>rsyslog configuration</title>
+      <link>http://mymneo.github.io/posts/rsyslog-configuration/</link>
+      <pubDate>Fri, 17 Feb 2017 14:25:46 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/rsyslog-configuration/</guid>
+      <description>configuration file location
+/etc/rsyslog.conf /etc/rsyslog.d/  rotate configuration location
+/etc/logrotate.d/rsyslog  rotate options
+  The following is a list of some of the directives you can specify in your logrotate configuration file:
+ weekly — Specifies the rotation of log files to be done weekly. Similar directives include:
+ daily monthly yearly  compress — Enables compression of rotated log files. Similar directives include:
+ nocompress compresscmd — Specifies the command to be used for compressing.</description>
+    </item>
+    
+    <item>
+      <title>tcpdump tutorial</title>
+      <link>http://mymneo.github.io/posts/tcpdump/</link>
+      <pubDate>Fri, 15 Jul 2016 10:30:34 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/tcpdump/</guid>
+      <description>Tcpdump usage example  See the list of interfaces on which tcpdump can listen:
+tcpdump -D  Listen on interface eth0:
+tcpdump -i eth0  Listen on any available interface (cannot be done in promiscuous mode. Requires Linux kernel 2.2 or greater):
+tcpdump -i any  Be verbose while capturing packets:
+tcpdump -v  Be more verbose while capturing packets:
+tcpdump -vv  Be very verbose while capturing packets:</description>
+    </item>
+    
+    <item>
+      <title>SVN and Git migration</title>
+      <link>http://mymneo.github.io/posts/svn2git/</link>
+      <pubDate>Fri, 15 Jul 2016 10:05:33 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/svn2git/</guid>
+      <description> Import svn project into your git project git config --add svn-remote.&amp;lt;branch name&amp;gt;.url &amp;lt;svn repository url&amp;gt; git config --add svn-remote.&amp;lt;branch name&amp;gt;.fetch :refs/remotes/&amp;lt;branch name&amp;gt; git svn fetch &amp;lt;branch name&amp;gt; [-r&amp;lt;rev&amp;gt;] Export and import SVN repository svnrdump dump [-r&amp;lt;rev&amp;gt;] &amp;lt;svn repostory url&amp;gt; &amp;gt; &amp;lt;dump file&amp;gt; svnadmin load --force-uuid &amp;lt;directory&amp;gt; &amp;lt; &amp;lt;dump file&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>behaviors of ext4 file system when devicemapper pool is full</title>
+      <link>http://mymneo.github.io/posts/behaviors-ext4-file-system-when-devicemapper-pool-is-full/</link>
+      <pubDate>Thu, 23 Jun 2016 17:41:46 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/behaviors-ext4-file-system-when-devicemapper-pool-is-full/</guid>
+      <description>Backgroud &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Our production system currently use docker to run all kinds of services. One day our clients reported that their service could not write down any log in the container and all the other containers which were started and worked well a few days ago also couldn&amp;rsquo;t. And the containers couldn&amp;rsquo;t be recovered. We logged in the malfunction machine, found that the thin pool used by devicemapper was full. At the same time there was some messages that dmesg reported telling the file system of containers became read-only.</description>
+    </item>
+    
+    <item>
+      <title>kvm virtual machine with vnc support</title>
+      <link>http://mymneo.github.io/posts/kvm/</link>
+      <pubDate>Wed, 22 Jun 2016 16:32:51 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/kvm/</guid>
+      <description>Install a KVM virtual machin with VNC support  Create a disk for VM
+qemu-img create -f qcow2 &amp;lt;img path&amp;gt; &amp;lt;size&amp;gt;  Use virt-install install a VM bash virt-install \ --virt-type kvm \ --name &amp;lt;name&amp;gt; \ --cdrom=&amp;lt;cdrom iso&amp;gt; \ --disk path=&amp;lt;disk path&amp;gt; \ --network network=default \ --graphics vnc,listen=0.0.0.0 \ --noautoconsole \ --os-type=&amp;lt;os type&amp;gt; \ --os-variant=&amp;lt;os&amp;gt;   Show VNC port
+virsh vncdisplay &amp;lt;domain name&amp;gt; VM Operations  Sometimes you need add For example:</description>
+    </item>
+    
+    <item>
+      <title>find cheatsheet</title>
+      <link>http://mymneo.github.io/posts/find-cheatsheet/</link>
+      <pubDate>Tue, 14 Jun 2016 09:43:51 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/find-cheatsheet/</guid>
+      <description>Frequently used option of Find TEST    option description example     -name  find the file which name is filename find / -name &amp;ldquo;*.js&amp;rdquo;   -group  find the file belongs to group-name find / -group users   -user  find the file belongs to user-name find / -user root   -maxdepth  Descend at most levels to find find / -maxdepth 4   -empty find file is empty and is either a regular file or a directory find / -empty   -path  find file name matches shell pattern  find / -path &amp;ldquo;/sr*sc&amp;rdquo;   -perm  find file&amp;rsquo;s permission bits are exactly mode find / -perm 0664   -perm - find all of the permission bits mode are set for the file find / -perm -644   -perm / find any of the permission bits mode are set for the file find / -perm /644   -regex  find file name matches regular expression  find / -regex &amp;ldquo;.</description>
+    </item>
+    
+    <item>
+      <title>lvm thin pool cheatsheet</title>
+      <link>http://mymneo.github.io/posts/lvm-thin-pool-cheatsheet/</link>
+      <pubDate>Mon, 13 Jun 2016 15:17:34 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/lvm-thin-pool-cheatsheet/</guid>
+      <description>We use devicemapper as Docker storage driver, sometime any of the meta or data pool is full. We have to extend the pool
+  Single step thin pool LV creation  lvcreate --type thin-pool --poolmetadata &amp;lt;meta size&amp;gt; -L &amp;lt;pool size&amp;gt; &amp;lt;pool name&amp;gt;  Manually manage free data space of thin pool LV  lvextend -L &amp;lt;size&amp;gt; &amp;lt;pool name&amp;gt;  Manually manage free metadata space of a thin pool LV  lvs -oname,size,data_percent,metadata_percent # show the available metadat space in a thin pool LV lvextend --poolmetadatasize &amp;lt;size&amp;gt; &amp;lt;pool name&amp;gt; Metadata space exhaustion  Metadata space exhaustion can lead to inconsistent thin pool metadata and inconsistent file systems, so the response requires offline checking and repair.</description>
+    </item>
+    
+    <item>
+      <title>resize disk</title>
+      <link>http://mymneo.github.io/posts/resize-disk/</link>
+      <pubDate>Mon, 13 Jun 2016 14:39:06 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/resize-disk/</guid>
+      <description> Shrink a disk  If the partition the file system is on is currently mounted, unmount it
+umount /dev/disk  Run fsck on the umounted file system bash e2fsck -f /dev/disk   Shrink the file system with the resize2fs /dev/fdisk size
+resize2fs /dev/disk size  Use fdisk to modify the partition table information bash fdisk /dev/disk   Mount the disk
+mount /dev/disk target  </description>
+    </item>
+    
+    <item>
+      <title>Shell Cheatsheet</title>
+      <link>http://mymneo.github.io/posts/shell-cheatsheet/</link>
+      <pubDate>Fri, 03 Jun 2016 09:50:09 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/shell-cheatsheet/</guid>
+      <description> Checking if string does or not contain other string  Use &amp;lsquo;=&amp;rsquo; or &amp;lsquo;!=&amp;rsquo;
+if [[ ${testmystring} = *&amp;#34;c0&amp;#34;* ]];then # testmystring does contain c0 fi if [[ ${testmystring} != *&amp;#34;c0&amp;#34;* ]];then # testmystring does not contain c0 fi</description>
+    </item>
+    
+    <item>
+      <title>makefile memo</title>
+      <link>http://mymneo.github.io/posts/makefile-memo/</link>
+      <pubDate>Thu, 28 Apr 2016 17:39:32 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/makefile-memo/</guid>
+      <description>Checks if the first argument is non-empty.If so runs the second argument, otherwise runs the third
+$(if this-is-not-empty,then!,else!)   Execute command but not display on standard output makefile @ls .   tell make to ignore error
+-rm -f *.*   The foreach function is very different from other functions. It causes one piece of text to be used repeatedly, each time with a different substitution performed on it.</description>
+    </item>
+    
+    <item>
+      <title>rpmbuild easy tutorial</title>
+      <link>http://mymneo.github.io/posts/rpmbuild-tutorial/</link>
+      <pubDate>Thu, 28 Apr 2016 11:04:44 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/rpmbuild-tutorial/</guid>
+      <description>创建好文件夹结构  SOURCES 包含源代码,补丁,图标文件等 SPECS 包含spec文件,这些文件用来控制构建过程 BUILD 用来解压源代码的目录和软件构建的目录 RPMS 包含构建程序最后产生的RPM包 SPRMS 包含构建程序最后产生的源代码包文件  放置源代码到SOURCES文件夹中 编写spec文件   常用label     label description     Name 表明这个包叫什么名字，通常来说，一般用软件的名字作为name，name存在于最后的包的标签和包的文件名字中   Version 表示这个软件被打包后的版本，版本存在于最后包的标签和包的名字   Release 表示这个软件的时间信息，表示何时什么版本的软件被打包，你可以当作这个是包的版本号，这个信息最后作为最后包的标签和文件名的一部分   Group 用来存储这个被打包的文件与其他包的组关系，这段信息由很多词构成，以/分割。从左到右描述的更为精确   Source 说明被打包的软件的源代码在哪里可以被发现;告诉存在SOURCES文件夹中的源文件的名字   URL 通常含有一个URL，像Source那行，与source的区别是，source通常给RPM提供源代码的名字，URL是用来指明被打包的软件是文档信息   Distribution 告知被打包的软件是属于那个产品的   Vendor 指明那个组织发布的这个软件   Packager 指明组织中那个作者打包的这个软件   License 许可证   Requires 说明这个包需要的依赖条件   BuildRoot 说明这个包构建的根目录     常用section     section description     description 更详细的描述包的内容   define 定义自己的macro   prep 创建软件的构建环境，可以执行多条shell命令   build 执行build的多条命令   install 执行install的多条命令   files 列出来的文件都会被打进RPM包中   defattr RPM安装的文件默认的权限，拥有者和组   pre 在安装前执行的命令   post 在安装后执行的命令   preun 在卸载前执行的命令   postun 在卸载后执行的命令   package 生成子包    创建Subpackages  简单的来说,subpackage是同一个spec文件创建出来众多package中的一个,RPM可以创建一个主要的package同时创建一个或者多个subpackage,subpackges可以不从主要的package中产生,这些都是根据package builder的规则来确定</description>
+    </item>
+    
+    <item>
+      <title>rpm and yum cheatsheet</title>
+      <link>http://mymneo.github.io/posts/rpm-and-yum-cheatsheet/</link>
+      <pubDate>Thu, 28 Apr 2016 10:58:34 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/rpm-and-yum-cheatsheet/</guid>
+      <description>query the dependency of a package  rpm -qR &amp;lt;package-name&amp;gt;  query the dependency of a rpm file  rpm -qpR &amp;lt;rpm-file&amp;gt;  query which rpm this file belongs to  rpm -qif &amp;lt;filename&amp;gt;  query non-installed rpm file  rpm -qip &amp;lt;rpm-file&amp;gt;  setup yum with proxy  append proxy=&amp;lt;your proxy&amp;gt; to /etc/yum.conf
+[main] proxy=&amp;lt;your proxy&amp;gt;  if you don&amp;rsquo;t want proxy in some repository
+append proxy=_none_ to your repo file</description>
+    </item>
+    
+    <item>
+      <title>Frequent commands about linux sed</title>
+      <link>http://mymneo.github.io/posts/sed-command/</link>
+      <pubDate>Wed, 27 Apr 2016 22:42:37 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/sed-command/</guid>
+      <description>add content at last line
+sed &amp;#39;$a&amp;lt;content&amp;gt;&amp;#39; &amp;lt;file&amp;gt;  add content at line bash sed &#39;&amp;lt;line&amp;gt;i&amp;lt;content&amp;gt;&#39; &amp;lt;file&amp;gt;   delete line
+sed &amp;#39;&amp;lt;line&amp;gt;d&amp;#39; &amp;lt;file&amp;gt;  match pattern, then execute expression bash sed &#39;/&amp;lt;regex&amp;gt;/&amp;lt;command&amp;gt;&#39; &amp;lt;file&amp;gt;   print line number of matched pattern
+sed &amp;#39;/&amp;lt;regex&amp;gt;/{=}&amp;#39; &amp;lt;file&amp;gt; Zero- or One- address commands in linux sed ```
+ label = # line_number a # append_text_to_stdout_after_flush b # branch_unconditional c # range_change d # pattern_delete_top/cycle D # pattern_ltrunc(line+nl)_top/cycle g # pattern=hold G # pattern+=nl+hold h # hold=pattern H # hold+=nl+pattern i # insert_text_to_stdout_now l # pattern_list n # pattern_flush=nextline_continue N # pattern+=nl+nextline p # pattern_print P # pattern_first_line_print q # flush_quit r # append_file_to_stdout_after_flush s # substitute t # branch_on_substitute w # append_pattern_to_file_now x # swap_pattern_and_hold y # transform_chars ```</description>
+    </item>
+    
+    <item>
+      <title>iptables command(docker related)</title>
+      <link>http://mymneo.github.io/posts/iptables/</link>
+      <pubDate>Wed, 27 Apr 2016 22:32:29 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/iptables/</guid>
+      <description> flush all rules bash sudo iptables -P INPUT ACCEPT sudo iptables -P FORWARD ACCEPT sudo iptables -P OUTPUT ACCEPT sudo iptables -F sudo iptables -X sudo iptables -t nat -F sudo iptables -t nat -X   </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sed on Sparking Mind</title>
+    <link>http://mymneo.github.io/tags/sed/</link>
+    <description>Recent content in sed on Sparking Mind</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 27 Apr 2016 22:42:37 +0000</lastBuildDate>
+    
+	<atom:link href="http://mymneo.github.io/tags/sed/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Frequent commands about linux sed</title>
+      <link>http://mymneo.github.io/posts/sed-command/</link>
+      <pubDate>Wed, 27 Apr 2016 22:42:37 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/sed-command/</guid>
+      <description>add content at last line
+sed &amp;#39;$a&amp;lt;content&amp;gt;&amp;#39; &amp;lt;file&amp;gt;  add content at line bash sed &#39;&amp;lt;line&amp;gt;i&amp;lt;content&amp;gt;&#39; &amp;lt;file&amp;gt;   delete line
+sed &amp;#39;&amp;lt;line&amp;gt;d&amp;#39; &amp;lt;file&amp;gt;  match pattern, then execute expression bash sed &#39;/&amp;lt;regex&amp;gt;/&amp;lt;command&amp;gt;&#39; &amp;lt;file&amp;gt;   print line number of matched pattern
+sed &amp;#39;/&amp;lt;regex&amp;gt;/{=}&amp;#39; &amp;lt;file&amp;gt; Zero- or One- address commands in linux sed ```
+ label = # line_number a # append_text_to_stdout_after_flush b # branch_unconditional c # range_change d # pattern_delete_top/cycle D # pattern_ltrunc(line+nl)_top/cycle g # pattern=hold G # pattern+=nl+hold h # hold=pattern H # hold+=nl+pattern i # insert_text_to_stdout_now l # pattern_list n # pattern_flush=nextline_continue N # pattern+=nl+nextline p # pattern_print P # pattern_first_line_print q # flush_quit r # append_file_to_stdout_after_flush s # substitute t # branch_on_substitute w # append_pattern_to_file_now x # swap_pattern_and_hold y # transform_chars ```</description>
+    </item>
+    
+  </channel>
+</rss>

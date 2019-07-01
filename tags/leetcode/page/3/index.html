@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sparking Mind</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="revised" content="2019-07-01T18:09:34 CST">
+<title>leetcode :: Sparking Mind</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/hybrid.css" rel="stylesheet">
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<link href="/css/auto-complete.css" rel="stylesheet">
+<link href="/theme-original/style.css" rel="stylesheet">
+
+  <link href="/theme-original/variant-green.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<style type="text/css">
+  :root #header + #content > #left > #rlblock_left {
+    display:none !important;
+  }
+</style>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+</script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+    
+  </head>
+  <body data-url="/tags/leetcode/">
+    
+      <div id="headermain"></div>
+<nav id="sidebar" class="showVisitedLinks">
+
+
+
+<div class="highlightable">
+  <div id="header-wrapper">
+    <div id="header">
+      
+	
+  
+    <a class="baselink" href="http://mymneo.github.io/">Sparking Mind</a>
+  
+
+
+    </div>
+        <div class="searchbox">
+		    <label for="search-by"><i class="fa fa-search"></i></label>
+		    <input data-search-input id="search-by" type="text" placeholder="Search...">
+		    <span data-search-clear=""><i class="fa fa-close"></i></span>
+		</div>
+		<script type="text/javascript" src="/js/lunr.min.js"></script>
+		<script type="text/javascript" src="/js/auto-complete.js"></script>
+		<script type="text/javascript">
+        
+            var baseurl = "http:\/\/mymneo.github.io\/";
+        
+		</script>
+		<script type="text/javascript" src="/js/search.js"></script>
+  </div>
+
+      <ul class="topics">
+            <li data-nav-id="/" class="dd-item">
+            <a href="/"><i class="fa fa-fw fa-home"></i></a>
+            </li>
+    <li data-nav-id="/posts/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/posts/">Posts</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/posts/algorithm/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/posts/algorithm/">Algorithm</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/posts/algorithm/reverse-words-in-a-string-iii/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/reverse-words-in-a-string-iii/">
+            Reverse Words in a String III
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/next-greater-element-i/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/next-greater-element-i/">
+            Next Greater Element I
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/max-consecutive-ones/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/max-consecutive-ones/">
+            Max Consecutive Ones
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/fizz-buzz/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/fizz-buzz/">
+            Fizz Buzz
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/island-perimeter/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/island-perimeter/">
+            Island Perimeter
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/find-all-numbers-disappeared-in-an-array/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/find-all-numbers-disappeared-in-an-array/">
+            Find All Numbers Disappeared in an Array
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/keyboard-row/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/keyboard-row/">
+            Keyboard Row
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/number-complement/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/number-complement/">
+            Number Complement
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/hamming-distance/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/hamming-distance/">
+            Hamming Distance
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/reverse-bits/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/reverse-bits/">
+            Reverse Bits
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/read-n-characters-given-read4/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/read-n-characters-given-read4/">
+            Read N Characters Given Read4
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/valid-parentheses/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/valid-parentheses/">
+            Valid Parentheses
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/remove-nth-node-from-end-of-list/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/remove-nth-node-from-end-of-list/">
+            Remove Nth Node From End of List
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/isomorphic-strings/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/isomorphic-strings/">
+            Isomorphic Strings
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/bulls-and-cows/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/bulls-and-cows/">
+            Bulls and Cows
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/rectangle-area/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/rectangle-area/">
+            Rectangle Area
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/contains-duplicate-ii/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/contains-duplicate-ii/">
+            Contains Duplicate II
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/merge-sorted-array/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/merge-sorted-array/">
+            Merge Sorted Array
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/intersection-of-two-linked-lists/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/intersection-of-two-linked-lists/">
+            Intersection of Two Linked Lists
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/implement-stack-using-queues/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/implement-stack-using-queues/">
+            Implement Stack using Queues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/valid-sudoku/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/valid-sudoku/">
+            Valid Sudoku
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/minimum-depth-of-binary-tree/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/minimum-depth-of-binary-tree/">
+            Minimum Depth of Binary Tree
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/paint-fence/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/paint-fence/">
+            Paint Fence
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/path-sum/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/path-sum/">
+            Path Sum
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/group-shifted-strings/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/group-shifted-strings/">
+            Group Shifted Strings
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/palindrome-number/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/palindrome-number/">
+            Palindrome Number
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/pascal-s-triangle-ii/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/pascal-s-triangle-ii/">
+            Pascal&#39;s Triangle II
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/binary-tree-level-order-traversal/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/binary-tree-level-order-traversal/">
+            Binary Tree Level Order Traversal
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/factorial-trailing-zeroes/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/factorial-trailing-zeroes/">
+            Factorial Trailing Zeroes
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/pascal-s-triangle/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/pascal-s-triangle/">
+            Pascal&#39;s Triangle
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/remove-duplicates-from-sorted-array/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/remove-duplicates-from-sorted-array/">
+            Remove Duplicates from Sorted Array
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/power-of-four/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/power-of-four/">
+            Power of Four
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/plus-one/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/plus-one/">
+            Plus One
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/remove-element/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/remove-element/">
+            Remove Element
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/binary-tree-level-order-traversal-ii/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/binary-tree-level-order-traversal-ii/">
+            Binary Tree Level Order Traversal II
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/implement-queue-using-stacks/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/implement-queue-using-stacks/">
+            Implement Queue using Stacks
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/symmetric-tree/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/symmetric-tree/">
+            Symmetric Tree
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/balanced-binary-tree/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/balanced-binary-tree/">
+            Balanced Binary Tree
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/house-robber/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/house-robber/">
+            House Robber
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/closest-binary-search-tree-value/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/closest-binary-search-tree-value/">
+            Closest Binary Search Tree Value
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/reverse-vowels-of-a-string/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/reverse-vowels-of-a-string/">
+            Reverse Vowels of a String
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/swap-nodes-in-pairs/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/swap-nodes-in-pairs/">
+            Swap Nodes in Pairs
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/merge-two-sorted-lists/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/merge-two-sorted-lists/">
+            Merge Two Sorted Lists
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/best-time-to-buy-and-sell-stock/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/best-time-to-buy-and-sell-stock/">
+            Best Time to Buy and Sell Stock
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/strobogrammatic-number/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/strobogrammatic-number/">
+            Strobogrammatic Number
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/ugly-number/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/ugly-number/">
+            Ugly Number
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/happy-number/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/happy-number/">
+            Happy Number
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/power-of-two/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/power-of-two/">
+            Power of Two
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/power-of-three/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/power-of-three/">
+            Power of Three
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/climbing-stairs/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/climbing-stairs/">
+            Climbing Stairs
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/remove-duplicates-from-sorted-list/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/remove-duplicates-from-sorted-list/">
+            Remove Duplicates from Sorted List
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/linked-list-cycle/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/linked-list-cycle/">
+            Linked List Cycle
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/number-of-1-bits/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/number-of-1-bits/">
+            Number of 1 Bits
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/lowest-common-ancestor-of-a-binary-search-tree/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/lowest-common-ancestor-of-a-binary-search-tree/">
+            Lowest Common Ancestor of a Binary Search Tree
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/roman-to-integer/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/roman-to-integer/">
+            Roman to Integer
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/reverse-linked-list/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/reverse-linked-list/">
+            Reverse Linked List
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/maximum-size-subarray-sum-equals-k/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/maximum-size-subarray-sum-equals-k/">
+            Maximum Size Subarray Sum Equals k
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/majority-element/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/majority-element/">
+            Majority Element
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/contains-duplicate/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/contains-duplicate/">
+            Contains Duplicate
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/meeting-rooms/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/meeting-rooms/">
+            Meeting Rooms
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/excel-sheet-column-number/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/excel-sheet-column-number/">
+            Excel Sheet Column Number
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/valid-anagram/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/valid-anagram/">
+            Valid Anagram
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/same-tree/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/same-tree/">
+            Same Tree
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/delete-node-in-a-linked-list/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/delete-node-in-a-linked-list/">
+            Delete Node in a Linked List
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/move-zeroes/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/move-zeroes/">
+            Move Zeroes
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/find-the-celebrity/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/find-the-celebrity/">
+            Find the Celebrity
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/invert-binary-tree/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/invert-binary-tree/">
+            Invert Binary Tree
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/shortest-word-distance/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/shortest-word-distance/">
+            Shortest Word Distance
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/maximum-depth-of-binary-tree/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/maximum-depth-of-binary-tree/">
+            Maximum Depth of Binary Tree
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/add-digits/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/add-digits/">
+            Add Digits
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/flip-game/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/flip-game/">
+            Flip Game
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/palindrome-permutation/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/palindrome-permutation/">
+            Palindrome Permutation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/nim-game/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/nim-game/">
+            Nim Game
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/nested-list-weight-sum/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/nested-list-weight-sum/">
+            Nested List Weight Sum
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/reverse-string/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/reverse-string/">
+            Reverse String
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/posts/vim-cheatsheet/" class="dd-item">
+        <div>
+          <a href="/posts/vim-cheatsheet/">
+            vim cheatsheet
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/audit/" class="dd-item">
+        <div>
+          <a href="/posts/audit/">
+            audit command cheatsheet
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/ssh-tunnel/" class="dd-item">
+        <div>
+          <a href="/posts/ssh-tunnel/">
+            ssh tunnel configuration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/socat-tips/" class="dd-item">
+        <div>
+          <a href="/posts/socat-tips/">
+            socat tips
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/linux-administrator-command/" class="dd-item">
+        <div>
+          <a href="/posts/linux-administrator-command/">
+            Linux Administrator command
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/mysql-cheatsheet/" class="dd-item">
+        <div>
+          <a href="/posts/mysql-cheatsheet/">
+            MySQL cheatsheet
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/port-forwarding-in-windows/" class="dd-item">
+        <div>
+          <a href="/posts/port-forwarding-in-windows/">
+            port forwarding in windows
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/rsyslog-configuration/" class="dd-item">
+        <div>
+          <a href="/posts/rsyslog-configuration/">
+            rsyslog configuration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/symbol-legend/" class="dd-item">
+        <div>
+          <a href="/posts/symbol-legend/">
+            symbol legend
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/tcpdump/" class="dd-item">
+        <div>
+          <a href="/posts/tcpdump/">
+            tcpdump tutorial
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/svn2git/" class="dd-item">
+        <div>
+          <a href="/posts/svn2git/">
+            SVN and Git migration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/jq-tutorial/" class="dd-item">
+        <div>
+          <a href="/posts/jq-tutorial/">
+            jq tutorial
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/behaviors-ext4-file-system-when-devicemapper-pool-is-full/" class="dd-item">
+        <div>
+          <a href="/posts/behaviors-ext4-file-system-when-devicemapper-pool-is-full/">
+            behaviors of ext4 file system when devicemapper pool is full
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kvm/" class="dd-item">
+        <div>
+          <a href="/posts/kvm/">
+            kvm virtual machine with vnc support
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/find-cheatsheet/" class="dd-item">
+        <div>
+          <a href="/posts/find-cheatsheet/">
+            find cheatsheet
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/lvm-thin-pool-cheatsheet/" class="dd-item">
+        <div>
+          <a href="/posts/lvm-thin-pool-cheatsheet/">
+            lvm thin pool cheatsheet
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/resize-disk/" class="dd-item">
+        <div>
+          <a href="/posts/resize-disk/">
+            resize disk
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/shell-cheatsheet/" class="dd-item">
+        <div>
+          <a href="/posts/shell-cheatsheet/">
+            Shell Cheatsheet
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/mac-cheatsheet/" class="dd-item">
+        <div>
+          <a href="/posts/mac-cheatsheet/">
+            mac cheatsheet
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/golang-functions/" class="dd-item">
+        <div>
+          <a href="/posts/golang-functions/">
+            golang memo
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/git-command/" class="dd-item">
+        <div>
+          <a href="/posts/git-command/">
+            git command
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/makefile-memo/" class="dd-item">
+        <div>
+          <a href="/posts/makefile-memo/">
+            makefile memo
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/rpmbuild-tutorial/" class="dd-item">
+        <div>
+          <a href="/posts/rpmbuild-tutorial/">
+            rpmbuild easy tutorial
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/rpm-and-yum-cheatsheet/" class="dd-item">
+        <div>
+          <a href="/posts/rpm-and-yum-cheatsheet/">
+            rpm and yum cheatsheet
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/sed-command/" class="dd-item">
+        <div>
+          <a href="/posts/sed-command/">
+            Frequent commands about linux sed
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/docker-registry/" class="dd-item">
+        <div>
+          <a href="/posts/docker-registry/">
+            docker registry
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/iptables/" class="dd-item">
+        <div>
+          <a href="/posts/iptables/">
+            iptables command(docker related)
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/log4j-configuration/" class="dd-item">
+        <div>
+          <a href="/posts/log4j-configuration/">
+            log4j configuration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/vim-plugins/" class="dd-item">
+        <div>
+          <a href="/posts/vim-plugins/">
+            vim plugins
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
+        <div>
+          <a href="/posts/gdb-cheatsheet/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kernel-development/" class="dd-item">
+        <div>
+          <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+
+
+
+        <section id="shortcuts">
+                <li class="" role=""><h3>More</h3><a href="https://github.com/mYmNeo/" target="_blank" rel="noopener"><i class='fa fa-github'></i> <label>Github repo</label></a></li>
+        </section>
+            <a id="clear-history" class="" href="#" data-clear-history-toggle=""><i class="fa  fa-history"></i> Clear History</a>
+
+    <hr />
+    <li></li>
+    
+    </ul>
+
+ <section id="footer">
+    </section>
+  </div>
+</nav>
+
+
+
+<section id="body">
+<div id="overlay"></div>
+<div class="padding highlightable">
+
+  <div id="top-bar">
+    <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+        <span id="sidebar-toggle-span">
+          <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+            <i class="fa fa-bars"></i>
+          </a>
+        </span>
+        <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+        <span class="links">
+        
+
+ leetcode
+
+   
+        </span>
+    </div>
+    
+    
+    <div class="progress">
+        <div class="wrapper">
+    
+        </div>
+    </div>
+    
+
+  </div>
+
+
+<div id="body-inner">
+  
+    <h1>leetcode</h1>
+  
+
+
+
+    
+    
+    
+
+
+
+<div class="extra-pagination inner">
+<nav class="pagination" role="navigation">
+	
+	    <a class="newer-posts" href="/tags/leetcode/page/2/">&larr; Previous Pages</a>
+	
+	<span class="page-number">Page 3 of 8</span>
+	
+	    <a class="older-posts" href="/tags/leetcode/page/4/">Next Pages &rarr;</a>
+	
+</nav>
+
+</div>
+
+
+   <article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/posts/algorithm/valid-sudoku/">Valid Sudoku</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>Determine if a Sudoku is valid, according to: Sudoku Puzzles - The Rules.
+The Sudoku board could be partially filled, where empty cells are filled with the character &lsquo;.&rsquo;.
+A partially filled sudoku which is valid.
+Note:
+A valid Sudoku board (partially filled) is not necessarily solvable. Only the filled cells need to be validated.
+ Analysis: Sudoku的要求,每个格子只能有1-9且只能出现一次
+Time and space complexity: Code: classSolution { public: bool isValidSudoku(vector&lt;vector&lt;char&gt;&gt;&amp; board) { unordered_map&lt;char, int&gt; record; //row  for (int i = 0; i &lt; 9; ++i) { record. <a class="read-more" href="/posts/algorithm/valid-sudoku/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+
+        
+          
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/leetcode/">leetcode</a>
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/algorithm/">algorithm</a>
+            
+        
+
+    </footer>
+</article>
+
+   <article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/posts/algorithm/minimum-depth-of-binary-tree/">Minimum Depth of Binary Tree</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>  Given a binary tree, find its minimum depth.
+The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
+ Analysis: DFS或者BFS遍历
+Time and space complexity: time: $\Theta (n)$
+Code: classSolution { public: int minDepth(TreeNode *root) { if(!root) return 0; if(!root-&gt;left) return 1 + minDepth(root-&gt;right); if(!root-&gt;right) return 1 + minDepth(root-&gt;left); return 1 + min(minDepth(root-&gt;left), minDepth(root-&gt;right)); } };  <a class="read-more" href="/posts/algorithm/minimum-depth-of-binary-tree/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+
+        
+          
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/leetcode/">leetcode</a>
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/algorithm/">algorithm</a>
+            
+        
+
+    </footer>
+</article>
+
+   <article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/posts/algorithm/paint-fence/">Paint Fence</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>There is a fence with n posts, each post can be painted with one of the k colors.
+You have to paint all the posts such that no more than two adjacent fence posts have the same color.
+Return the total number of ways you can paint the fence.
+Note:
+n and k are non-negative integers.
+ Analysis: 分2种情况考虑: + 最后2个fences的color一样,这样就有(k-1)*f(n-2) + 最后2个fences的color不一样,这样就有(k-1)*f(n-1)
+Time and space complexity: time: $\Theta (n)$ <a class="read-more" href="/posts/algorithm/paint-fence/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+
+        
+          
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/leetcode/">leetcode</a>
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/algorithm/">algorithm</a>
+            
+        
+
+    </footer>
+</article>
+
+   <article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/posts/algorithm/path-sum/">Path Sum</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.
+For example:
+Given the below binary tree and sum = 22,
+ 5 / \ 4 8 / / \ 11 13 4 / \ \ 7 2 1  return true, as there exist a root-to-leaf path 5-&gt;4-&gt;11-&gt;2 which sum is 22. <a class="read-more" href="/posts/algorithm/path-sum/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+
+        
+          
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/leetcode/">leetcode</a>
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/algorithm/">algorithm</a>
+            
+        
+
+    </footer>
+</article>
+
+   <article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/posts/algorithm/group-shifted-strings/">Group Shifted Strings</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>Given a string, we can &ldquo;shift&rdquo; each of its letter to its successive letter, for example: &quot;abc&quot; -&gt; &quot;bcd&quot;. We can keep &ldquo;shifting&rdquo; which forms the sequence:
+&quot;abc&quot; -&gt; &quot;bcd&quot; -&gt; ... -&gt; &quot;xyz&quot;  Given a list of strings which contains only lowercase alphabets, group all strings that belong to the same shifting sequence.
+For example, given: [&quot;abc&quot;, &quot;bcd&quot;, &quot;acef&quot;, &quot;xyz&quot;, &quot;az&quot;, &quot;ba&quot;, &quot;a&quot;, &quot;z&quot;], Return:
+[ [&quot;abc&quot;,&quot;bcd&quot;,&quot;xyz&quot;], [&quot;az&quot;,&quot;ba&quot;], [&quot;acef&quot;], [&quot;a&quot;,&quot;z&quot;] ]  Note: For the return value, each inner list&rsquo;s elements must follow the lexicographic order. <a class="read-more" href="/posts/algorithm/group-shifted-strings/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+
+        
+          
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/leetcode/">leetcode</a>
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/algorithm/">algorithm</a>
+            
+        
+
+    </footer>
+</article>
+
+   <article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/posts/algorithm/palindrome-number/">Palindrome Number</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>  Determine whether an integer is a palindrome. Do this without extra space.
+ Analysis: 利用回文数的特点:逆序还是原来的数解决,注意溢出问题,为了防止溢出,只需要算一半的数字即可
+Time and space complexity: space: $\Theta (1)$
+Code: classSolution { public: bool isPalindrome(int x) { if (x&lt;0 || (x!=0 &amp;&amp; x%10==0)) return false; int rev = 0; while (x&gt;rev){ rev = rev*10 + x%10; x = x/10; } return (x==rev || x==rev/10); };  <a class="read-more" href="/posts/algorithm/palindrome-number/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+
+        
+          
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/leetcode/">leetcode</a>
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/algorithm/">algorithm</a>
+            
+        
+
+    </footer>
+</article>
+
+   <article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/posts/algorithm/pascal-s-triangle-ii/">Pascal&#39;s Triangle II</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>  Given an index k, return the kth row of the Pascal&rsquo;s triangle.
+For example, given k = 3, Return [1,3,3,1].
+Note:
+Could you optimize your algorithm to use only O(k) extra space?
+ Analysis: 思路和pascal&rsquo;s triangle一样
+Time and space complexity: time: $\Theta (k^2)$
+space: $\Theta (k)$
+Code: classSolution { public: vector&lt;int&gt; getRow(int rowIndex) { vector&lt;int&gt; A(rowIndex+1, 0); A[0] = 1; for(int i=1; i&lt;rowIndex+1; i++) for(int j=i; j&gt;=1; j--) A[j] += A[j-1]; return A; } };  <a class="read-more" href="/posts/algorithm/pascal-s-triangle-ii/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+
+        
+          
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/leetcode/">leetcode</a>
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/algorithm/">algorithm</a>
+            
+        
+
+    </footer>
+</article>
+
+   <article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/posts/algorithm/binary-tree-level-order-traversal/">Binary Tree Level Order Traversal</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>Given a binary tree, return the level order traversal of its nodes&rsquo; values. (ie, from left to right, level by level).
+For example:
+Given binary tree {3,9,20,#,#,15,7},
+ 3 / \ 9 20 / \ 15 7  return its level order traversal as:
+[ [3], [9,20], [15,7] ]   Analysis: level遍历
+Time and space complexity: time: $\Theta (n)$
+Code: classSolution { public: vector&lt;vector&lt;int&gt;&gt; levelOrderBottom(TreeNode* root) { DFS(root, 0); return res; } private: void DFS(TreeNode* root, int level) { if (root == NULL) return; if (level == res. <a class="read-more" href="/posts/algorithm/binary-tree-level-order-traversal/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+
+        
+          
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/leetcode/">leetcode</a>
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/algorithm/">algorithm</a>
+            
+        
+
+    </footer>
+</article>
+
+   <article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/posts/algorithm/factorial-trailing-zeroes/">Factorial Trailing Zeroes</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>  Given an integer n, return the number of trailing zeroes in n!.
+Note: Your solution should be in logarithmic time complexity.
+ Analysis: 因为2比较多,0的个数由5的个数决定,需要注意的是5的power的数字,会包含5的个数更多,不停的除以5,并把商加起来为0的个数
+Time and space complexity: time: $\Theta(log_5(n))$
+Code: classSolution { public: int trailingZeroes(int n) { int result = 0; while (n) { n /= 5; result += n; } return result; } };  <a class="read-more" href="/posts/algorithm/factorial-trailing-zeroes/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+
+        
+          
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/leetcode/">leetcode</a>
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/algorithm/">algorithm</a>
+            
+        
+
+    </footer>
+</article>
+
+   <article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/posts/algorithm/pascal-s-triangle/">Pascal&#39;s Triangle</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>  Given numRows, generate the first numRows of Pascal&rsquo;s triangle.
+For example, given numRows = 5,
+Return
+[ [1], [1,1], [1,2,1], [1,3,3,1], [1,4,6,4,1] ]   Analysis: 类似dp, 对于每一个新行,现push 1,然后根据上一行从第二个元素开始,把上一行的当前位置的元素和它前面的元素加一起,为这个新行该位置的值
+Time and space complexity: Code: classSolution { public: vector&lt;vector&lt;int&gt; &gt; generate(int numRows) { vector&lt;vector&lt;int&gt;&gt; r(numRows); for (int i = 0; i &lt; numRows; i++) { r[i].resize(i + 1); r[i][0] = r[i][i] = 1; for (int j = 1; j &lt; i; j++) r[i][j] = r[i - 1][j - 1] + r[i - 1][j]; } return r; } };  <a class="read-more" href="/posts/algorithm/pascal-s-triangle/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+
+        
+          
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/leetcode/">leetcode</a>
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/algorithm/">algorithm</a>
+            
+        
+
+    </footer>
+</article>
+
+
+<div style="margin-bottom:2rem"></div>
+
+<nav class="pagination" role="navigation">
+	
+	    <a class="newer-posts" href="/tags/leetcode/page/2/">&larr; Previous Pages</a>
+	
+	<span class="page-number">Page 3 of 8</span>
+	
+	    <a class="older-posts" href="/tags/leetcode/page/4/">Next Pages &rarr;</a>
+	
+</nav>
+
+
+
+
+    
+    
+          <footer class=" footline" >
+	
+</footer>
+  </div>
+</div>
+
+<div id="navigation">
+</div>
+
+</section>
+<div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+  <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+</div>    
+
+<script src="/js/clipboard.min.js"></script>
+<script src="/js/featherlight.min.js"></script>
+<script src="/js/html5shiv-printshiv.min.js"></script>
+
+<script src="/js/modernizr.custom.71422.js"></script>
+<script src="/js/docdock.js"></script>
+<script src="/theme-original/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

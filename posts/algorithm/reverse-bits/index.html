@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sparking Mind</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="revised" content="2019-07-01T18:09:34 CST">
+<title>Reverse Bits :: Sparking Mind</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/hybrid.css" rel="stylesheet">
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<link href="/css/auto-complete.css" rel="stylesheet">
+<link href="/theme-original/style.css" rel="stylesheet">
+
+  <link href="/theme-original/variant-green.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<style type="text/css">
+  :root #header + #content > #left > #rlblock_left {
+    display:none !important;
+  }
+</style>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+</script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+    
+  </head>
+  <body data-url="/posts/algorithm/reverse-bits/">
+    
+      <div id="headermain"></div>
+<nav id="sidebar" class="showVisitedLinks">
+
+
+
+<div class="highlightable">
+  <div id="header-wrapper">
+    <div id="header">
+      
+	
+  
+    <a class="baselink" href="http://mymneo.github.io/">Sparking Mind</a>
+  
+
+
+    </div>
+        <div class="searchbox">
+		    <label for="search-by"><i class="fa fa-search"></i></label>
+		    <input data-search-input id="search-by" type="text" placeholder="Search...">
+		    <span data-search-clear=""><i class="fa fa-close"></i></span>
+		</div>
+		<script type="text/javascript" src="/js/lunr.min.js"></script>
+		<script type="text/javascript" src="/js/auto-complete.js"></script>
+		<script type="text/javascript">
+        
+            var baseurl = "http:\/\/mymneo.github.io\/";
+        
+		</script>
+		<script type="text/javascript" src="/js/search.js"></script>
+  </div>
+
+      <ul class="topics">
+            <li data-nav-id="/" class="dd-item">
+            <a href="/"><i class="fa fa-fw fa-home"></i></a>
+            </li>
+    <li data-nav-id="/posts/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/posts/">Posts</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/posts/algorithm/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/posts/algorithm/">Algorithm</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/posts/algorithm/reverse-words-in-a-string-iii/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/reverse-words-in-a-string-iii/">
+            Reverse Words in a String III
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/next-greater-element-i/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/next-greater-element-i/">
+            Next Greater Element I
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/max-consecutive-ones/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/max-consecutive-ones/">
+            Max Consecutive Ones
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/fizz-buzz/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/fizz-buzz/">
+            Fizz Buzz
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/island-perimeter/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/island-perimeter/">
+            Island Perimeter
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/find-all-numbers-disappeared-in-an-array/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/find-all-numbers-disappeared-in-an-array/">
+            Find All Numbers Disappeared in an Array
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/keyboard-row/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/keyboard-row/">
+            Keyboard Row
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/number-complement/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/number-complement/">
+            Number Complement
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/hamming-distance/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/hamming-distance/">
+            Hamming Distance
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/reverse-bits/" class="dd-item active">
+        <div>
+          <a href="/posts/algorithm/reverse-bits/">
+            Reverse Bits
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/read-n-characters-given-read4/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/read-n-characters-given-read4/">
+            Read N Characters Given Read4
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/valid-parentheses/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/valid-parentheses/">
+            Valid Parentheses
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/remove-nth-node-from-end-of-list/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/remove-nth-node-from-end-of-list/">
+            Remove Nth Node From End of List
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/isomorphic-strings/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/isomorphic-strings/">
+            Isomorphic Strings
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/bulls-and-cows/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/bulls-and-cows/">
+            Bulls and Cows
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/rectangle-area/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/rectangle-area/">
+            Rectangle Area
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/contains-duplicate-ii/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/contains-duplicate-ii/">
+            Contains Duplicate II
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/merge-sorted-array/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/merge-sorted-array/">
+            Merge Sorted Array
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/intersection-of-two-linked-lists/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/intersection-of-two-linked-lists/">
+            Intersection of Two Linked Lists
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/implement-stack-using-queues/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/implement-stack-using-queues/">
+            Implement Stack using Queues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/valid-sudoku/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/valid-sudoku/">
+            Valid Sudoku
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/minimum-depth-of-binary-tree/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/minimum-depth-of-binary-tree/">
+            Minimum Depth of Binary Tree
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/paint-fence/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/paint-fence/">
+            Paint Fence
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/path-sum/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/path-sum/">
+            Path Sum
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/group-shifted-strings/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/group-shifted-strings/">
+            Group Shifted Strings
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/palindrome-number/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/palindrome-number/">
+            Palindrome Number
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/pascal-s-triangle-ii/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/pascal-s-triangle-ii/">
+            Pascal&#39;s Triangle II
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/binary-tree-level-order-traversal/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/binary-tree-level-order-traversal/">
+            Binary Tree Level Order Traversal
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/factorial-trailing-zeroes/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/factorial-trailing-zeroes/">
+            Factorial Trailing Zeroes
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/pascal-s-triangle/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/pascal-s-triangle/">
+            Pascal&#39;s Triangle
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/remove-duplicates-from-sorted-array/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/remove-duplicates-from-sorted-array/">
+            Remove Duplicates from Sorted Array
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/power-of-four/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/power-of-four/">
+            Power of Four
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/plus-one/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/plus-one/">
+            Plus One
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/remove-element/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/remove-element/">
+            Remove Element
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/binary-tree-level-order-traversal-ii/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/binary-tree-level-order-traversal-ii/">
+            Binary Tree Level Order Traversal II
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/implement-queue-using-stacks/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/implement-queue-using-stacks/">
+            Implement Queue using Stacks
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/symmetric-tree/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/symmetric-tree/">
+            Symmetric Tree
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/balanced-binary-tree/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/balanced-binary-tree/">
+            Balanced Binary Tree
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/house-robber/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/house-robber/">
+            House Robber
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/closest-binary-search-tree-value/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/closest-binary-search-tree-value/">
+            Closest Binary Search Tree Value
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/reverse-vowels-of-a-string/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/reverse-vowels-of-a-string/">
+            Reverse Vowels of a String
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/swap-nodes-in-pairs/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/swap-nodes-in-pairs/">
+            Swap Nodes in Pairs
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/merge-two-sorted-lists/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/merge-two-sorted-lists/">
+            Merge Two Sorted Lists
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/best-time-to-buy-and-sell-stock/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/best-time-to-buy-and-sell-stock/">
+            Best Time to Buy and Sell Stock
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/strobogrammatic-number/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/strobogrammatic-number/">
+            Strobogrammatic Number
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/ugly-number/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/ugly-number/">
+            Ugly Number
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/happy-number/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/happy-number/">
+            Happy Number
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/power-of-two/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/power-of-two/">
+            Power of Two
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/power-of-three/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/power-of-three/">
+            Power of Three
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/climbing-stairs/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/climbing-stairs/">
+            Climbing Stairs
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/remove-duplicates-from-sorted-list/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/remove-duplicates-from-sorted-list/">
+            Remove Duplicates from Sorted List
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/linked-list-cycle/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/linked-list-cycle/">
+            Linked List Cycle
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/number-of-1-bits/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/number-of-1-bits/">
+            Number of 1 Bits
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/lowest-common-ancestor-of-a-binary-search-tree/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/lowest-common-ancestor-of-a-binary-search-tree/">
+            Lowest Common Ancestor of a Binary Search Tree
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/roman-to-integer/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/roman-to-integer/">
+            Roman to Integer
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/reverse-linked-list/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/reverse-linked-list/">
+            Reverse Linked List
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/maximum-size-subarray-sum-equals-k/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/maximum-size-subarray-sum-equals-k/">
+            Maximum Size Subarray Sum Equals k
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/majority-element/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/majority-element/">
+            Majority Element
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/contains-duplicate/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/contains-duplicate/">
+            Contains Duplicate
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/meeting-rooms/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/meeting-rooms/">
+            Meeting Rooms
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/excel-sheet-column-number/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/excel-sheet-column-number/">
+            Excel Sheet Column Number
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/valid-anagram/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/valid-anagram/">
+            Valid Anagram
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/same-tree/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/same-tree/">
+            Same Tree
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/delete-node-in-a-linked-list/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/delete-node-in-a-linked-list/">
+            Delete Node in a Linked List
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/move-zeroes/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/move-zeroes/">
+            Move Zeroes
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/find-the-celebrity/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/find-the-celebrity/">
+            Find the Celebrity
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/invert-binary-tree/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/invert-binary-tree/">
+            Invert Binary Tree
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/shortest-word-distance/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/shortest-word-distance/">
+            Shortest Word Distance
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/maximum-depth-of-binary-tree/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/maximum-depth-of-binary-tree/">
+            Maximum Depth of Binary Tree
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/add-digits/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/add-digits/">
+            Add Digits
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/flip-game/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/flip-game/">
+            Flip Game
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/palindrome-permutation/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/palindrome-permutation/">
+            Palindrome Permutation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/nim-game/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/nim-game/">
+            Nim Game
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/nested-list-weight-sum/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/nested-list-weight-sum/">
+            Nested List Weight Sum
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/algorithm/reverse-string/" class="dd-item">
+        <div>
+          <a href="/posts/algorithm/reverse-string/">
+            Reverse String
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/posts/vim-cheatsheet/" class="dd-item">
+        <div>
+          <a href="/posts/vim-cheatsheet/">
+            vim cheatsheet
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/audit/" class="dd-item">
+        <div>
+          <a href="/posts/audit/">
+            audit command cheatsheet
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/ssh-tunnel/" class="dd-item">
+        <div>
+          <a href="/posts/ssh-tunnel/">
+            ssh tunnel configuration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/socat-tips/" class="dd-item">
+        <div>
+          <a href="/posts/socat-tips/">
+            socat tips
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/linux-administrator-command/" class="dd-item">
+        <div>
+          <a href="/posts/linux-administrator-command/">
+            Linux Administrator command
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/mysql-cheatsheet/" class="dd-item">
+        <div>
+          <a href="/posts/mysql-cheatsheet/">
+            MySQL cheatsheet
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/port-forwarding-in-windows/" class="dd-item">
+        <div>
+          <a href="/posts/port-forwarding-in-windows/">
+            port forwarding in windows
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/rsyslog-configuration/" class="dd-item">
+        <div>
+          <a href="/posts/rsyslog-configuration/">
+            rsyslog configuration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/symbol-legend/" class="dd-item">
+        <div>
+          <a href="/posts/symbol-legend/">
+            symbol legend
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/tcpdump/" class="dd-item">
+        <div>
+          <a href="/posts/tcpdump/">
+            tcpdump tutorial
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/svn2git/" class="dd-item">
+        <div>
+          <a href="/posts/svn2git/">
+            SVN and Git migration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/jq-tutorial/" class="dd-item">
+        <div>
+          <a href="/posts/jq-tutorial/">
+            jq tutorial
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/behaviors-ext4-file-system-when-devicemapper-pool-is-full/" class="dd-item">
+        <div>
+          <a href="/posts/behaviors-ext4-file-system-when-devicemapper-pool-is-full/">
+            behaviors of ext4 file system when devicemapper pool is full
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kvm/" class="dd-item">
+        <div>
+          <a href="/posts/kvm/">
+            kvm virtual machine with vnc support
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/find-cheatsheet/" class="dd-item">
+        <div>
+          <a href="/posts/find-cheatsheet/">
+            find cheatsheet
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/lvm-thin-pool-cheatsheet/" class="dd-item">
+        <div>
+          <a href="/posts/lvm-thin-pool-cheatsheet/">
+            lvm thin pool cheatsheet
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/resize-disk/" class="dd-item">
+        <div>
+          <a href="/posts/resize-disk/">
+            resize disk
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/shell-cheatsheet/" class="dd-item">
+        <div>
+          <a href="/posts/shell-cheatsheet/">
+            Shell Cheatsheet
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/mac-cheatsheet/" class="dd-item">
+        <div>
+          <a href="/posts/mac-cheatsheet/">
+            mac cheatsheet
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/golang-functions/" class="dd-item">
+        <div>
+          <a href="/posts/golang-functions/">
+            golang memo
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/git-command/" class="dd-item">
+        <div>
+          <a href="/posts/git-command/">
+            git command
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/makefile-memo/" class="dd-item">
+        <div>
+          <a href="/posts/makefile-memo/">
+            makefile memo
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/rpmbuild-tutorial/" class="dd-item">
+        <div>
+          <a href="/posts/rpmbuild-tutorial/">
+            rpmbuild easy tutorial
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/rpm-and-yum-cheatsheet/" class="dd-item">
+        <div>
+          <a href="/posts/rpm-and-yum-cheatsheet/">
+            rpm and yum cheatsheet
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/sed-command/" class="dd-item">
+        <div>
+          <a href="/posts/sed-command/">
+            Frequent commands about linux sed
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/docker-registry/" class="dd-item">
+        <div>
+          <a href="/posts/docker-registry/">
+            docker registry
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/iptables/" class="dd-item">
+        <div>
+          <a href="/posts/iptables/">
+            iptables command(docker related)
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/log4j-configuration/" class="dd-item">
+        <div>
+          <a href="/posts/log4j-configuration/">
+            log4j configuration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/vim-plugins/" class="dd-item">
+        <div>
+          <a href="/posts/vim-plugins/">
+            vim plugins
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
+        <div>
+          <a href="/posts/gdb-cheatsheet/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kernel-development/" class="dd-item">
+        <div>
+          <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+
+
+
+        <section id="shortcuts">
+                <li class="" role=""><h3>More</h3><a href="https://github.com/mYmNeo/" target="_blank" rel="noopener"><i class='fa fa-github'></i> <label>Github repo</label></a></li>
+        </section>
+            <a id="clear-history" class="" href="#" data-clear-history-toggle=""><i class="fa  fa-history"></i> Clear History</a>
+
+    <hr />
+    <li></li>
+    
+    </ul>
+
+ <section id="footer">
+    </section>
+  </div>
+</nav>
+
+
+
+<section id="body">
+<div id="overlay"></div>
+<div class="padding highlightable">
+
+  <div id="top-bar">
+    
+      
+      
+      
+    <div id="top-github-link">
+      <a class="github-link" href="https://github.com/mYmNeo/blog/tree/master/content/posts/algorithm/Reverse-Bits.md" target="blank">
+        <i class="fa fa-code-fork"></i>
+        Improve this page
+      </a>
+    </div><div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+        <span id="sidebar-toggle-span">
+          <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+            <i class="fa fa-bars"></i>
+          </a>
+        </span>
+        <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+        <span class="links">
+        
+
+
+
+
+
+
+
+
+
+
+ <a href='/'></a> > <a href='/posts/'>Posts</a> > <a href='/posts/algorithm/'>Algorithm</a> > Reverse Bits
+
+ 
+
+ 
+
+ 
+
+   
+        </span>
+    </div>
+    
+    
+    <div class="progress">
+        <div class="wrapper">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#analysis">Analysis:</a></li>
+<li><a href="#time-and-space-complexity">Time and space complexity:</a></li>
+<li><a href="#code">Code:</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+        </div>
+    </div>
+    
+
+  </div>
+
+
+  <div id="tags">
+    
+      <a class="label label-default" href="http://mymneo.github.io/tags/leetcode">leetcode</a>
+    
+      <a class="label label-default" href="http://mymneo.github.io/tags/algorithm">algorithm</a>
+    
+  </div>
+
+<div id="body-inner">
+  
+    <h1>Reverse Bits</h1>
+  
+
+
+
+    
+    
+    
+    
+
+<blockquote>
+<p>Reverse bits of a given 32 bits unsigned integer.</p>
+
+<p>For example, given input 43261596 (represented in binary as <strong>00000010100101000001111010011100</strong>), return 964176192 (represented in binary as <strong>00111001011110000010100101000000</strong>).</p>
+
+<p><strong>Follow up:</strong></p>
+
+<p>If this function is called many times, how would you optimize it?</p>
+</blockquote>
+
+<h3 id="analysis">Analysis:</h3>
+
+<p>与counting bit类似,divide and conquer,先2位2位swap,然后4位4位swap</p>
+
+<h3 id="time-and-space-complexity">Time and space complexity:</h3>
+
+<p>time: $\Theta (1)$</p>
+
+<p>space: $\Theta (1)$</p>
+
+<h3 id="code">Code:</h3>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">class</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#75af00">Solution</span> <span style="color:#111">{</span>
+<span style="color:#00a8c8">public</span><span style="color:#f92672">:</span>
+    <span style="color:#111">uint32_t</span> <span style="color:#111">reverseBits</span><span style="color:#111">(</span><span style="color:#111">uint32_t</span> <span style="color:#111">n</span><span style="color:#111">)</span> <span style="color:#111">{</span>
+        <span style="color:#111">n</span> <span style="color:#f92672">=</span> <span style="color:#111">(</span><span style="color:#111">n</span> <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">16</span><span style="color:#111">)</span> <span style="color:#f92672">|</span> <span style="color:#111">(</span><span style="color:#111">n</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">16</span><span style="color:#111">);</span>
+        <span style="color:#111">n</span> <span style="color:#f92672">=</span> <span style="color:#111">((</span><span style="color:#111">n</span> <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">0xff00ff00</span><span style="color:#111">)</span> <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">8</span><span style="color:#111">)</span> <span style="color:#f92672">|</span> <span style="color:#111">((</span><span style="color:#111">n</span> <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">0x00ff00ff</span><span style="color:#111">)</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">8</span><span style="color:#111">);</span>
+        <span style="color:#111">n</span> <span style="color:#f92672">=</span> <span style="color:#111">((</span><span style="color:#111">n</span> <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">0xf0f0f0f0</span><span style="color:#111">)</span> <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">4</span><span style="color:#111">)</span> <span style="color:#f92672">|</span> <span style="color:#111">((</span><span style="color:#111">n</span> <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">0x0f0f0f0f</span><span style="color:#111">)</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">4</span><span style="color:#111">);</span>
+        <span style="color:#111">n</span> <span style="color:#f92672">=</span> <span style="color:#111">((</span><span style="color:#111">n</span> <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">0xcccccccc</span><span style="color:#111">)</span> <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">2</span><span style="color:#111">)</span> <span style="color:#f92672">|</span> <span style="color:#111">((</span><span style="color:#111">n</span> <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">0x33333333</span><span style="color:#111">)</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">2</span><span style="color:#111">);</span>
+        <span style="color:#111">n</span> <span style="color:#f92672">=</span> <span style="color:#111">((</span><span style="color:#111">n</span> <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">0xaaaaaaaa</span><span style="color:#111">)</span> <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">1</span><span style="color:#111">)</span> <span style="color:#f92672">|</span> <span style="color:#111">((</span><span style="color:#111">n</span> <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">0x55555555</span><span style="color:#111">)</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">1</span><span style="color:#111">);</span>
+        <span style="color:#00a8c8">return</span> <span style="color:#111">n</span><span style="color:#111">;</span>
+    <span style="color:#111">}</span>
+<span style="color:#111">};</span>
+</code></pre></div>
+
+    
+    
+          <footer class=" footline" >
+	
+</footer>
+  </div>
+</div>
+
+<div id="navigation">
+</div>
+
+</section>
+<div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+  <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+</div>    
+
+<script src="/js/clipboard.min.js"></script>
+<script src="/js/featherlight.min.js"></script>
+<script src="/js/html5shiv-printshiv.min.js"></script>
+
+<script src="/js/modernizr.custom.71422.js"></script>
+<script src="/js/docdock.js"></script>
+<script src="/theme-original/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

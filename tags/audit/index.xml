@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>audit on Sparking Mind</title>
+    <link>http://mymneo.github.io/tags/audit/</link>
+    <description>Recent content in audit on Sparking Mind</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 03 Jul 2018 18:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://mymneo.github.io/tags/audit/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>audit command cheatsheet</title>
+      <link>http://mymneo.github.io/posts/audit/</link>
+      <pubDate>Tue, 03 Jul 2018 18:00:00 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/audit/</guid>
+      <description>Audit Cheatsheet  audit syscall  auditctl -a exit,always -S &amp;lt;syscall&amp;gt;  audit file  auditctl -w /etc/shadow -p wa   extra option     Tag Description     -b backlog Set max number of outstanding audit buffers allowed (Kernel Default=64) If all buffers are full, the failure flag is consulted by the kernel for action.   -e [0..2] Set enabled flag. When 0 is passed, this can be used to temporarily disable auditing.</description>
+    </item>
+    
+  </channel>
+</rss>

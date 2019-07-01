@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rpm on Sparking Mind</title>
+    <link>http://mymneo.github.io/tags/rpm/</link>
+    <description>Recent content in rpm on Sparking Mind</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 28 Apr 2016 10:58:34 +0000</lastBuildDate>
+    
+	<atom:link href="http://mymneo.github.io/tags/rpm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>rpm and yum cheatsheet</title>
+      <link>http://mymneo.github.io/posts/rpm-and-yum-cheatsheet/</link>
+      <pubDate>Thu, 28 Apr 2016 10:58:34 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/rpm-and-yum-cheatsheet/</guid>
+      <description>query the dependency of a package  rpm -qR &amp;lt;package-name&amp;gt;  query the dependency of a rpm file  rpm -qpR &amp;lt;rpm-file&amp;gt;  query which rpm this file belongs to  rpm -qif &amp;lt;filename&amp;gt;  query non-installed rpm file  rpm -qip &amp;lt;rpm-file&amp;gt;  setup yum with proxy  append proxy=&amp;lt;your proxy&amp;gt; to /etc/yum.conf
+[main] proxy=&amp;lt;your proxy&amp;gt;  if you don&amp;rsquo;t want proxy in some repository
+append proxy=_none_ to your repo file</description>
+    </item>
+    
+  </channel>
+</rss>

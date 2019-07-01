@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jq on Sparking Mind</title>
+    <link>http://mymneo.github.io/tags/jq/</link>
+    <description>Recent content in jq on Sparking Mind</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 24 Jun 2016 16:48:39 +0000</lastBuildDate>
+    
+	<atom:link href="http://mymneo.github.io/tags/jq/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>jq tutorial</title>
+      <link>http://mymneo.github.io/posts/jq-tutorial/</link>
+      <pubDate>Fri, 24 Jun 2016 16:48:39 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/jq-tutorial/</guid>
+      <description>Example json file
+{ &amp;#34;id&amp;#34;: { &amp;#34;bioguide&amp;#34;: &amp;#34;E000295&amp;#34;, &amp;#34;thomas&amp;#34;: &amp;#34;02283&amp;#34;, &amp;#34;fec&amp;#34;: [ &amp;#34;S4IA00129&amp;#34; ], &amp;#34;govtrack&amp;#34;: 412667, &amp;#34;opensecrets&amp;#34;: &amp;#34;N00035483&amp;#34;, &amp;#34;lis&amp;#34;: &amp;#34;S376&amp;#34; }, &amp;#34;name&amp;#34;: { &amp;#34;first&amp;#34;: &amp;#34;Joni&amp;#34;, &amp;#34;last&amp;#34;: &amp;#34;Ernst&amp;#34;, &amp;#34;official_full&amp;#34;: &amp;#34;Joni Ernst&amp;#34; }, &amp;#34;bio&amp;#34;: { &amp;#34;gender&amp;#34;: &amp;#34;F&amp;#34;, &amp;#34;birthday&amp;#34;: &amp;#34;1970-07-01&amp;#34; }, &amp;#34;terms&amp;#34;: [ { &amp;#34;type&amp;#34;: &amp;#34;sen&amp;#34;, &amp;#34;start&amp;#34;: &amp;#34;2015-01-06&amp;#34;, &amp;#34;end&amp;#34;: &amp;#34;2021-01-03&amp;#34;, &amp;#34;state&amp;#34;: &amp;#34;IA&amp;#34;, &amp;#34;class&amp;#34;: 2, &amp;#34;state_rank&amp;#34;: &amp;#34;junior&amp;#34;, &amp;#34;party&amp;#34;: &amp;#34;Republican&amp;#34;, &amp;#34;url&amp;#34;: &amp;#34;http://www.ernst.senate.gov&amp;#34;, &amp;#34;address&amp;#34;: &amp;#34;825 B&amp;amp;C Hart Senate Office Building Washington DC 20510&amp;#34;, &amp;#34;office&amp;#34;: &amp;#34;825 B&amp;amp;c Hart Senate Office Building&amp;#34;, &amp;#34;phone&amp;#34;: &amp;#34;202-224-3254&amp;#34; } ] }  query a attribute</description>
+    </item>
+    
+  </channel>
+</rss>

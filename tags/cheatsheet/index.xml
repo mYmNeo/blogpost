@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cheatsheet on Sparking Mind</title>
+    <link>http://mymneo.github.io/tags/cheatsheet/</link>
+    <description>Recent content in cheatsheet on Sparking Mind</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 14 Jun 2016 09:43:51 +0000</lastBuildDate>
+    
+	<atom:link href="http://mymneo.github.io/tags/cheatsheet/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>find cheatsheet</title>
+      <link>http://mymneo.github.io/posts/find-cheatsheet/</link>
+      <pubDate>Tue, 14 Jun 2016 09:43:51 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/find-cheatsheet/</guid>
+      <description>Frequently used option of Find TEST    option description example     -name  find the file which name is filename find / -name &amp;ldquo;*.js&amp;rdquo;   -group  find the file belongs to group-name find / -group users   -user  find the file belongs to user-name find / -user root   -maxdepth  Descend at most levels to find find / -maxdepth 4   -empty find file is empty and is either a regular file or a directory find / -empty   -path  find file name matches shell pattern  find / -path &amp;ldquo;/sr*sc&amp;rdquo;   -perm  find file&amp;rsquo;s permission bits are exactly mode find / -perm 0664   -perm - find all of the permission bits mode are set for the file find / -perm -644   -perm / find any of the permission bits mode are set for the file find / -perm /644   -regex  find file name matches regular expression  find / -regex &amp;ldquo;.</description>
+    </item>
+    
+    <item>
+      <title>lvm thin pool cheatsheet</title>
+      <link>http://mymneo.github.io/posts/lvm-thin-pool-cheatsheet/</link>
+      <pubDate>Mon, 13 Jun 2016 15:17:34 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/lvm-thin-pool-cheatsheet/</guid>
+      <description>We use devicemapper as Docker storage driver, sometime any of the meta or data pool is full. We have to extend the pool
+  Single step thin pool LV creation  lvcreate --type thin-pool --poolmetadata &amp;lt;meta size&amp;gt; -L &amp;lt;pool size&amp;gt; &amp;lt;pool name&amp;gt;  Manually manage free data space of thin pool LV  lvextend -L &amp;lt;size&amp;gt; &amp;lt;pool name&amp;gt;  Manually manage free metadata space of a thin pool LV  lvs -oname,size,data_percent,metadata_percent # show the available metadat space in a thin pool LV lvextend --poolmetadatasize &amp;lt;size&amp;gt; &amp;lt;pool name&amp;gt; Metadata space exhaustion  Metadata space exhaustion can lead to inconsistent thin pool metadata and inconsistent file systems, so the response requires offline checking and repair.</description>
+    </item>
+    
+    <item>
+      <title>resize disk</title>
+      <link>http://mymneo.github.io/posts/resize-disk/</link>
+      <pubDate>Mon, 13 Jun 2016 14:39:06 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/resize-disk/</guid>
+      <description> Shrink a disk  If the partition the file system is on is currently mounted, unmount it
+umount /dev/disk  Run fsck on the umounted file system bash e2fsck -f /dev/disk   Shrink the file system with the resize2fs /dev/fdisk size
+resize2fs /dev/disk size  Use fdisk to modify the partition table information bash fdisk /dev/disk   Mount the disk
+mount /dev/disk target  </description>
+    </item>
+    
+    <item>
+      <title>Shell Cheatsheet</title>
+      <link>http://mymneo.github.io/posts/shell-cheatsheet/</link>
+      <pubDate>Fri, 03 Jun 2016 09:50:09 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/shell-cheatsheet/</guid>
+      <description> Checking if string does or not contain other string  Use &amp;lsquo;=&amp;rsquo; or &amp;lsquo;!=&amp;rsquo;
+if [[ ${testmystring} = *&amp;#34;c0&amp;#34;* ]];then # testmystring does contain c0 fi if [[ ${testmystring} != *&amp;#34;c0&amp;#34;* ]];then # testmystring does not contain c0 fi</description>
+    </item>
+    
+    <item>
+      <title>mac cheatsheet</title>
+      <link>http://mymneo.github.io/posts/mac-cheatsheet/</link>
+      <pubDate>Fri, 29 Apr 2016 09:32:42 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/mac-cheatsheet/</guid>
+      <description> Reset Launchpad Layout in OS X El Capitan &amp;amp; Yosemite bash defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock   </description>
+    </item>
+    
+  </channel>
+</rss>

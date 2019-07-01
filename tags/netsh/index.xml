@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>netsh on Sparking Mind</title>
+    <link>http://mymneo.github.io/tags/netsh/</link>
+    <description>Recent content in netsh on Sparking Mind</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 Mar 2017 21:25:25 +0000</lastBuildDate>
+    
+	<atom:link href="http://mymneo.github.io/tags/netsh/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>port forwarding in windows</title>
+      <link>http://mymneo.github.io/posts/port-forwarding-in-windows/</link>
+      <pubDate>Fri, 10 Mar 2017 21:25:25 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/port-forwarding-in-windows/</guid>
+      <description> Port forwarding configuration  Add rule
+   forward A:B to C:D
+netsh interface portproxy add v4tov4 listenaddress=A listenport=B connectaddress=C connectport=D    Delete rule   delete A:B
+netsh interface portproxy delete v4tov4 listenaddress=A listenport=B    List all rules
+netsh interface portproxy show all   </description>
+    </item>
+    
+  </channel>
+</rss>
