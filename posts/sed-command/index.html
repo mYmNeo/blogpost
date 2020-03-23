@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-07-01T18:42:05 CST">
+<meta name="revised" content="2020-03-23T12:09:36 CST">
 <title>Frequent commands about linux sed :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -813,6 +813,20 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
+        <div>
+          <a href="/posts/application-grid-design/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -823,6 +837,13 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item">
         <div>
           <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -893,16 +914,13 @@
     <div class="progress">
         <div class="wrapper">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#zero-or-one-address-commands-in-linux-sed">Zero- or One- address commands in linux sed</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#label">label</a></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#zero--or-one--address-commands-in-linux-sed">Zero- or One- address commands in linux sed</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
         </div>
     </div>
@@ -929,36 +947,29 @@
     
     
     
-    
-
-<ul>
-<li><p>add content at last line</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sed <span style="color:#d88200">&#39;$a&lt;content&gt;&#39;</span> &lt;file&gt;</code></pre></div>
-<ul>
-<li>add content at line
-<code>bash
-sed '&lt;line&gt;i&lt;content&gt;' &lt;file&gt;
-</code></li>
-</ul></li>
-
-<li><p>delete line</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sed <span style="color:#d88200">&#39;&lt;line&gt;d&#39;</span> &lt;file&gt;</code></pre></div>
-<ul>
-<li>match pattern, then execute expression
-<code>bash
-sed '/&lt;regex&gt;/&lt;command&gt;' &lt;file&gt;
-</code></li>
-</ul></li>
-
-<li><p>print line number of matched pattern</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sed <span style="color:#d88200">&#39;/&lt;regex&gt;/{=}&#39;</span> &lt;file&gt;</code></pre></div>
-<h3 id="zero-or-one-address-commands-in-linux-sed">Zero- or One- address commands in linux sed</h3>
-
-<p>```</p></li>
-
-<li><h1 id="label">label</h1>
-
-<p>=  # line_number
+    <ul>
+<li>add content at last line</li>
+</ul>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sed <span style="color:#d88200">&#39;$a&lt;content&gt;&#39;</span> &lt;file&gt;
+</code></pre></div><ul>
+<li>add content at line</li>
+</ul>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sed <span style="color:#d88200">&#39;&lt;line&gt;i&lt;content&gt;&#39;</span> &lt;file&gt;
+</code></pre></div><ul>
+<li>delete line</li>
+</ul>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sed <span style="color:#d88200">&#39;&lt;line&gt;d&#39;</span> &lt;file&gt;
+</code></pre></div><ul>
+<li>match pattern, then execute expression</li>
+</ul>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sed <span style="color:#d88200">&#39;/&lt;regex&gt;/&lt;command&gt;&#39;</span> &lt;file&gt;
+</code></pre></div><ul>
+<li>print line number of matched pattern</li>
+</ul>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sed <span style="color:#d88200">&#39;/&lt;regex&gt;/{=}&#39;</span> &lt;file&gt;
+</code></pre></div><h3 id="zero--or-one--address-commands-in-linux-sed">Zero- or One- address commands in linux sed</h3>
+<pre><code>:  # label
+=  # line_number
 a  # append_text_to_stdout_after_flush
 b  # branch_unconditional
 c  # range_change
@@ -981,9 +992,7 @@ t  # branch_on_substitute
 w  # append_pattern_to_file_now
 x  # swap_pattern_and_hold
 y  # transform_chars
-```</p></li>
-</ul>
-
+</code></pre>
 
     
     

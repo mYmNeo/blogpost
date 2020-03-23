@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-07-01T18:42:05 CST">
+<meta name="revised" content="2020-03-23T12:09:36 CST">
 <title>makefile memo :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -813,6 +813,20 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
+        <div>
+          <a href="/posts/application-grid-design/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -823,6 +837,13 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item">
         <div>
           <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -892,7 +913,7 @@
     
     <div class="progress">
         <div class="wrapper">
-    
+    <nav id="TableOfContents"></nav>
         </div>
     </div>
     
@@ -919,27 +940,22 @@
     
     
     <ul>
-<li><p>Checks if the first argument is non-empty.If so runs the second argument, otherwise runs the third</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-makefile" data-lang="makefile"><span style="color:#00a8c8">$(</span><span style="color:#111">if</span> <span style="color:#111">this</span>-<span style="color:#111">is</span>-<span style="color:#111">not</span>-<span style="color:#111">empty</span>,<span style="color:#111">then</span>!,<span style="color:#111">else</span>!<span style="color:#00a8c8">)</span>
-</code></pre></div>
-<ul>
-<li>Execute command but not display on standard output
-<code>makefile
-@ls .
-</code></li>
-</ul></li>
-
-<li><p>tell make to ignore error</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-makefile" data-lang="makefile"><span style="color:#960050;background-color:#1e0010">-rm</span> -f *.*
-</code></pre></div>
-<ul>
-<li>The foreach function is very different from other functions. It causes one piece of text to be used repeatedly, each time with a different substitution performed on it. It resembles the for command in the shell sh and the foreach command in the C-shell csh.
-<code>makefile
-$(foreach var,list,text)
-</code></li>
-</ul></li>
+<li>Checks if the first argument is non-empty.If so runs the second argument, otherwise runs the third</li>
 </ul>
-
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-makefile" data-lang="makefile"><span style="color:#00a8c8">$(</span><span style="color:#111">if</span> <span style="color:#111">this</span>-<span style="color:#111">is</span>-<span style="color:#111">not</span>-<span style="color:#111">empty</span>,<span style="color:#111">then</span>!,<span style="color:#111">else</span>!<span style="color:#00a8c8">)</span>
+</code></pre></div><ul>
+<li>Execute command but not display on standard output</li>
+</ul>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-makefile" data-lang="makefile"><span style="color:#960050;background-color:#1e0010">@ls</span> <span style="color:#960050;background-color:#1e0010">.</span>
+</code></pre></div><ul>
+<li>tell make to ignore error</li>
+</ul>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-makefile" data-lang="makefile"><span style="color:#960050;background-color:#1e0010">-rm</span> <span style="color:#960050;background-color:#1e0010">-f</span> <span style="color:#960050;background-color:#1e0010">*.*</span>
+</code></pre></div><ul>
+<li>The foreach function is very different from other functions. It causes one piece of text to be used repeatedly, each time with a different substitution performed on it. It resembles the for command in the shell sh and the foreach command in the C-shell csh.</li>
+</ul>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-makefile" data-lang="makefile"><span style="color:#00a8c8">$(</span><span style="color:#111">foreach</span> <span style="color:#111">var</span>,<span style="color:#111">list</span>,<span style="color:#111">text</span><span style="color:#00a8c8">)</span>
+</code></pre></div>
 
     
     

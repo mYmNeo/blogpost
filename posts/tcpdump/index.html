@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-07-01T18:42:05 CST">
+<meta name="revised" content="2020-03-23T12:09:36 CST">
 <title>tcpdump tutorial :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -813,6 +813,20 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
+        <div>
+          <a href="/posts/application-grid-design/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -823,6 +837,13 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item">
         <div>
           <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -892,11 +913,7 @@
     
     <div class="progress">
         <div class="wrapper">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#tcpdump-usage-example">Tcpdump usage example</a></li>
-</ul>
-</nav>
+    <nav id="TableOfContents"></nav>
         </div>
     </div>
     
@@ -922,177 +939,140 @@
     
     
     
-    
-
-<h1 id="tcpdump-usage-example">Tcpdump usage example</h1>
-
+    <h1 id="tcpdump-usage-example">Tcpdump usage example</h1>
 <ul>
-<li><p>See the list of interfaces on which tcpdump can listen:</p>
-
-<pre><code>tcpdump -D
-</code></pre></li>
-
-<li><p>Listen on interface eth0:</p>
-
-<pre><code>tcpdump -i eth0
-</code></pre></li>
-
-<li><p>Listen on any available interface (cannot be done in promiscuous mode. Requires Linux kernel 2.2 or greater):</p>
-
-<pre><code>tcpdump -i any
-</code></pre></li>
-
-<li><p>Be verbose while capturing packets:</p>
-
-<pre><code>tcpdump -v
-</code></pre></li>
-
-<li><p>Be more verbose while capturing packets:</p>
-
-<pre><code>tcpdump -vv
-</code></pre></li>
-
-<li><p>Be very verbose while capturing packets:</p>
-
-<pre><code>tcpdump -vvv
-</code></pre></li>
-
-<li><p>Be verbose and print the data of each packet in both hex and ASCII, excluding the link level header:</p>
-
-<pre><code>tcpdump -v -X
-</code></pre></li>
-
-<li><p>Be verbose and print the data of each packet in both hex and ASCII, also including the link level header:</p>
-
-<pre><code>tcpdump -v -XX
-</code></pre></li>
-
-<li><p>Be less verbose (than the default) while capturing packets:</p>
-
-<pre><code>tcpdump -q
-</code></pre></li>
-
-<li><p>Limit the capture to 100 packets:</p>
-
-<pre><code>tcpdump -c 100
-</code></pre></li>
-
-<li><p>Record the packet capture to a file called capture.cap:</p>
-
-<pre><code>tcpdump -w capture.cap
-</code></pre></li>
-
-<li><p>Record the packet capture to a file called capture.cap but display on-screen how many packets have been captured in real-time:</p>
-
-<pre><code>tcpdump -v -w capture.cap
-</code></pre></li>
-
-<li><p>Display the packets of a file called capture.cap:</p>
-
-<pre><code>tcpdump -r capture.cap
-</code></pre></li>
-
-<li><p>Display the packets using maximum detail of a file called capture.cap:</p>
-
-<pre><code>tcpdump -vvv -r capture.cap
-</code></pre></li>
-
-<li><p>Display IP addresses and port numbers instead of domain and service names when capturing packets (note: on some systems you need to specify -nn to display port numbers):</p>
-
-<pre><code>tcpdump -n
-</code></pre></li>
-
-<li><p>Capture any packets where the destination host is 192.168.1.1. Display IP addresses and port numbers:</p>
-
-<pre><code>tcpdump -n dst host 192.168.1.1
-</code></pre></li>
-
-<li><p>Capture any packets where the source host is 192.168.1.1. Display IP addresses and port numbers:</p>
-
-<pre><code>tcpdump -n src host 192.168.1.1
-</code></pre></li>
-
-<li><p>Capture any packets where the source or destination host is 192.168.1.1. Display IP addresses and port numbers:</p>
-
-<pre><code>tcpdump -n host 192.168.1.1
-</code></pre></li>
-
-<li><p>Capture any packets where the destination network is 192.168.1.0/24. Display IP addresses and port numbers:</p>
-
-<pre><code>tcpdump -n dst net 192.168.1.0/24
-</code></pre></li>
-
-<li><p>Capture any packets where the source network is 192.168.1.0/24. Display IP addresses and port numbers:</p>
-
-<pre><code>tcpdump -n src net 192.168.1.0/24
-</code></pre></li>
-
-<li><p>Capture any packets where the source or destination network is 192.168.1.0/24. Display IP addresses and port numbers:</p>
-
-<pre><code>tcpdump -n net 192.168.1.0/24
-</code></pre></li>
-
-<li><p>Capture any packets where the destination port is 23. Display IP addresses and port numbers:</p>
-
-<pre><code>tcpdump -n dst port 23
-</code></pre></li>
-
-<li><p>Capture any packets where the destination port is is between 1 and 1023 inclusive. Display IP addresses and port numbers:</p>
-
-<pre><code>tcpdump -n dst portrange 1-1023
-</code></pre></li>
-
-<li><p>Capture only TCP packets where the destination port is is between 1 and 1023 inclusive. Display IP addresses and port numbers:</p>
-
-<pre><code>tcpdump -n tcp dst portrange 1-1023
-</code></pre></li>
-
-<li><p>Capture only UDP packets where the destination port is is between 1 and 1023 inclusive. Display IP addresses and port numbers:</p>
-
-<pre><code>tcpdump -n udp dst portrange 1-1023
-</code></pre></li>
-
-<li><p>Capture any packets with destination IP 192.168.1.1 and destination port 23. Display IP addresses and port numbers:</p>
-
-<pre><code>tcpdump -n &quot;dst host 192.168.1.1 and dst port 23&quot;
-</code></pre></li>
-
-<li><p>Capture any packets with destination IP 192.168.1.1 and destination port 80 or 443. Display IP addresses and port numbers:</p>
-
-<pre><code>tcpdump -n &quot;dst host 192.168.1.1 and (dst port 80 or dst port 443)&quot;
-</code></pre></li>
-
-<li><p>Capture any ICMP packets:</p>
-
-<pre><code>tcpdump -v icmp
-</code></pre></li>
-
-<li><p>Capture any ARP packets:</p>
-
-<pre><code>tcpdump -v arp
-</code></pre></li>
-
-<li><p>Capture either ICMP or ARP packets:</p>
-
-<pre><code>tcpdump -v &quot;icmp or arp&quot;
-</code></pre></li>
-
-<li><p>Capture any packets that are broadcast or multicast:</p>
-
-<pre><code>tcpdump -n &quot;broadcast or multicast&quot;
-</code></pre></li>
-
-<li><p>Capture 500 bytes of data for each packet rather than the default of 68 bytes:</p>
-
-<pre><code>tcpdump -s 500
-</code></pre></li>
-
-<li><p>Capture all bytes of data within the packet:</p>
-
-<pre><code>tcpdump -s 0
-</code></pre></li>
+<li>See the list of interfaces on which tcpdump can listen:</li>
 </ul>
-
+<pre><code>tcpdump -D
+</code></pre><ul>
+<li>Listen on interface eth0:</li>
+</ul>
+<pre><code>tcpdump -i eth0
+</code></pre><ul>
+<li>Listen on any available interface (cannot be done in promiscuous mode. Requires Linux kernel 2.2 or greater):</li>
+</ul>
+<pre><code>tcpdump -i any
+</code></pre><ul>
+<li>Be verbose while capturing packets:</li>
+</ul>
+<pre><code>tcpdump -v
+</code></pre><ul>
+<li>Be more verbose while capturing packets:</li>
+</ul>
+<pre><code>tcpdump -vv
+</code></pre><ul>
+<li>Be very verbose while capturing packets:</li>
+</ul>
+<pre><code>tcpdump -vvv
+</code></pre><ul>
+<li>Be verbose and print the data of each packet in both hex and ASCII, excluding the link level header:</li>
+</ul>
+<pre><code>tcpdump -v -X
+</code></pre><ul>
+<li>Be verbose and print the data of each packet in both hex and ASCII, also including the link level header:</li>
+</ul>
+<pre><code>tcpdump -v -XX
+</code></pre><ul>
+<li>Be less verbose (than the default) while capturing packets:</li>
+</ul>
+<pre><code>tcpdump -q
+</code></pre><ul>
+<li>Limit the capture to 100 packets:</li>
+</ul>
+<pre><code>tcpdump -c 100
+</code></pre><ul>
+<li>Record the packet capture to a file called capture.cap:</li>
+</ul>
+<pre><code>tcpdump -w capture.cap
+</code></pre><ul>
+<li>Record the packet capture to a file called capture.cap but display on-screen how many packets have been captured in real-time:</li>
+</ul>
+<pre><code>tcpdump -v -w capture.cap
+</code></pre><ul>
+<li>Display the packets of a file called capture.cap:</li>
+</ul>
+<pre><code>tcpdump -r capture.cap
+</code></pre><ul>
+<li>Display the packets using maximum detail of a file called capture.cap:</li>
+</ul>
+<pre><code>tcpdump -vvv -r capture.cap
+</code></pre><ul>
+<li>Display IP addresses and port numbers instead of domain and service names when capturing packets (note: on some systems you need to specify -nn to display port numbers):</li>
+</ul>
+<pre><code>tcpdump -n
+</code></pre><ul>
+<li>Capture any packets where the destination host is 192.168.1.1. Display IP addresses and port numbers:</li>
+</ul>
+<pre><code>tcpdump -n dst host 192.168.1.1
+</code></pre><ul>
+<li>Capture any packets where the source host is 192.168.1.1. Display IP addresses and port numbers:</li>
+</ul>
+<pre><code>tcpdump -n src host 192.168.1.1
+</code></pre><ul>
+<li>Capture any packets where the source or destination host is 192.168.1.1. Display IP addresses and port numbers:</li>
+</ul>
+<pre><code>tcpdump -n host 192.168.1.1
+</code></pre><ul>
+<li>Capture any packets where the destination network is 192.168.1.0/24. Display IP addresses and port numbers:</li>
+</ul>
+<pre><code>tcpdump -n dst net 192.168.1.0/24
+</code></pre><ul>
+<li>Capture any packets where the source network is 192.168.1.0/24. Display IP addresses and port numbers:</li>
+</ul>
+<pre><code>tcpdump -n src net 192.168.1.0/24
+</code></pre><ul>
+<li>Capture any packets where the source or destination network is 192.168.1.0/24. Display IP addresses and port numbers:</li>
+</ul>
+<pre><code>tcpdump -n net 192.168.1.0/24
+</code></pre><ul>
+<li>Capture any packets where the destination port is 23. Display IP addresses and port numbers:</li>
+</ul>
+<pre><code>tcpdump -n dst port 23
+</code></pre><ul>
+<li>Capture any packets where the destination port is is between 1 and 1023 inclusive. Display IP addresses and port numbers:</li>
+</ul>
+<pre><code>tcpdump -n dst portrange 1-1023
+</code></pre><ul>
+<li>Capture only TCP packets where the destination port is is between 1 and 1023 inclusive. Display IP addresses and port numbers:</li>
+</ul>
+<pre><code>tcpdump -n tcp dst portrange 1-1023
+</code></pre><ul>
+<li>Capture only UDP packets where the destination port is is between 1 and 1023 inclusive. Display IP addresses and port numbers:</li>
+</ul>
+<pre><code>tcpdump -n udp dst portrange 1-1023
+</code></pre><ul>
+<li>Capture any packets with destination IP 192.168.1.1 and destination port 23. Display IP addresses and port numbers:</li>
+</ul>
+<pre><code>tcpdump -n &quot;dst host 192.168.1.1 and dst port 23&quot;
+</code></pre><ul>
+<li>Capture any packets with destination IP 192.168.1.1 and destination port 80 or 443. Display IP addresses and port numbers:</li>
+</ul>
+<pre><code>tcpdump -n &quot;dst host 192.168.1.1 and (dst port 80 or dst port 443)&quot;
+</code></pre><ul>
+<li>Capture any ICMP packets:</li>
+</ul>
+<pre><code>tcpdump -v icmp
+</code></pre><ul>
+<li>Capture any ARP packets:</li>
+</ul>
+<pre><code>tcpdump -v arp
+</code></pre><ul>
+<li>Capture either ICMP or ARP packets:</li>
+</ul>
+<pre><code>tcpdump -v &quot;icmp or arp&quot;
+</code></pre><ul>
+<li>Capture any packets that are broadcast or multicast:</li>
+</ul>
+<pre><code>tcpdump -n &quot;broadcast or multicast&quot;
+</code></pre><ul>
+<li>Capture 500 bytes of data for each packet rather than the default of 68 bytes:</li>
+</ul>
+<pre><code>tcpdump -s 500
+</code></pre><ul>
+<li>Capture all bytes of data within the packet:</li>
+</ul>
+<pre><code>tcpdump -s 0
+</code></pre>
 
     
     

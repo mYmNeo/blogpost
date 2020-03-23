@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-07-01T18:42:05 CST">
+<meta name="revised" content="2020-03-23T12:09:35 CST">
 <title>Pascal&#39;s Triangle II :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -814,6 +814,20 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
+        <div>
+          <a href="/posts/application-grid-design/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -824,6 +838,13 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item">
         <div>
           <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -899,17 +920,15 @@
     <div class="progress">
         <div class="wrapper">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#analysis">Analysis:</a></li>
-<li><a href="#time-and-space-complexity">Time and space complexity:</a></li>
-<li><a href="#code">Code:</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#analysis">Analysis:</a></li>
+        <li><a href="#time-and-space-complexity">Time and space complexity:</a></li>
+        <li><a href="#code">Code:</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
         </div>
     </div>
@@ -936,31 +955,20 @@
     
     
     
-    
-
-<blockquote>
+    <blockquote>
 <p>Given an index k, return the kth row of the Pascal&rsquo;s triangle.</p>
-
 <p>For example, given k = 3,
 Return <code>[1,3,3,1]</code>.</p>
-
 <p><strong>Note:</strong></p>
-
 <p>Could you optimize your algorithm to use only O(k) extra space?</p>
 </blockquote>
-
 <h3 id="analysis">Analysis:</h3>
-
 <p>思路和pascal&rsquo;s triangle一样</p>
-
 <h3 id="time-and-space-complexity">Time and space complexity:</h3>
-
 <p>time: $\Theta (k^2)$</p>
-
 <p>space: $\Theta (k)$</p>
-
 <h3 id="code">Code:</h3>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">class</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#75af00">Solution</span> <span style="color:#111">{</span>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">class</span> <span style="color:#75af00">Solution</span> <span style="color:#111">{</span>
 <span style="color:#00a8c8">public</span><span style="color:#f92672">:</span>
     <span style="color:#111">vector</span><span style="color:#f92672">&lt;</span><span style="color:#00a8c8">int</span><span style="color:#f92672">&gt;</span> <span style="color:#111">getRow</span><span style="color:#111">(</span><span style="color:#00a8c8">int</span> <span style="color:#111">rowIndex</span><span style="color:#111">)</span> <span style="color:#111">{</span>
         <span style="color:#111">vector</span><span style="color:#f92672">&lt;</span><span style="color:#00a8c8">int</span><span style="color:#f92672">&gt;</span> <span style="color:#111">A</span><span style="color:#111">(</span><span style="color:#111">rowIndex</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span><span style="color:#111">,</span> <span style="color:#ae81ff">0</span><span style="color:#111">);</span>

@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-07-01T18:42:05 CST">
+<meta name="revised" content="2020-03-23T12:09:36 CST">
 <title>Valid Sudoku :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -814,6 +814,20 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
+        <div>
+          <a href="/posts/application-grid-design/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -824,6 +838,13 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item">
         <div>
           <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -899,17 +920,15 @@
     <div class="progress">
         <div class="wrapper">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#analysis">Analysis:</a></li>
-<li><a href="#time-and-space-complexity">Time and space complexity:</a></li>
-<li><a href="#code">Code:</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#analysis">Analysis:</a></li>
+        <li><a href="#time-and-space-complexity">Time and space complexity:</a></li>
+        <li><a href="#code">Code:</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
         </div>
     </div>
@@ -936,28 +955,18 @@
     
     
     
-    
-
-<blockquote>
+    <blockquote>
 <p>Determine if a Sudoku is valid, according to: <a href="http://sudoku.com.au/TheRules.aspx">Sudoku Puzzles - The Rules</a>.</p>
-
-<p>The Sudoku board could be partially filled, where empty cells are filled with the character &lsquo;.&rsquo;.</p>
-
+<p>The Sudoku board could be partially filled, where empty cells are filled with the character &lsquo;.'.</p>
 <p>A partially filled sudoku which is valid.</p>
-
 <p><strong>Note:</strong></p>
-
 <p>A valid Sudoku board (partially filled) is not necessarily solvable. Only the filled cells need to be validated.</p>
 </blockquote>
-
 <h3 id="analysis">Analysis:</h3>
-
 <p>Sudoku的要求,每个格子只能有1-9且只能出现一次</p>
-
 <h3 id="time-and-space-complexity">Time and space complexity:</h3>
-
 <h3 id="code">Code:</h3>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">class</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#75af00">Solution</span> <span style="color:#111">{</span>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">class</span> <span style="color:#75af00">Solution</span> <span style="color:#111">{</span>
 <span style="color:#00a8c8">public</span><span style="color:#f92672">:</span>
     <span style="color:#00a8c8">bool</span> <span style="color:#111">isValidSudoku</span><span style="color:#111">(</span><span style="color:#111">vector</span><span style="color:#f92672">&lt;</span><span style="color:#111">vector</span><span style="color:#f92672">&lt;</span><span style="color:#00a8c8">char</span><span style="color:#f92672">&gt;&gt;&amp;</span> <span style="color:#111">board</span><span style="color:#111">)</span> <span style="color:#111">{</span>
         <span style="color:#111">unordered_map</span><span style="color:#f92672">&lt;</span><span style="color:#00a8c8">char</span><span style="color:#111">,</span> <span style="color:#00a8c8">int</span><span style="color:#f92672">&gt;</span> <span style="color:#111">record</span><span style="color:#111">;</span>
@@ -995,7 +1004,7 @@
         
         <span style="color:#00a8c8">return</span> <span style="color:#111">true</span><span style="color:#111">;</span>
     <span style="color:#111">}</span>
-    <span style="color:#00a8c8">bool</span> <span style="color:#111">pass</span><span style="color:#111">(</span><span style="color:#111">unordered_map</span><span style="color:#f92672">&lt;</span><span style="color:#00a8c8">char</span><span style="color:#111">,</span> <span style="color:#00a8c8">int</span><span style="color:#f92672">&gt;&amp;</span> <span style="color:#111">record</span><span style="color:#111">,</span> <span style="color:#111">vector</span><span style="color:#f92672">&lt;</span><span style="color:#111">vector</span><span style="color:#f92672">&lt;</span><span style="color:#00a8c8">char</span><span style="color:#f92672">&gt;&gt;&amp;</span> <span style="color:#111">board</span><span style="color:#111">,</span> <span style="color:#00a8c8">int</span> <span style="color:#111">i</span><span style="color:#111">,</span> <span style="color:#00a8c8">int</span> <span style="color:#111">j</span><span style="color:#111">)</span> <span style="color:#111">{</span>
+    <span style="color:#00a8c8">bool</span> <span style="color:#75af00">pass</span><span style="color:#111">(</span><span style="color:#111">unordered_map</span><span style="color:#f92672">&lt;</span><span style="color:#00a8c8">char</span><span style="color:#111">,</span> <span style="color:#00a8c8">int</span><span style="color:#f92672">&gt;&amp;</span> <span style="color:#111">record</span><span style="color:#111">,</span> <span style="color:#111">vector</span><span style="color:#f92672">&lt;</span><span style="color:#111">vector</span><span style="color:#f92672">&lt;</span><span style="color:#00a8c8">char</span><span style="color:#f92672">&gt;&gt;&amp;</span> <span style="color:#111">board</span><span style="color:#111">,</span> <span style="color:#00a8c8">int</span> <span style="color:#111">i</span><span style="color:#111">,</span> <span style="color:#00a8c8">int</span> <span style="color:#111">j</span><span style="color:#111">)</span> <span style="color:#111">{</span>
         <span style="color:#111">record</span><span style="color:#111">[</span><span style="color:#111">board</span><span style="color:#111">[</span><span style="color:#111">i</span><span style="color:#111">][</span><span style="color:#111">j</span><span style="color:#111">]]</span><span style="color:#f92672">++</span><span style="color:#111">;</span>
         <span style="color:#00a8c8">if</span> <span style="color:#111">(</span><span style="color:#111">board</span><span style="color:#111">[</span><span style="color:#111">i</span><span style="color:#111">][</span><span style="color:#111">j</span><span style="color:#111">]</span> <span style="color:#f92672">!=</span> <span style="color:#d88200">&#39;.&#39;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#111">record</span><span style="color:#111">[</span><span style="color:#111">board</span><span style="color:#111">[</span><span style="color:#111">i</span><span style="color:#111">][</span><span style="color:#111">j</span><span style="color:#111">]]</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span><span style="color:#111">)</span> <span style="color:#111">{</span>
             <span style="color:#00a8c8">return</span> <span style="color:#111">false</span><span style="color:#111">;</span>

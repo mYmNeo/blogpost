@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>devicemapper on Sparking Mind</title>
@@ -17,7 +17,7 @@
       <pubDate>Thu, 23 Jun 2016 17:41:46 +0000</pubDate>
       
       <guid>http://mymneo.github.io/posts/behaviors-ext4-file-system-when-devicemapper-pool-is-full/</guid>
-      <description>Backgroud &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Our production system currently use docker to run all kinds of services. One day our clients reported that their service could not write down any log in the container and all the other containers which were started and worked well a few days ago also couldn&amp;rsquo;t. And the containers couldn&amp;rsquo;t be recovered. We logged in the malfunction machine, found that the thin pool used by devicemapper was full. At the same time there was some messages that dmesg reported telling the file system of containers became read-only.</description>
+      <description>Backgroud  Our production system currently use docker to run all kinds of services. One day our clients reported that their service could not write down any log in the container and all the other containers which were started and worked well a few days ago also couldn&amp;rsquo;t. And the containers couldn&amp;rsquo;t be recovered. We logged in the malfunction machine, found that the thin pool used by devicemapper was full. At the same time there was some messages that dmesg reported telling the file system of containers became read-only.</description>
     </item>
     
     <item>

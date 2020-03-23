@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-07-01T18:42:05 CST">
+<meta name="revised" content="2020-03-23T12:09:36 CST">
 <title>lvm thin pool cheatsheet :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -813,6 +813,20 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
+        <div>
+          <a href="/posts/application-grid-design/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -823,6 +837,13 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item">
         <div>
           <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -893,13 +914,10 @@
     <div class="progress">
         <div class="wrapper">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#metadata-space-exhaustion">Metadata space exhaustion</a></li>
-<li><a href="#metadata-check-and-repair">Metadata check and repair</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#metadata-space-exhaustion">Metadata space exhaustion</a></li>
+    <li><a href="#metadata-check-and-repair">Metadata check and repair</a></li>
+  </ul>
 </nav>
         </div>
     </div>
@@ -930,58 +948,50 @@
     
     
     
-    
-
-<blockquote>
+    <blockquote>
 <p>We use devicemapper as Docker storage driver, sometime any of the meta or data pool is full. We have to extend the pool</p>
 </blockquote>
-
 <ol>
 <li>Single step thin pool LV creation</li>
 </ol>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">lvcreate --type thin-pool --poolmetadata &lt;meta size&gt; -L &lt;pool size&gt; &lt;pool name&gt;</code></pre></div>
-<ol>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">lvcreate --type thin-pool --poolmetadata &lt;meta size&gt; -L &lt;pool size&gt; &lt;pool name&gt;
+</code></pre></div><ol>
 <li>Manually manage free data space of thin pool LV</li>
 </ol>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">lvextend -L &lt;size&gt; &lt;pool name&gt;</code></pre></div>
-<ol>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">lvextend -L &lt;size&gt; &lt;pool name&gt;
+</code></pre></div><ol>
 <li>Manually manage free metadata space of a thin pool LV</li>
 </ol>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">lvs -oname,size,data_percent,metadata_percent <span style="color:#75715e"># show the available metadat space in a thin pool LV</span>
-lvextend --poolmetadatasize &lt;size&gt; &lt;pool name&gt;</code></pre></div>
-<h2 id="metadata-space-exhaustion">Metadata space exhaustion</h2>
-
+lvextend --poolmetadatasize &lt;size&gt; &lt;pool name&gt;
+</code></pre></div><h2 id="metadata-space-exhaustion">Metadata space exhaustion</h2>
 <blockquote>
 <p>Metadata space exhaustion can lead to inconsistent thin pool metadata
 and inconsistent file systems, so the response requires offline
 checking and repair.</p>
 </blockquote>
-
 <ol>
 <li>Deactivate the thin pool LV, or reboot the system if this is not possible.</li>
 <li>Repair thin pool with <code>lvconvert --repair</code>. See &ldquo;Metadata check and repair&rdquo;.</li>
 <li>Extend pool metadata space with <code>lvextend --poolmetadatasize</code>.</li>
 <li>Check and repair file system with fsck.</li>
 </ol>
-
 <h2 id="metadata-check-and-repair">Metadata check and repair</h2>
-
-<p>Repair performs the following steps:
-1. Creates a new, repaired copy of the metadata.lvconvert runs the thin_repair command to read damaged metadata from the existing pool metadata LV, and writes a new repaired copy to the VG&rsquo;s pmspare LV.
-2. Replaces the thin pool metadata LV.
+<p>Repair performs the following steps:</p>
+<ol>
+<li>Creates a new, repaired copy of the metadata.lvconvert runs the thin_repair command to read damaged metadata from the existing pool metadata LV, and writes a new repaired copy to the VG&rsquo;s pmspare LV.</li>
+<li>Replaces the thin pool metadata LV.
 If step 1 is successful, the thin pool metadata LV is replaced with
 the pmspare LV containing the corrected metadata.  The previous thin
 pool metadata LV, containing the damaged metadata, becomes visible
-with the new name ThinPoolLV_tmetaN (where N is 0,1,&hellip;).</p>
-
+with the new name ThinPoolLV_tmetaN (where N is 0,1,&hellip;).</li>
+</ol>
 <p>If the repair works, the thin pool LV and its thin LVs can be
 activated, and the LV containing the damaged thin pool metadata can
 be removed.  It may be useful to move the new metadata LV (previously
 pmspare) to a better PV.</p>
-
 <p>If the repair does not work, the thin pool LV and its thin LVs are
 lost.</p>
-
 <p>If metadata is manually restored with thin_repair directly, the pool
 metadata LV can be manually swapped with another LV containing new
 metadata:

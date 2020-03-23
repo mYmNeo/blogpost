@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-07-01T18:42:05 CST">
+<meta name="revised" content="2020-03-23T12:09:36 CST">
 <title>resize disk :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -813,6 +813,20 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
+        <div>
+          <a href="/posts/application-grid-design/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -823,6 +837,13 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item">
         <div>
           <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -892,11 +913,7 @@
     
     <div class="progress">
         <div class="wrapper">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#shrink-a-disk">Shrink a disk</a></li>
-</ul>
-</nav>
+    <nav id="TableOfContents"></nav>
         </div>
     </div>
     
@@ -924,33 +941,28 @@
     
     
     
-    
-
-<h1 id="shrink-a-disk">Shrink a disk</h1>
-
+    <h1 id="shrink-a-disk">Shrink a disk</h1>
 <ol>
-<li><p>If the partition the file system is on is currently mounted, unmount it</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">umount /dev/disk</code></pre></div>
-<ol>
-<li>Run fsck on the umounted file system
-<code>bash
-e2fsck -f /dev/disk
-</code></li>
-</ol></li>
-
-<li><p>Shrink the file system with the <code>resize2fs /dev/fdisk size</code></p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">resize2fs /dev/disk size</code></pre></div>
-<ol>
-<li>Use <code>fdisk</code> to modify the partition table information
-<code>bash
-fdisk /dev/disk
-</code></li>
-</ol></li>
-
-<li><p>Mount the disk</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mount /dev/disk target</code></pre></div></li>
+<li>If the partition the file system is on is currently mounted, unmount it</li>
 </ol>
-
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">umount /dev/disk
+</code></pre></div><ol>
+<li>Run fsck on the umounted file system</li>
+</ol>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">e2fsck -f /dev/disk
+</code></pre></div><ol>
+<li>Shrink the file system with the <code>resize2fs /dev/fdisk size</code></li>
+</ol>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">resize2fs /dev/disk size
+</code></pre></div><ol>
+<li>Use <code>fdisk</code> to modify the partition table information</li>
+</ol>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">fdisk /dev/disk
+</code></pre></div><ol>
+<li>Mount the disk</li>
+</ol>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mount /dev/disk target
+</code></pre></div>
 
     
     

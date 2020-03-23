@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>cheatsheet on Sparking Mind</title>
@@ -36,10 +36,7 @@
       <pubDate>Mon, 13 Jun 2016 14:39:06 +0000</pubDate>
       
       <guid>http://mymneo.github.io/posts/resize-disk/</guid>
-      <description> Shrink a disk  If the partition the file system is on is currently mounted, unmount it
-umount /dev/disk  Run fsck on the umounted file system bash e2fsck -f /dev/disk   Shrink the file system with the resize2fs /dev/fdisk size
-resize2fs /dev/disk size  Use fdisk to modify the partition table information bash fdisk /dev/disk   Mount the disk
-mount /dev/disk target  </description>
+      <description>Shrink a disk  If the partition the file system is on is currently mounted, unmount it  umount /dev/disk  Run fsck on the umounted file system  e2fsck -f /dev/disk  Shrink the file system with the resize2fs /dev/fdisk size  resize2fs /dev/disk size  Use fdisk to modify the partition table information  fdisk /dev/disk  Mount the disk  mount /dev/disk target </description>
     </item>
     
     <item>
@@ -49,7 +46,7 @@ mount /dev/disk target  </description>
       
       <guid>http://mymneo.github.io/posts/shell-cheatsheet/</guid>
       <description> Checking if string does or not contain other string  Use &amp;lsquo;=&amp;rsquo; or &amp;lsquo;!=&amp;rsquo;
-if [[ ${testmystring} = *&amp;#34;c0&amp;#34;* ]];then # testmystring does contain c0 fi if [[ ${testmystring} != *&amp;#34;c0&amp;#34;* ]];then # testmystring does not contain c0 fi</description>
+if [[ ${testmystring} = *&amp;#34;c0&amp;#34;* ]];then # testmystring does contain c0 fi if [[ ${testmystring} != *&amp;#34;c0&amp;#34;* ]];then # testmystring does not contain c0 fi </description>
     </item>
     
     <item>
@@ -58,7 +55,7 @@ if [[ ${testmystring} = *&amp;#34;c0&amp;#34;* ]];then # testmystring does conta
       <pubDate>Fri, 29 Apr 2016 09:32:42 +0000</pubDate>
       
       <guid>http://mymneo.github.io/posts/mac-cheatsheet/</guid>
-      <description> Reset Launchpad Layout in OS X El Capitan &amp;amp; Yosemite bash defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock   </description>
+      <description> Reset Launchpad Layout in OS X El Capitan &amp;amp; Yosemite  defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock </description>
     </item>
     
   </channel>

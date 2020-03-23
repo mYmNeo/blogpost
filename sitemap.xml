@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
@@ -18,21 +18,18 @@
   </url>
   
   <url>
-    <loc>http://mymneo.github.io/tags/</loc>
+    <loc>http://mymneo.github.io/tags/production/</loc>
     <lastmod>2018-11-22T10:19:40+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://mymneo.github.io/tags/production/</loc>
+    <loc>http://mymneo.github.io/tags/</loc>
     <lastmod>2018-11-22T10:19:40+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://mymneo.github.io/tags/vim/</loc>
     <lastmod>2018-11-22T10:19:40+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -43,7 +40,6 @@
   <url>
     <loc>http://mymneo.github.io/tags/audit/</loc>
     <lastmod>2018-07-03T18:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -54,13 +50,11 @@
   <url>
     <loc>http://mymneo.github.io/tags/linux/</loc>
     <lastmod>2018-07-03T18:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://mymneo.github.io/tags/ssh/</loc>
     <lastmod>2018-06-29T10:31:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -79,20 +73,18 @@
   </url>
   
   <url>
-    <loc>http://mymneo.github.io/posts/algorithm/reverse-words-in-a-string-iii/</loc>
-    <lastmod>2017-04-19T21:46:15+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://mymneo.github.io/tags/algorithm/</loc>
     <lastmod>2017-04-19T21:46:15+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://mymneo.github.io/tags/leetcode/</loc>
     <lastmod>2017-04-19T21:46:15+00:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://mymneo.github.io/posts/algorithm/reverse-words-in-a-string-iii/</loc>
+    <lastmod>2017-04-19T21:46:15+00:00</lastmod>
   </url>
   
   <url>
@@ -121,14 +113,13 @@
   </url>
   
   <url>
-    <loc>http://mymneo.github.io/posts/mysql-cheatsheet/</loc>
+    <loc>http://mymneo.github.io/tags/mysql/</loc>
     <lastmod>2017-04-18T10:39:59+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://mymneo.github.io/tags/mysql/</loc>
+    <loc>http://mymneo.github.io/posts/mysql-cheatsheet/</loc>
     <lastmod>2017-04-18T10:39:59+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -149,7 +140,6 @@
   <url>
     <loc>http://mymneo.github.io/tags/netsh/</loc>
     <lastmod>2017-03-10T21:25:25+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -160,13 +150,11 @@
   <url>
     <loc>http://mymneo.github.io/tags/windows/</loc>
     <lastmod>2017-03-10T21:25:25+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://mymneo.github.io/tags/log/</loc>
     <lastmod>2017-02-17T14:25:46+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -177,7 +165,6 @@
   <url>
     <loc>http://mymneo.github.io/tags/english/</loc>
     <lastmod>2016-10-18T09:56:04+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -188,7 +175,6 @@
   <url>
     <loc>http://mymneo.github.io/tags/tcpdump/</loc>
     <lastmod>2016-07-15T10:30:34+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -197,26 +183,23 @@
   </url>
   
   <url>
-    <loc>http://mymneo.github.io/posts/svn2git/</loc>
-    <lastmod>2016-07-15T10:05:33+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://mymneo.github.io/tags/git/</loc>
     <lastmod>2016-07-15T10:05:33+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://mymneo.github.io/tags/svn/</loc>
     <lastmod>2016-07-15T10:05:33+00:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://mymneo.github.io/posts/svn2git/</loc>
+    <lastmod>2016-07-15T10:05:33+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://mymneo.github.io/tags/jq/</loc>
     <lastmod>2016-06-24T16:48:39+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -232,19 +215,16 @@
   <url>
     <loc>http://mymneo.github.io/tags/devicemapper/</loc>
     <lastmod>2016-06-23T17:41:46+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://mymneo.github.io/tags/docker/</loc>
     <lastmod>2016-06-23T17:41:46+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://mymneo.github.io/tags/kvm/</loc>
     <lastmod>2016-06-22T16:32:51+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -255,13 +235,11 @@
   <url>
     <loc>http://mymneo.github.io/tags/cheatsheet/</loc>
     <lastmod>2016-06-14T09:43:51+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://mymneo.github.io/tags/find/</loc>
     <lastmod>2016-06-14T09:43:51+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -277,7 +255,6 @@
   <url>
     <loc>http://mymneo.github.io/tags/filesystem/</loc>
     <lastmod>2016-06-13T14:39:06+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -286,14 +263,13 @@
   </url>
   
   <url>
-    <loc>http://mymneo.github.io/posts/shell-cheatsheet/</loc>
+    <loc>http://mymneo.github.io/tags/shell/</loc>
     <lastmod>2016-06-03T09:50:09+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://mymneo.github.io/tags/shell/</loc>
+    <loc>http://mymneo.github.io/posts/shell-cheatsheet/</loc>
     <lastmod>2016-06-03T09:50:09+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -629,7 +605,6 @@
   <url>
     <loc>http://mymneo.github.io/tags/mac/</loc>
     <lastmod>2016-04-29T09:32:42+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -640,7 +615,6 @@
   <url>
     <loc>http://mymneo.github.io/tags/golang/</loc>
     <lastmod>2016-04-28T18:06:41+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -651,7 +625,6 @@
   <url>
     <loc>http://mymneo.github.io/tags/programme/</loc>
     <lastmod>2016-04-28T18:06:41+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -662,7 +635,6 @@
   <url>
     <loc>http://mymneo.github.io/tags/makefile/</loc>
     <lastmod>2016-04-28T17:39:32+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -671,20 +643,18 @@
   </url>
   
   <url>
+    <loc>http://mymneo.github.io/tags/rpm/</loc>
+    <lastmod>2016-04-28T11:04:44+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://mymneo.github.io/tags/rpmbuild/</loc>
     <lastmod>2016-04-28T11:04:44+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://mymneo.github.io/posts/rpmbuild-tutorial/</loc>
     <lastmod>2016-04-28T11:04:44+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://mymneo.github.io/tags/rpm/</loc>
-    <lastmod>2016-04-28T10:58:34+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -700,7 +670,6 @@
   <url>
     <loc>http://mymneo.github.io/tags/sed/</loc>
     <lastmod>2016-04-27T22:42:37+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -711,7 +680,6 @@
   <url>
     <loc>http://mymneo.github.io/tags/iptables/</loc>
     <lastmod>2016-04-27T22:32:29+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -722,13 +690,11 @@
   <url>
     <loc>http://mymneo.github.io/tags/hadoop/</loc>
     <lastmod>2016-04-27T21:20:09+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://mymneo.github.io/tags/log4j/</loc>
     <lastmod>2016-04-27T21:20:09+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -747,18 +713,27 @@
   </url>
   
   <url>
+    <loc>http://mymneo.github.io/posts/application-grid-design/</loc>
+  </url>
+  
+  <url>
+    <loc>http://mymneo.github.io/posts/cgroup/</loc>
+  </url>
+  
+  <url>
     <loc>http://mymneo.github.io/posts/gdb-cheatsheet/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://mymneo.github.io/posts/kernel-development/</loc>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://mymneo.github.io/posts/kube-proxy-topology-design/</loc>
   </url>
   
   <url>
     <loc>http://mymneo.github.io/categories/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>

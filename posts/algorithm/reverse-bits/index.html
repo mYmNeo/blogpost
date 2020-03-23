@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-07-01T18:42:05 CST">
+<meta name="revised" content="2020-03-23T12:09:35 CST">
 <title>Reverse Bits :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -814,6 +814,20 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
+        <div>
+          <a href="/posts/application-grid-design/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -824,6 +838,13 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item">
         <div>
           <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -899,17 +920,15 @@
     <div class="progress">
         <div class="wrapper">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#analysis">Analysis:</a></li>
-<li><a href="#time-and-space-complexity">Time and space complexity:</a></li>
-<li><a href="#code">Code:</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#analysis">Analysis:</a></li>
+        <li><a href="#time-and-space-complexity">Time and space complexity:</a></li>
+        <li><a href="#code">Code:</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
         </div>
     </div>
@@ -936,32 +955,21 @@
     
     
     
-    
-
-<blockquote>
+    <blockquote>
 <p>Reverse bits of a given 32 bits unsigned integer.</p>
-
 <p>For example, given input 43261596 (represented in binary as <strong>00000010100101000001111010011100</strong>), return 964176192 (represented in binary as <strong>00111001011110000010100101000000</strong>).</p>
-
 <p><strong>Follow up:</strong></p>
-
 <p>If this function is called many times, how would you optimize it?</p>
 </blockquote>
-
 <h3 id="analysis">Analysis:</h3>
-
 <p>与counting bit类似,divide and conquer,先2位2位swap,然后4位4位swap</p>
-
 <h3 id="time-and-space-complexity">Time and space complexity:</h3>
-
 <p>time: $\Theta (1)$</p>
-
 <p>space: $\Theta (1)$</p>
-
 <h3 id="code">Code:</h3>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">class</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#75af00">Solution</span> <span style="color:#111">{</span>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">class</span> <span style="color:#75af00">Solution</span> <span style="color:#111">{</span>
 <span style="color:#00a8c8">public</span><span style="color:#f92672">:</span>
-    <span style="color:#111">uint32_t</span> <span style="color:#111">reverseBits</span><span style="color:#111">(</span><span style="color:#111">uint32_t</span> <span style="color:#111">n</span><span style="color:#111">)</span> <span style="color:#111">{</span>
+    <span style="color:#00a8c8">uint32_t</span> <span style="color:#111">reverseBits</span><span style="color:#111">(</span><span style="color:#00a8c8">uint32_t</span> <span style="color:#111">n</span><span style="color:#111">)</span> <span style="color:#111">{</span>
         <span style="color:#111">n</span> <span style="color:#f92672">=</span> <span style="color:#111">(</span><span style="color:#111">n</span> <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">16</span><span style="color:#111">)</span> <span style="color:#f92672">|</span> <span style="color:#111">(</span><span style="color:#111">n</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">16</span><span style="color:#111">);</span>
         <span style="color:#111">n</span> <span style="color:#f92672">=</span> <span style="color:#111">((</span><span style="color:#111">n</span> <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">0xff00ff00</span><span style="color:#111">)</span> <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">8</span><span style="color:#111">)</span> <span style="color:#f92672">|</span> <span style="color:#111">((</span><span style="color:#111">n</span> <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">0x00ff00ff</span><span style="color:#111">)</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">8</span><span style="color:#111">);</span>
         <span style="color:#111">n</span> <span style="color:#f92672">=</span> <span style="color:#111">((</span><span style="color:#111">n</span> <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">0xf0f0f0f0</span><span style="color:#111">)</span> <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">4</span><span style="color:#111">)</span> <span style="color:#f92672">|</span> <span style="color:#111">((</span><span style="color:#111">n</span> <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">0x0f0f0f0f</span><span style="color:#111">)</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">4</span><span style="color:#111">);</span>

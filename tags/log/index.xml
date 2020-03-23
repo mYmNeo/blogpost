@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>log on Sparking Mind</title>
@@ -17,12 +17,9 @@
       <pubDate>Fri, 17 Feb 2017 14:25:46 +0000</pubDate>
       
       <guid>http://mymneo.github.io/posts/rsyslog-configuration/</guid>
-      <description>configuration file location
-/etc/rsyslog.conf /etc/rsyslog.d/  rotate configuration location
-/etc/logrotate.d/rsyslog  rotate options
-  The following is a list of some of the directives you can specify in your logrotate configuration file:
- weekly — Specifies the rotation of log files to be done weekly. Similar directives include:
- daily monthly yearly  compress — Enables compression of rotated log files. Similar directives include:
+      <description>configuration file location  /etc/rsyslog.conf /etc/rsyslog.d/ rotate configuration location  /etc/logrotate.d/rsyslog rotate options  The following is a list of some of the directives you can specify in your logrotate configuration file:
+  weekly — Specifies the rotation of log files to be done weekly. Similar directives include:
+ daily monthly yearly    compress — Enables compression of rotated log files. Similar directives include:
  nocompress compresscmd — Specifies the command to be used for compressing.</description>
     </item>
     

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>kvm on Sparking Mind</title>
@@ -17,9 +17,7 @@
       <pubDate>Wed, 22 Jun 2016 16:32:51 +0000</pubDate>
       
       <guid>http://mymneo.github.io/posts/kvm/</guid>
-      <description>Install a KVM virtual machin with VNC support  Create a disk for VM
-qemu-img create -f qcow2 &amp;lt;img path&amp;gt; &amp;lt;size&amp;gt;  Use virt-install install a VM bash virt-install \ --virt-type kvm \ --name &amp;lt;name&amp;gt; \ --cdrom=&amp;lt;cdrom iso&amp;gt; \ --disk path=&amp;lt;disk path&amp;gt; \ --network network=default \ --graphics vnc,listen=0.0.0.0 \ --noautoconsole \ --os-type=&amp;lt;os type&amp;gt; \ --os-variant=&amp;lt;os&amp;gt;   Show VNC port
-virsh vncdisplay &amp;lt;domain name&amp;gt; VM Operations  Sometimes you need add For example:</description>
+      <description>Install a KVM virtual machin with VNC support  Create a disk for VM  qemu-img create -f qcow2 &amp;lt;img path&amp;gt; &amp;lt;size&amp;gt;  Use virt-install install a VM  virt-install \  --virt-type kvm \  --name &amp;lt;name&amp;gt; \  --cdrom=&amp;lt;cdrom iso&amp;gt; \  --disk path=&amp;lt;disk path&amp;gt; \  --network network=default \  --graphics vnc,listen=0.0.0.0 \  --noautoconsole \  --os-type=&amp;lt;os type&amp;gt; \  --os-variant=&amp;lt;os&amp;gt;  Show VNC port  virsh vncdisplay &amp;lt;domain name&amp;gt; VM Operations  Sometimes you need add For example:</description>
     </item>
     
   </channel>

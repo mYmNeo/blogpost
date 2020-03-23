@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-07-01T18:42:05 CST">
+<meta name="revised" content="2020-03-23T12:09:35 CST">
 <title>Next Greater Element I :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -814,6 +814,20 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
+        <div>
+          <a href="/posts/application-grid-design/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -824,6 +838,13 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item">
         <div>
           <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -899,17 +920,15 @@
     <div class="progress">
         <div class="wrapper">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#analysis">Analysis:</a></li>
-<li><a href="#time-and-space-complexity">Time and space complexity:</a></li>
-<li><a href="#code">Code:</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#analysis">Analysis:</a></li>
+        <li><a href="#time-and-space-complexity">Time and space complexity:</a></li>
+        <li><a href="#code">Code:</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
         </div>
     </div>
@@ -936,37 +955,29 @@
     
     
     
-    
-
-<blockquote>
+    <blockquote>
 <p>First array, there is no next greater number for it in the second array, so output -1.
 Example 2:
 Input: nums1 = [2,4], nums2 = [1,2,3,4].
 Output: [3,-1]
 Explanation:
-   For number 2 in the first array, the next greater number for it in the second array is 3.
-   For number 4 in the first array, there is no next greater number for it in the second array, so output -1.
+For number 2 in the first array, the next greater number for it in the second array is 3.
+For number 4 in the first array, there is no next greater number for it in the second array, so output -1.
 Note:
 All elements in nums1 and nums2 are unique.
 The length of both nums1 and nums2 would not exceed 1000.</p>
 </blockquote>
-
 <h3 id="analysis">Analysis:</h3>
-
 <p>利用stack记录逆序的序列,当stack的top元素小于当前读取元素的时候,就记录一下top元素的下一个元素就是当前元素,最后记录的结果查询输入的最终结果</p>
-
 <h3 id="time-and-space-complexity">Time and space complexity:</h3>
-
 <p>time: $\Theta (n)$</p>
-
 <p>space: $\Theta (n)$</p>
-
 <h3 id="code">Code:</h3>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#ifdef CONFIG_H
 </span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;../config.h&#34;</span><span style="color:#75715e">
 </span><span style="color:#75715e">#endif
 </span><span style="color:#75715e"></span>
-<span style="color:#00a8c8">class</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#75af00">Solution</span> <span style="color:#111">{</span>
+<span style="color:#00a8c8">class</span> <span style="color:#75af00">Solution</span> <span style="color:#111">{</span>
  <span style="color:#00a8c8">public</span><span style="color:#f92672">:</span>
   <span style="color:#111">vector</span><span style="color:#f92672">&lt;</span><span style="color:#00a8c8">int</span><span style="color:#f92672">&gt;</span> <span style="color:#111">nextGreaterElement</span><span style="color:#111">(</span><span style="color:#111">vector</span><span style="color:#f92672">&lt;</span><span style="color:#00a8c8">int</span><span style="color:#f92672">&gt;&amp;</span> <span style="color:#111">findNums</span><span style="color:#111">,</span> <span style="color:#111">vector</span><span style="color:#f92672">&lt;</span><span style="color:#00a8c8">int</span><span style="color:#f92672">&gt;&amp;</span> <span style="color:#111">nums</span><span style="color:#111">)</span> <span style="color:#111">{</span>
     <span style="color:#111">vector</span><span style="color:#f92672">&lt;</span><span style="color:#00a8c8">int</span><span style="color:#f92672">&gt;</span> <span style="color:#111">ret</span><span style="color:#111">;</span>

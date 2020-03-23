@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-07-01T18:42:05 CST">
+<meta name="revised" content="2020-03-23T12:09:36 CST">
 <title>behaviors of ext4 file system when devicemapper pool is full :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -813,6 +813,20 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
+        <div>
+          <a href="/posts/application-grid-design/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -823,6 +837,13 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item">
         <div>
           <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -892,13 +913,7 @@
     
     <div class="progress">
         <div class="wrapper">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#backgroud">Backgroud</a></li>
-<li><a href="#reason">Reason</a></li>
-<li><a href="#prevention">Prevention</a></li>
-</ul>
-</nav>
+    <nav id="TableOfContents"></nav>
         </div>
     </div>
     
@@ -926,21 +941,13 @@
     
     
     
-    
-
-<h1 id="backgroud">Backgroud</h1>
-
-<p>&nbsp;&nbsp;&nbsp;&nbsp;Our production system currently use docker to run all kinds of services. One day our clients reported that their service could not write down any log in the container and all the other containers which were started and worked well a few days ago also couldn&rsquo;t. And the containers couldn&rsquo;t be recovered. We logged in the malfunction machine, found that the thin pool used by devicemapper was full. At the same time there was some messages that <code>dmesg</code> reported telling the file system of containers became read-only.</p>
-
+    <h1 id="backgroud">Backgroud</h1>
+<p>    Our production system currently use docker to run all kinds of services. One day our clients reported that their service could not write down any log in the container and all the other containers which were started and worked well a few days ago also couldn&rsquo;t. And the containers couldn&rsquo;t be recovered. We logged in the malfunction machine, found that the thin pool used by devicemapper was full. At the same time there was some messages that <code>dmesg</code> reported telling the file system of containers became read-only.</p>
 <h1 id="reason">Reason</h1>
-
-<p>&nbsp;&nbsp;&nbsp;&nbsp;Devicemapper is a COW storage model, that means no blocks are allocated if no data is produced. A container had 10G capacity as default. Now we assume that your thin pool&rsquo;s size is 40G, and 4 containers writing log persistently and rapidly, the last 5 produce data very slowly. At some moment, the pool becomes full because of that 4 containers which generate log persistently and rapidly. And this time it triggers the condition we mentioned at the beginning of the article, all the 10 containers become read-only, we can&rsquo;t recover them except we delete them.</p>
-
-<p>&nbsp;&nbsp;&nbsp;&nbsp;The reason why the conainer became read-only is that the error behavior of file system. When the pool is full, a request of allocating a block in thin pool will failed, that will raise an error to file system. The default hanlder to this kind of error of <code>ext4</code> is to remount the file system read-only.</p>
-
+<p>    Devicemapper is a COW storage model, that means no blocks are allocated if no data is produced. A container had 10G capacity as default. Now we assume that your thin pool&rsquo;s size is 40G, and 4 containers writing log persistently and rapidly, the last 5 produce data very slowly. At some moment, the pool becomes full because of that 4 containers which generate log persistently and rapidly. And this time it triggers the condition we mentioned at the beginning of the article, all the 10 containers become read-only, we can&rsquo;t recover them except we delete them.</p>
+<p>    The reason why the conainer became read-only is that the error behavior of file system. When the pool is full, a request of allocating a block in thin pool will failed, that will raise an error to file system. The default hanlder to this kind of error of <code>ext4</code> is to remount the file system read-only.</p>
 <h1 id="prevention">Prevention</h1>
-
-<p>&nbsp;&nbsp;&nbsp;&nbsp;Add surveillance to thin pool used by devicemapper.</p>
+<p>    Add surveillance to thin pool used by devicemapper.</p>
 
 
     

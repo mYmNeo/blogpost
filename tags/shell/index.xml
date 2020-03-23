@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>shell on Sparking Mind</title>
@@ -18,7 +18,7 @@
       
       <guid>http://mymneo.github.io/posts/shell-cheatsheet/</guid>
       <description> Checking if string does or not contain other string  Use &amp;lsquo;=&amp;rsquo; or &amp;lsquo;!=&amp;rsquo;
-if [[ ${testmystring} = *&amp;#34;c0&amp;#34;* ]];then # testmystring does contain c0 fi if [[ ${testmystring} != *&amp;#34;c0&amp;#34;* ]];then # testmystring does not contain c0 fi</description>
+if [[ ${testmystring} = *&amp;#34;c0&amp;#34;* ]];then # testmystring does contain c0 fi if [[ ${testmystring} != *&amp;#34;c0&amp;#34;* ]];then # testmystring does not contain c0 fi </description>
     </item>
     
   </channel>

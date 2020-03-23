@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-07-01T18:42:05 CST">
+<meta name="revised" content="2020-03-23T12:09:35 CST">
 <title>Power of Four :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -814,6 +814,20 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
+        <div>
+          <a href="/posts/application-grid-design/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -824,6 +838,13 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item">
         <div>
           <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -899,17 +920,15 @@
     <div class="progress">
         <div class="wrapper">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#analysis">Analysis:</a></li>
-<li><a href="#time-and-space-complexity">Time and space complexity:</a></li>
-<li><a href="#code">Code:</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#analysis">Analysis:</a></li>
+        <li><a href="#time-and-space-complexity">Time and space complexity:</a></li>
+        <li><a href="#code">Code:</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
         </div>
     </div>
@@ -936,37 +955,23 @@
     
     
     
-    
-
-<blockquote>
+    <blockquote>
 <p>Given an integer (signed 32 bits), write a function to check whether it is a power of 4.</p>
-
 <p><strong>Example:</strong></p>
-
 <p>Given num = 16, return true. Given num = 5, return false.</p>
-
 <p><strong>Follow up:</strong></p>
-
 <p>Could you solve it without loops/recursion?</p>
 </blockquote>
-
 <h3 id="analysis">Analysis:</h3>
-
 <p>power of 4一定是power of 2,所以先用power of 2 的验证方法来验证,然后处理特例的情况,例如</p>
-
 <pre><code>2 -&gt; 10   # 10 &amp; 01 = 0
 8 -&gt; 1000 # 1000 &amp; 0101 = 0
 32 -&gt; 100000 # 100000 &amp; 010101 = 0
-</code></pre>
-
-<p>是power of 2的数字再与0x55555555作and,如果不为0,就是power of 4</p>
-
+</code></pre><p>是power of 2的数字再与0x55555555作and,如果不为0,就是power of 4</p>
 <h3 id="time-and-space-complexity">Time and space complexity:</h3>
-
 <p>time: $\Theta (1)$</p>
-
 <h3 id="code">Code:</h3>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">class</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#75af00">Solution</span> <span style="color:#111">{</span>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">class</span> <span style="color:#75af00">Solution</span> <span style="color:#111">{</span>
 <span style="color:#00a8c8">public</span><span style="color:#f92672">:</span>
   <span style="color:#00a8c8">bool</span> <span style="color:#111">isPowerOfFour</span><span style="color:#111">(</span><span style="color:#00a8c8">int</span> <span style="color:#111">num</span><span style="color:#111">)</span> <span style="color:#111">{</span>
     <span style="color:#75715e">// first we check if the number is power of two, then we check the 1 whether is located

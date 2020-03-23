@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-07-01T18:42:05 CST">
+<meta name="revised" content="2020-03-23T12:09:36 CST">
 <title>port forwarding in windows :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -813,6 +813,20 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
+        <div>
+          <a href="/posts/application-grid-design/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -823,6 +837,13 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item">
         <div>
           <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -892,11 +913,7 @@
     
     <div class="progress">
         <div class="wrapper">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#port-forwarding-configuration">Port forwarding configuration</a></li>
-</ul>
-</nav>
+    <nav id="TableOfContents"></nav>
         </div>
     </div>
     
@@ -922,39 +939,26 @@
     
     
     
-    
-
-<h1 id="port-forwarding-configuration">Port forwarding configuration</h1>
-
+    <h1 id="port-forwarding-configuration">Port forwarding configuration</h1>
 <ol>
-<li>Add rule<br /></li>
+<li>Add rule</li>
 </ol>
-
 <ul>
-<li><p>forward A:B to C:D</p>
-
-<pre><code>netsh interface portproxy add v4tov4 listenaddress=A listenport=B connectaddress=C connectport=D
-</code></pre></li>
+<li>forward A:B to C:D</li>
 </ul>
-
-<ol>
+<pre><code>netsh interface portproxy add v4tov4 listenaddress=A listenport=B connectaddress=C connectport=D
+</code></pre><ol start="2">
 <li>Delete rule</li>
 </ol>
-
 <ul>
-<li><p>delete A:B</p>
-
-<pre><code>netsh interface portproxy delete v4tov4 listenaddress=A listenport=B
-</code></pre></li>
+<li>delete A:B</li>
 </ul>
-
-<ol>
-<li><p>List all rules</p>
-
-<pre><code>netsh interface portproxy show all
-</code></pre></li>
+<pre><code>netsh interface portproxy delete v4tov4 listenaddress=A listenport=B
+</code></pre><ol start="3">
+<li>List all rules</li>
 </ol>
-
+<pre><code>netsh interface portproxy show all
+</code></pre>
 
     
     

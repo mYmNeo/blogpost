@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-07-01T18:42:05 CST">
+<meta name="revised" content="2020-03-23T12:09:35 CST">
 <title>Intersection of Two Linked Lists :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -814,6 +814,20 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
+        <div>
+          <a href="/posts/application-grid-design/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -824,6 +838,13 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item">
         <div>
           <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -899,17 +920,15 @@
     <div class="progress">
         <div class="wrapper">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#analysis">Analysis:</a></li>
-<li><a href="#time-and-space-complexity">Time and space complexity:</a></li>
-<li><a href="#code">Code:</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#analysis">Analysis:</a></li>
+        <li><a href="#time-and-space-complexity">Time and space complexity:</a></li>
+        <li><a href="#code">Code:</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
         </div>
     </div>
@@ -936,24 +955,18 @@
     
     
     
-    
-
-<blockquote>
+    <blockquote>
 <p>Write a program to find the node at which the intersection of two singly linked lists begins.</p>
-
 <p>For example, the following two linked lists:</p>
-
+</blockquote>
 <pre><code>A:          a1 → a2
                    ↘
                      c1 → c2 → c3
                    ↗            
 B:     b1 → b2 → b3
-</code></pre>
-
+</code></pre><blockquote>
 <p>begin to intersect at node c1.</p>
-
 <p><strong>Notes:</strong></p>
-
 <ul>
 <li>If the two linked lists have no intersection at all, return null.</li>
 <li>The linked lists must retain their original structure after the function returns.</li>
@@ -961,24 +974,17 @@ B:     b1 → b2 → b3
 <li>Your code should preferably run in O(n) time and use only O(1) memory.</li>
 </ul>
 </blockquote>
-
 <h3 id="analysis">Analysis:</h3>
-
 <p>一种方式,原理跟快慢指针找环是一个道理,将一个list的尾部加到另外一个list的头部,找到交叉部分,然后根据交叉部分来找到相交部分.</p>
-
 <p>另外一种方式是,交叉遍历,如代码所示</p>
-
 <h3 id="time-and-space-complexity">Time and space complexity:</h3>
-
 <p>time: $\Theta (n)$</p>
-
 <p>space: $\Theta (1)$</p>
-
 <h3 id="code">Code:</h3>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">class</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#75af00">Solution</span> <span style="color:#111">{</span>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">class</span> <span style="color:#75af00">Solution</span> <span style="color:#111">{</span>
 <span style="color:#00a8c8">public</span><span style="color:#f92672">:</span>
   <span style="color:#111">ListNode</span> <span style="color:#f92672">*</span><span style="color:#111">getIntersectionNode</span><span style="color:#111">(</span><span style="color:#111">ListNode</span> <span style="color:#f92672">*</span><span style="color:#111">headA</span><span style="color:#111">,</span> <span style="color:#111">ListNode</span> <span style="color:#f92672">*</span><span style="color:#111">headB</span><span style="color:#111">)</span> <span style="color:#111">{</span>
-    <span style="color:#111">ListNode</span> <span style="color:#f92672">*</span><span style="color:#111">getIntersectionNode</span><span style="color:#111">(</span><span style="color:#111">ListNode</span> <span style="color:#f92672">*</span> <span style="color:#111">headA</span><span style="color:#111">,</span> <span style="color:#111">ListNode</span> <span style="color:#f92672">*</span> <span style="color:#111">headB</span><span style="color:#111">)</span> <span style="color:#111">{</span>
+    <span style="color:#111">ListNode</span> <span style="color:#f92672">*</span><span style="color:#75af00">getIntersectionNode</span><span style="color:#111">(</span><span style="color:#111">ListNode</span> <span style="color:#f92672">*</span> <span style="color:#111">headA</span><span style="color:#111">,</span> <span style="color:#111">ListNode</span> <span style="color:#f92672">*</span> <span style="color:#111">headB</span><span style="color:#111">)</span> <span style="color:#111">{</span>
       <span style="color:#111">ListNode</span> <span style="color:#f92672">*</span><span style="color:#111">p1</span> <span style="color:#f92672">=</span> <span style="color:#111">headA</span><span style="color:#111">;</span>
       <span style="color:#111">ListNode</span> <span style="color:#f92672">*</span><span style="color:#111">p2</span> <span style="color:#f92672">=</span> <span style="color:#111">headB</span><span style="color:#111">;</span>
 
@@ -1012,6 +1018,7 @@ B:     b1 → b2 → b3
     <span style="color:#111">}</span>
   <span style="color:#111">}</span>
 <span style="color:#111">};</span>
+
 </code></pre></div>
 
     

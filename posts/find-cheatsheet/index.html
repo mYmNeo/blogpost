@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-07-01T18:42:05 CST">
+<meta name="revised" content="2020-03-23T12:09:36 CST">
 <title>find cheatsheet :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -813,6 +813,20 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
+        <div>
+          <a href="/posts/application-grid-design/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -823,6 +837,13 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item">
         <div>
           <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -893,13 +914,10 @@
     <div class="progress">
         <div class="wrapper">
     <nav id="TableOfContents">
-<ul>
-<li><a href="#frequently-used-option-of-find">Frequently used option of Find</a>
-<ul>
-<li><a href="#test">TEST</a></li>
-<li><a href="#action">ACTION</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#test">TEST</a></li>
+    <li><a href="#action">ACTION</a></li>
+  </ul>
 </nav>
         </div>
     </div>
@@ -928,12 +946,8 @@
     
     
     
-    
-
-<h1 id="frequently-used-option-of-find">Frequently used option of Find</h1>
-
+    <h1 id="frequently-used-option-of-find">Frequently used option of Find</h1>
 <h2 id="test">TEST</h2>
-
 <table>
 <thead>
 <tr>
@@ -942,74 +956,62 @@
 <th>example</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
-<td>-name <filename></td>
+<td>-name <!-- raw HTML omitted --></td>
 <td>find the file which name is filename</td>
 <td>find / -name &ldquo;*.js&rdquo;</td>
 </tr>
-
 <tr>
-<td>-group <group-name></td>
+<td>-group <!-- raw HTML omitted --></td>
 <td>find the file belongs to group-name</td>
 <td>find / -group users</td>
 </tr>
-
 <tr>
-<td>-user <user-name></td>
+<td>-user <!-- raw HTML omitted --></td>
 <td>find the file belongs to user-name</td>
 <td>find / -user root</td>
 </tr>
-
 <tr>
-<td>-maxdepth <level></td>
+<td>-maxdepth <!-- raw HTML omitted --></td>
 <td>Descend at most levels to find</td>
 <td>find / -maxdepth 4</td>
 </tr>
-
 <tr>
 <td>-empty</td>
 <td>find file is empty and is either a regular file or a directory</td>
 <td>find / -empty</td>
 </tr>
-
 <tr>
-<td>-path <pattern></td>
-<td>find file name matches shell pattern <pattern></td>
+<td>-path <!-- raw HTML omitted --></td>
+<td>find file name matches shell pattern <!-- raw HTML omitted --></td>
 <td>find / -path &ldquo;/sr*sc&rdquo;</td>
 </tr>
-
 <tr>
-<td>-perm <mode></td>
+<td>-perm <!-- raw HTML omitted --></td>
 <td>find file&rsquo;s permission bits are exactly mode</td>
 <td>find / -perm 0664</td>
 </tr>
-
 <tr>
-<td>-perm -<mode></td>
+<td>-perm -<!-- raw HTML omitted --></td>
 <td>find all of the permission bits mode are set for the file</td>
 <td>find / -perm -644</td>
 </tr>
-
 <tr>
-<td>-perm /<mode></td>
+<td>-perm /<!-- raw HTML omitted --></td>
 <td>find any of the permission bits mode are set for the file</td>
 <td>find / -perm /644</td>
 </tr>
-
 <tr>
-<td>-regex <pattern></td>
-<td>find file name matches regular expression <pattern></td>
+<td>-regex <!-- raw HTML omitted --></td>
+<td>find file name matches regular expression <!-- raw HTML omitted --></td>
 <td>find / -regex &ldquo;.*bar&rdquo;</td>
 </tr>
-
 <tr>
 <td>-size n[cwbkMG]</td>
 <td>find file uses n units of space, rounding up.  The following suffixes can be used: <code>b</code> for 512-byte blocks (this is the default if no suffix  is used), <code>c</code> for bytes, <code>w</code> for two-byte words, <code>k</code> for Kilobytes (units of 1024 bytes), <code>M</code> for Megabytes (units of 1048576 bytes), <code>G</code> for Gigabytes (units of 1073741824 bytes)</td>
 <td>find / -size 1G</td>
 </tr>
-
 <tr>
 <td>-type c</td>
 <td>find file is of type c: <code>b</code> block (buffered) special,<code>c</code> character (unbuffered) special, <code>d</code> directory, <code>p</code> named pipe (FIFO), <code>f</code> regular file, <code>l</code> symbolic link; this is never true if the -L option or the -follow option is in effect, unless the symbolic link is broken.  If you want to search for symbolic links when -L is in effect, use -xtype, <code>s</code> socket</td>
@@ -1017,9 +1019,7 @@
 </tr>
 </tbody>
 </table>
-
 <h2 id="action">ACTION</h2>
-
 <table>
 <thead>
 <tr>
@@ -1027,28 +1027,23 @@
 <th>description</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>-delete</td>
 <td>Delete files</td>
 </tr>
-
 <tr>
-<td>-exec <commadn></td>
-<td>Execute <command></td>
+<td>-exec <!-- raw HTML omitted --></td>
+<td>Execute <!-- raw HTML omitted --></td>
 </tr>
-
 <tr>
-<td>-fprint <file></td>
-<td>print the full file name into file <file></td>
+<td>-fprint <!-- raw HTML omitted --></td>
+<td>print the full file name into file <!-- raw HTML omitted --></td>
 </tr>
-
 <tr>
 <td>-print</td>
 <td>print the full file name on the standard output, followed by a newline</td>
 </tr>
-
 <tr>
 <td>-prune</td>
 <td>if the file is a directory, do not descend into it</td>

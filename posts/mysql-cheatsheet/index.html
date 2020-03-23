@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-07-01T18:42:05 CST">
+<meta name="revised" content="2020-03-23T12:09:36 CST">
 <title>MySQL cheatsheet :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -813,6 +813,20 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
+        <div>
+          <a href="/posts/application-grid-design/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -823,6 +837,13 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item">
         <div>
           <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -892,7 +913,7 @@
     
     <div class="progress">
         <div class="wrapper">
-    
+    <nav id="TableOfContents"></nav>
         </div>
     </div>
     
@@ -921,21 +942,21 @@
     <ul>
 <li>select</li>
 </ul>
-
 <ol>
 <li>normal select</li>
 </ol>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"><span style="color:#00a8c8">SELECT</span> <span style="color:#111">column1</span><span style="color:#111">,</span> <span style="color:#111">column2</span><span style="color:#111">,</span> <span style="color:#111">...</span>
-<span style="color:#00a8c8">FROM</span> <span style="color:#111">table_name</span><span style="color:#111">;</span> </code></pre></div>
-<ol>
+<span style="color:#00a8c8">FROM</span> <span style="color:#111">table_name</span><span style="color:#111">;</span> 
+</code></pre></div><ol start="2">
 <li>Derived Tables</li>
 </ol>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"><span style="color:#00a8c8">SELECT</span> <span style="color:#111">column1</span><span style="color:#111">,</span> <span style="color:#111">column2</span><span style="color:#111">,</span> <span style="color:#111">...</span>
-<span style="color:#00a8c8">FROM</span> <span style="color:#111">(</span><span style="color:#111">subquery</span><span style="color:#111">)</span> <span style="color:#111">[</span><span style="color:#00a8c8">AS</span><span style="color:#111">]</span> <span style="color:#111">tbl_name</span> <span style="color:#111">...</span></code></pre></div>
-<ul>
+<span style="color:#00a8c8">FROM</span> <span style="color:#111">(</span><span style="color:#111">subquery</span><span style="color:#111">)</span> <span style="color:#111">[</span><span style="color:#00a8c8">AS</span><span style="color:#111">]</span> <span style="color:#111">tbl_name</span> <span style="color:#111">...</span>
+</code></pre></div><ul>
 <li>encoding</li>
 </ul>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"><span style="color:#00a8c8">set</span> <span style="color:#00a8c8">CHARACTER</span> <span style="color:#00a8c8">SET</span> <span style="color:#111">(</span><span style="color:#111">encoding</span><span style="color:#111">)</span></code></pre></div>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"><span style="color:#00a8c8">set</span> <span style="color:#00a8c8">CHARACTER</span> <span style="color:#00a8c8">SET</span> <span style="color:#111">(</span><span style="color:#111">encoding</span><span style="color:#111">)</span>
+</code></pre></div>
 
     
     

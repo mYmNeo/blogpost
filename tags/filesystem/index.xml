@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>filesystem on Sparking Mind</title>
@@ -17,10 +17,7 @@
       <pubDate>Mon, 13 Jun 2016 14:39:06 +0000</pubDate>
       
       <guid>http://mymneo.github.io/posts/resize-disk/</guid>
-      <description> Shrink a disk  If the partition the file system is on is currently mounted, unmount it
-umount /dev/disk  Run fsck on the umounted file system bash e2fsck -f /dev/disk   Shrink the file system with the resize2fs /dev/fdisk size
-resize2fs /dev/disk size  Use fdisk to modify the partition table information bash fdisk /dev/disk   Mount the disk
-mount /dev/disk target  </description>
+      <description>Shrink a disk  If the partition the file system is on is currently mounted, unmount it  umount /dev/disk  Run fsck on the umounted file system  e2fsck -f /dev/disk  Shrink the file system with the resize2fs /dev/fdisk size  resize2fs /dev/disk size  Use fdisk to modify the partition table information  fdisk /dev/disk  Mount the disk  mount /dev/disk target </description>
     </item>
     
   </channel>

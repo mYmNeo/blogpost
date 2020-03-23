@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ssh on Sparking Mind</title>
@@ -18,10 +18,8 @@
       
       <guid>http://mymneo.github.io/posts/ssh-tunnel/</guid>
       <description>SSH Tunnel Configuration You basically have three possibilities:
- Tunnel from localhost to host1:
-ssh -L 9999:host2:1234 -N host1   As noted above, the connection from host1 to host2 will not be secured.
- Tunnel from localhost to host1 and from host1 to host2:
-ssh -L 9999:localhost:9999 host1 ssh -L 9999:localhost:1234 -N host2   This will open a tunnel from localhost to host1 and another tunnel from host1 to host2.</description>
+ Tunnel from localhost to host1:  ssh -L 9999:host2:1234 -N host1 As noted above, the connection from host1 to host2 will not be secured.
+ Tunnel from localhost to host1 and from host1 to host2:  ssh -L 9999:localhost:9999 host1 ssh -L 9999:localhost:1234 -N host2 This will open a tunnel from localhost to host1 and another tunnel from host1 to host2. However the port 9999 to host2:1234 can be used by anyone on host1.</description>
     </item>
     
   </channel>

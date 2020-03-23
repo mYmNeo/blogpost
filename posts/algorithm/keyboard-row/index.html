@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-07-01T18:42:05 CST">
+<meta name="revised" content="2020-03-23T12:09:35 CST">
 <title>Keyboard Row :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -814,6 +814,20 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
+        <div>
+          <a href="/posts/application-grid-design/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -824,6 +838,13 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item">
         <div>
           <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -899,17 +920,15 @@
     <div class="progress">
         <div class="wrapper">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#analysis">Analysis:</a></li>
-<li><a href="#time-and-space-complexity">Time and space complexity:</a></li>
-<li><a href="#code">Code:</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#analysis">Analysis:</a></li>
+        <li><a href="#time-and-space-complexity">Time and space complexity:</a></li>
+        <li><a href="#code">Code:</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
         </div>
     </div>
@@ -936,39 +955,25 @@
     
     
     
-    
-
-<blockquote>
+    <blockquote>
 <p>Given a List of words, return the words that can be typed using letters of alphabet on only one row&rsquo;s of American keyboard like the image below.</p>
 </blockquote>
-
 <p><strong>Example 1:</strong></p>
-
 <pre><code>Input: [&quot;Hello&quot;, &quot;Alaska&quot;, &quot;Dad&quot;, &quot;Peace&quot;]
 Output: [&quot;Alaska&quot;, &quot;Dad&quot;]
-</code></pre>
-
-<p><strong>Note:</strong></p>
-
+</code></pre><p><strong>Note:</strong></p>
 <ol>
 <li>You may use one character in the keyboard more than once.</li>
 <li>You may assume the input string will only contain letters of alphabet.</li>
 </ol>
-
 <h3 id="analysis">Analysis:</h3>
-
 <p>对每一行的字母编码,<code>qwertyuiop</code>编码<code>001</code>,<code>asdfghjkl</code>编码<code>010</code>,<code>zxcvbnm</code>编码<code>100</code>,遍历每个字串的每个字母,如果都是同一行的字母,那么所有的编码做与操作都是同一个编码,不然就会是<code>0</code></p>
-
 <h3 id="time-and-space-complexity">Time and space complexity:</h3>
-
 <p>time: $\Theta (n*m) $</p>
-
 <p>n represents number of strings, m represents length of string</p>
-
 <p>space: $\Theta (1) $</p>
-
 <h3 id="code">Code:</h3>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">class</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#75af00">Solution</span> <span style="color:#111">{</span>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">class</span> <span style="color:#75af00">Solution</span> <span style="color:#111">{</span>
  <span style="color:#00a8c8">public</span><span style="color:#f92672">:</span>
   <span style="color:#111">Solution</span><span style="color:#111">()</span> <span style="color:#111">{</span>
     <span style="color:#111">lookup</span><span style="color:#111">.</span><span style="color:#111">resize</span><span style="color:#111">(</span><span style="color:#ae81ff">26</span><span style="color:#111">);</span>

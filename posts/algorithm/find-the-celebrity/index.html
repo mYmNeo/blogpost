@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-07-01T18:42:05 CST">
+<meta name="revised" content="2020-03-23T12:09:35 CST">
 <title>Find the Celebrity :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -814,6 +814,20 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
+        <div>
+          <a href="/posts/application-grid-design/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -824,6 +838,13 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item">
         <div>
           <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -899,17 +920,15 @@
     <div class="progress">
         <div class="wrapper">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#analysis">Analysis:</a></li>
-<li><a href="#time-and-space-complexity">Time and space complexity:</a></li>
-<li><a href="#code">Code:</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#analysis">Analysis:</a></li>
+        <li><a href="#time-and-space-complexity">Time and space complexity:</a></li>
+        <li><a href="#code">Code:</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
         </div>
     </div>
@@ -936,30 +955,20 @@
     
     
     
-    
-
-<blockquote>
+    <blockquote>
 <p>Suppose you are at a party with <code>n</code> people (labeled from <code>0</code> to <code>n - 1</code>) and among them, there may exist one celebrity. The definition of a celebrity is that all the other <code>n - 1</code> people know him/her but he/she does not know any of them.</p>
-
 <p>Now you want to find out who the celebrity is or verify that there is not one. The only thing you are allowed to do is to ask questions like: &ldquo;Hi, A. Do you know B?&rdquo; to get information of whether A knows B. You need to find out the celebrity (or verify there is not one) by asking as few questions as possible (in the asymptotic sense).</p>
-
 <p>You are given a helper function <code>bool knows(a, b)</code> which tells you whether A knows B. Implement a function <code>int findCelebrity(n)</code>, your function should minimize the number of calls to <code>knows</code>.</p>
-
 <p>Note: There will be exactly one celebrity if he/she is in the party. Return the celebrity&rsquo;s label if there is a celebrity in the party. If there is no celebrity, return -1.</p>
 </blockquote>
-
 <h3 id="analysis">Analysis:</h3>
-
 <p>Celebrity的定义是别人都认识他,他不认识所有人,根据这个定义我们可以知道如果一个人认识另外一个人,那么他肯定不是Celebrity,如果他不认识另外一个人,那么他可能是Celebrity.所以我们就先用一次遍历来找出可能的Celebrity,然后我们再遍历一次,验证这个人到底是不是Celebrity.</p>
-
 <h3 id="time-and-space-complexity">Time and space complexity:</h3>
-
 <p>time: $\Theta (n) $</p>
-
 <h3 id="code">Code:</h3>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">bool</span> <span style="color:#75af00">knows</span><span style="color:#111">(</span><span style="color:#00a8c8">int</span> <span style="color:#111">a</span><span style="color:#111">,</span> <span style="color:#00a8c8">int</span> <span style="color:#111">b</span><span style="color:#111">);</span>
 
-<span style="color:#00a8c8">class</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#75af00">Solution</span> <span style="color:#111">{</span>
+<span style="color:#00a8c8">class</span> <span style="color:#75af00">Solution</span> <span style="color:#111">{</span>
 <span style="color:#00a8c8">public</span><span style="color:#f92672">:</span>
     <span style="color:#00a8c8">int</span> <span style="color:#111">findCelebrity</span><span style="color:#111">(</span><span style="color:#00a8c8">int</span> <span style="color:#111">n</span><span style="color:#111">)</span> <span style="color:#111">{</span>
         <span style="color:#00a8c8">int</span> <span style="color:#111">candidate</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span><span style="color:#111">;</span>

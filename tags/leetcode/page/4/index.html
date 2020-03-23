@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-07-01T18:42:05 CST">
+<meta name="revised" content="2020-03-23T12:09:36 CST">
 <title>leetcode :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -812,6 +812,20 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
+        <div>
+          <a href="/posts/application-grid-design/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -822,6 +836,13 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item">
         <div>
           <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -863,7 +884,17 @@
         <span class="links">
         
 
- leetcode
+
+
+
+
+
+
+ <a href='/'></a> > <a href='/tags/'>Tags</a> > leetcode
+
+ 
+
+ 
 
    
         </span>
@@ -945,7 +976,7 @@ Given num = 16, return true. Given num = 5, return false.
 Follow up:
 Could you solve it without loops/recursion?
  Analysis: power of 4一定是power of 2,所以先用power of 2 的验证方法来验证,然后处理特例的情况,例如
-2 -&gt; 10 # 10 &amp; 01 = 0 8 -&gt; 1000 # 1000 &amp; 0101 = 0 32 -&gt; 100000 # 100000 &amp; 010101 = 0  是power of 2的数字再与0x55555555作and,如果不为0,就是power of 4 <a class="read-more" href="/posts/algorithm/power-of-four/">&raquo;</a></p>
+2 -&gt; 10 # 10 &amp; 01 = 0 8 -&gt; 1000 # 1000 &amp; 0101 = 0 32 -&gt; 100000 # 100000 &amp; 010101 = 0 是power of 2的数字再与0x55555555作and,如果不为0,就是power of 4 <a class="read-more" href="/posts/algorithm/power-of-four/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -972,7 +1003,7 @@ Could you solve it without loops/recursion?
 The digits are stored such that the most significant digit is at the head of the list.
  Analysis: 逆向遍历,如果当前数字是9,那么变为0,如果不是9就把该数字+1,如果全是9的话,需要把第一位变成1,然后多加一个0
 Time and space complexity: time: $\Theta (n)$
-Code: classSolution { public: vector&lt;int&gt; plusOne(vector&lt;int&gt;&amp; digits) { int n = digits.size(); for (int i = n - 1; i &gt;= 0; --i) { if (digits[i] == 9) { digits[i] = 0; } else { digits[i]++; return; } } digits[0] =1; digits. <a class="read-more" href="/posts/algorithm/plus-one/">&raquo;</a></p>
+Code: class Solution { public: vector&lt;int&gt; plusOne(vector&lt;int&gt;&amp; digits) { int n = digits.size(); for (int i = n - 1; i &gt;= 0; --i) { if (digits[i] == 9) { digits[i] = 0; } else { digits[i]++; return; } } digits[0] =1; digits. <a class="read-more" href="/posts/algorithm/plus-one/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -1026,10 +1057,10 @@ Your function should return length = 2, with the first two elements of nums bein
         <p>Given a binary tree, return the bottom-up level order traversal of its nodes&rsquo; values. (ie, from left to &gt;right, level by level from leaf to root).
 For example:
 Given binary tree {3,9,20,#,#,15,7},
- 3 / \ 9 20 / \ 15 7  return its bottom-up level order traversal as:
-[ [15,7], [9,20], [3] ]   Analysis: level遍历,最后reverse
+  3 / \ 9 20 / \ 15 7  return its bottom-up level order traversal as:
+ [ [15,7], [9,20], [3] ] Analysis: level遍历,最后reverse
 Time and space complexity: time: $\Theta (n)$
-Code: classSolution { public: vector&lt;vector&lt;int&gt;&gt; levelOrderBottom(TreeNode* root) { DFS(root, 0); return vector&lt;vector&lt;int&gt; &gt; (res. <a class="read-more" href="/posts/algorithm/binary-tree-level-order-traversal-ii/">&raquo;</a></p>
+Code: class Solution { public: vector&lt;vector&lt;int&gt;&gt; levelOrderBottom(TreeNode* root) { DFS(root, 0); return vector&lt;vector&lt;int&gt; &gt; (res. <a class="read-more" href="/posts/algorithm/binary-tree-level-order-traversal-ii/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -1053,7 +1084,8 @@ Code: classSolution { public: vector&lt;vector&lt;int&gt;&gt; levelOrderBottom(T
     </header>
     <section class="post-excerpt">
         <p>Implement the following operations of a queue using stacks.
- push(x) &ndash; Push element x to the back of queue. pop() &ndash; Removes the element from in front of queue. peek() &ndash; Get the front element. empty() &ndash; Return whether the queue is empty.  Notes: + You must use only standard operations of a stack &ndash; which means only push to top, peek/pop from top, size, and is empty operations are valid. <a class="read-more" href="/posts/algorithm/implement-queue-using-stacks/">&raquo;</a></p>
+ push(x) &ndash; Push element x to the back of queue. pop() &ndash; Removes the element from in front of queue. peek() &ndash; Get the front element. empty() &ndash; Return whether the queue is empty.  Notes:
+ You must use only standard operations of a stack &ndash; which means only push to top, peek/pop from top, size, and is empty operations are valid. <a class="read-more" href="/posts/algorithm/implement-queue-using-stacks/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -1078,9 +1110,8 @@ Code: classSolution { public: vector&lt;vector&lt;int&gt;&gt; levelOrderBottom(T
     <section class="post-excerpt">
         <p>Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).
 For example, this binary tree is symmetric:
- 1 / \ 2 2 / \ / \ 3 4 4 3  But the following is not:
- 1 / \ 2 2 \ \ 3 3  Note: Bonus points if you could solve it both recursively and iteratively.
- Analysis: 根据example,可以看出对称的位置是left-&gt;left和right-&gt;right,left-&gt;right和right-&gt;left,递归调用,检测每个子树是否为对称. <a class="read-more" href="/posts/algorithm/symmetric-tree/">&raquo;</a></p>
+  1 / \ 2 2 / \ / \ 3 4 4 3   But the following is not:
+   1 / \ 2 2 \ \ 3 3  Note: Bonus points if you could solve it both recursively and iteratively. <a class="read-more" href="/posts/algorithm/symmetric-tree/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -1107,7 +1138,7 @@ For example, this binary tree is symmetric:
 For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two &gt;subtrees of every node never differ by more than 1.
  Analysis: DFS遍历树,给每个节点一个depth值,检查左右子树的的depth值是否相差为1
 Time and space complexity: time: $\Theta (n)$
-Code: classSolution { public: bool isBalanced(TreeNode* root) { bool result = true; Depth(root, result); return result; } private: int Depth(TreeNode* node, bool&amp; result) { if (! <a class="read-more" href="/posts/algorithm/balanced-binary-tree/">&raquo;</a></p>
+Code: class Solution { public: bool isBalanced(TreeNode* root) { bool result = true; Depth(root, result); return result; } private: int Depth(TreeNode* node, bool&amp; result) { if (! <a class="read-more" href="/posts/algorithm/balanced-binary-tree/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -1155,10 +1186,10 @@ Given a list of non-negative integers representing the amount of money of each h
     </header>
     <section class="post-excerpt">
         <p>Given a non-empty binary search tree and a target value, find the value in the BST that is closest to the target.
-Note: Given target value is a floating point. You are guaranteed to have only one unique value in the BST that is closest to the target.
+  Note: Given target value is a floating point. You are guaranteed to have only one unique value in the BST that is closest to the target.
  Analysis: 先判断target的值是在哪个分支,然后再用该分支的值与当前的root的值相比,看哪个值更接近target
 Time and space complexity: time: $\Theta (log (n))$
-Code: classSolution { public: int closestValue(TreeNode* root, double target) { int cur = root-&gt;val; TreeNode* branch = target &lt; cur ? <a class="read-more" href="/posts/algorithm/closest-binary-search-tree-value/">&raquo;</a></p>
+Code: class Solution { public: int closestValue(TreeNode* root, double target) { int cur = root-&gt;val; TreeNode* branch = target &lt; cur ? <a class="read-more" href="/posts/algorithm/closest-binary-search-tree-value/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          

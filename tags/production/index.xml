@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>production on Sparking Mind</title>
@@ -17,8 +17,7 @@
       <pubDate>Thu, 22 Nov 2018 10:19:40 +0000</pubDate>
       
       <guid>http://mymneo.github.io/posts/vim-cheatsheet/</guid>
-      <description> VIM cheatsheet  delete lines which matches regex expression
-:g/&amp;lt;expr&amp;gt;/d   </description>
+      <description>VIM cheatsheet  delete lines which matches regex expression  :g/&amp;lt;expr&amp;gt;/d </description>
     </item>
     
     <item>

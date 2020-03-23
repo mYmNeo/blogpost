@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-07-01T18:42:05 CST">
+<meta name="revised" content="2020-03-23T12:09:36 CST">
 <title>leetcode :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -812,6 +812,20 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
+        <div>
+          <a href="/posts/application-grid-design/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -822,6 +836,13 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item">
         <div>
           <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -863,7 +884,17 @@
         <span class="links">
         
 
- leetcode
+
+
+
+
+
+
+ <a href='/'></a> > <a href='/tags/'>Tags</a> > leetcode
+
+ 
+
+ 
 
    
         </span>
@@ -940,7 +971,7 @@ For example,
  Analysis: 这个问题可以看做是简单的统计字符问题,如果字符串每个字符都是偶数个,或者只有一个字符的数量是奇数个,那么这个字符串就会是palindrome permutation
 Time and space complexity time: $\Theta (n)$
 space: $\Theta (n)$
-Code: classSolution { public: bool canPermutePalindrome(string s) { unordered_map&lt;char, int&gt; count; for (char&amp; c : s) { ++count[c]; } int odd = 0; for (auto it = count.begin(); it ! <a class="read-more" href="/posts/algorithm/palindrome-permutation/">&raquo;</a></p>
+Code: class Solution { public: bool canPermutePalindrome(string s) { unordered_map&lt;char, int&gt; count; for (char&amp; c : s) { ++count[c]; } int odd = 0; for (auto it = count.begin(); it ! <a class="read-more" href="/posts/algorithm/palindrome-permutation/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -992,7 +1023,7 @@ Each element is either an integer, or a list &ndash; whose elements may also be 
 Example 1:
 Given the list [[1,1],2,[1,1]], return 10. (four 1&rsquo;s at depth 2, one 2 at depth 1)
 Example 2:
-Given the list [1,[4,[6]]], return 27. (one 1 at depth 1, one 4 at depth 2, and one 6 at depth 3; 1 + 4*2 + 6*3 = 27) <a class="read-more" href="/posts/algorithm/nested-list-weight-sum/">&raquo;</a></p>
+Given the list [1,[4,[6]]], return 27. (one 1 at depth 1, one 4 at depth 2, and one 6 at depth 3; 1 + 42 + 63 = 27) <a class="read-more" href="/posts/algorithm/nested-list-weight-sum/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -1015,12 +1046,12 @@ Given the list [1,[4,[6]]], return 27. (one 1 at depth 1, one 4 at depth 2, and 
         <h2 class="post-title"><a href="/posts/algorithm/reverse-string/">Reverse String</a></h2>
     </header>
     <section class="post-excerpt">
-        <p>  Write a function that takes a string as input and returns the string reversed.
+        <p> Write a function that takes a string as input and returns the string reversed.
 Example:
 Given s = &ldquo;hello&rdquo;, return &ldquo;olleh&rdquo;.
  Analysis: 用头尾2个指针进行遍历,遍历的同时进行交换
 Time ans space complexity time: $\Theta (n) $
-Code: classSolution { public: string reverseString(string s) { int i = 0, j = (int)s.length() - 1; while (i &lt; j) { swap(s[i++], s[j--]); } return s; } };  <a class="read-more" href="/posts/algorithm/reverse-string/">&raquo;</a></p>
+Code: class Solution { public: string reverseString(string s) { int i = 0, j = (int)s.length() - 1; while (i &lt; j) { swap(s[i++], s[j--]); } return s; } };  <a class="read-more" href="/posts/algorithm/reverse-string/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          

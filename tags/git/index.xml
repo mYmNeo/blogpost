@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>git on Sparking Mind</title>
@@ -17,7 +17,7 @@
       <pubDate>Fri, 15 Jul 2016 10:05:33 +0000</pubDate>
       
       <guid>http://mymneo.github.io/posts/svn2git/</guid>
-      <description> Import svn project into your git project git config --add svn-remote.&amp;lt;branch name&amp;gt;.url &amp;lt;svn repository url&amp;gt; git config --add svn-remote.&amp;lt;branch name&amp;gt;.fetch :refs/remotes/&amp;lt;branch name&amp;gt; git svn fetch &amp;lt;branch name&amp;gt; [-r&amp;lt;rev&amp;gt;] Export and import SVN repository svnrdump dump [-r&amp;lt;rev&amp;gt;] &amp;lt;svn repostory url&amp;gt; &amp;gt; &amp;lt;dump file&amp;gt; svnadmin load --force-uuid &amp;lt;directory&amp;gt; &amp;lt; &amp;lt;dump file&amp;gt;</description>
+      <description>Import svn project into your git project git config --add svn-remote.&amp;lt;branch name&amp;gt;.url &amp;lt;svn repository url&amp;gt; git config --add svn-remote.&amp;lt;branch name&amp;gt;.fetch :refs/remotes/&amp;lt;branch name&amp;gt; git svn fetch &amp;lt;branch name&amp;gt; [-r&amp;lt;rev&amp;gt;] Export and import SVN repository svnrdump dump [-r&amp;lt;rev&amp;gt;] &amp;lt;svn repostory url&amp;gt; &amp;gt; &amp;lt;dump file&amp;gt; svnadmin load --force-uuid &amp;lt;directory&amp;gt; &amp;lt; &amp;lt;dump file&amp;gt; </description>
     </item>
     
     <item>
@@ -26,8 +26,7 @@
       <pubDate>Thu, 28 Apr 2016 17:43:31 +0000</pubDate>
       
       <guid>http://mymneo.github.io/posts/git-command/</guid>
-      <description>branch
-git checkout -b &amp;lt;branch name&amp;gt; # checkout with &amp;lt;branch name&amp;gt; git push origin &amp;lt;branch name&amp;gt; # push changes to remote named &amp;#39;origin&amp;#39; with &amp;lt;branch name&amp;gt; git push origin :&amp;lt;branch name&amp;gt; # delete remote named &amp;#39;origin&amp;#39; &amp;lt;branch name&amp;gt;  commit bash git rebase -i &amp;lt;commit lists&amp;gt; # rebase &amp;lt;commit lists&amp;gt; with interactive mode, it can re-order commits git reset --hard &amp;lt;commit id&amp;gt; # Resets the index and working tree. Any changes to tracked files in the working tree since &amp;lt;commit&amp;gt; are discarded.</description>
+      <description>branch  git checkout -b &amp;lt;branch name&amp;gt; # checkout with &amp;lt;branch name&amp;gt; git push origin &amp;lt;branch name&amp;gt; # push changes to remote named &amp;#39;origin&amp;#39; with &amp;lt;branch name&amp;gt; git push origin :&amp;lt;branch name&amp;gt; # delete remote named &amp;#39;origin&amp;#39; &amp;lt;branch name&amp;gt;  commit  git rebase -i &amp;lt;commit lists&amp;gt; # rebase &amp;lt;commit lists&amp;gt; with interactive mode, it can re-order commits git reset --hard &amp;lt;commit id&amp;gt; # Resets the index and working tree.</description>
     </item>
     
   </channel>

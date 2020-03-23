@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-07-01T18:42:05 CST">
+<meta name="revised" content="2020-03-23T12:09:36 CST">
 <title>rpmbuild easy tutorial :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -813,6 +813,20 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
+        <div>
+          <a href="/posts/application-grid-design/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -823,6 +837,13 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item">
         <div>
           <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -893,14 +914,9 @@
     <div class="progress">
         <div class="wrapper">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#创建subpackages">创建Subpackages</a></li>
-</ul></li>
-<li><a href="#packge-server-will-result-in-the-name-of-the-subpackage-being-foo-server">%packge server will result in the name of the subpackage being foo-server</a></li>
-<li><a href="#the-n-option-is-used-to-change-the-final-name-of-a-subpackage-from-mainpackage-subpackage-to-subpackage">The -n option is used to change the final name of a subpackage from <mainpackage>-<subpackage> to <subpackage>.</a></li>
-</ul>
+  <ul>
+    <li><a href="#创建subpackages">创建Subpackages</a></li>
+  </ul>
 </nav>
         </div>
     </div>
@@ -927,26 +943,22 @@
     
     
     
-    
-
-<ol>
+    <ol>
 <li>创建好文件夹结构
-
 <ul>
 <li>SOURCES 包含源代码,补丁,图标文件等</li>
 <li>SPECS 包含spec文件,这些文件用来控制构建过程</li>
 <li>BUILD 用来解压源代码的目录和软件构建的目录</li>
 <li>RPMS 包含构建程序最后产生的RPM包</li>
 <li>SPRMS 包含构建程序最后产生的源代码包文件</li>
-</ul></li>
+</ul>
+</li>
 <li>放置源代码到SOURCES文件夹中</li>
 <li>编写spec文件</li>
 </ol>
-
 <ul>
 <li>常用label</li>
 </ul>
-
 <table>
 <thead>
 <tr>
@@ -954,74 +966,60 @@
 <th>description</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>Name</td>
 <td>表明这个包叫什么名字，通常来说，一般用软件的名字作为name，name存在于最后的包的标签和包的文件名字中</td>
 </tr>
-
 <tr>
 <td>Version</td>
 <td>表示这个软件被打包后的版本，版本存在于最后包的标签和包的名字</td>
 </tr>
-
 <tr>
 <td>Release</td>
 <td>表示这个软件的时间信息，表示何时什么版本的软件被打包，你可以当作这个是包的版本号，这个信息最后作为最后包的标签和文件名的一部分</td>
 </tr>
-
 <tr>
 <td>Group</td>
 <td>用来存储这个被打包的文件与其他包的组关系，这段信息由很多词构成，以/分割。从左到右描述的更为精确</td>
 </tr>
-
 <tr>
 <td>Source</td>
 <td>说明被打包的软件的源代码在哪里可以被发现;告诉存在SOURCES文件夹中的源文件的名字</td>
 </tr>
-
 <tr>
 <td>URL</td>
 <td>通常含有一个URL，像Source那行，与source的区别是，source通常给RPM提供源代码的名字，URL是用来指明被打包的软件是文档信息</td>
 </tr>
-
 <tr>
 <td>Distribution</td>
 <td>告知被打包的软件是属于那个产品的</td>
 </tr>
-
 <tr>
 <td>Vendor</td>
 <td>指明那个组织发布的这个软件</td>
 </tr>
-
 <tr>
 <td>Packager</td>
 <td>指明组织中那个作者打包的这个软件</td>
 </tr>
-
 <tr>
 <td>License</td>
 <td>许可证</td>
 </tr>
-
 <tr>
 <td>Requires</td>
 <td>说明这个包需要的依赖条件</td>
 </tr>
-
 <tr>
 <td>BuildRoot</td>
 <td>说明这个包构建的根目录</td>
 </tr>
 </tbody>
 </table>
-
 <ul>
 <li>常用section</li>
 </ul>
-
 <table>
 <thead>
 <tr>
@@ -1029,75 +1027,63 @@
 <th>description</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>description</td>
 <td>更详细的描述包的内容</td>
 </tr>
-
 <tr>
 <td>define</td>
 <td>定义自己的macro</td>
 </tr>
-
 <tr>
 <td>prep</td>
 <td>创建软件的构建环境，可以执行多条shell命令</td>
 </tr>
-
 <tr>
 <td>build</td>
 <td>执行build的多条命令</td>
 </tr>
-
 <tr>
 <td>install</td>
 <td>执行install的多条命令</td>
 </tr>
-
 <tr>
 <td>files</td>
 <td>列出来的文件都会被打进RPM包中</td>
 </tr>
-
 <tr>
 <td>defattr</td>
 <td>RPM安装的文件默认的权限，拥有者和组</td>
 </tr>
-
 <tr>
 <td>pre</td>
 <td>在安装前执行的命令</td>
 </tr>
-
 <tr>
 <td>post</td>
 <td>在安装后执行的命令</td>
 </tr>
-
 <tr>
 <td>preun</td>
 <td>在卸载前执行的命令</td>
 </tr>
-
 <tr>
 <td>postun</td>
 <td>在卸载后执行的命令</td>
 </tr>
-
 <tr>
 <td>package</td>
 <td>生成子包</td>
 </tr>
 </tbody>
 </table>
-
 <h2 id="创建subpackages">创建Subpackages</h2>
-
 <blockquote>
+</blockquote>
 <p>简单的来说,subpackage是同一个spec文件创建出来众多package中的一个,RPM可以创建一个主要的package同时创建一个或者多个subpackage,subpackges可以不从主要的package中产生,这些都是根据package builder的规则来确定</p>
-
+<blockquote>
+</blockquote>
 <p>Example:
 {% codeblock lang:spec example.spec %}
 Name: foo
@@ -1110,52 +1096,38 @@ Group: bogus/junque
 %description
 This is the long description of the foo app, and the baz library needed to
 build it&hellip;</p>
-</blockquote>
-
 <h1 id="packge-server-will-result-in-the-name-of-the-subpackage-being-foo-server">%packge server will result in the name of the subpackage being foo-server</h1>
-
 <p>%package server
 Summary: The foo server
 Group: bogus/junque
 %description server
 This is the long description for the foo server&hellip;</p>
-
 <p>%package client
 Summary: The foo client
 Group: bogus/junque
 %description client
 This is the long description for the foo client&hellip;</p>
-
-<h1 id="the-n-option-is-used-to-change-the-final-name-of-a-subpackage-from-mainpackage-subpackage-to-subpackage">The -n option is used to change the final name of a subpackage from <mainpackage>-<subpackage> to <subpackage>.</h1>
-
+<h1 id="the--n-option-is-used-to-change-the-final-name-of-a-subpackage-from-mainpackage-subpackage-to-subpackage">The -n option is used to change the final name of a subpackage from <!-- raw HTML omitted -->-<!-- raw HTML omitted --> to <!-- raw HTML omitted -->.</h1>
 <p>%package -n bazlib
 Version: 5.6
 Summary: The baz library
 Group: bogus/junque
 %description -n bazlib
 This is the long description for the bazlib&hellip;</p>
-
 <p>%pre
 echo &ldquo;This is the foo package preinstall script&rdquo;</p>
-
 <p>%pre server
 echo &ldquo;This is the foo-server subpackage preinstall script&rdquo;</p>
-
 <p>%pre client
 echo &ldquo;This is the foo-client subpackage preinstall script&rdquo;</p>
-
 <p>%pre -n bazlib
 echo &ldquo;This is the bazlib subpackage preinstall script&rdquo;</p>
-
 <p>%files
 /usr/local/foo-file</p>
-
 <p>%files server
 /usr/local/server-file</p>
-
 <p>%files client
 /usr/local/client-file</p>
-
 <p>%files -n bazlib
 /usr/local/bazlib-file
 {% endcodeblock %}</p>

@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-07-01T18:42:05 CST">
+<meta name="revised" content="2020-03-23T12:09:36 CST">
 <title>kvm virtual machine with vnc support :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -813,6 +813,20 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
+        <div>
+          <a href="/posts/application-grid-design/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -823,6 +837,13 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item">
         <div>
           <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -893,15 +914,13 @@
     <div class="progress">
         <div class="wrapper">
     <nav id="TableOfContents">
-<ul>
-<li><a href="#install-a-kvm-virtual-machin-with-vnc-support">Install a KVM virtual machin with VNC support</a>
-<ul>
-<li>
-<ul>
-<li><a href="#vm-operations">VM Operations</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#vm-operations">VM Operations</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
         </div>
     </div>
@@ -928,53 +947,47 @@
     
     
     
-    
-
-<h1 id="install-a-kvm-virtual-machin-with-vnc-support">Install a KVM virtual machin with VNC support</h1>
-
+    <h1 id="install-a-kvm-virtual-machin-with-vnc-support">Install a KVM virtual machin with VNC support</h1>
 <ol>
-<li><p>Create a disk for VM</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">qemu-img create -f qcow2 &lt;img path&gt; &lt;size&gt;</code></pre></div>
-<ol>
-<li>Use virt-install install a VM
-<code>bash
-virt-install \
---virt-type kvm \
---name &lt;name&gt; \
---cdrom=&lt;cdrom iso&gt; \
---disk path=&lt;disk path&gt; \
---network network=default \
---graphics vnc,listen=0.0.0.0 \
---noautoconsole \
---os-type=&lt;os type&gt; \
---os-variant=&lt;os&gt;
-</code></li>
-</ol></li>
-
-<li><p>Show VNC port</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">virsh vncdisplay &lt;domain name&gt;</code></pre></div>
-<h3 id="vm-operations">VM Operations</h3>
-
+<li>Create a disk for VM</li>
+</ol>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">qemu-img create -f qcow2 &lt;img path&gt; &lt;size&gt;
+</code></pre></div><ol>
+<li>Use virt-install install a VM</li>
+</ol>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">virt-install <span style="color:#8045ff">\
+</span><span style="color:#8045ff"></span>    --virt-type kvm <span style="color:#8045ff">\
+</span><span style="color:#8045ff"></span>    --name &lt;name&gt; <span style="color:#8045ff">\
+</span><span style="color:#8045ff"></span>    --cdrom<span style="color:#f92672">=</span>&lt;cdrom iso&gt; <span style="color:#8045ff">\
+</span><span style="color:#8045ff"></span>    --disk <span style="color:#111">path</span><span style="color:#f92672">=</span>&lt;disk path&gt; <span style="color:#8045ff">\
+</span><span style="color:#8045ff"></span>    --network <span style="color:#111">network</span><span style="color:#f92672">=</span>default <span style="color:#8045ff">\
+</span><span style="color:#8045ff"></span>    --graphics vnc,listen<span style="color:#f92672">=</span>0.0.0.0 <span style="color:#8045ff">\
+</span><span style="color:#8045ff"></span>    --noautoconsole <span style="color:#8045ff">\
+</span><span style="color:#8045ff"></span>    --os-type<span style="color:#f92672">=</span>&lt;os type&gt; <span style="color:#8045ff">\
+</span><span style="color:#8045ff"></span>    --os-variant<span style="color:#f92672">=</span>&lt;os&gt;
+</code></pre></div><ol>
+<li>Show VNC port</li>
+</ol>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">virsh vncdisplay &lt;domain name&gt;
+</code></pre></div><h3 id="vm-operations">VM Operations</h3>
 <blockquote>
-<p>Sometimes you need add <hypervisor connection URI><br />
-For example:<br />
+<p>Sometimes you need add <!-- raw HTML omitted --><br>
+For example:<br>
 virsh -c qemu:///system</p>
 </blockquote>
-
 <ul>
 <li>Start VM</li>
 </ul>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">virsh start &lt;domain name&gt;</code></pre></div></li>
-</ol>
-
-<ul>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">virsh start &lt;domain name&gt;
+</code></pre></div><ul>
 <li>Stop VM</li>
 </ul>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">virsh destroy &lt;domain name&gt;</code></pre></div>
-<ul>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">virsh destroy &lt;domain name&gt;
+</code></pre></div><ul>
 <li>Delete VM</li>
 </ul>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">virsh undefined &lt;domain name&gt;</code></pre></div>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">virsh undefined &lt;domain name&gt;
+</code></pre></div>
 
     
     

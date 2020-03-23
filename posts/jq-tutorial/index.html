@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-07-01T18:42:05 CST">
+<meta name="revised" content="2020-03-23T12:09:36 CST">
 <title>jq tutorial :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -813,6 +813,20 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
+        <div>
+          <a href="/posts/application-grid-design/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -823,6 +837,13 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item">
         <div>
           <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -892,7 +913,7 @@
     
     <div class="progress">
         <div class="wrapper">
-    
+    <nav id="TableOfContents"></nav>
         </div>
     </div>
     
@@ -952,66 +973,62 @@
       <span style="color:#f92672">&#34;phone&#34;</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;202-224-3254&#34;</span>
     <span style="color:#111">}</span>
   <span style="color:#111">]</span>
-<span style="color:#111">}</span></code></pre></div>
-<ul>
-<li><p>query a attribute</p>
+<span style="color:#111">}</span>
+</code></pre></div><ul>
+<li>query a attribute</li>
+</ul>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ jq <span style="color:#d88200">&#39;.name&#39;</span> example.json
 <span style="color:#f92672">{</span>
-<span style="color:#d88200">&#34;first&#34;</span>: <span style="color:#d88200">&#34;Joni&#34;</span>,
-<span style="color:#d88200">&#34;last&#34;</span>: <span style="color:#d88200">&#34;Ernst&#34;</span>,
-<span style="color:#d88200">&#34;official_full&#34;</span>: <span style="color:#d88200">&#34;Joni Ernst&#34;</span>
-<span style="color:#f92672">}</span></code></pre></div>
-<ul>
-<li>query nested attribute
-<code>bash
-$ jq '.name.first' example.json
-&quot;Joni&quot;
-</code></li>
-</ul></li>
-
-<li><p>query a array</p>
+  <span style="color:#d88200">&#34;first&#34;</span>: <span style="color:#d88200">&#34;Joni&#34;</span>,
+  <span style="color:#d88200">&#34;last&#34;</span>: <span style="color:#d88200">&#34;Ernst&#34;</span>,
+  <span style="color:#d88200">&#34;official_full&#34;</span>: <span style="color:#d88200">&#34;Joni Ernst&#34;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><ul>
+<li>query nested attribute</li>
+</ul>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ jq <span style="color:#d88200">&#39;.name.first&#39;</span> example.json
+<span style="color:#d88200">&#34;Joni&#34;</span>
+</code></pre></div><ul>
+<li>query a array</li>
+</ul>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ jq <span style="color:#d88200">&#39;.terms[0]&#39;</span> example.json
 <span style="color:#f92672">{</span>
-<span style="color:#d88200">&#34;type&#34;</span>: <span style="color:#d88200">&#34;sen&#34;</span>,
-<span style="color:#d88200">&#34;start&#34;</span>: <span style="color:#d88200">&#34;2015-01-06&#34;</span>,
-<span style="color:#d88200">&#34;end&#34;</span>: <span style="color:#d88200">&#34;2021-01-03&#34;</span>,
-<span style="color:#d88200">&#34;state&#34;</span>: <span style="color:#d88200">&#34;IA&#34;</span>,
-<span style="color:#d88200">&#34;class&#34;</span>: <span style="color:#ae81ff">2</span>,
-<span style="color:#d88200">&#34;state_rank&#34;</span>: <span style="color:#d88200">&#34;junior&#34;</span>,
-<span style="color:#d88200">&#34;party&#34;</span>: <span style="color:#d88200">&#34;Republican&#34;</span>,
-<span style="color:#d88200">&#34;url&#34;</span>: <span style="color:#d88200">&#34;http://www.ernst.senate.gov&#34;</span>,
-<span style="color:#d88200">&#34;address&#34;</span>: <span style="color:#d88200">&#34;825 B&amp;C Hart Senate Office Building Washington DC 20510&#34;</span>,
-<span style="color:#d88200">&#34;office&#34;</span>: <span style="color:#d88200">&#34;825 B&amp;c Hart Senate Office Building&#34;</span>,
-<span style="color:#d88200">&#34;phone&#34;</span>: <span style="color:#d88200">&#34;202-224-3254&#34;</span>
-<span style="color:#f92672">}</span></code></pre></div>
-<ul>
+  <span style="color:#d88200">&#34;type&#34;</span>: <span style="color:#d88200">&#34;sen&#34;</span>,
+  <span style="color:#d88200">&#34;start&#34;</span>: <span style="color:#d88200">&#34;2015-01-06&#34;</span>,
+  <span style="color:#d88200">&#34;end&#34;</span>: <span style="color:#d88200">&#34;2021-01-03&#34;</span>,
+  <span style="color:#d88200">&#34;state&#34;</span>: <span style="color:#d88200">&#34;IA&#34;</span>,
+  <span style="color:#d88200">&#34;class&#34;</span>: 2,
+  <span style="color:#d88200">&#34;state_rank&#34;</span>: <span style="color:#d88200">&#34;junior&#34;</span>,
+  <span style="color:#d88200">&#34;party&#34;</span>: <span style="color:#d88200">&#34;Republican&#34;</span>,
+  <span style="color:#d88200">&#34;url&#34;</span>: <span style="color:#d88200">&#34;http://www.ernst.senate.gov&#34;</span>,
+  <span style="color:#d88200">&#34;address&#34;</span>: <span style="color:#d88200">&#34;825 B&amp;C Hart Senate Office Building Washington DC 20510&#34;</span>,
+  <span style="color:#d88200">&#34;office&#34;</span>: <span style="color:#d88200">&#34;825 B&amp;c Hart Senate Office Building&#34;</span>,
+  <span style="color:#d88200">&#34;phone&#34;</span>: <span style="color:#d88200">&#34;202-224-3254&#34;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><ul>
 <li>select(boolean_expression)</li>
 </ul>
-
 <p><code>select(x)</code> produces its input unchanged if <code>x</code> returns true for that input, and produces no output otherwise.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ jq <span style="color:#d88200">&#39;.terms[] | select(.class == 2)&#39;</span> example.json
 <span style="color:#f92672">{</span>
-<span style="color:#d88200">&#34;type&#34;</span>: <span style="color:#d88200">&#34;sen&#34;</span>,
-<span style="color:#d88200">&#34;start&#34;</span>: <span style="color:#d88200">&#34;2015-01-06&#34;</span>,
-<span style="color:#d88200">&#34;end&#34;</span>: <span style="color:#d88200">&#34;2021-01-03&#34;</span>,
-<span style="color:#d88200">&#34;state&#34;</span>: <span style="color:#d88200">&#34;IA&#34;</span>,
-<span style="color:#d88200">&#34;class&#34;</span>: <span style="color:#ae81ff">2</span>,
-<span style="color:#d88200">&#34;state_rank&#34;</span>: <span style="color:#d88200">&#34;junior&#34;</span>,
-<span style="color:#d88200">&#34;party&#34;</span>: <span style="color:#d88200">&#34;Republican&#34;</span>,
-<span style="color:#d88200">&#34;url&#34;</span>: <span style="color:#d88200">&#34;http://www.ernst.senate.gov&#34;</span>,
-<span style="color:#d88200">&#34;address&#34;</span>: <span style="color:#d88200">&#34;825 B&amp;C Hart Senate Office Building Washington DC 20510&#34;</span>,
-<span style="color:#d88200">&#34;office&#34;</span>: <span style="color:#d88200">&#34;825 B&amp;c Hart Senate Office Building&#34;</span>,
-<span style="color:#d88200">&#34;phone&#34;</span>: <span style="color:#d88200">&#34;202-224-3254&#34;</span>
-<span style="color:#f92672">}</span></code></pre></div></li>
+  <span style="color:#d88200">&#34;type&#34;</span>: <span style="color:#d88200">&#34;sen&#34;</span>,
+  <span style="color:#d88200">&#34;start&#34;</span>: <span style="color:#d88200">&#34;2015-01-06&#34;</span>,
+  <span style="color:#d88200">&#34;end&#34;</span>: <span style="color:#d88200">&#34;2021-01-03&#34;</span>,
+  <span style="color:#d88200">&#34;state&#34;</span>: <span style="color:#d88200">&#34;IA&#34;</span>,
+  <span style="color:#d88200">&#34;class&#34;</span>: 2,
+  <span style="color:#d88200">&#34;state_rank&#34;</span>: <span style="color:#d88200">&#34;junior&#34;</span>,
+  <span style="color:#d88200">&#34;party&#34;</span>: <span style="color:#d88200">&#34;Republican&#34;</span>,
+  <span style="color:#d88200">&#34;url&#34;</span>: <span style="color:#d88200">&#34;http://www.ernst.senate.gov&#34;</span>,
+  <span style="color:#d88200">&#34;address&#34;</span>: <span style="color:#d88200">&#34;825 B&amp;C Hart Senate Office Building Washington DC 20510&#34;</span>,
+  <span style="color:#d88200">&#34;office&#34;</span>: <span style="color:#d88200">&#34;825 B&amp;c Hart Senate Office Building&#34;</span>,
+  <span style="color:#d88200">&#34;phone&#34;</span>: <span style="color:#d88200">&#34;202-224-3254&#34;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><strong>Notice: particular attribute such as numbers should use quotes</strong></p>
+<ul>
+<li>to_entries, from_entries, with_entries</li>
 </ul>
-
-<p><strong>Notice: particular attribute such as numbers should use quotes</strong>
-+ to_entries, from_entries, with_entries</p>
-
 <p>These functions convert between an object and an array of key-value pairs. If to_entries is passed an object, then for each k: v entry in the input, the output array includes {&ldquo;key&rdquo;: k, &ldquo;value&rdquo;: v}.</p>
-
 <p>from_entries does the opposite conversion, and with_entries(foo) is a shorthand for to_entries | map(foo) | from_entries, useful for doing some operation to all keys and values of an object. from_entries accepts key, Key, name, Name, value and Value as keys.</p>
-
 <pre><code>jq 'to_entries'
 Input	{&quot;a&quot;: 1, &quot;b&quot;: 2}
 Output	[{&quot;key&quot;:&quot;a&quot;, &quot;value&quot;:1}, {&quot;key&quot;:&quot;b&quot;, &quot;value&quot;:2}]
@@ -1023,38 +1040,31 @@ Output	{&quot;a&quot;: 1, &quot;b&quot;: 2}
 jq 'with_entries(.key |= &quot;KEY_&quot; + .)'
 Input	{&quot;a&quot;: 1, &quot;b&quot;: 2}
 Output	{&quot;KEY_a&quot;: 1, &quot;KEY_b&quot;: 2}
-</code></pre>
-
-<ul>
-<li><p>change field value</p>
-
+</code></pre><ul>
+<li>change field value</li>
+</ul>
 <pre><code>jq '.name=&quot;1&quot;|.resource=&quot;2&quot;'
 Input {&quot;name&quot;:&quot;a&quot;,&quot;resource&quot;:&quot;b&quot;}
 Ouput {&quot;name&quot;:&quot;1&quot;,&quot;resource&quot;:&quot;2&quot;}
-</code></pre></li>
-
-<li><p>show select fields</p>
-
+</code></pre><ul>
+<li>show select fields</li>
+</ul>
 <pre><code>jq '.name,.resource'
 Input {&quot;name&quot;:&quot;a&quot;,&quot;resource&quot;:&quot;b&quot;,&quot;type&quot;:&quot;c&quot;}
 Output &quot;a&quot; &quot;b&quot;
-</code></pre></li>
-
-<li><p>delete field value</p>
-
+</code></pre><ul>
+<li>delete field value</li>
+</ul>
 <pre><code>jq 'del(.name)'
 Input {&quot;name&quot;:&quot;a&quot;,&quot;resource&quot;:&quot;b&quot;,&quot;type&quot;:&quot;c&quot;}
 Output {&quot;resource&quot;:&quot;b&quot;,&quot;type&quot;:&quot;c&quot;}
-</code></pre></li>
-
-<li><p>change key field</p>
-
+</code></pre><ul>
+<li>change key field</li>
+</ul>
 <pre><code>jq '{&quot;newkey&quot;:.name,&quot;newkey2&quot;:.type}'
 Input {&quot;name&quot;:&quot;a&quot;,&quot;resource&quot;:&quot;b&quot;,&quot;type&quot;:&quot;c&quot;}
 Output {&quot;newkey&quot;:&quot;a&quot;,&quot;newkey2&quot;:&quot;c&quot;}
-</code></pre></li>
-</ul>
-
+</code></pre>
 
     
     

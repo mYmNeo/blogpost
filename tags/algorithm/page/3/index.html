@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-07-01T18:42:05 CST">
+<meta name="revised" content="2020-03-23T12:09:36 CST">
 <title>algorithm :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -812,6 +812,20 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
+        <div>
+          <a href="/posts/application-grid-design/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -822,6 +836,13 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item">
         <div>
           <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -863,7 +884,17 @@
         <span class="links">
         
 
- algorithm
+
+
+
+
+
+
+ <a href='/'></a> > <a href='/tags/'>Tags</a> > algorithm
+
+ 
+
+ 
 
    
         </span>
@@ -913,12 +944,12 @@
     </header>
     <section class="post-excerpt">
         <p>Determine if a Sudoku is valid, according to: Sudoku Puzzles - The Rules.
-The Sudoku board could be partially filled, where empty cells are filled with the character &lsquo;.&rsquo;.
+The Sudoku board could be partially filled, where empty cells are filled with the character &lsquo;.'.
 A partially filled sudoku which is valid.
 Note:
 A valid Sudoku board (partially filled) is not necessarily solvable. Only the filled cells need to be validated.
  Analysis: Sudoku的要求,每个格子只能有1-9且只能出现一次
-Time and space complexity: Code: classSolution { public: bool isValidSudoku(vector&lt;vector&lt;char&gt;&gt;&amp; board) { unordered_map&lt;char, int&gt; record; //row  for (int i = 0; i &lt; 9; ++i) { record. <a class="read-more" href="/posts/algorithm/valid-sudoku/">&raquo;</a></p>
+Time and space complexity: Code: class Solution { public: bool isValidSudoku(vector&lt;vector&lt;char&gt;&gt;&amp; board) { unordered_map&lt;char, int&gt; record; //row  for (int i = 0; i &lt; 9; ++i) { record. <a class="read-more" href="/posts/algorithm/valid-sudoku/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -941,11 +972,11 @@ Time and space complexity: Code: classSolution { public: bool isValidSudoku(vect
         <h2 class="post-title"><a href="/posts/algorithm/minimum-depth-of-binary-tree/">Minimum Depth of Binary Tree</a></h2>
     </header>
     <section class="post-excerpt">
-        <p>  Given a binary tree, find its minimum depth.
+        <p> Given a binary tree, find its minimum depth.
 The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
  Analysis: DFS或者BFS遍历
 Time and space complexity: time: $\Theta (n)$
-Code: classSolution { public: int minDepth(TreeNode *root) { if(!root) return 0; if(!root-&gt;left) return 1 + minDepth(root-&gt;right); if(!root-&gt;right) return 1 + minDepth(root-&gt;left); return 1 + min(minDepth(root-&gt;left), minDepth(root-&gt;right)); } };  <a class="read-more" href="/posts/algorithm/minimum-depth-of-binary-tree/">&raquo;</a></p>
+Code: class Solution { public: int minDepth(TreeNode *root) { if(!root) return 0; if(!root-&gt;left) return 1 + minDepth(root-&gt;right); if(!root-&gt;right) return 1 + minDepth(root-&gt;left); return 1 + min(minDepth(root-&gt;left), minDepth(root-&gt;right)); } };  <a class="read-more" href="/posts/algorithm/minimum-depth-of-binary-tree/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -973,8 +1004,8 @@ You have to paint all the posts such that no more than two adjacent fence posts 
 Return the total number of ways you can paint the fence.
 Note:
 n and k are non-negative integers.
- Analysis: 分2种情况考虑: + 最后2个fences的color一样,这样就有(k-1)*f(n-2) + 最后2个fences的color不一样,这样就有(k-1)*f(n-1)
-Time and space complexity: time: $\Theta (n)$ <a class="read-more" href="/posts/algorithm/paint-fence/">&raquo;</a></p>
+ Analysis: 分2种情况考虑:
+ 最后2个fences的color一样,这样就有(k-1)*f(n-2) 最后2个fences的color不一样,这样就有(k-1)*f(n-1)  Time and space complexity: time: $\Theta (n)$ <a class="read-more" href="/posts/algorithm/paint-fence/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -1000,7 +1031,7 @@ Time and space complexity: time: $\Theta (n)$ <a class="read-more" href="/posts/
         <p>Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.
 For example:
 Given the below binary tree and sum = 22,
- 5 / \ 4 8 / / \ 11 13 4 / \ \ 7 2 1  return true, as there exist a root-to-leaf path 5-&gt;4-&gt;11-&gt;2 which sum is 22. <a class="read-more" href="/posts/algorithm/path-sum/">&raquo;</a></p>
+  5 / \ 4 8 / / \ 11 13 4 / \ \ 7 2 1  return true, as there exist a root-to-leaf path 5-&gt;4-&gt;11-&gt;2 which sum is 22. <a class="read-more" href="/posts/algorithm/path-sum/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -1024,9 +1055,9 @@ Given the below binary tree and sum = 22,
     </header>
     <section class="post-excerpt">
         <p>Given a string, we can &ldquo;shift&rdquo; each of its letter to its successive letter, for example: &quot;abc&quot; -&gt; &quot;bcd&quot;. We can keep &ldquo;shifting&rdquo; which forms the sequence:
-&quot;abc&quot; -&gt; &quot;bcd&quot; -&gt; ... -&gt; &quot;xyz&quot;  Given a list of strings which contains only lowercase alphabets, group all strings that belong to the same shifting sequence.
+ &quot;abc&quot; -&gt; &quot;bcd&quot; -&gt; ... -&gt; &quot;xyz&quot;  Given a list of strings which contains only lowercase alphabets, group all strings that belong to the same shifting sequence.
 For example, given: [&quot;abc&quot;, &quot;bcd&quot;, &quot;acef&quot;, &quot;xyz&quot;, &quot;az&quot;, &quot;ba&quot;, &quot;a&quot;, &quot;z&quot;], Return:
-[ [&quot;abc&quot;,&quot;bcd&quot;,&quot;xyz&quot;], [&quot;az&quot;,&quot;ba&quot;], [&quot;acef&quot;], [&quot;a&quot;,&quot;z&quot;] ]  Note: For the return value, each inner list&rsquo;s elements must follow the lexicographic order. <a class="read-more" href="/posts/algorithm/group-shifted-strings/">&raquo;</a></p>
+ [ [&quot;abc&quot;,&quot;bcd&quot;,&quot;xyz&quot;], [&quot;az&quot;,&quot;ba&quot;], [&quot;acef&quot;], [&quot;a&quot;,&quot;z&quot;] ]  Note: For the return value, each inner list&rsquo;s elements must follow the lexicographic order. <a class="read-more" href="/posts/algorithm/group-shifted-strings/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -1049,10 +1080,10 @@ For example, given: [&quot;abc&quot;, &quot;bcd&quot;, &quot;acef&quot;, &quot;x
         <h2 class="post-title"><a href="/posts/algorithm/palindrome-number/">Palindrome Number</a></h2>
     </header>
     <section class="post-excerpt">
-        <p>  Determine whether an integer is a palindrome. Do this without extra space.
+        <p> Determine whether an integer is a palindrome. Do this without extra space.
  Analysis: 利用回文数的特点:逆序还是原来的数解决,注意溢出问题,为了防止溢出,只需要算一半的数字即可
 Time and space complexity: space: $\Theta (1)$
-Code: classSolution { public: bool isPalindrome(int x) { if (x&lt;0 || (x!=0 &amp;&amp; x%10==0)) return false; int rev = 0; while (x&gt;rev){ rev = rev*10 + x%10; x = x/10; } return (x==rev || x==rev/10); };  <a class="read-more" href="/posts/algorithm/palindrome-number/">&raquo;</a></p>
+Code: class Solution { public: bool isPalindrome(int x) { if (x&lt;0 || (x!=0 &amp;&amp; x%10==0)) return false; int rev = 0; while (x&gt;rev){ rev = rev*10 + x%10; x = x/10; } return (x==rev || x==rev/10); };  <a class="read-more" href="/posts/algorithm/palindrome-number/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -1075,14 +1106,14 @@ Code: classSolution { public: bool isPalindrome(int x) { if (x&lt;0 || (x!=0 &am
         <h2 class="post-title"><a href="/posts/algorithm/pascal-s-triangle-ii/">Pascal&#39;s Triangle II</a></h2>
     </header>
     <section class="post-excerpt">
-        <p>  Given an index k, return the kth row of the Pascal&rsquo;s triangle.
+        <p> Given an index k, return the kth row of the Pascal&rsquo;s triangle.
 For example, given k = 3, Return [1,3,3,1].
 Note:
 Could you optimize your algorithm to use only O(k) extra space?
  Analysis: 思路和pascal&rsquo;s triangle一样
 Time and space complexity: time: $\Theta (k^2)$
 space: $\Theta (k)$
-Code: classSolution { public: vector&lt;int&gt; getRow(int rowIndex) { vector&lt;int&gt; A(rowIndex+1, 0); A[0] = 1; for(int i=1; i&lt;rowIndex+1; i++) for(int j=i; j&gt;=1; j--) A[j] += A[j-1]; return A; } };  <a class="read-more" href="/posts/algorithm/pascal-s-triangle-ii/">&raquo;</a></p>
+Code: class Solution { public: vector&lt;int&gt; getRow(int rowIndex) { vector&lt;int&gt; A(rowIndex+1, 0); A[0] = 1; for(int i=1; i&lt;rowIndex+1; i++) for(int j=i; j&gt;=1; j--) A[j] += A[j-1]; return A; } };  <a class="read-more" href="/posts/algorithm/pascal-s-triangle-ii/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -1108,10 +1139,10 @@ Code: classSolution { public: vector&lt;int&gt; getRow(int rowIndex) { vector&lt
         <p>Given a binary tree, return the level order traversal of its nodes&rsquo; values. (ie, from left to right, level by level).
 For example:
 Given binary tree {3,9,20,#,#,15,7},
- 3 / \ 9 20 / \ 15 7  return its level order traversal as:
-[ [3], [9,20], [15,7] ]   Analysis: level遍历
+  3 / \ 9 20 / \ 15 7  return its level order traversal as:
+ [ [3], [9,20], [15,7] ] Analysis: level遍历
 Time and space complexity: time: $\Theta (n)$
-Code: classSolution { public: vector&lt;vector&lt;int&gt;&gt; levelOrderBottom(TreeNode* root) { DFS(root, 0); return res; } private: void DFS(TreeNode* root, int level) { if (root == NULL) return; if (level == res. <a class="read-more" href="/posts/algorithm/binary-tree-level-order-traversal/">&raquo;</a></p>
+Code: class Solution { public: vector&lt;vector&lt;int&gt;&gt; levelOrderBottom(TreeNode* root) { DFS(root, 0); return res; } private: void DFS(TreeNode* root, int level) { if (root == NULL) return; if (level == res. <a class="read-more" href="/posts/algorithm/binary-tree-level-order-traversal/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -1134,11 +1165,11 @@ Code: classSolution { public: vector&lt;vector&lt;int&gt;&gt; levelOrderBottom(T
         <h2 class="post-title"><a href="/posts/algorithm/factorial-trailing-zeroes/">Factorial Trailing Zeroes</a></h2>
     </header>
     <section class="post-excerpt">
-        <p>  Given an integer n, return the number of trailing zeroes in n!.
+        <p> Given an integer n, return the number of trailing zeroes in n!.
 Note: Your solution should be in logarithmic time complexity.
  Analysis: 因为2比较多,0的个数由5的个数决定,需要注意的是5的power的数字,会包含5的个数更多,不停的除以5,并把商加起来为0的个数
 Time and space complexity: time: $\Theta(log_5(n))$
-Code: classSolution { public: int trailingZeroes(int n) { int result = 0; while (n) { n /= 5; result += n; } return result; } };  <a class="read-more" href="/posts/algorithm/factorial-trailing-zeroes/">&raquo;</a></p>
+Code: class Solution { public: int trailingZeroes(int n) { int result = 0; while (n) { n /= 5; result += n; } return result; } };  <a class="read-more" href="/posts/algorithm/factorial-trailing-zeroes/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -1161,11 +1192,11 @@ Code: classSolution { public: int trailingZeroes(int n) { int result = 0; while 
         <h2 class="post-title"><a href="/posts/algorithm/pascal-s-triangle/">Pascal&#39;s Triangle</a></h2>
     </header>
     <section class="post-excerpt">
-        <p>  Given numRows, generate the first numRows of Pascal&rsquo;s triangle.
+        <p> Given numRows, generate the first numRows of Pascal&rsquo;s triangle.
 For example, given numRows = 5,
 Return
-[ [1], [1,1], [1,2,1], [1,3,3,1], [1,4,6,4,1] ]   Analysis: 类似dp, 对于每一个新行,现push 1,然后根据上一行从第二个元素开始,把上一行的当前位置的元素和它前面的元素加一起,为这个新行该位置的值
-Time and space complexity: Code: classSolution { public: vector&lt;vector&lt;int&gt; &gt; generate(int numRows) { vector&lt;vector&lt;int&gt;&gt; r(numRows); for (int i = 0; i &lt; numRows; i++) { r[i].resize(i + 1); r[i][0] = r[i][i] = 1; for (int j = 1; j &lt; i; j++) r[i][j] = r[i - 1][j - 1] + r[i - 1][j]; } return r; } };  <a class="read-more" href="/posts/algorithm/pascal-s-triangle/">&raquo;</a></p>
+ [ [1], [1,1], [1,2,1], [1,3,3,1], [1,4,6,4,1] ] Analysis: 类似dp, 对于每一个新行,现push 1,然后根据上一行从第二个元素开始,把上一行的当前位置的元素和它前面的元素加一起,为这个新行该位置的值
+Time and space complexity: Code: class Solution { public: vector&lt;vector&lt;int&gt; &gt; generate(int numRows) { vector&lt;vector&lt;int&gt;&gt; r(numRows); for (int i = 0; i &lt; numRows; i++) { r[i].resize(i + 1); r[i][0] = r[i][i] = 1; for (int j = 1; j &lt; i; j++) r[i][j] = r[i - 1][j - 1] + r[i - 1][j]; } return r; } };  <a class="read-more" href="/posts/algorithm/pascal-s-triangle/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          

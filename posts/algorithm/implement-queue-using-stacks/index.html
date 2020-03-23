@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-07-01T18:42:05 CST">
+<meta name="revised" content="2020-03-23T12:09:35 CST">
 <title>Implement Queue using Stacks :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -814,6 +814,20 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
+        <div>
+          <a href="/posts/application-grid-design/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -824,6 +838,13 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item">
         <div>
           <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -899,17 +920,15 @@
     <div class="progress">
         <div class="wrapper">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#analysis">Analysis:</a></li>
-<li><a href="#time-and-space-complexity">Time and space complexity:</a></li>
-<li><a href="#code">Code:</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#analysis">Analysis:</a></li>
+        <li><a href="#time-and-space-complexity">Time and space complexity:</a></li>
+        <li><a href="#code">Code:</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
         </div>
     </div>
@@ -936,48 +955,36 @@
     
     
     
-    
-
-<blockquote>
+    <blockquote>
 <p>Implement the following operations of a queue using stacks.</p>
-
 <ul>
 <li>push(x) &ndash; Push element x to the back of queue.</li>
 <li>pop() &ndash; Removes the element from in front of queue.</li>
 <li>peek() &ndash; Get the front element.</li>
 <li>empty() &ndash; Return whether the queue is empty.</li>
 </ul>
-
-<p><strong>Notes:</strong>
-+ You must use only standard operations of a stack &ndash; which means only push to top, peek/pop from top, size, and is empty operations are valid.
-+ Depending on your language, stack may not be supported natively. You may simulate a stack by using a list or deque (double-ended queue), as long as you use only standard &gt;operations of a stack.
-+ You may assume that all operations are valid (for example, no pop or peek operations will be called on an empty queue).</p>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>You must use only standard operations of a stack &ndash; which means only push to top, peek/pop from top, size, and is empty operations are valid.</li>
+<li>Depending on your language, stack may not be supported natively. You may simulate a stack by using a list or deque (double-ended queue), as long as you use only standard &gt;operations of a stack.</li>
+<li>You may assume that all operations are valid (for example, no pop or peek operations will be called on an empty queue).</li>
+</ul>
 </blockquote>
-
 <h3 id="analysis">Analysis:</h3>
-
 <ul>
 <li>push,正常的方式push进去,如果stack为空的时候就记录第一入栈的数,该数值用来记录peek需要的值</li>
 <li>pop,取栈顶值放到新的栈中直到stack的元素只剩下一个,退栈的时候记录peek的值</li>
 <li>peek,返回peek值</li>
-
-<li><p>empty,返回stack的empty</p>
-
-<h3 id="time-and-space-complexity">Time and space complexity:</h3>
-
-<p>time:</p></li>
+<li>empty,返回stack的empty</li>
 </ul>
-
+<h3 id="time-and-space-complexity">Time and space complexity:</h3>
+<p>time:</p>
 <p>push $\Theta (1)$</p>
-
 <p>pop  $\Theta (n)$</p>
-
 <p>peek $\Theta (1)$</p>
-
 <p>empty $\Theta (1)$</p>
-
 <h3 id="code">Code:</h3>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">class</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#75af00">Queue</span> <span style="color:#111">{</span>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">class</span> <span style="color:#75af00">Queue</span> <span style="color:#111">{</span>
 <span style="color:#00a8c8">public</span><span style="color:#f92672">:</span>
     <span style="color:#75715e">// Push element x to the back of queue.
 </span><span style="color:#75715e"></span>    <span style="color:#00a8c8">void</span> <span style="color:#111">push</span><span style="color:#111">(</span><span style="color:#00a8c8">int</span> <span style="color:#111">x</span><span style="color:#111">)</span> <span style="color:#111">{</span>
@@ -988,7 +995,7 @@
     <span style="color:#111">}</span>
 
     <span style="color:#75715e">// Removes the element from in front of queue.
-</span><span style="color:#75715e"></span>    <span style="color:#00a8c8">void</span> <span style="color:#111">pop</span><span style="color:#111">(</span><span style="color:#00a8c8">void</span><span style="color:#111">)</span> <span style="color:#111">{</span>
+</span><span style="color:#75715e"></span>    <span style="color:#00a8c8">void</span> <span style="color:#75af00">pop</span><span style="color:#111">(</span><span style="color:#00a8c8">void</span><span style="color:#111">)</span> <span style="color:#111">{</span>
         <span style="color:#111">std</span><span style="color:#f92672">::</span><span style="color:#111">stack</span><span style="color:#f92672">&lt;</span><span style="color:#00a8c8">int</span><span style="color:#f92672">&gt;</span> <span style="color:#111">tmp</span><span style="color:#111">;</span>
         <span style="color:#00a8c8">while</span> <span style="color:#111">(</span><span style="color:#111">mock</span><span style="color:#111">.</span><span style="color:#111">size</span><span style="color:#111">()</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span><span style="color:#111">)</span> <span style="color:#111">{</span>
             <span style="color:#111">tmp</span><span style="color:#111">.</span><span style="color:#111">push</span><span style="color:#111">(</span><span style="color:#111">mock</span><span style="color:#111">.</span><span style="color:#111">top</span><span style="color:#111">());</span>
@@ -1003,12 +1010,12 @@
     <span style="color:#111">}</span>
 
     <span style="color:#75715e">// Get the front element.
-</span><span style="color:#75715e"></span>    <span style="color:#00a8c8">int</span> <span style="color:#111">peek</span><span style="color:#111">(</span><span style="color:#00a8c8">void</span><span style="color:#111">)</span> <span style="color:#111">{</span>
+</span><span style="color:#75715e"></span>    <span style="color:#00a8c8">int</span> <span style="color:#75af00">peek</span><span style="color:#111">(</span><span style="color:#00a8c8">void</span><span style="color:#111">)</span> <span style="color:#111">{</span>
         <span style="color:#00a8c8">return</span> <span style="color:#111">top</span><span style="color:#111">;</span>
     <span style="color:#111">}</span>
 
     <span style="color:#75715e">// Return whether the queue is empty.
-</span><span style="color:#75715e"></span>    <span style="color:#00a8c8">bool</span> <span style="color:#111">empty</span><span style="color:#111">(</span><span style="color:#00a8c8">void</span><span style="color:#111">)</span> <span style="color:#111">{</span>
+</span><span style="color:#75715e"></span>    <span style="color:#00a8c8">bool</span> <span style="color:#75af00">empty</span><span style="color:#111">(</span><span style="color:#00a8c8">void</span><span style="color:#111">)</span> <span style="color:#111">{</span>
         <span style="color:#00a8c8">return</span> <span style="color:#111">mock</span><span style="color:#111">.</span><span style="color:#111">empty</span><span style="color:#111">();</span>
     <span style="color:#111">}</span>
 <span style="color:#00a8c8">private</span><span style="color:#f92672">:</span>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>svn on Sparking Mind</title>
@@ -17,7 +17,7 @@
       <pubDate>Fri, 15 Jul 2016 10:05:33 +0000</pubDate>
       
       <guid>http://mymneo.github.io/posts/svn2git/</guid>
-      <description> Import svn project into your git project git config --add svn-remote.&amp;lt;branch name&amp;gt;.url &amp;lt;svn repository url&amp;gt; git config --add svn-remote.&amp;lt;branch name&amp;gt;.fetch :refs/remotes/&amp;lt;branch name&amp;gt; git svn fetch &amp;lt;branch name&amp;gt; [-r&amp;lt;rev&amp;gt;] Export and import SVN repository svnrdump dump [-r&amp;lt;rev&amp;gt;] &amp;lt;svn repostory url&amp;gt; &amp;gt; &amp;lt;dump file&amp;gt; svnadmin load --force-uuid &amp;lt;directory&amp;gt; &amp;lt; &amp;lt;dump file&amp;gt;</description>
+      <description>Import svn project into your git project git config --add svn-remote.&amp;lt;branch name&amp;gt;.url &amp;lt;svn repository url&amp;gt; git config --add svn-remote.&amp;lt;branch name&amp;gt;.fetch :refs/remotes/&amp;lt;branch name&amp;gt; git svn fetch &amp;lt;branch name&amp;gt; [-r&amp;lt;rev&amp;gt;] Export and import SVN repository svnrdump dump [-r&amp;lt;rev&amp;gt;] &amp;lt;svn repostory url&amp;gt; &amp;gt; &amp;lt;dump file&amp;gt; svnadmin load --force-uuid &amp;lt;directory&amp;gt; &amp;lt; &amp;lt;dump file&amp;gt; </description>
     </item>
     
   </channel>

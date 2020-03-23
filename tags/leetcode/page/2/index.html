@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-07-01T18:42:05 CST">
+<meta name="revised" content="2020-03-23T12:09:36 CST">
 <title>leetcode :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -812,6 +812,20 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
+        <div>
+          <a href="/posts/application-grid-design/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -822,6 +836,13 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item">
         <div>
           <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -863,7 +884,17 @@
         <span class="links">
         
 
- leetcode
+
+
+
+
+
+
+ <a href='/'></a> > <a href='/tags/'>Tags</a> > leetcode
+
+ 
+
+ 
 
    
         </span>
@@ -943,7 +974,7 @@ The brackets must close in the correct order, &quot;()&quot; and &quot;()[]{}&qu
  Analysis: 经典的用stack解决的问题
 Time and space complexity: time: $\Theta (n)$
 space: $\Theta (n)$
-Code: classSolution { public: bool isValid(string s) { unordered_map&lt;char, char&gt; table { {&#39;(&#39;, &#39;)&#39;}, {&#39;[&#39;, &#39;]&#39;}, {&#39;{&#39;, &#39;}&#39;}, }; stack&lt;char&gt; frame; for (char&amp; c : s) { switch(c) { case &#39;(&#39;: case &#39;[&#39;: case &#39;{&#39;: { frame. <a class="read-more" href="/posts/algorithm/valid-parentheses/">&raquo;</a></p>
+Code: class Solution { public: bool isValid(string s) { unordered_map&lt;char, char&gt; table { {&#39;(&#39;, &#39;)&#39;}, {&#39;[&#39;, &#39;]&#39;}, {&#39;{&#39;, &#39;}&#39;}, }; stack&lt;char&gt; frame; for (char&amp; c : s) { switch(c) { case &#39;(&#39;: case &#39;[&#39;: case &#39;{&#39;: { frame. <a class="read-more" href="/posts/algorithm/valid-parentheses/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -974,7 +1005,7 @@ Note:
 Given n will always be valid. Try to do this in one pass.
  Analysis: 双指针,类似n大小滑动窗口
 Time and space complexity: time: $\Theta (n)$
-Code: classSolution { public: ListNode *removeNthFromEnd(ListNode *head, int n) { ListNode **t1 = &amp;head, *t2 = head; for (int i = 1; i &lt; n; ++i) { t2 = t2-&gt;next; } while (t2-&gt;next ! <a class="read-more" href="/posts/algorithm/remove-nth-node-from-end-of-list/">&raquo;</a></p>
+Code: class Solution { public: ListNode *removeNthFromEnd(ListNode *head, int n) { ListNode **t1 = &amp;head, *t2 = head; for (int i = 1; i &lt; n; ++i) { t2 = t2-&gt;next; } while (t2-&gt;next ! <a class="read-more" href="/posts/algorithm/remove-nth-node-from-end-of-list/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -1048,11 +1079,11 @@ Given &quot;foo&quot;, &quot;bar&quot;, return false. <a class="read-more" href=
         <h2 class="post-title"><a href="/posts/algorithm/rectangle-area/">Rectangle Area</a></h2>
     </header>
     <section class="post-excerpt">
-        <p>  Find the total area covered by two rectilinear rectangles in a 2D plane.
+        <p> Find the total area covered by two rectilinear rectangles in a 2D plane.
 Each rectangle is defined by its bottom left corner and top right corner as shown in the figure.
-Assume that the total area is never beyond the maximum possible value of int.
- Analysis: 分cross和non-cross2种情况
-Time and space complexity: Code: classSolution { public: int computeArea(int A, int B, int C, int D, int E, int F, int G, int H) { int w1 = abs(A - C); int h1 = abs(B - D); int w2 = abs(E - G); int h2 = abs(H - F); int w3 = abs(min(A, E) - max(C, G)); int h3 = abs(min(B, F) - max(D, H)); // cross  if (w1 + w2 &gt;= w3 &amp;&amp; h1 + h2 &gt;= h3) { return (w1 * h1 + w2 * h2) - (w1 + w2 - w3) * (h1 + h2 - h3); } return w1 * h1 + w2 * h2; } };  <a class="read-more" href="/posts/algorithm/rectangle-area/">&raquo;</a></p>
+ Assume that the total area is never beyond the maximum possible value of int.
+  Analysis: 分cross和non-cross2种情况
+Time and space complexity: Code: class Solution { public: int computeArea(int A, int B, int C, int D, int E, int F, int G, int H) { int w1 = abs(A - C); int h1 = abs(B - D); int w2 = abs(E - G); int h2 = abs(H - F); int w3 = abs(min(A, E) - max(C, G)); int h3 = abs(min(B, F) - max(D, H)); // cross  if (w1 + w2 &gt;= w3 &amp;&amp; h1 + h2 &gt;= h3) { return (w1 * h1 + w2 * h2) - (w1 + w2 - w3) * (h1 + h2 - h3); } return w1 * h1 + w2 * h2; } };  <a class="read-more" href="/posts/algorithm/rectangle-area/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -1075,11 +1106,11 @@ Time and space complexity: Code: classSolution { public: int computeArea(int A, 
         <h2 class="post-title"><a href="/posts/algorithm/contains-duplicate-ii/">Contains Duplicate II</a></h2>
     </header>
     <section class="post-excerpt">
-        <p>  Given an array of integers and an integer k, find out whether there are two distinct indices i and j in the array such that nums[i] = nums[j] and the difference between i and j is at most k.
+        <p> Given an array of integers and an integer k, find out whether there are two distinct indices i and j in the array such that nums[i] = nums[j] and the difference between i and j is at most k.
  Analysis: 长度为k的滑动窗口,用map来记录数字出现的次数
 Time and space complexity: time: $\Theta (n)$
 space: $\Theta (n)$
-Code: classSolution { public: bool containsNearbyDuplicate(vector&lt;int&gt;&amp; nums, int k) { int size = nums.size(); unordered_map&lt;int, int&gt; record; for (int i = 0; i &lt; size; ++i) { if (i &gt; k) { --record[nums[i - k - 1]]; } ++record[nums[i]]; if (record[nums[i]] &gt; 1) { return true; } } return false; } };  <a class="read-more" href="/posts/algorithm/contains-duplicate-ii/">&raquo;</a></p>
+Code: class Solution { public: bool containsNearbyDuplicate(vector&lt;int&gt;&amp; nums, int k) { int size = nums.size(); unordered_map&lt;int, int&gt; record; for (int i = 0; i &lt; size; ++i) { if (i &gt; k) { --record[nums[i - k - 1]]; } ++record[nums[i]]; if (record[nums[i]] &gt; 1) { return true; } } return false; } };  <a class="read-more" href="/posts/algorithm/contains-duplicate-ii/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -1102,11 +1133,11 @@ Code: classSolution { public: bool containsNearbyDuplicate(vector&lt;int&gt;&amp
         <h2 class="post-title"><a href="/posts/algorithm/merge-sorted-array/">Merge Sorted Array</a></h2>
     </header>
     <section class="post-excerpt">
-        <p>  Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
+        <p> Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
 Note: You may assume that nums1 has enough space (size that is greater or equal to m + n) to hold additional elements from nums2. The number of elements initialized in nums1 and nums2 are m and n respectively.
  Analysis: 题目的意思是不要用额外空间,为了避免overwrite原始数据,从m+n的位置开始写,逆序遍历2个array,选择最大的那个填到对应的位置
 Time and space complexity: time: $\Theta (m+n)$
-Code: classSolution { public: void merge(vector&lt;int&gt;&amp; nums1, int m, vector&lt;int&gt;&amp; nums2, int n) { int size = m + n; int i, j; for (i = m - 1, j = n - 1; i &gt;= 0 &amp;&amp; j &gt;= 0; ) { if (nums1[i] &gt; nums2[j]) { nums1[--size] = nums1[i]; --i; } else { nums1[--size] = nums2[j]; --j; } } while (i &gt;= 0) { nums1[--size] = nums1[i--]; } while (j &gt;= 0) { nums1[--size] = nums2[j--]; } } };  <a class="read-more" href="/posts/algorithm/merge-sorted-array/">&raquo;</a></p>
+Code: class Solution { public: void merge(vector&lt;int&gt;&amp; nums1, int m, vector&lt;int&gt;&amp; nums2, int n) { int size = m + n; int i, j; for (i = m - 1, j = n - 1; i &gt;= 0 &amp;&amp; j &gt;= 0; ) { if (nums1[i] &gt; nums2[j]) { nums1[--size] = nums1[i]; --i; } else { nums1[--size] = nums2[j]; --j; } } while (i &gt;= 0) { nums1[--size] = nums1[i--]; } while (j &gt;= 0) { nums1[--size] = nums2[j--]; } } };  <a class="read-more" href="/posts/algorithm/merge-sorted-array/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -1131,7 +1162,7 @@ Code: classSolution { public: void merge(vector&lt;int&gt;&amp; nums1, int m, ve
     <section class="post-excerpt">
         <p>Write a program to find the node at which the intersection of two singly linked lists begins.
 For example, the following two linked lists:
-A: a1 → a2 ↘ c1 → c2 → c3 ↗ B: b1 → b2 → b3  begin to intersect at node c1.
+ A: a1 → a2 ↘ c1 → c2 → c3 ↗ B: b1 → b2 → b3  begin to intersect at node c1.
 Notes:
  If the two linked lists have no intersection at all, return null. The linked lists must retain their original structure after the function returns. <a class="read-more" href="/posts/algorithm/intersection-of-two-linked-lists/">&raquo;</a></p>
     </section>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>makefile on Sparking Mind</title>
@@ -17,9 +17,7 @@
       <pubDate>Thu, 28 Apr 2016 17:39:32 +0000</pubDate>
       
       <guid>http://mymneo.github.io/posts/makefile-memo/</guid>
-      <description>Checks if the first argument is non-empty.If so runs the second argument, otherwise runs the third
-$(if this-is-not-empty,then!,else!)   Execute command but not display on standard output makefile @ls .   tell make to ignore error
--rm -f *.*   The foreach function is very different from other functions. It causes one piece of text to be used repeatedly, each time with a different substitution performed on it.</description>
+      <description>Checks if the first argument is non-empty.If so runs the second argument, otherwise runs the third  $(if this-is-not-empty,then!,else!)  Execute command but not display on standard output  @ls .  tell make to ignore error  -rm -f *.*  The foreach function is very different from other functions. It causes one piece of text to be used repeatedly, each time with a different substitution performed on it.</description>
     </item>
     
   </channel>

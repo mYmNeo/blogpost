@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-07-01T18:42:05 CST">
+<meta name="revised" content="2020-03-23T12:09:36 CST">
 <title> :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -813,6 +813,20 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
+        <div>
+          <a href="/posts/application-grid-design/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -823,6 +837,13 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item active">
         <div>
           <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -892,11 +913,7 @@
     
     <div class="progress">
         <div class="wrapper">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#kernel-development-cheatsheet">Kernel Development Cheatsheet</a></li>
-</ul>
-</nav>
+    <nav id="TableOfContents"></nav>
         </div>
     </div>
     
@@ -914,35 +931,25 @@
     
     
     
-    
-
-<h1 id="kernel-development-cheatsheet">Kernel Development Cheatsheet</h1>
-
+    <h1 id="kernel-development-cheatsheet">Kernel Development Cheatsheet</h1>
 <ul>
 <li><code>asmlinkage</code> macro</li>
 </ul>
-
 <p>The asmlinkage tag is one other thing that we should observe about this simple function. This is a <code>#define</code> for some gcc magic that tells the compiler that the function should not expect to find any of its arguments in registers (a common optimization), but only on the CPU&rsquo;s stack. Recall our earlier assertion that system_call consumes its first argument, the system call number, and allows up to four more arguments that are passed along to the real system call. system_call achieves this feat simply by leaving its other arguments (which were passed to it in registers) on the stack. All system calls are marked with the asmlinkage tag, so they all look to the stack for arguments. Of course, in sys_ni_syscall&rsquo;s case, this doesn&rsquo;t make any difference, because sys_ni_syscall doesn&rsquo;t take any arguments, but it&rsquo;s an issue for most other system calls.</p>
-
 <ul>
 <li><code>__builtin_return_address(0)</code></li>
 </ul>
-
 <p>get caller address</p>
-
 <ul>
 <li><code>__user, __kernel</code> attribute</li>
 </ul>
-
 <blockquote>
 <p>Some of the checks performed by Sparse require annotating the source code using the <strong>attribute</strong> GCC extension, or the Sparse-specific <strong>context</strong> specifier.[5] Sparse defines the following list of attributes:</p>
-
 <p>address_space(num)
 bitwise
 force
 context(expression,in_context,out_context)</p>
 </blockquote>
-
 <p>so <code>__user</code> indicate the pointer is from user-space, kernel can&rsquo;t dereference it. <code>__kernel</code> is objection.</p>
 
 

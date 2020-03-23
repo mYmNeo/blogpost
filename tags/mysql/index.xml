@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>mysql on Sparking Mind</title>
@@ -17,7 +17,7 @@
       <pubDate>Tue, 18 Apr 2017 10:39:59 +0000</pubDate>
       
       <guid>http://mymneo.github.io/posts/mysql-cheatsheet/</guid>
-      <description> select   normal select  SELECT column1, column2, ... FROM table_name;   Derived Tables  SELECT column1, column2, ... FROM (subquery) [AS] tbl_name ...  encoding  set CHARACTER SET (encoding)</description>
+      <description> select   normal select  SELECT column1, column2, ... FROM table_name; Derived Tables  SELECT column1, column2, ... FROM (subquery) [AS] tbl_name ...  encoding  set CHARACTER SET (encoding) </description>
     </item>
     
   </channel>

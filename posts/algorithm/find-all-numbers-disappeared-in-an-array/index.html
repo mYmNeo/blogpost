@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-07-01T18:42:05 CST">
+<meta name="revised" content="2020-03-23T12:09:35 CST">
 <title>Find All Numbers Disappeared in an Array :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -814,6 +814,20 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
+        <div>
+          <a href="/posts/application-grid-design/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -824,6 +838,13 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item">
         <div>
           <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -899,17 +920,15 @@
     <div class="progress">
         <div class="wrapper">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#analysis">Analysis:</a></li>
-<li><a href="#time-and-space-complexity">Time and space complexity:</a></li>
-<li><a href="#code">Code:</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#analysis">Analysis:</a></li>
+        <li><a href="#time-and-space-complexity">Time and space complexity:</a></li>
+        <li><a href="#code">Code:</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
         </div>
     </div>
@@ -936,42 +955,28 @@
     
     
     
-    
-
-<blockquote>
+    <blockquote>
 <p>Given an array of integers where 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others &gt;appear once.</p>
-
 <p>Find all the elements of [1, n] inclusive that do not appear in this array.</p>
-
 <p>Could you do it without extra space and in O(n) runtime? You may assume the returned list does not count as extra space.</p>
-
 <p>Example:</p>
-
 <p>Input:
 [4,3,2,7,8,2,3,1]</p>
-
 <p>Output:
 [5,6]</p>
 </blockquote>
-
 <h3 id="analysis">Analysis:</h3>
-
 <p>一种方式像Union Find一样,每个元素是不是属于当前这个slot,如果不是就和该元素应该属于的位置交换,直到满足条件.</p>
-
 <p>另外一种方式, 先遍历一遍标记当前元素应该在的位置上的元素为负数,再遍历一遍,如果该位置的元素仍然是大于0的数,那么该元素就是缺失元素</p>
-
 <h3 id="time-and-space-complexity">Time and space complexity:</h3>
-
 <p>time: $\Theta (n)$</p>
-
 <p>space: $\Theta (1)$</p>
-
 <h3 id="code">Code:</h3>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#ifdef CONFIG_H
 </span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;../config.h&#34;</span><span style="color:#75715e">
 </span><span style="color:#75715e">#endif
 </span><span style="color:#75715e"></span>
-<span style="color:#00a8c8">class</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#75af00">Solution</span> <span style="color:#111">{</span>
+<span style="color:#00a8c8">class</span> <span style="color:#75af00">Solution</span> <span style="color:#111">{</span>
  <span style="color:#00a8c8">public</span><span style="color:#f92672">:</span>
   <span style="color:#111">vector</span><span style="color:#f92672">&lt;</span><span style="color:#00a8c8">int</span><span style="color:#f92672">&gt;</span> <span style="color:#111">findDisappearedNumbers</span><span style="color:#111">(</span><span style="color:#111">vector</span><span style="color:#f92672">&lt;</span><span style="color:#00a8c8">int</span><span style="color:#f92672">&gt;&amp;</span> <span style="color:#111">nums</span><span style="color:#111">)</span> <span style="color:#111">{</span>
     <span style="color:#00a8c8">for</span> <span style="color:#111">(</span><span style="color:#00a8c8">int</span> <span style="color:#111">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span><span style="color:#111">;</span> <span style="color:#111">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#111">nums</span><span style="color:#111">.</span><span style="color:#111">size</span><span style="color:#111">();</span> <span style="color:#f92672">++</span><span style="color:#111">i</span><span style="color:#111">)</span> <span style="color:#111">{</span>
@@ -1000,7 +1005,7 @@
 </span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;../config.h&#34;</span><span style="color:#75715e">
 </span><span style="color:#75715e">#endif
 </span><span style="color:#75715e"></span>
-<span style="color:#00a8c8">class</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#75af00">Solution</span> <span style="color:#111">{</span>
+<span style="color:#00a8c8">class</span> <span style="color:#75af00">Solution</span> <span style="color:#111">{</span>
  <span style="color:#00a8c8">public</span><span style="color:#f92672">:</span>
   <span style="color:#111">vector</span><span style="color:#f92672">&lt;</span><span style="color:#00a8c8">int</span><span style="color:#f92672">&gt;</span> <span style="color:#111">findDisappearedNumbers</span><span style="color:#111">(</span><span style="color:#111">vector</span><span style="color:#f92672">&lt;</span><span style="color:#00a8c8">int</span><span style="color:#f92672">&gt;&amp;</span> <span style="color:#111">nums</span><span style="color:#111">)</span> <span style="color:#111">{</span>
     <span style="color:#00a8c8">int</span> <span style="color:#111">index</span><span style="color:#111">;</span>

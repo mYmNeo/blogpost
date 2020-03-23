@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>tcpdump on Sparking Mind</title>
@@ -17,12 +17,7 @@
       <pubDate>Fri, 15 Jul 2016 10:30:34 +0000</pubDate>
       
       <guid>http://mymneo.github.io/posts/tcpdump/</guid>
-      <description>Tcpdump usage example  See the list of interfaces on which tcpdump can listen:
-tcpdump -D  Listen on interface eth0:
-tcpdump -i eth0  Listen on any available interface (cannot be done in promiscuous mode. Requires Linux kernel 2.2 or greater):
-tcpdump -i any  Be verbose while capturing packets:
-tcpdump -v  Be more verbose while capturing packets:
-tcpdump -vv  Be very verbose while capturing packets:</description>
+      <description>Tcpdump usage example  See the list of interfaces on which tcpdump can listen:  tcpdump -D  Listen on interface eth0:  tcpdump -i eth0  Listen on any available interface (cannot be done in promiscuous mode. Requires Linux kernel 2.2 or greater):  tcpdump -i any  Be verbose while capturing packets:  tcpdump -v  Be more verbose while capturing packets:  tcpdump -vv  Be very verbose while capturing packets:  tcpdump -vvv  Be verbose and print the data of each packet in both hex and ASCII, excluding the link level header:  tcpdump -v -X  Be verbose and print the data of each packet in both hex and ASCII, also including the link level header:  tcpdump -v -XX  Be less verbose (than the default) while capturing packets:  tcpdump -q  Limit the capture to 100 packets:  tcpdump -c 100  Record the packet capture to a file called capture.</description>
     </item>
     
   </channel>

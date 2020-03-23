@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-07-01T18:42:05 CST">
+<meta name="revised" content="2020-03-23T12:09:35 CST">
 <title>Bulls and Cows :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -814,6 +814,20 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
+        <div>
+          <a href="/posts/application-grid-design/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -824,6 +838,13 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item">
         <div>
           <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -899,17 +920,15 @@
     <div class="progress">
         <div class="wrapper">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#analysis">Analysis:</a></li>
-<li><a href="#time-and-space-complexity">Time and space complexity:</a></li>
-<li><a href="#code">Code:</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#analysis">Analysis:</a></li>
+        <li><a href="#time-and-space-complexity">Time and space complexity:</a></li>
+        <li><a href="#code">Code:</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
         </div>
     </div>
@@ -936,42 +955,30 @@
     
     
     
-    
-
-<blockquote>
+    <blockquote>
 <p>You are playing the following <a href="https://en.wikipedia.org/wiki/Bulls_and_Cows">Bulls and Cows</a> game with your friend: You write down a number and ask your friend to guess what the number is. Each time your friend makes a guess, you provide a hint that indicates how many digits in said guess match your secret number exactly in both digit and position (called &ldquo;bulls&rdquo;) and how many digits match the secret number but locate in the wrong position (called &ldquo;cows&rdquo;). Your friend will use successive guesses and hints to eventually derive the secret number.</p>
-
 <p>For example:</p>
-
+</blockquote>
 <pre><code>Secret number:  &quot;1807&quot;
 Friend's guess: &quot;7810&quot;
-</code></pre>
-
+</code></pre><blockquote>
 <p>Hint: <code>1</code> bull and <code>3</code> cows. (The bull is <code>8</code>, the cows are <code>0</code>, <code>1</code> and <code>7</code>.)
 Write a function to return a hint according to the secret number and friend&rsquo;s guess, use A to indicate the bulls and B to indicate the cows. In the above example, your function should return <code>&quot;1A3B&quot;</code>.</p>
-
 <p>Please note that both secret number and friend&rsquo;s guess may contain duplicate digits, for example:</p>
-
+</blockquote>
 <pre><code>Secret number:  &quot;1123&quot;
 Friend's guess: &quot;0111&quot;
-</code></pre>
-
+</code></pre><blockquote>
 <p>In this case, the 1st <code>1</code> in friend&rsquo;s guess is a bull, the 2nd or 3rd <code>1</code> is a cow, and your function should return <code>&quot;1A1B&quot;</code>.
 You may assume that the secret number and your friend&rsquo;s guess only contain digits, and their lengths are always equal.</p>
 </blockquote>
-
 <h3 id="analysis">Analysis:</h3>
-
 <p>分别记录secret和guess出现的差值,如果有差值,那么就是一个cow</p>
-
 <h3 id="time-and-space-complexity">Time and space complexity:</h3>
-
 <p>time: $\Theta (n)$</p>
-
 <p>space: $\Theta (n)$</p>
-
 <h3 id="code">Code:</h3>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">class</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#75af00">Solution</span> <span style="color:#111">{</span>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">class</span> <span style="color:#75af00">Solution</span> <span style="color:#111">{</span>
 <span style="color:#00a8c8">public</span><span style="color:#f92672">:</span>
     <span style="color:#111">string</span> <span style="color:#111">getHint</span><span style="color:#111">(</span><span style="color:#111">string</span> <span style="color:#111">secret</span><span style="color:#111">,</span> <span style="color:#111">string</span> <span style="color:#111">guess</span><span style="color:#111">)</span> <span style="color:#111">{</span>
         <span style="color:#00a8c8">int</span> <span style="color:#111">size</span> <span style="color:#f92672">=</span> <span style="color:#111">secret</span><span style="color:#111">.</span><span style="color:#111">size</span><span style="color:#111">();</span>

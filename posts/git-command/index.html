@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-07-01T18:42:05 CST">
+<meta name="revised" content="2020-03-23T12:09:36 CST">
 <title>git command :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -813,6 +813,20 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
+        <div>
+          <a href="/posts/application-grid-design/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -823,6 +837,13 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item">
         <div>
           <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -892,7 +913,7 @@
     
     <div class="progress">
         <div class="wrapper">
-    
+    <nav id="TableOfContents"></nav>
         </div>
     </div>
     
@@ -917,61 +938,57 @@
     
     
     <ul>
-<li><p>branch</p>
+<li>branch</li>
+</ul>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git checkout -b &lt;branch name&gt; <span style="color:#75715e"># checkout with &lt;branch name&gt;</span>
 git push origin &lt;branch name&gt; <span style="color:#75715e"># push changes to remote named &#39;origin&#39; with &lt;branch name&gt;</span>
-git push origin :&lt;branch name&gt; <span style="color:#75715e"># delete remote named &#39;origin&#39; &lt;branch name&gt;</span></code></pre></div>
-<ul>
-<li>commit
-<code>bash
-git rebase -i &lt;commit lists&gt; # rebase &lt;commit lists&gt; with interactive mode, it can re-order commits
-git reset --hard &lt;commit id&gt; # Resets the index and working tree. Any changes to tracked files in the working tree since &lt;commit&gt; are discarded.
-git reset --mixed &lt;commit id&gt; # Resets the index but not the working tree (i.e., the changed files are preserved but not marked for commit) and reports what has not been updated. This is the default action.
-git show &lt;commit id&gt; # show &lt;commit id&gt; content
-</code></li>
-</ul></li>
-
-<li><p>patch</p>
+git push origin :&lt;branch name&gt; <span style="color:#75715e"># delete remote named &#39;origin&#39; &lt;branch name&gt;</span>
+</code></pre></div><ul>
+<li>commit</li>
+</ul>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git rebase -i &lt;commit lists&gt; <span style="color:#75715e"># rebase &lt;commit lists&gt; with interactive mode, it can re-order commits</span>
+git reset --hard &lt;commit id&gt; <span style="color:#75715e"># Resets the index and working tree. Any changes to tracked files in the working tree since &lt;commit&gt; are discarded.</span>
+git reset --mixed &lt;commit id&gt; <span style="color:#75715e"># Resets the index but not the working tree (i.e., the changed files are preserved but not marked for commit) and reports what has not been updated. This is the default action.</span>
+git show &lt;commit id&gt; <span style="color:#75715e"># show &lt;commit id&gt; content</span>
+</code></pre></div><ul>
+<li>patch</li>
+</ul>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git format-patch -1 &lt;commit id&gt; <span style="color:#75715e"># generate patch related to &lt;commit id&gt;</span>
 git format-path HEAD~n <span style="color:#75715e"># generate last n commits patches</span>
 git am &lt;patch name&gt; <span style="color:#75715e"># apply &lt;patch name&gt;</span>
-git apply --reject &lt;patch name&gt; <span style="color:#75715e"># apply the files without conflicts in patch, leave conflict files with tags</span></code></pre></div>
-<ul>
-<li><p>repository</p>
+git apply --reject &lt;patch name&gt; <span style="color:#75715e"># apply the files without conflicts in patch, leave conflict files with tags</span>
+</code></pre></div><ul>
+<li>repository</li>
+</ul>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git fetch &lt;repository&gt;
 git checkout master
 git rebase &lt;repository&gt;/master
 git push -f origin master
-<span style="color:#75715e"># all the above are used to update a forked repository</span></code></pre></div></li>
-</ul></li>
-
-<li><p>history</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git log -p &lt;filename&gt; <span style="color:#75715e"># view the change history of &lt;filename&gt;</span></code></pre></div>
-<ul>
-<li>archive
-<code>bash
-git archive &lt;branch name&gt; --prefix=&lt;prefix&gt; --format=&lt;zip,tar&gt; -o &lt;filename&gt;
-</code></li>
-</ul></li>
-
-<li><p>recover delete commit</p>
-
+<span style="color:#75715e"># all the above are used to update a forked repository</span>
+</code></pre></div><ul>
+<li>history</li>
+</ul>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git log -p &lt;filename&gt; <span style="color:#75715e"># view the change history of &lt;filename&gt;</span>
+</code></pre></div><ul>
+<li>archive</li>
+</ul>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git archive &lt;branch name&gt; --prefix<span style="color:#f92672">=</span>&lt;prefix&gt; --format<span style="color:#f92672">=</span>&lt;zip,tar&gt; -o &lt;filename&gt;
+</code></pre></div><ul>
+<li>recover delete commit
 <ol>
 <li>back up your entire directory, including the .git directory.</li>
 <li>You can use <code>git fsck --lost-found</code> to obtain the ID of the lost commits.</li>
 <li>rebase or merge onto the lost commit.</li>
-</ol></li>
-
-<li><p>get current branch name</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git rev-parse --abbrev-ref HEAD</code></pre></div>
-<ul>
-<li>clean remote branch
-<code>bash
-git remote prune &lt;remote repository&gt;
-</code></li>
-</ul></li>
+</ol>
+</li>
+<li>get current branch name</li>
 </ul>
-
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git rev-parse --abbrev-ref HEAD
+</code></pre></div><ul>
+<li>clean remote branch</li>
+</ul>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote prune &lt;remote repository&gt;
+</code></pre></div>
 
     
     

@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-07-01T18:42:05 CST">
+<meta name="revised" content="2020-03-23T12:09:36 CST">
 <title>leetcode :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -812,6 +812,20 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
+        <div>
+          <a href="/posts/application-grid-design/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -822,6 +836,13 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item">
         <div>
           <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -863,7 +884,17 @@
         <span class="links">
         
 
- leetcode
+
+
+
+
+
+
+ <a href='/'></a> > <a href='/tags/'>Tags</a> > leetcode
+
+ 
+
+ 
 
    
         </span>
@@ -962,7 +993,8 @@ Time and space complexity: time: $\Theta (n)$ <a class="read-more" href="/posts/
         <p>Given a binary array, find the maximum number of consecutive 1s in this array.
 Example 1: Input: [1,1,0,1,1,1] Output: 3 Explanation: The first two digits or the last three digits are consecutive 1s. The maximum number of consecutive 1s is 3. Note:
 The input array will only contain 0 and 1. The length of input array is a positive integer and will not exceed 10,000
- Analysis: 简单的数组问题 <a class="read-more" href="/posts/algorithm/max-consecutive-ones/">&raquo;</a></p>
+ Analysis: 简单的数组问题
+Time and space complexity: time: $\Theta (n)$ <a class="read-more" href="/posts/algorithm/max-consecutive-ones/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -1066,7 +1098,7 @@ Output: [5,6]
     <section class="post-excerpt">
         <p>Given a List of words, return the words that can be typed using letters of alphabet on only one row&rsquo;s of American keyboard like the image below.
  Example 1:
-Input: [&quot;Hello&quot;, &quot;Alaska&quot;, &quot;Dad&quot;, &quot;Peace&quot;] Output: [&quot;Alaska&quot;, &quot;Dad&quot;]  Note:
+Input: [&quot;Hello&quot;, &quot;Alaska&quot;, &quot;Dad&quot;, &quot;Peace&quot;] Output: [&quot;Alaska&quot;, &quot;Dad&quot;] Note:
  You may use one character in the keyboard more than once. You may assume the input string will only contain letters of alphabet.  Analysis: 对每一行的字母编码,qwertyuiop编码001,asdfghjkl编码010,zxcvbnm编码100,遍历每个字串的每个字母,如果都是同一行的字母,那么所有的编码做与操作都是同一个编码,不然就会是0
 Time and space complexity: time: $\Theta (n*m) $ <a class="read-more" href="/posts/algorithm/keyboard-row/">&raquo;</a></p>
     </section>
@@ -1117,13 +1149,13 @@ The given integer is guaranteed to fit within the range of a 32-bit signed integ
         <h2 class="post-title"><a href="/posts/algorithm/hamming-distance/">Hamming Distance</a></h2>
     </header>
     <section class="post-excerpt">
-        <p>  The Hamming distance between two integers is the number of positions at which the corresponding bits are different.
+        <p> The Hamming distance between two integers is the number of positions at which the corresponding bits are different.
 Given two integers x and y, calculate the Hamming distance.
  Note: $ 0 &lt;= x, y &lt; 2^{31} $
 Analysis: divide and conquer, 先1位计算,再2位计算,一直到16位
 Time and space complexity: time: $\Theta (1) $
 space: $\Theta (1) $
-Code: classSolution { public: int hammingDistance(int x, int y) { return pop(x ^ y); } int pop(int x) { x = ((x &gt;&gt; 1) &amp; 0x55555555) + (x &amp; 0x55555555); x = ((x &gt;&gt; 2) &amp; 0x33333333) + (x &amp; 0x33333333); x = ((x &gt;&gt; 4) &amp; 0x0f0f0f0f) + (x &amp; 0x0f0f0f0f); x = ((x &gt;&gt; 8) &amp; 0x00ff00ff) + (x &amp; 0x00ff00ff); x = ((x &gt;&gt; 16) &amp; 0x0000ffff) + (x &amp; 0x0000ffff); return x; } };  <a class="read-more" href="/posts/algorithm/hamming-distance/">&raquo;</a></p>
+Code: class Solution { public: int hammingDistance(int x, int y) { return pop(x ^ y); } int pop(int x) { x = ((x &gt;&gt; 1) &amp; 0x55555555) + (x &amp; 0x55555555); x = ((x &gt;&gt; 2) &amp; 0x33333333) + (x &amp; 0x33333333); x = ((x &gt;&gt; 4) &amp; 0x0f0f0f0f) + (x &amp; 0x0f0f0f0f); x = ((x &gt;&gt; 8) &amp; 0x00ff00ff) + (x &amp; 0x00ff00ff); x = ((x &gt;&gt; 16) &amp; 0x0000ffff) + (x &amp; 0x0000ffff); return x; } };  <a class="read-more" href="/posts/algorithm/hamming-distance/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -1146,14 +1178,14 @@ Code: classSolution { public: int hammingDistance(int x, int y) { return pop(x ^
         <h2 class="post-title"><a href="/posts/algorithm/reverse-bits/">Reverse Bits</a></h2>
     </header>
     <section class="post-excerpt">
-        <p>  Reverse bits of a given 32 bits unsigned integer.
+        <p> Reverse bits of a given 32 bits unsigned integer.
 For example, given input 43261596 (represented in binary as 00000010100101000001111010011100), return 964176192 (represented in binary as 00111001011110000010100101000000).
 Follow up:
 If this function is called many times, how would you optimize it?
  Analysis: 与counting bit类似,divide and conquer,先2位2位swap,然后4位4位swap
 Time and space complexity: time: $\Theta (1)$
 space: $\Theta (1)$
-Code: classSolution { public: uint32_t reverseBits(uint32_t n) { n = (n &gt;&gt; 16) | (n &lt;&lt; 16); n = ((n &amp; 0xff00ff00) &gt;&gt; 8) | ((n &amp; 0x00ff00ff) &lt;&lt; 8); n = ((n &amp; 0xf0f0f0f0) &gt;&gt; 4) | ((n &amp; 0x0f0f0f0f) &lt;&lt; 4); n = ((n &amp; 0xcccccccc) &gt;&gt; 2) | ((n &amp; 0x33333333) &lt;&lt; 2); n = ((n &amp; 0xaaaaaaaa) &gt;&gt; 1) | ((n &amp; 0x55555555) &lt;&lt; 1); return n; } };  <a class="read-more" href="/posts/algorithm/reverse-bits/">&raquo;</a></p>
+Code: class Solution { public: uint32_t reverseBits(uint32_t n) { n = (n &gt;&gt; 16) | (n &lt;&lt; 16); n = ((n &amp; 0xff00ff00) &gt;&gt; 8) | ((n &amp; 0x00ff00ff) &lt;&lt; 8); n = ((n &amp; 0xf0f0f0f0) &gt;&gt; 4) | ((n &amp; 0x0f0f0f0f) &lt;&lt; 4); n = ((n &amp; 0xcccccccc) &gt;&gt; 2) | ((n &amp; 0x33333333) &lt;&lt; 2); n = ((n &amp; 0xaaaaaaaa) &gt;&gt; 1) | ((n &amp; 0x55555555) &lt;&lt; 1); return n; } };  <a class="read-more" href="/posts/algorithm/reverse-bits/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          

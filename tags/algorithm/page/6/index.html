@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-07-01T18:42:05 CST">
+<meta name="revised" content="2020-03-23T12:09:36 CST">
 <title>algorithm :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -812,6 +812,20 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
+        <div>
+          <a href="/posts/application-grid-design/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -822,6 +836,13 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item">
         <div>
           <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -863,7 +884,17 @@
         <span class="links">
         
 
- algorithm
+
+
+
+
+
+
+ <a href='/'></a> > <a href='/tags/'>Tags</a> > algorithm
+
+ 
+
+ 
 
    
         </span>
@@ -912,12 +943,12 @@
         <h2 class="post-title"><a href="/posts/algorithm/remove-duplicates-from-sorted-list/">Remove Duplicates from Sorted List</a></h2>
     </header>
     <section class="post-excerpt">
-        <p>  Given a sorted linked list, delete all duplicates such that each element appear only once.
+        <p> Given a sorted linked list, delete all duplicates such that each element appear only once.
 For example, Given 1-&gt;1-&gt;2, return 1-&gt;2. Given 1-&gt;1-&gt;2-&gt;3-&gt;3, return 1-&gt;2-&gt;3.
  Analysis: 和数组遍历去重复一样
 Time and space complexity: time: $\Theta (n) $
 space: $\Theta (1) $
-Code: classSolution { public: ListNode* deleteDuplicates(ListNode* head) { ListNode* uniq = head; ListNode* cur; while (uniq) { cur = uniq; while (cur &amp;&amp; uniq-&gt;val == cur-&gt;val) { cur = cur-&gt;next; } uniq-&gt;next = cur; uniq = uniq-&gt;next; } return head; } };  <a class="read-more" href="/posts/algorithm/remove-duplicates-from-sorted-list/">&raquo;</a></p>
+Code: class Solution { public: ListNode* deleteDuplicates(ListNode* head) { ListNode* uniq = head; ListNode* cur; while (uniq) { cur = uniq; while (cur &amp;&amp; uniq-&gt;val == cur-&gt;val) { cur = cur-&gt;next; } uniq-&gt;next = cur; uniq = uniq-&gt;next; } return head; } };  <a class="read-more" href="/posts/algorithm/remove-duplicates-from-sorted-list/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -940,13 +971,13 @@ Code: classSolution { public: ListNode* deleteDuplicates(ListNode* head) { ListN
         <h2 class="post-title"><a href="/posts/algorithm/linked-list-cycle/">Linked List Cycle</a></h2>
     </header>
     <section class="post-excerpt">
-        <p>  Given a linked list, determine if it has a cycle in it.
+        <p> Given a linked list, determine if it has a cycle in it.
 Follow up: Can you solve it without using extra space?
  Analysis: native方式存储所有的node节点,如果查到相同的node节点表示有cycle.
 Follow up, 快慢指针追逐,一个指针每次走2步,一个指针每次走1步,如果快指针追上慢指针,说明有cycle,否则没有.快慢指针还有一个常用的功能就是找链表中点.
 Time and space complexity: time: $\Theta (n)$
 space: $\Theta (1)$
-Code: classSolution { public: bool hasCycle(ListNode *head) { ListNode* slow = head, *fast = head; while (fast &amp;&amp; fast-&gt;next) { slow = slow-&gt;next; fast = fast-&gt;next-&gt;next; if (slow == fast) { return true; } } return false; } };  <a class="read-more" href="/posts/algorithm/linked-list-cycle/">&raquo;</a></p>
+Code: class Solution { public: bool hasCycle(ListNode *head) { ListNode* slow = head, *fast = head; while (fast &amp;&amp; fast-&gt;next) { slow = slow-&gt;next; fast = fast-&gt;next-&gt;next; if (slow == fast) { return true; } } return false; } };  <a class="read-more" href="/posts/algorithm/linked-list-cycle/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -969,12 +1000,12 @@ Code: classSolution { public: bool hasCycle(ListNode *head) { ListNode* slow = h
         <h2 class="post-title"><a href="/posts/algorithm/number-of-1-bits/">Number of 1 Bits</a></h2>
     </header>
     <section class="post-excerpt">
-        <p>  Write a function that takes an unsigned integer and returns the number of ’1&rsquo; bits it has (also known as the Hamming weight).
+        <p> Write a function that takes an unsigned integer and returns the number of ’1&rsquo; bits it has (also known as the Hamming weight).
 For example, the 32-bit integer ’11&rsquo; has binary representation 00000000000000000000000000001011, so the function should return 3.
  Analysis: 最native的方式就是不停的logical right shift,然后统计1的个数,循环次数最多为32次.更高级一点的办法是divide and conquer,先2个bit数1的个数然后再4个bit数1的个数,再8个bit数,直到数到32bit
 Time and space complexity: time: $\Theta (1)$
 space: $\Theta (1)$
-Code: classSolution { public: int hammingWeight(uint32_t n) { n = (n &amp; 0x55555555) + ((n &gt;&gt; 1) &amp; 0x55555555); n = (n &amp; 0x33333333) + ((n &gt;&gt; 2) &amp; 0x33333333); n = (n &amp; 0x0f0f0f0f) + ((n &gt;&gt; 4) &amp; 0x0f0f0f0f); n = (n &amp; 0x00ff00ff) + ((n &gt;&gt; 8) &amp; 0x00ff00ff); n = (n &amp; 0x0000ffff) + ((n &gt;&gt; 16) &amp; 0x0000ffff); return n; } };  <a class="read-more" href="/posts/algorithm/number-of-1-bits/">&raquo;</a></p>
+Code: class Solution { public: int hammingWeight(uint32_t n) { n = (n &amp; 0x55555555) + ((n &gt;&gt; 1) &amp; 0x55555555); n = (n &amp; 0x33333333) + ((n &gt;&gt; 2) &amp; 0x33333333); n = (n &amp; 0x0f0f0f0f) + ((n &gt;&gt; 4) &amp; 0x0f0f0f0f); n = (n &amp; 0x00ff00ff) + ((n &gt;&gt; 8) &amp; 0x00ff00ff); n = (n &amp; 0x0000ffff) + ((n &gt;&gt; 16) &amp; 0x0000ffff); return n; } };  <a class="read-more" href="/posts/algorithm/number-of-1-bits/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -999,7 +1030,7 @@ Code: classSolution { public: int hammingWeight(uint32_t n) { n = (n &amp; 0x555
     <section class="post-excerpt">
         <p>Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST.
 According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes v and w as the lowest node in T that has both v and w as descendants (where we allow a node to be a descendant of itself).”
- _______6______ / \ ___2__ ___8__ / \ / \ 0 _4 7 9 / \ 3 5  For example, the lowest common ancestor (LCA) of nodes 2 and 8 is 6. <a class="read-more" href="/posts/algorithm/lowest-common-ancestor-of-a-binary-search-tree/">&raquo;</a></p>
+  _______6______ / \ ___2__ ___8__ / \ / \ 0 _4 7 9 / \ 3 5  For example, the lowest common ancestor (LCA) of nodes 2 and 8 is 6. <a class="read-more" href="/posts/algorithm/lowest-common-ancestor-of-a-binary-search-tree/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -1027,7 +1058,7 @@ Input is guaranteed to be within the range from 1 to 3999.
  Analysis: 从左往右依次读取,如果当前的字符代表的值大于后面的值,就把这个值+到最后的结果,不然就-,就像找递增数列一样
 Time and space complexity: time: $\Theta (n)$
 space: $\Theta (1)$
-Code: classSolution { public: int romanToInt(string s) { std::map&lt;char, int&gt; lookup { {&#39;I&#39;, 1}, {&#39;V&#39;, 5}, {&#39;X&#39;, 10}, {&#39;L&#39;, 50}, {&#39;C&#39;, 100}, {&#39;D&#39;, 500}, {&#39;M&#39;, 1000}, }; int num = 0; int next = 0; for (int i = 0; i &lt; (int) s. <a class="read-more" href="/posts/algorithm/roman-to-integer/">&raquo;</a></p>
+Code: class Solution { public: int romanToInt(string s) { std::map&lt;char, int&gt; lookup { {&#39;I&#39;, 1}, {&#39;V&#39;, 5}, {&#39;X&#39;, 10}, {&#39;L&#39;, 50}, {&#39;C&#39;, 100}, {&#39;D&#39;, 500}, {&#39;M&#39;, 1000}, }; int num = 0; int next = 0; for (int i = 0; i &lt; (int) s. <a class="read-more" href="/posts/algorithm/roman-to-integer/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -1050,11 +1081,11 @@ Code: classSolution { public: int romanToInt(string s) { std::map&lt;char, int&g
         <h2 class="post-title"><a href="/posts/algorithm/reverse-linked-list/">Reverse Linked List</a></h2>
     </header>
     <section class="post-excerpt">
-        <p>  Reverse a singly linked list.
+        <p> Reverse a singly linked list.
  Analysis: 这个没有难度,不停的往头指针加入节点就可以
 Time and space complexity: time: $\Theta (n)$
 space: $\Theta (1)$
-Code: classSolution { public: ListNode* reverseList(ListNode* head) { ListNode pivot(0); ListNode* pos = head; ListNode* next = nullptr; while (pos) { next = pos-&gt;next; pos-&gt;next = pivot.next; pivot.next = pos; pos = next; } return pivot.next; } };  <a class="read-more" href="/posts/algorithm/reverse-linked-list/">&raquo;</a></p>
+Code: class Solution { public: ListNode* reverseList(ListNode* head) { ListNode pivot(0); ListNode* pos = head; ListNode* next = nullptr; while (pos) { next = pos-&gt;next; pos-&gt;next = pivot.next; pivot.next = pos; pos = next; } return pivot.next; } };  <a class="read-more" href="/posts/algorithm/reverse-linked-list/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -1104,10 +1135,10 @@ Example 2: Given nums = [-2, -1, 2, 1], k = 1, return 2. <a class="read-more" hr
     <section class="post-excerpt">
         <p>Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.
 You may assume that the array is non-empty and the majority element always exist in the array.
-Analysis: 最简单的方式是统计没有数字出现的次数,然后遍历一遍统计值,找出大于⌊ n/2 ⌋的那个数字. 还有一种更快速地方法Moore Voting,思路如下,用一个统计值表示当前的major出现的次数,然后遍历数组重复如下步骤: 1. 如果统计值为0,更改major的值为当前值和统计值为1 1. 如果统计值不为0,那么如果当前值和major的值不一致,统计值就-1,否则就+1 最后,major的值就为答案
- Time and space complexity: time: $\Theta (n)$
+ Analysis: 最简单的方式是统计没有数字出现的次数,然后遍历一遍统计值,找出大于⌊ n/2 ⌋的那个数字. 还有一种更快速地方法Moore Voting,思路如下,用一个统计值表示当前的major出现的次数,然后遍历数组重复如下步骤:
+ 如果统计值为0,更改major的值为当前值和统计值为1 如果统计值不为0,那么如果当前值和major的值不一致,统计值就-1,否则就+1 最后,major的值就为答案  Time and space complexity: time: $\Theta (n)$
 space: $\Theta (1)$
-Code: classSolution { public: int majorityElement(vector&lt;int&gt;&amp; nums) { int major = nums[0]; int count = 1; for (int i = 1; i &lt; (int) nums. <a class="read-more" href="/posts/algorithm/majority-element/">&raquo;</a></p>
+Code: class Solution { public: int majorityElement(vector&lt;int&gt;&amp; nums) { int major = nums[0]; int count = 1; for (int i = 1; i &lt; (int) nums. <a class="read-more" href="/posts/algorithm/majority-element/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -1134,7 +1165,7 @@ Code: classSolution { public: int majorityElement(vector&lt;int&gt;&amp; nums) {
  Analysis: 用unordered_set记录出现的数字,如果find到就返回true
 Time and space complexity: time: $\Theta (n) $
 space: $\Theta (n) $
-Code: classSolution { public: bool containsDuplicate(vector&lt;int&gt;&amp; nums) { std::unordered_set&lt;int&gt; record; for (int&amp; n : nums) { if (record. <a class="read-more" href="/posts/algorithm/contains-duplicate/">&raquo;</a></p>
+Code: class Solution { public: bool containsDuplicate(vector&lt;int&gt;&amp; nums) { std::unordered_set&lt;int&gt; record; for (int&amp; n : nums) { if (record. <a class="read-more" href="/posts/algorithm/contains-duplicate/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -1161,7 +1192,7 @@ Code: classSolution { public: bool containsDuplicate(vector&lt;int&gt;&amp; nums
 For example, Given [[0, 30],[5, 10],[15, 20]], return false.
  Analysis: 简单地排序问题,将所有的interval按照开始时间排序, 然后遍历如果当前的interval的结束时间大于下一个interval的开始时间就返回false
 Time and space complexity: 排序时间为主要耗时 time: $\Theta(n\log n) $
-Code: classSolution { public: bool canAttendMeetings(vector&lt;Interval&gt;&amp; intervals) { sort(intervals.begin(), intervals.end(), [](const Interval&amp; a, const Interval&amp; b){ return a.start &lt; b.start; }); int size = intervals. <a class="read-more" href="/posts/algorithm/meeting-rooms/">&raquo;</a></p>
+Code: class Solution { public: bool canAttendMeetings(vector&lt;Interval&gt;&amp; intervals) { sort(intervals.begin(), intervals.end(), [](const Interval&amp; a, const Interval&amp; b){ return a.start &lt; b.start; }); int size = intervals. <a class="read-more" href="/posts/algorithm/meeting-rooms/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          

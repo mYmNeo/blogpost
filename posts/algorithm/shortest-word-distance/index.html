@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-07-01T18:42:05 CST">
+<meta name="revised" content="2020-03-23T12:09:35 CST">
 <title>Shortest Word Distance :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -814,6 +814,20 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
+        <div>
+          <a href="/posts/application-grid-design/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -824,6 +838,13 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item">
         <div>
           <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -899,17 +920,15 @@
     <div class="progress">
         <div class="wrapper">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#analysis">Analysis:</a></li>
-<li><a href="#time-and-space-complexity">Time and space complexity:</a></li>
-<li><a href="#code">Code:</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#analysis">Analysis:</a></li>
+        <li><a href="#time-and-space-complexity">Time and space complexity:</a></li>
+        <li><a href="#code">Code:</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
         </div>
     </div>
@@ -936,32 +955,22 @@
     
     
     
-    
-
-<blockquote>
+    <blockquote>
 <p>Given a list of words and two words word1 and word2, return the shortest distance between these two words in the list.</p>
-
 <p>For example,
 Assume that words = <code>[&quot;practice&quot;, &quot;makes&quot;, &quot;perfect&quot;, &quot;coding&quot;, &quot;makes&quot;]</code>.</p>
-
 <p>Given word1 = <code>“coding”</code>, word2 = <code>“practice”</code>, return 3.
 Given word1 = <code>&quot;makes&quot;</code>, word2 = <code>&quot;coding&quot;</code>, return 1.</p>
-
 <p>Note:
 You may assume that word1 <strong>does not equal</strong> to word2, and word1 and word2 are both in the list.</p>
 </blockquote>
-
 <h3 id="analysis">Analysis:</h3>
-
 <p>遍历一遍所有的words,记录word1和word2出现的位置,最后求一下位置的差值的绝对值</p>
-
 <h3 id="time-and-space-complexity">Time and space complexity:</h3>
-
 <p>time: $\Theta (n)$
 space: $\Theta (1)$</p>
-
 <h3 id="code">Code:</h3>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">class</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#75af00">Solution</span> <span style="color:#111">{</span>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">class</span> <span style="color:#75af00">Solution</span> <span style="color:#111">{</span>
 <span style="color:#00a8c8">public</span><span style="color:#f92672">:</span>
     <span style="color:#00a8c8">int</span> <span style="color:#111">shortestDistance</span><span style="color:#111">(</span><span style="color:#111">vector</span><span style="color:#f92672">&lt;</span><span style="color:#111">string</span><span style="color:#f92672">&gt;&amp;</span> <span style="color:#111">words</span><span style="color:#111">,</span> <span style="color:#111">string</span> <span style="color:#111">word1</span><span style="color:#111">,</span> <span style="color:#111">string</span> <span style="color:#111">word2</span><span style="color:#111">)</span> <span style="color:#111">{</span>
         <span style="color:#00a8c8">int</span> <span style="color:#111">distance</span> <span style="color:#f92672">=</span> <span style="color:#111">words</span><span style="color:#111">.</span><span style="color:#111">size</span><span style="color:#111">();</span>
@@ -971,7 +980,7 @@ space: $\Theta (1)$</p>
         <span style="color:#00a8c8">for</span> <span style="color:#111">(</span><span style="color:#111">string</span><span style="color:#f92672">&amp;</span> <span style="color:#111">s</span> <span style="color:#111">:</span> <span style="color:#111">words</span><span style="color:#111">)</span> <span style="color:#111">{</span>
             <span style="color:#00a8c8">if</span> <span style="color:#111">(</span><span style="color:#111">s</span> <span style="color:#f92672">==</span> <span style="color:#111">word1</span><span style="color:#111">)</span> <span style="color:#111">{</span>
                 <span style="color:#111">p1</span> <span style="color:#f92672">=</span> <span style="color:#111">pos</span><span style="color:#111">;</span>
-            <span style="color:#111">}</span> <span style="color:#00a8c8">else</span> <span style="color:#00a8c8">if</span> <span style="color:#111">(</span><span style="color:#111">s</span> <span style="color:#f92672">==</span> <span style="color:#111">word2</span><span style="color:#111">)</span> <span style="color:#111">{</span>
+            <span style="color:#111">}</span> <span style="color:#00a8c8">else</span> <span style="color:#75af00">if</span> <span style="color:#111">(</span><span style="color:#111">s</span> <span style="color:#f92672">==</span> <span style="color:#111">word2</span><span style="color:#111">)</span> <span style="color:#111">{</span>
                 <span style="color:#111">p2</span> <span style="color:#f92672">=</span> <span style="color:#111">pos</span><span style="color:#111">;</span>
             <span style="color:#111">}</span>
             

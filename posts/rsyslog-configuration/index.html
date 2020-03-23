@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-07-01T18:42:05 CST">
+<meta name="revised" content="2020-03-23T12:09:36 CST">
 <title>rsyslog configuration :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -813,6 +813,20 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
+        <div>
+          <a href="/posts/application-grid-design/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -823,6 +837,13 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item">
         <div>
           <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -892,7 +913,7 @@
     
     <div class="progress">
         <div class="wrapper">
-    
+    <nav id="TableOfContents"></nav>
         </div>
     </div>
     
@@ -919,33 +940,29 @@
     
     
     <ol>
-<li><p>configuration file location</p>
-
+<li>configuration file location</li>
+</ol>
 <pre><code>/etc/rsyslog.conf
 /etc/rsyslog.d/
-</code></pre></li>
-
-<li><p>rotate configuration location</p>
-
-<pre><code>/etc/logrotate.d/rsyslog
-</code></pre></li>
-
-<li><p>rotate options</p></li>
+</code></pre><ol start="2">
+<li>rotate configuration location</li>
 </ol>
-
+<pre><code>/etc/logrotate.d/rsyslog
+</code></pre><ol start="3">
+<li>rotate options</li>
+</ol>
 <p>The following is a list of some of the directives you can specify in your logrotate configuration file:</p>
-
 <ul>
-<li><p>weekly — Specifies the rotation of log files to be done weekly. Similar directives include:</p>
-
+<li>
+<p>weekly — Specifies the rotation of log files to be done weekly. Similar directives include:</p>
 <ul>
 <li>daily</li>
 <li>monthly</li>
 <li>yearly</li>
-</ul></li>
-
-<li><p>compress — Enables compression of rotated log files. Similar directives include:</p>
-
+</ul>
+</li>
+<li>
+<p>compress — Enables compression of rotated log files. Similar directives include:</p>
 <ul>
 <li>nocompress</li>
 <li>compresscmd — Specifies the command to be used for compressing.</li>
@@ -953,28 +970,29 @@
 <li>compressext — Specifies what extension is to be used for compressing.</li>
 <li>compressoptions — Specifies any options to be passed to the compression program used.</li>
 <li>delaycompress — Postpones the compression of log files to the next rotation of log files.</li>
-</ul></li>
-
-<li><p>rotate INTEGER  — Specifies the number of rotations a log file undergoes before it is removed or mailed to a specific address. If the value 0 is specified, old log files are removed instead of rotated.</p></li>
-
-<li><p>mail ADDRESS  — This option enables mailing of log files that have been rotated as many times as is defined by the rotate directive to the specified address. Similar directives include:</p>
-
+</ul>
+</li>
+<li>
+<p>rotate INTEGER  — Specifies the number of rotations a log file undergoes before it is removed or mailed to a specific address. If the value 0 is specified, old log files are removed instead of rotated.</p>
+</li>
+<li>
+<p>mail ADDRESS  — This option enables mailing of log files that have been rotated as many times as is defined by the rotate directive to the specified address. Similar directives include:</p>
 <ul>
 <li>nomail</li>
 <li>mailfirst — Specifies that the just-rotated log files are to be mailed, instead of the about-to-expire log files.</li>
 <li>maillast — Specifies that the about-to-expire log files are to be mailed, instead of the just-rotated log files. This is the default option when mail is enabled.</li>
-</ul></li>
 </ul>
-
-<ol>
+</li>
+</ul>
+<ol start="4">
 <li>FAQ:</li>
 </ol>
-
 <ul>
-<li>Q: Restart rsyslog since rsyslog configuration is changed, no log output</li>
-</ul>
-
+<li>
+<p>Q: Restart rsyslog since rsyslog configuration is changed, no log output</p>
 <p>A: remove <code>/var/lib/rsyslog/imjournal.state</code>, then restart rsyslog</p>
+</li>
+</ul>
 
 
     

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>windows on Sparking Mind</title>
@@ -17,11 +17,7 @@
       <pubDate>Fri, 10 Mar 2017 21:25:25 +0000</pubDate>
       
       <guid>http://mymneo.github.io/posts/port-forwarding-in-windows/</guid>
-      <description> Port forwarding configuration  Add rule
-   forward A:B to C:D
-netsh interface portproxy add v4tov4 listenaddress=A listenport=B connectaddress=C connectport=D    Delete rule   delete A:B
-netsh interface portproxy delete v4tov4 listenaddress=A listenport=B    List all rules
-netsh interface portproxy show all   </description>
+      <description>Port forwarding configuration  Add rule   forward A:B to C:D  netsh interface portproxy add v4tov4 listenaddress=A listenport=B connectaddress=C connectport=D Delete rule   delete A:B  netsh interface portproxy delete v4tov4 listenaddress=A listenport=B List all rules  netsh interface portproxy show all </description>
     </item>
     
   </channel>

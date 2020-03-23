@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-07-01T18:42:05 CST">
+<meta name="revised" content="2020-03-23T12:09:36 CST">
 <title>ssh :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -812,6 +812,20 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
+        <div>
+          <a href="/posts/application-grid-design/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -822,6 +836,13 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item">
         <div>
           <a href="/posts/kernel-development/">
+            
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -863,7 +884,17 @@
         <span class="links">
         
 
- ssh
+
+
+
+
+
+
+ <a href='/'></a> > <a href='/tags/'>Tags</a> > ssh
+
+ 
+
+ 
 
    
         </span>
@@ -909,10 +940,8 @@
     </header>
     <section class="post-excerpt">
         <p>SSH Tunnel Configuration You basically have three possibilities:
- Tunnel from localhost to host1:
-ssh -L 9999:host2:1234 -N host1   As noted above, the connection from host1 to host2 will not be secured.
- Tunnel from localhost to host1 and from host1 to host2:
-ssh -L 9999:localhost:9999 host1 ssh -L 9999:localhost:1234 -N host2   This will open a tunnel from localhost to host1 and another tunnel from host1 to host2. <a class="read-more" href="/posts/ssh-tunnel/">&raquo;</a></p>
+ Tunnel from localhost to host1:  ssh -L 9999:host2:1234 -N host1 As noted above, the connection from host1 to host2 will not be secured.
+ Tunnel from localhost to host1 and from host1 to host2:  ssh -L 9999:localhost:9999 host1 ssh -L 9999:localhost:1234 -N host2 This will open a tunnel from localhost to host1 and another tunnel from host1 to host2. However the port 9999 to host2:1234 can be used by anyone on host1. <a class="read-more" href="/posts/ssh-tunnel/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
