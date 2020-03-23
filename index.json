@@ -4,7 +4,7 @@
 	"title": "Posts",
 	"tags": [],
 	"description": "",
-	"content": "Posts Algorithmvim cheatsheetaudit command cheatsheetssh tunnel configurationsocat tipsLinux Administrator commandMySQL cheatsheetport forwarding in windowsrsyslog configurationsymbol legendtcpdump tutorialSVN and Git migrationjq tutorialbehaviors of ext4 file system when devicemapper pool is fullkvm virtual machine with vnc supportfind cheatsheetlvm thin pool cheatsheetresize diskShell Cheatsheetmac cheatsheetgolang memogit commandmakefile memorpmbuild easy tutorialrpm and yum cheatsheetFrequent commands about linux seddocker registryiptables command(docker related)log4j configurationvim plugins"
+	"content": "Posts AlgorithmApplication grid designkube-proxy topology designcgroup controlle memovim cheatsheetaudit command cheatsheetssh tunnel configurationsocat tipsLinux Administrator commandMySQL cheatsheetport forwarding in windowsrsyslog configurationsymbol legendtcpdump tutorialSVN and Git migrationjq tutorialbehaviors of ext4 file system when devicemapper pool is fullkvm virtual machine with vnc supportfind cheatsheetlvm thin pool cheatsheetresize diskShell Cheatsheetmac cheatsheetgolang memogit commandmakefile memorpmbuild easy tutorialrpm and yum cheatsheetFrequent commands about linux seddocker registryiptables command(docker related)log4j configurationvim plugins"
 },
 {
 	"uri": "http://mymneo.github.io/posts/algorithm/",
@@ -21,8 +21,29 @@
 	"content": "Just memos "
 },
 {
-	"uri": "http://mymneo.github.io/tags/production/",
-	"title": "production",
+	"uri": "http://mymneo.github.io/posts/application-grid-design/",
+	"title": "Application grid design",
+	"tags": ["linux", "kubernetes", "crd"],
+	"description": "",
+	"content": "Architecture Summary Application grid is a feature to support such a scenario described as following:\n Application is deployed in many grids, each grid has a number of nodes The pods in each grid can communiate with the others in the same grid by service, other pods which aren\u0026rsquo;t in the same grid can\u0026rsquo;t be in touch with this grid by service. This can be called service isolation. Application keeps some replicas in each grid.  So we create 2 CRD (DeploymentGrid, ServiceGrid) for implements our purpose.\n ServiceGrid  ServiceGrid plays as a template of Service Topology, the controller monitors the changes to this objects, then apply them to Service spec.\nDeploymentGrid  DeploymentsGrid is a higher-level of concept than Deployments. the controller will determine how many Deployments in the cluster and the number of replicas in eacho Deployments. If the specific label of Node changed, controller will re-calculate the replicas of each Deployments under its control even delete them.\nProposal  ServiceGrid  apiVersion: v1alpha1 kind: ServiceGrid metadata: name: servicegrid-demo namespace: default spec: gridUniqKey: zone data: selector: appGrid: nginx ports: - protocol: TCP port: 80 targetPort: 9376 SerivceGrid is a higher-level concept of Service with topology support(1.17) or kube-proxy-wrapper installed.\nDeploymentGrid  apiVersion: v1alpha1 kind: DeploymentGrid metadata: name: deploymentgrid-demo namespace: default spec: gridUniqKey: zone # data is the copy of Deployment without replicas set data: metadata: matchLabels: appGrid: nginx selector: matchLabels: appGrid: nginx template: metadata: labels: appGrid: nginx spec: containers: - name: nginx image: nginx:1.7.9 ports: - containerPort: 80 status: - name: grid-1 availableReplicas: 3 conditions: - lastTransitionTime: \u0026#34;2020-03-02T07:30:01Z\u0026#34; lastUpdateTime: \u0026#34;2020-03-02T07:30:01Z\u0026#34; message: Deployment has minimum availability. reason: MinimumReplicasAvailable status: \u0026#34;True\u0026#34; type: Available - lastTransitionTime: \u0026#34;2020-03-02T07:29:02Z\u0026#34; lastUpdateTime: \u0026#34;2020-03-02T07:30:01Z\u0026#34; message: ReplicaSet \u0026#34;nginx-deployment-54f57cf6bf\u0026#34; has successfully progressed. reason: NewReplicaSetAvailable status: \u0026#34;True\u0026#34; type: Progressing observedGeneration: 1 readyReplicas: 3 replicas: 3 updatedReplicas: 3 "
+},
+{
+	"uri": "http://mymneo.github.io/tags/crd/",
+	"title": "crd",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://mymneo.github.io/tags/kubernetes/",
+	"title": "kubernetes",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://mymneo.github.io/tags/linux/",
+	"title": "linux",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -30,6 +51,48 @@
 {
 	"uri": "http://mymneo.github.io/tags/",
 	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://mymneo.github.io/tags/hijack/",
+	"title": "hijack",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://mymneo.github.io/posts/kube-proxy-topology-design/",
+	"title": "kube-proxy topology design",
+	"tags": ["linux", "kubernetes", "hijack"],
+	"description": "",
+	"content": "Architecture Summary To support topology in old version kubernetes, we need to add a middleware programm between kube-proxy and kube-apiserver. By this method, we can hijack and modify the data which is sent to kube-proxy. Then we can controll the network rules without change kube-proxy code. We call our programm kube-proxy-wrapper.\nImplementation To keep consistence as much as possible with the latest version of Kubernetes. We also use kubernetes.io/hostname, topology.kubernetes.io/zone and topology.kubernetes.io/region as well-known keys.\nWe choose a annotation topologyKeys for Service to indicate topology concerned key, then label nodes with this key and some value to tell kube-proxy-wrapper the enpoints this node concerns\napiVersion: v1 kind: Service metadata: annotations: topologyKeys: '[\u0026quot;topology.kubernetes.io/zone\u0026quot;]' ... apiVersion: v1 kind: Node metadata: labels: topology.kubernetes.io/zone: 1001 ... kube-proxy-wrapper acts as 2 roles. One is reverse proxy called R, the other one is to manipulate data retrieved from kube-apiserver called M.\nFor the direction from kube-proxy to kube-apiserver, M won\u0026rsquo;t modify any data. But the direction from kube-apiserver to kube-proxy, M will be involved by filtering the endpoints. So the remaining work are that how M get endpoints which it concerns and how network rules flush if node labels are changed.\nM uses 1 informer to get all nodes of this cluster. This is essential component that can be used to divide endpoints into this node concerned and not-concerned. Through this way, we filter the endpoints that this node concerns. And now we focus on how rule flush if our node labels are changed. According to kube-proxy source code, we could send a watch event to kube-proxy, make it thought that endpoints has been changed. By this way kube-proxy will flush all rules.\n"
+},
+{
+	"uri": "http://mymneo.github.io/tags/cgroup/",
+	"title": "cgroup",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://mymneo.github.io/posts/cgroup/",
+	"title": "cgroup controlle memo",
+	"tags": ["linux", "cgroup", "grub"],
+	"description": "",
+	"content": " Disable cgroup v1 in grub  For Ubuntu:\nvim /etc/default/grub\nGRUB_CMDLINE_LINUX=\u0026quot;cgroup_no_v1=all\u0026quot; "
+},
+{
+	"uri": "http://mymneo.github.io/tags/grub/",
+	"title": "grub",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://mymneo.github.io/tags/production/",
+	"title": "production",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -61,13 +124,6 @@
 	"tags": ["linux", "audit"],
 	"description": "",
 	"content": "Audit Cheatsheet  audit syscall  auditctl -a exit,always -S \u0026lt;syscall\u0026gt;  audit file  auditctl -w /etc/shadow -p wa  extra option     Tag Description     -b backlog Set max number of outstanding audit buffers allowed (Kernel Default=64) If all buffers are full, the failure flag is consulted by the kernel for action.   -e [0..2] Set enabled flag. When 0 is passed, this can be used to temporarily disable auditing. When 1 is passed as an argument, it will enable auditing. To lock the audit configuration so that it can’t be changed, pass a 2 as the argument. Locking the configuration is intended to be the last command in audit.rules for anyone wishing this feature to be active. Any attempt to change the configuration in this mode will be audited and denied. The configuration can only be changed by rebooting the machine.   -f [0..2] Set failure flag 0=silent 1=printk 2=panic. This option lets you determine how you want the kernel to handle critical errors. Example conditions where this flag is consulted includes: transmission errors to userspace audit daemon, backlog limit exceeded, out of kernel memory, and rate limit exceeded. The default value is 1. Secure environments will probably want to set this to 2.   -h Help   -i Ignore errors when reading rules from a file   -l List all rules 1 per line. This can take a key option (-k), too.   -k key Set a filter key on an audit rule. The filter key is an arbitrary string of text that can be up to 31 bytes long. It can uniquely identify the audit records produced by a rule. Typical use is for when you have several rules that together satisfy a security requirement. The key value can be searched on with ausearch so that no matter which rule triggered the event, you can find its results. The key can also be used on delete all (-D) and list rules (-l) to select rules with a specific key. You may have more than one key on a rule if you want to be able to search logged events in multiple ways or if you have an audispd plugin that uses a key to aid its analysis.   -m text Send a user space message into the audit system. This can only be done by the root user.   -p [r|w|x|a] Set permissions filter for a file system watch. r=read, w=write, x=execute, a=attribute change. These permissions are not the standard file permissions, but rather the kind of syscall that would do this kind of thing. The read \u0026amp; write syscalls are omitted from this set since they would overwhelm the logs. But rather for reads or writes, the open flags are looked at to see what permission was requested.   -q mount-point,subtree If you have an existing directory watch and bind or move mount another subtree in the watched subtree, you need to tell the kernel to make the subtree being mounted equivalent to the directory being watched. If the subtree is already mounted at the time the directory watch is issued, the subtree is automatically tagged for watching. Please note the comma separating the two values. Omitting it will cause errors.   -r rate Set limit in messages/sec (0=none). If this rate is non-zero and is exceeded, the failure flag is consulted by the kernel for action. The default value is 0.   -R file Read rules from a file. The rules must be 1 per line and in the order that they are to be executed in. The rule file must be owned by root and not readable by other users or it will be rejected. The rule file may have comments embedded by starting the line with a ’#’ character. Rules that are read from a file are identical to what you would type on a command line except they are not preceeded by auditctl (since auditctl is the one executing the file).   -s Report status. Note that a pid of 0 indicates that the audit daemon is not running.   -t Trim the subtrees after a mount command.   -a list,action Append rule to the end of list with action. Please note the comma separating the two values. Omitting it will cause errors.   -A list,action Add rule to the beginning list with action.   -d list,action Delete rule from list with action. The rule is deleted only if it exactly matches syscall name and field names.   -D Delete all rules and watches. This can take a key option (-k), too.   -S [Syscall name or number|all] Any syscall name or number may be used. The word ’all’ may also be used. If this syscall is made by a program, then start an audit record. If a field rule is given and no syscall is specified, it will default to all syscalls. You may also specify multiple syscalls in the same rule by using multiple -S options in the same rule. Doing so improves performance since fewer rules need to be evaluated. If you are on a bi-arch system, like x86_64, you should be aware that auditctl simply takes the text, looks it up for the native arch (in this case b64) and sends that rule to the kernel. If there are no additional arch directives, IT WILL APPLY TO BOTH 32 \u0026amp; 64 BIT SYSCALLS. This can have undesirable effects since there is no guarantee that, for example, the open syscall has the same number on both 32 and 64 bit interfaces. You may want to control this and write 2 rules, one with arch equal to b32 and one with b64 to make sure the kernel finds the events that you intend.   -F [n=v | n!=v | n\u0026lt;v | n\u0026gt;v | n\u0026lt;=v | n\u0026gt;=v | n\u0026amp;v | n\u0026amp;=v] Build a rule field: name, operation, value. You may have up to 64 fields passed on a single command line. Each one must start with -F. Each field equation is anded with each other to trigger an audit record. There are 8 operators supported - equal, not equal, less than, greater than, less than or equal, and greater than or equal, bit mask, and bit test respectively. Bit test will \u0026ldquo;and\u0026rdquo; the values and check that they are equal, bit mask just \u0026ldquo;ands\u0026rdquo; the values. Fields that take a user ID may instead have the user’s name; the program will convert the name to user ID. The same is true of group names.   -w path Insert a watch for the file system object at path. You cannot insert a watch to the top level directory. This is prohibited by the kernel. Wildcards are not supported either and will generate a warning. The way that watches work is by tracking the inode internally. If you place a watch on a file, its the same as using the -F path option on a syscall rule. If you place a watch on a directory, its the same as using the -F dir option on a syscall rule. The -w form of writing watches is for backwards compatibility and the syscall based form is more expressive. Unlike most syscall auditing rules, watches do not impact performance based on the number of rules sent to the kernel. The only valid options when using a watch are the -p and -k. If you need to anything fancy like audit a specific user accessing a file, then use the syscall auditing form with the path or dir fields. See the EXAMPLES section for an example of converting one form to another.   -W path Remove a watch for the file system object at path.    -a list\n   Tag Description     task Add a rule to the per task list. This rule list is used only at the time a task is created \u0026ndash; when fork() or clone() are called by the parent task. When using this list, you should only use fields that are known at task creation time, such as the uid, gid, etc.   entry Add a rule to the syscall entry list. This list is used upon entry to a system call to determine if an audit event should be created.   exit Add a rule to the syscall exit list. This list is used upon exit from a system call to determine if an audit event should be created.   user Add a rule to the user message filter list. This list is used by the kernel to filter events originating in user space before relaying them to the audit daemon. It should be noted that the only fields that are valid are: uid, auid, gid, and pid. All other fields will be treated as non-matching.   exclude Add a rule to the event type exclusion filter list. This list is used to filter events that you do not want to see. For example, if you do not want to see any avc messages, you would using this list to record that. The message type that you do not wish to see is given with the msgtype field.    -a action\n   Tag Description     never No audit records will be generated. This can be used to suppress event generation. In general, you want suppressions at the top of the list instead of the bottom. This is because the event triggers on the first matching rule.   always Allocate an audit context, always fill it in at syscall entry time, and always write out a record at syscall exit time.    -F field\n   Tag Description     a0, a1, a2, a3 Respectively, the first 4 arguments to a syscall. Note that string arguments are not supported. This is because the kernel is passed a pointer to the string. Triggering on a pointer address value is not likely to work. So, when using this, you should only use on numeric values. This is most likely to be used on platforms that multiplex socket or IPC operations.   arch The CPU architecture of the syscall. The arch can be found doing ’uname -m’. If you do not know the arch of your machine but you want to use the 32 bit syscall table and your machine supports 32 bit, you can also use b32 for the arch. The same applies to the 64 bit syscall table, you can use b64. In this way, you can write rules that are somewhat arch independent because the family type will be auto detected. However, syscalls can be arch specific and what is available on x86_64, may not be available on ppc. The arch directive should preceed the -S option so that auditctl knows which internal table to use to look up the syscall numbers.   auid The original ID the user logged in with. Its an abbreviation of audit uid. Sometimes its referred to as loginuid. Either the text or number may be used.   devmajor Device Major Number   devminor Device Minor Number   dir Full Path of Directory to watch. This will place a recursive watch on the directory and its whole subtree. Should only be used on exit list. See \u0026ldquo;-w\u0026rdquo;.   egid Effective Group ID   euid Effective User ID   exit Exit value from a syscall. If the exit code is an errno, you may use the text representation, too.   fsgid Filesystem Group ID   fsuid Filesystem User ID   filetype The target file’s type. Can be either file, dir, socket, symlink, char, block, or fifo.   gid Group ID   inode Inode Number   key This is another way of setting a filter key. See discussion above for -k option.   msgtype This is used to match the message type number. It should only be used on the exclude filter list.   obj_user Resource’s SE Linux User   obj_role Resource’s SE Linux Role   obj_type Resource’s SE Linux Type   obj_lev_low Resource’s SE Linux Low Level   obj_lev_high Resource’s SE Linux High Level   path Full Path of File to watch. Should only be used on exit list.   perm Permission filter for file operations. See \u0026ldquo;-p\u0026rdquo;. Should only be used on exit list. You can use this without specifying a syscall and the kernel will select the syscalls that satisfy the permissions being requested.   pers OS Personality Number   pid Process ID   ppid Parent’s Process ID   subj_user Program’s SE Linux User   subj_role Program’s SE Linux Role   subj_type Program’s SE Linux Type   subj_sen Program’s SE Linux Sensitivity   subj_clr Program’s SE Linux Clearance   sgid Saved Group ID. See getresgid(2) man page.   success If the exit value is \u0026gt;= 0 this is true/yes otherwise its false/no. When writing a rule, use a 1 for true/yes and a 0 for false/no   suid Saved User ID. See getresuid(2) man page.   uid User ID    "
-},
-{
-	"uri": "http://mymneo.github.io/tags/linux/",
-	"title": "linux",
-	"tags": [],
-	"description": "",
-	"content": ""
 },
 {
 	"uri": "http://mymneo.github.io/tags/ssh/",
@@ -994,20 +1050,6 @@
 	"content": "People will never forget how you made them feel\n"
 },
 {
-	"uri": "http://mymneo.github.io/posts/application-grid-design/",
-	"title": "",
-	"tags": [],
-	"description": "",
-	"content": "application-grid-design\n title: Application grid design date: 2020-03-01 15:00:01 tags: - linux - kubernetes - crd Architecture Summary Application grid is a feature to support such a scenario described as following:\n Application is deployed in many grids, each grid has a number of nodes The pods in each grid can communiate with the others in the same grid by service, other pods which aren\u0026rsquo;t in the same grid can\u0026rsquo;t be in touch with this grid by service. This can be called service isolation. Application keeps some replicas in each grid.  So we create 2 CRD (DeploymentGrid, ServiceGrid) for implements our purpose.\n ServiceGrid  ServiceGrid plays as a template of Service Topology, the controller monitors the changes to this objects, then apply them to Service spec.\nDeploymentGrid  DeploymentsGrid is a higher-level of concept than Deployments. the controller will determine how many Deployments in the cluster and the number of replicas in eacho Deployments. If the specific label of Node changed, controller will re-calculate the replicas of each Deployments under its control even delete them.\nProposal  ServiceGrid  apiVersion: v1alpha1 kind: ServiceGrid metadata: name: servicegrid-demo namespace: default spec: gridUniqKey: zone data: selector: appGrid: nginx ports: - protocol: TCP port: 80 targetPort: 9376 SerivceGrid is a higher-level concept of Service with topology support(1.17) or kube-proxy-wrapper installed.\nDeploymentGrid  apiVersion: v1alpha1 kind: DeploymentGrid metadata: name: deploymentgrid-demo namespace: default spec: gridUniqKey: zone # data is the copy of Deployment without replicas set data: metadata: matchLabels: appGrid: nginx selector: matchLabels: appGrid: nginx template: metadata: labels: appGrid: nginx spec: containers: - name: nginx image: nginx:1.7.9 ports: - containerPort: 80 status: - name: grid-1 availableReplicas: 3 conditions: - lastTransitionTime: \u0026#34;2020-03-02T07:30:01Z\u0026#34; lastUpdateTime: \u0026#34;2020-03-02T07:30:01Z\u0026#34; message: Deployment has minimum availability. reason: MinimumReplicasAvailable status: \u0026#34;True\u0026#34; type: Available - lastTransitionTime: \u0026#34;2020-03-02T07:29:02Z\u0026#34; lastUpdateTime: \u0026#34;2020-03-02T07:30:01Z\u0026#34; message: ReplicaSet \u0026#34;nginx-deployment-54f57cf6bf\u0026#34; has successfully progressed. reason: NewReplicaSetAvailable status: \u0026#34;True\u0026#34; type: Progressing observedGeneration: 1 readyReplicas: 3 replicas: 3 updatedReplicas: 3 "
-},
-{
-	"uri": "http://mymneo.github.io/posts/cgroup/",
-	"title": "",
-	"tags": [],
-	"description": "",
-	"content": "Cgroup\n title: cgroup controlle memo date: 2020-01-14 11:48:34 tags: - linux - cgroup - grub  Disable cgroup v1 in grub  For Ubuntu:\nvim /etc/default/grub\nGRUB_CMDLINE_LINUX=\u0026quot;cgroup_no_v1=all\u0026quot; "
-},
-{
 	"uri": "http://mymneo.github.io/posts/gdb-cheatsheet/",
 	"title": "",
 	"tags": [],
@@ -1020,13 +1062,6 @@
 	"tags": [],
 	"description": "",
 	"content": "Kernel Development Cheatsheet  asmlinkage macro  The asmlinkage tag is one other thing that we should observe about this simple function. This is a #define for some gcc magic that tells the compiler that the function should not expect to find any of its arguments in registers (a common optimization), but only on the CPU\u0026rsquo;s stack. Recall our earlier assertion that system_call consumes its first argument, the system call number, and allows up to four more arguments that are passed along to the real system call. system_call achieves this feat simply by leaving its other arguments (which were passed to it in registers) on the stack. All system calls are marked with the asmlinkage tag, so they all look to the stack for arguments. Of course, in sys_ni_syscall\u0026rsquo;s case, this doesn\u0026rsquo;t make any difference, because sys_ni_syscall doesn\u0026rsquo;t take any arguments, but it\u0026rsquo;s an issue for most other system calls.\n __builtin_return_address(0)  get caller address\n __user, __kernel attribute   Some of the checks performed by Sparse require annotating the source code using the attribute GCC extension, or the Sparse-specific context specifier.[5] Sparse defines the following list of attributes:\naddress_space(num) bitwise force context(expression,in_context,out_context)\n so __user indicate the pointer is from user-space, kernel can\u0026rsquo;t dereference it. __kernel is objection.\n"
-},
-{
-	"uri": "http://mymneo.github.io/posts/kube-proxy-topology-design/",
-	"title": "",
-	"tags": [],
-	"description": "",
-	"content": "kube-proxy-topology-design\n title: kube-proxy topology design date: 2020-01-15 11:12:34 tags: - linux - kubernetes - hijack Architecture Summary To support topology in old version kubernetes, we need to add a middleware programm between kube-proxy and kube-apiserver. By this method, we can hijack and modify the data which is sent to kube-proxy. Then we can controll the network rules without change kube-proxy code. We call our programm kube-proxy-wrapper.\nImplementation To keep consistence as much as possible with the latest version of Kubernetes. We also use kubernetes.io/hostname, topology.kubernetes.io/zone and topology.kubernetes.io/region as well-known keys.\nWe choose a annotation topologyKeys for Service to indicate topology concerned key, then label nodes with this key and some value to tell kube-proxy-wrapper the enpoints this node concerns\napiVersion: v1 kind: Service metadata: annotations: topologyKeys: '[\u0026quot;topology.kubernetes.io/zone\u0026quot;]' ... apiVersion: v1 kind: Node metadata: labels: topology.kubernetes.io/zone: 1001 ... kube-proxy-wrapper acts as 2 roles. One is reverse proxy called R, the other one is to manipulate data retrieved from kube-apiserver called M.\nFor the direction from kube-proxy to kube-apiserver, M won\u0026rsquo;t modify any data. But the direction from kube-apiserver to kube-proxy, M will be involved by filtering the endpoints. So the remaining work are that how M get endpoints which it concerns and how network rules flush if node labels are changed.\nM uses 1 informer to get all nodes of this cluster. This is essential component that can be used to divide endpoints into this node concerned and not-concerned. Through this way, we filter the endpoints that this node concerns. And now we focus on how rule flush if our node labels are changed. According to kube-proxy source code, we could send a watch event to kube-proxy, make it thought that endpoints has been changed. By this way kube-proxy will flush all rules.\n"
 },
 {
 	"uri": "http://mymneo.github.io/categories/",

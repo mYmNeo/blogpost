@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cgroup on Sparking Mind</title>
+    <link>http://mymneo.github.io/tags/cgroup/</link>
+    <description>Recent content in cgroup on Sparking Mind</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 14 Jan 2020 11:48:34 +0000</lastBuildDate>
+    
+	<atom:link href="http://mymneo.github.io/tags/cgroup/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>cgroup controlle memo</title>
+      <link>http://mymneo.github.io/posts/cgroup/</link>
+      <pubDate>Tue, 14 Jan 2020 11:48:34 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/cgroup/</guid>
+      <description> Disable cgroup v1 in grub  For Ubuntu:
+vim /etc/default/grub
+GRUB_CMDLINE_LINUX=&amp;quot;cgroup_no_v1=all&amp;quot; </description>
+    </item>
+    
+  </channel>
+</rss>

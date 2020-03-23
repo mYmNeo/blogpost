@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2020-03-23T12:09:36 CST">
+<meta name="revised" content="2020-03-23T12:20:55 CST">
 <title>linux :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -609,6 +609,27 @@
     </li>
         </ul>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
+        <div>
+          <a href="/posts/application-grid-design/">
+            Application grid design
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
+            kube-proxy topology design
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            cgroup controlle memo
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/vim-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/vim-cheatsheet/">
@@ -812,20 +833,6 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
-        <div>
-          <a href="/posts/application-grid-design/">
-            
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
-      <li data-nav-id="/posts/cgroup/" class="dd-item">
-        <div>
-          <a href="/posts/cgroup/">
-            
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -836,13 +843,6 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item">
         <div>
           <a href="/posts/kernel-development/">
-            
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
-      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
-        <div>
-          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -929,12 +929,87 @@
 	
 	    <a class="newer-posts" href="/tags/linux/">&larr; Previous Pages</a>
 	
-	<span class="page-number">Page 2 of 2</span>
+	<span class="page-number">Page 2 of 3</span>
+	
+	    <a class="older-posts" href="/tags/linux/page/3/">Next Pages &rarr;</a>
 	
 </nav>
 
 </div>
 
+
+   <article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/posts/svn2git/">SVN and Git migration</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>Import svn project into your git project git config --add svn-remote.&lt;branch name&gt;.url &lt;svn repository url&gt; git config --add svn-remote.&lt;branch name&gt;.fetch :refs/remotes/&lt;branch name&gt; git svn fetch &lt;branch name&gt; [-r&lt;rev&gt;] Export and import SVN repository svnrdump dump [-r&lt;rev&gt;] &lt;svn repostory url&gt; &gt; &lt;dump file&gt; svnadmin load --force-uuid &lt;directory&gt; &lt; &lt;dump file&gt;  <a class="read-more" href="/posts/svn2git/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+
+        
+          
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/linux/">linux</a>
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/svn/">svn</a>
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/git/">git</a>
+            
+        
+
+    </footer>
+</article>
+
+   <article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/posts/behaviors-ext4-file-system-when-devicemapper-pool-is-full/">behaviors of ext4 file system when devicemapper pool is full</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>Backgroud  Our production system currently use docker to run all kinds of services. One day our clients reported that their service could not write down any log in the container and all the other containers which were started and worked well a few days ago also couldn&rsquo;t. And the containers couldn&rsquo;t be recovered. We logged in the malfunction machine, found that the thin pool used by devicemapper was full. At the same time there was some messages that dmesg reported telling the file system of containers became read-only. <a class="read-more" href="/posts/behaviors-ext4-file-system-when-devicemapper-pool-is-full/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+
+        
+          
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/linux/">linux</a>
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/devicemapper/">devicemapper</a>
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/docker/">docker</a>
+            
+        
+
+    </footer>
+</article>
+
+   <article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/posts/kvm/">kvm virtual machine with vnc support</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>Install a KVM virtual machin with VNC support  Create a disk for VM  qemu-img create -f qcow2 &lt;img path&gt; &lt;size&gt;  Use virt-install install a VM  virt-install \  --virt-type kvm \  --name &lt;name&gt; \  --cdrom=&lt;cdrom iso&gt; \  --disk path=&lt;disk path&gt; \  --network network=default \  --graphics vnc,listen=0.0.0.0 \  --noautoconsole \  --os-type=&lt;os type&gt; \  --os-variant=&lt;os&gt;  Show VNC port  virsh vncdisplay &lt;domain name&gt; VM Operations  Sometimes you need add For example: <a class="read-more" href="/posts/kvm/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+
+        
+          
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/kvm/">kvm</a>
+            
+                <a class="label label-default" href="http://mymneo.github.io/tags/linux/">linux</a>
+            
+        
+
+    </footer>
+</article>
 
    <article class="post posts">
     <header class="post-header">
@@ -1111,54 +1186,6 @@ append proxy=_none_ to your repo file <a class="read-more" href="/posts/rpm-and-
     </footer>
 </article>
 
-   <article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/posts/sed-command/">Frequent commands about linux sed</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p> add content at last line  sed &#39;$a&lt;content&gt;&#39; &lt;file&gt;  add content at line  sed &#39;&lt;line&gt;i&lt;content&gt;&#39; &lt;file&gt;  delete line  sed &#39;&lt;line&gt;d&#39; &lt;file&gt;  match pattern, then execute expression  sed &#39;/&lt;regex&gt;/&lt;command&gt;&#39; &lt;file&gt;  print line number of matched pattern  sed &#39;/&lt;regex&gt;/{=}&#39; &lt;file&gt; Zero- or One- address commands in linux sed : # label = # line_number a # append_text_to_stdout_after_flush b # branch_unconditional c # range_change d # pattern_delete_top/cycle D # pattern_ltrunc(line+nl)_top/cycle g # pattern=hold G # pattern+=nl+hold h # hold=pattern H # hold+=nl+pattern i # insert_text_to_stdout_now l # pattern_list n # pattern_flush=nextline_continue N # pattern+=nl+nextline p # pattern_print P # pattern_first_line_print q # flush_quit r # append_file_to_stdout_after_flush s # substitute t # branch_on_substitute w # append_pattern_to_file_now x # swap_pattern_and_hold y # transform_chars  <a class="read-more" href="/posts/sed-command/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
-
-        
-          
-            
-                <a class="label label-default" href="http://mymneo.github.io/tags/linux/">linux</a>
-            
-                <a class="label label-default" href="http://mymneo.github.io/tags/sed/">sed</a>
-            
-        
-
-    </footer>
-</article>
-
-   <article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/posts/iptables/">iptables command(docker related)</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p> flush all rules  sudo iptables -P INPUT ACCEPT sudo iptables -P FORWARD ACCEPT sudo iptables -P OUTPUT ACCEPT sudo iptables -F sudo iptables -X sudo iptables -t nat -F sudo iptables -t nat -X  <a class="read-more" href="/posts/iptables/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
-
-        
-          
-            
-                <a class="label label-default" href="http://mymneo.github.io/tags/linux/">linux</a>
-            
-                <a class="label label-default" href="http://mymneo.github.io/tags/iptables/">iptables</a>
-            
-                <a class="label label-default" href="http://mymneo.github.io/tags/docker/">docker</a>
-            
-        
-
-    </footer>
-</article>
-
 
 <div style="margin-bottom:2rem"></div>
 
@@ -1166,7 +1193,9 @@ append proxy=_none_ to your repo file <a class="read-more" href="/posts/rpm-and-
 	
 	    <a class="newer-posts" href="/tags/linux/">&larr; Previous Pages</a>
 	
-	<span class="page-number">Page 2 of 2</span>
+	<span class="page-number">Page 2 of 3</span>
+	
+	    <a class="older-posts" href="/tags/linux/page/3/">Next Pages &rarr;</a>
 	
 </nav>
 

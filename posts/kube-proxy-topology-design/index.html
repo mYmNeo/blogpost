@@ -5,8 +5,8 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2020-03-23T12:09:36 CST">
-<title> :: Sparking Mind</title>
+<meta name="revised" content="2020-03-23T12:20:55 CST">
+<title>kube-proxy topology design :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -610,6 +610,27 @@
     </li>
         </ul>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
+        <div>
+          <a href="/posts/application-grid-design/">
+            Application grid design
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item active">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
+            kube-proxy topology design
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            cgroup controlle memo
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/vim-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/vim-cheatsheet/">
@@ -813,20 +834,6 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/posts/application-grid-design/" class="dd-item">
-        <div>
-          <a href="/posts/application-grid-design/">
-            
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
-      <li data-nav-id="/posts/cgroup/" class="dd-item">
-        <div>
-          <a href="/posts/cgroup/">
-            
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -837,13 +844,6 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item">
         <div>
           <a href="/posts/kernel-development/">
-            
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
-      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item active">
-        <div>
-          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -900,7 +900,7 @@
 
 
 
- <a href='/'></a> > <a href='/posts/'>Posts</a> > 
+ <a href='/'></a> > <a href='/posts/'>Posts</a> > kube-proxy topology design
 
  
 
@@ -913,16 +913,7 @@
     
     <div class="progress">
         <div class="wrapper">
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#--hijack">title: kube-proxy topology design
-date: 2020-01-15 11:12:34
-tags:
-- linux
-- kubernetes
-- hijack</a></li>
-  </ul>
-</nav>
+    <nav id="TableOfContents"></nav>
         </div>
     </div>
     
@@ -930,9 +921,19 @@ tags:
   </div>
 
 
+  <div id="tags">
+    
+      <a class="label label-default" href="http://mymneo.github.io/tags/linux">linux</a>
+    
+      <a class="label label-default" href="http://mymneo.github.io/tags/kubernetes">kubernetes</a>
+    
+      <a class="label label-default" href="http://mymneo.github.io/tags/hijack">hijack</a>
+    
+  </div>
+
 <div id="body-inner">
   
-    <h1></h1>
+    <h1>kube-proxy topology design</h1>
   
 
 
@@ -940,15 +941,7 @@ tags:
     
     
     
-    <p>kube-proxy-topology-design</p>
-<hr>
-<h2 id="--hijack">title: kube-proxy topology design
-date: 2020-01-15 11:12:34
-tags:
-- linux
-- kubernetes
-- hijack</h2>
-<h1 id="architecture">Architecture</h1>
+    <h1 id="architecture">Architecture</h1>
 <p><img src="../../_resources/30a2fe9f776d43378587d62f71ac4a16.svg" alt="kube-proxy"></p>
 <h1 id="summary">Summary</h1>
 <p>To support topology in old version kubernetes, we need to add a middleware programm between kube-proxy and kube-apiserver. By this method, we can hijack and modify the data which is sent to kube-proxy. Then we can controll the network rules without change kube-proxy code. We call our programm <code>kube-proxy-wrapper</code>.</p>

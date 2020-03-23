@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>kubernetes on Sparking Mind</title>
+    <link>http://mymneo.github.io/tags/kubernetes/</link>
+    <description>Recent content in kubernetes on Sparking Mind</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Mar 2020 15:00:01 +0000</lastBuildDate>
+    
+	<atom:link href="http://mymneo.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Application grid design</title>
+      <link>http://mymneo.github.io/posts/application-grid-design/</link>
+      <pubDate>Sun, 01 Mar 2020 15:00:01 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/application-grid-design/</guid>
+      <description>Architecture Summary Application grid is a feature to support such a scenario described as following:
+ Application is deployed in many grids, each grid has a number of nodes The pods in each grid can communiate with the others in the same grid by service, other pods which aren&amp;rsquo;t in the same grid can&amp;rsquo;t be in touch with this grid by service. This can be called service isolation. Application keeps some replicas in each grid.</description>
+    </item>
+    
+    <item>
+      <title>kube-proxy topology design</title>
+      <link>http://mymneo.github.io/posts/kube-proxy-topology-design/</link>
+      <pubDate>Wed, 15 Jan 2020 11:12:34 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/kube-proxy-topology-design/</guid>
+      <description>Architecture Summary To support topology in old version kubernetes, we need to add a middleware programm between kube-proxy and kube-apiserver. By this method, we can hijack and modify the data which is sent to kube-proxy. Then we can controll the network rules without change kube-proxy code. We call our programm kube-proxy-wrapper.
+Implementation To keep consistence as much as possible with the latest version of Kubernetes. We also use kubernetes.io/hostname, topology.kubernetes.io/zone and topology.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -5,8 +5,8 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2020-03-23T12:09:36 CST">
-<title> :: Sparking Mind</title>
+<meta name="revised" content="2020-03-23T12:20:55 CST">
+<title>Application grid design :: Sparking Mind</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -610,6 +610,27 @@
     </li>
         </ul>
     </li>
+      <li data-nav-id="/posts/application-grid-design/" class="dd-item active">
+        <div>
+          <a href="/posts/application-grid-design/">
+            Application grid design
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
+        <div>
+          <a href="/posts/kube-proxy-topology-design/">
+            kube-proxy topology design
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/posts/cgroup/" class="dd-item">
+        <div>
+          <a href="/posts/cgroup/">
+            cgroup controlle memo
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/posts/vim-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/vim-cheatsheet/">
@@ -813,20 +834,6 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/posts/application-grid-design/" class="dd-item active">
-        <div>
-          <a href="/posts/application-grid-design/">
-            
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
-      <li data-nav-id="/posts/cgroup/" class="dd-item">
-        <div>
-          <a href="/posts/cgroup/">
-            
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/posts/gdb-cheatsheet/" class="dd-item">
         <div>
           <a href="/posts/gdb-cheatsheet/">
@@ -837,13 +844,6 @@
       <li data-nav-id="/posts/kernel-development/" class="dd-item">
         <div>
           <a href="/posts/kernel-development/">
-            
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
-      <li data-nav-id="/posts/kube-proxy-topology-design/" class="dd-item">
-        <div>
-          <a href="/posts/kube-proxy-topology-design/">
             
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -900,7 +900,7 @@
 
 
 
- <a href='/'></a> > <a href='/posts/'>Posts</a> > 
+ <a href='/'></a> > <a href='/posts/'>Posts</a> > Application grid design
 
  
 
@@ -913,16 +913,7 @@
     
     <div class="progress">
         <div class="wrapper">
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#--crd">title: Application grid design
-date: 2020-03-01 15:00:01
-tags:
-- linux
-- kubernetes
-- crd</a></li>
-  </ul>
-</nav>
+    <nav id="TableOfContents"></nav>
         </div>
     </div>
     
@@ -930,9 +921,19 @@ tags:
   </div>
 
 
+  <div id="tags">
+    
+      <a class="label label-default" href="http://mymneo.github.io/tags/linux">linux</a>
+    
+      <a class="label label-default" href="http://mymneo.github.io/tags/kubernetes">kubernetes</a>
+    
+      <a class="label label-default" href="http://mymneo.github.io/tags/crd">crd</a>
+    
+  </div>
+
 <div id="body-inner">
   
-    <h1></h1>
+    <h1>Application grid design</h1>
   
 
 
@@ -940,15 +941,7 @@ tags:
     
     
     
-    <p>application-grid-design</p>
-<hr>
-<h2 id="--crd">title: Application grid design
-date: 2020-03-01 15:00:01
-tags:
-- linux
-- kubernetes
-- crd</h2>
-<h1 id="architecture">Architecture</h1>
+    <h1 id="architecture">Architecture</h1>
 <p><img src="../../_resources/0ee9e58857ef4cb5bec1d84e795c75b6.svg" alt="application-grid.svg"></p>
 <h1 id="summary">Summary</h1>
 <p>Application grid is a feature to support such a scenario described as following:</p>

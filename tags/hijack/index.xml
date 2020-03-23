@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hijack on Sparking Mind</title>
+    <link>http://mymneo.github.io/tags/hijack/</link>
+    <description>Recent content in hijack on Sparking Mind</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 15 Jan 2020 11:12:34 +0000</lastBuildDate>
+    
+	<atom:link href="http://mymneo.github.io/tags/hijack/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>kube-proxy topology design</title>
+      <link>http://mymneo.github.io/posts/kube-proxy-topology-design/</link>
+      <pubDate>Wed, 15 Jan 2020 11:12:34 +0000</pubDate>
+      
+      <guid>http://mymneo.github.io/posts/kube-proxy-topology-design/</guid>
+      <description>Architecture Summary To support topology in old version kubernetes, we need to add a middleware programm between kube-proxy and kube-apiserver. By this method, we can hijack and modify the data which is sent to kube-proxy. Then we can controll the network rules without change kube-proxy code. We call our programm kube-proxy-wrapper.
+Implementation To keep consistence as much as possible with the latest version of Kubernetes. We also use kubernetes.io/hostname, topology.kubernetes.io/zone and topology.</description>
+    </item>
+    
+  </channel>
+</rss>
